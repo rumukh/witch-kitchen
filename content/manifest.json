@@ -1,0 +1,5 @@
+{
+  "files": ["feelings", "actions", "nights", "guests", "recipes", "economy", "sediment", "endings", "vows", "schedule"],
+  "id": "krestets-content",
+  "schemaVersion": 1
+}

@@ -1,0 +1,20 @@
+{
+  "worlds": {
+    "forest":   { "fromNight": 1, "candle": 8, "pay": "wood",   "tips": 5, "slice": { "sadness": 2, "nostalgia": 1, "anger": 1 }, "full": { "sadness": 2, "nostalgia": 1, "anger": 1, "fear": 1 } },
+    "river":    { "fromNight": 1, "candle": 7, "pay": "water",  "tips": 5, "slice": { "fear": 2, "sadness": 1, "nostalgia": 1 },  "full": { "fear": 2, "sadness": 1, "nostalgia": 1, "anger": 1 } },
+    "city":     { "fromNight": 1, "candle": 6, "pay": "sparks", "tips": 0, "slice": { "joy": 2, "nostalgia": 2, "anger": 1 },   "full": { "joy": 2, "nostalgia": 2, "anger": 1 } },
+    "memorial": { "fromNight": 5, "candle": 8, "pay": "story",  "tips": 0, "slice": { "loneliness": 2, "nostalgia": 1 },        "full": { "loneliness": 2, "nostalgia": 1 }, "reverseFreshness": true }
+  },
+  "special": {
+    "dubodyor": { "world": "forest", "order": null,        "candleMult": 2 },
+    "tikhaya":  { "world": "river",  "order": "sadness",   "candleMult": 2 },
+    "commis":   { "world": "city",   "order": "nostalgia", "candle": 8, "candleMult": 1 },
+    "tutorialA": { "world": "forest", "order": "sadness",  "candleMult": 1 },
+    "tutorialB": { "world": "river",  "order": "sadness",  "candleMult": 1 }
+  },
+  "doorQueue": 1,
+  "orderRecipes": { "sadness": "smoke_tea", "joy": "nimbus_ramen", "anger": "tar_gingerbread", "fear": "fog_ukha", "nostalgia": "postcard_sbiten" },
+  "nameless": { "nights": [3, 6, 9, 11, 12], "accepts": "empty_shchi", "acceptsFinal": "memory_pie", "finalNight": 12, "payEmptyGold": 2 },
+  "unhappy": { "sediment": 1, "storyHalves": 1 },
+  "overdrawn": { "emptyGold": 1, "sediment": 1 }
+}

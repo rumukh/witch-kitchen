@@ -1,0 +1,16 @@
+{
+  "vows": {
+    "v1":  { "n": 1,  "giver": "dubodyor", "announce": null, "from": 2,  "to": 2,  "tutorial": true, "cond": "pureDishes", "count": 2 },
+    "v2":  { "n": 2,  "giver": "prosha",   "announce": null, "from": 3,  "to": 3,  "tutorial": true, "cond": "doorWait", "maxWait": 2 },
+    "v3":  { "n": 3,  "giver": "tikhaya",  "announce": null, "from": 4,  "to": 4,  "tutorial": true, "cond": "serveGiverCold", "feeling": "sadness", "guest": "tikhaya" },
+    "v4":  { "n": 4,  "giver": "dubodyor", "announce": null, "from": 5,  "to": 7,  "cond": "serveRecipe", "recipe": "thunder_perepechi", "guest": "dubodyor", "serveNight": 7, "reminder": 6, "needsKind": "hope" },
+    "v5":  { "n": 5,  "giver": "prosha",   "announce": null, "from": 6,  "to": 6,  "cond": "allMemorialSatisfied" },
+    "v6":  { "n": 6,  "giver": "tikhaya",  "announce": 6,    "from": 7,  "to": 8,  "cond": "serveRecipe", "recipe": "forgotten_kisel", "guest": "tikhaya" },
+    "v7":  { "n": 7,  "giver": "prosha",   "announce": null, "from": 8,  "to": 8,  "cond": "serveFeelingQuality", "feeling": "nostalgia", "minQuality": 75, "guest": "commis" },
+    "v8":  { "n": 8,  "giver": "dubodyor", "announce": null, "from": 9,  "to": 9,  "cond": "noLivingBurn", "spoiler": true },
+    "v9":  { "n": 9,  "giver": "tikhaya",  "announce": 9,    "from": 10, "to": 11, "cond": "serveRecipe", "recipe": "tram_boltushka", "guest": "tikhaya" },
+    "v10": { "n": 10, "giver": "prosha",   "announce": null, "from": 11, "to": 11, "cond": "noCuckoo", "minSatisfied": 2 }
+  },
+  "keysPerSuccess": 1,
+  "threadsPerFailure": 1
+}

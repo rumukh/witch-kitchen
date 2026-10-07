@@ -1,0 +1,7 @@
+{
+  "shelfLifeNights": 3,
+  "stackMax": 3,
+  "mutGate": 5,
+  "mutGateFromNight": 10,
+  "overflowBurnHeat": 2
+}

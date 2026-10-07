@@ -1,0 +1,16 @@
+{
+  "priority": ["new_spring", "remember", "wound", "letter"],
+  "finalNight": 12,
+  "new_spring": { "requires": ["pieServed", "guardianBorn"] },
+  "remember":   { "requires": ["pieServed"] },
+  "wound":      { "action": "windFinal", "costKeys": 1 },
+  "letter":     { "fallback": true },
+  "achievements": {
+    "no_sediment":     { "when": "campaignEnd", "mutnoe": 0 },
+    "all_memorial":    { "when": "collection", "world": "memorial" },
+    "remember":        { "when": "ending", "endings": ["remember", "new_spring"] },
+    "ending_wound":    { "when": "ending", "endings": ["wound"], "spoiler": true },
+    "ending_new_spring": { "when": "ending", "endings": ["new_spring"], "spoiler": true },
+    "ending_letter":   { "when": "ending", "endings": ["letter"], "spoiler": true }
+  }
+}

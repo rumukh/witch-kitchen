@@ -1,0 +1,20 @@
+{
+  "recipes": {
+    "smoke_tea":         { "chapter": "forest",   "ingredients": { "sadness": 1 }, "brew": 1, "heat": 0, "knownFrom": 1 },
+    "nimbus_ramen":      { "chapter": "city",     "ingredients": { "sadness": 2, "joy": 1 }, "brew": 2, "heat": 1, "knownFrom": 2 },
+    "tar_gingerbread":   { "chapter": "forest",   "ingredients": { "anger": 1 }, "brew": 1, "heat": 1, "knownFrom": 2 },
+    "postcard_sbiten":   { "chapter": "city",     "ingredients": { "nostalgia": 1 }, "brew": 1, "heat": 1, "knownFrom": 2 },
+    "fog_ukha":          { "chapter": "river",    "ingredients": { "fear": 2 }, "brew": 2, "heat": 1, "knownFrom": 3 },
+    "empty_shchi":       { "chapter": "secret",   "ingredients": { "empty_gold": 2 }, "brew": 1, "heat": 0, "knownFrom": 3, "story": true },
+    "thunder_perepechi": { "chapter": "forest",   "ingredients": { "anger": 1, "hope": 1 }, "brew": 2, "heat": 2, "knownFrom": 4 },
+    "amber_ryapushka":   { "chapter": "river",    "ingredients": { "nostalgia": 1, "amber": 1 }, "brew": 2, "heat": 1, "knownFrom": 4 },
+    "forgotten_kisel":   { "chapter": "memorial", "ingredients": { "nostalgia": 2, "hope": 1 }, "brew": 2, "heat": 1, "knownFrom": 6 },
+    "courage_tea":       { "chapter": "forest",   "ingredients": { "fear": 2, "hope": 1 }, "brew": 3, "heat": 1, "knownFrom": 9 },
+    "tram_boltushka":    { "chapter": "city",     "ingredients": { "tremor": 1, "nostalgia": 1 }, "brew": 1, "heat": 0, "knownFrom": 9 },
+    "pryazhenets":       { "chapter": "secret",   "ingredients": { "hope": 1, "amber": 1, "anger": 1, "fear": 1, "nostalgia": 1, "loneliness": 1, "tremor": 1, "sediment": 3 }, "brew": 3, "heat": 2, "knownFrom": 99, "story": true, "unlock": "guardianArc" },
+    "memory_pie":        { "chapter": "secret",   "ingredients": { "nostalgia": 2, "thread": 1, "story": 1 }, "brew": 2, "heat": 1, "knownFrom": 11, "story": true }
+  },
+  "freshness": { "fromOven": 1, "hot": 3, "values": [100, 75, 50], "reverse": [50, 75, 100], "maxBonus": 2, "coldAtDawnAge": 4 },
+  "qualityStep": 25,
+  "qualityMin": 25
+}

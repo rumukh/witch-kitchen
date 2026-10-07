@@ -1,0 +1,18 @@
+{
+  "kinds": {
+    "joy":        { "base": true,  "act": 1, "orderFeeling": "joy",        "agesInto": "amber", "agingSteps": 2, "burnsNearStove": true },
+    "sadness":    { "base": true,  "act": 1, "orderFeeling": "sadness",    "agesInto": "hope",  "agingSteps": 2 },
+    "anger":      { "base": true,  "act": 1, "orderFeeling": "anger",      "burnHeat": 1, "burnHeatPerNight": 1 },
+    "fear":       { "base": true,  "act": 1, "orderFeeling": "fear" },
+    "nostalgia":  { "base": true,  "act": 1, "orderFeeling": "nostalgia" },
+    "loneliness": { "base": true,  "act": 2, "orderFeeling": "loneliness", "drainsNeighborsAfterDawns": 3 },
+    "tremor":     { "base": false, "act": 3, "orderFeeling": "tremor" },
+    "hope":       { "base": false, "act": 1, "orderFeeling": "sadness" },
+    "amber":      { "base": false, "act": 1, "orderFeeling": "joy" },
+    "burning":    { "base": false, "act": 1, "orderFeeling": "joy", "alwaysMurky": true },
+    "sediment":   { "base": false, "act": 1, "orderFeeling": null, "burnHeat": 2 }
+  },
+  "purity": { "pure": 100, "murky": 50 },
+  "tremorMerge": { "joy": "joy", "partner": "fear", "maxJoyAge": 1, "fromNight": 10, "requirePure": true },
+  "ingredientAccepts": { "joy": ["joy", "burning"] }
+}
