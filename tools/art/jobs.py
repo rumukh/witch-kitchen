@@ -290,3 +290,36 @@ job("jar-empty", "feeling-jar",
     "still air with soft glass reflections and a faint cool highlight — an unoccupied vessel waiting for a feeling. Game item illustration. "
     + STYLE + " " + CUTOUT, "1024x1024", "medium", True, refs=["jar-joy"], out=J)
 
+
+# ================================================================ game-session ID agreement (2026-10-08)
+RENAME = {
+    "dish-smoke-tea": "dish-smoke_tea", "dish-nimbus-ramen": "dish-nimbus_ramen", "dish-tar-gingerbread": "dish-tar_gingerbread",
+    "dish-postcard-sbiten": "dish-postcard_sbiten", "dish-fog-ukha": "dish-fog_ukha", "dish-empty-shchi": "dish-empty_shchi",
+    "dish-thunder-perepechi": "dish-thunder_perepechi", "dish-amber-ryapushka": "dish-amber_ryapushka",
+    "dish-forgotten-names-kissel": "dish-forgotten_kisel", "dish-courage-tea": "dish-courage_tea",
+    "dish-tram-ticket-boltushka": "dish-tram_boltushka", "dish-pryazhenets": "dish-pryazhenets", "dish-memory-pie": "dish-memory_pie",
+    "icon-memory-thread": "icon-thread", "icon-story-card": "icon-story", "icon-patience": "icon-candle",
+    "icon-upgrade-chair": "icon-chair", "icon-upgrade-shelf": "icon-shelf", "icon-upgrade-mittens": "icon-mittens",
+    "icon-upgrade-double-stove": "icon-double-burner",
+    "door-forest": "door-forest-open", "door-river": "door-river-open", "door-city": "door-city-open", "door-memorial": "door-memorial-open",
+}
+for k, v in RENAME.items():
+    JOBS[k]["out"] = dict(JOBS[k]["out"], id=v)
+
+for k, d in {
+    "icon-story-half": "A small upright card with a rounded ornament border and a tiny painted house, torn diagonally in half so only the left half remains, the torn edge ragged.",
+    "icon-mutnoe": "A small swirl of murky brown-grey silt smoke curling inside a round wooden bowl, dull and cloudy.",
+}.items():
+    job(k, "icon", ICON_REF + ICON + d + " " + STYLE + " " + CUTOUT, "1024x1024", "medium", True, refs=["icon-heat"], out=IB)
+for w, d in {"forest": "moss-green and bark-brown with a carved fir-tree motif", "river": "turquoise and glass-green with a carved wave and fish motif",
+             "city": "warm grey and amber with a carved streetlamp motif", "memorial": "silver and soft blue with a carved candle motif"}.items():
+    job(f"door-{w}-closed", "icon", ICON_REF + ICON + f"An arched carved wooden door, firmly CLOSED, painted {d}, an iron ring handle and a small padlock-free latch. "
+        + STYLE + " " + CUTOUT, "1024x1024", "medium", True, refs=[f"door-{w}"], out={"type": "sprite", "box": 384, "margin": 0.03})
+job("tarot-back", "card", CARD + "The back of grandmother's fortune cards: deep plum-violet with a symmetric silver-and-gold folk ornament, a crescent moon cradling a small pendulum clock in the middle, a carved border. "
+    + STYLE + " Isolated on a fully transparent background.", "1024x1536", "high", True, out={"type": "sprite", "h": 768, "margin": 0.0})
+
+PORTRAIT = {"type": "sprite", "h": 768, "square": 768, "bottom": True}
+for k in ["dubodyor", "tikhaya", "prosha", "commis-mirror", "nameless-guest", "tram33-spirit", "guardian"]:
+    JOBS[k]["out"] = dict(PORTRAIT, id="char-" + {"commis-mirror": "commis", "nameless-guest": "nameless", "tram33-spirit": "tram33"}.get(k, k))
+JOBS["char-kupa-portrait"] = dict(JOBS["kupa"], id="char-kupa-portrait", alias_of="kupa",
+                                  out={"type": "sprite", "h": 768, "square": 768, "bottom": True, "crop_top": 0.55})

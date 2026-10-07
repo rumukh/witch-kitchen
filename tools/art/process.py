@@ -53,9 +53,14 @@ def save_png(im, path):
     im.save(path, optimize=True)
 
 
+def ship_id(jid):
+    return JOBS[jid]["out"].get("id", jid)
+
+
 def process(jid, pk):
     job = JOBS[jid]
-    src = RAW_DIR / jid / pk["pick"]
+    aid = ship_id(jid)
+    src = RAW_DIR / job.get("alias_of", jid) / pk["pick"]
     im = Image.open(src)
     out = job["out"]
     folder = ART / FOLDER[job["kind"]]
@@ -69,9 +74,9 @@ def process(jid, pk):
         l, t = (im.width - tw) // 2, (im.height - th) // 2
         im = im.crop((l, t, l + tw, t + th))
         folder.mkdir(parents=True, exist_ok=True)
-        f = folder / f"{jid}.webp"
+        f = folder / f"{aid}.webp"
         im.save(f, quality=84, method=6)
-        f2 = folder / f"{jid}-720.webp"
+        f2 = folder / f"{aid}-720.webp"
         im.resize((tw * 2 // 3, th * 2 // 3), Image.LANCZOS).save(f2, quality=82, method=6)
         variants.append({"file": f2.relative_to(ART).as_posix(), "width": tw * 2 // 3, "height": th * 2 // 3, "label": "720p"})
         transparent = False
@@ -83,29 +88,36 @@ def process(jid, pk):
         w = np.clip(np.minimum.outer(r, r) * 2.5, 0, 1)[..., None]
         im = Image.fromarray((a * w + rolled * (1 - w)).astype(np.uint8))
         folder.mkdir(parents=True, exist_ok=True)
-        f = folder / f"{jid}.webp"
+        f = folder / f"{aid}.webp"
         im.save(f, quality=86, method=6)
         transparent = False
     else:
         im = trim(clean_alpha(im), out.get("margin", 0.02))
+        if "crop_top" in out:
+            im = trim(im.crop((0, 0, im.width, int(im.height * out["crop_top"]))), 0.02)
         if "h" in out:
             s = out["h"] / im.height
         else:
             s = out["box"] / max(im.size)
         s = min(s, 1.0) if not out.get("upscale") else s
         im = im.resize((round(im.width * s), round(im.height * s)), Image.LANCZOS)
+        if "square" in out:
+            n = out["square"]
+            canvas = Image.new("RGBA", (n, n), (0, 0, 0, 0))
+            canvas.paste(im, ((n - im.width) // 2, n - im.height if out.get("bottom") else (n - im.height) // 2))
+            im = canvas
         im = clean_alpha(im)
-        f = folder / f"{jid}.webp"
+        f = folder / f"{aid}.webp"
         save_png(im, f)
         transparent = True
         for vs in out.get("variants", []):
             v = im.resize((round(im.width * vs / max(im.size)), round(im.height * vs / max(im.size))), Image.LANCZOS)
-            fv = folder / f"{jid}-{vs}.webp"
+            fv = folder / f"{aid}-{vs}.webp"
             save_png(clean_alpha(v), fv)
             variants.append({"file": fv.relative_to(ART).as_posix(), "width": v.width, "height": v.height, "label": f"{vs}px"})
-    meta, sha, created = raw_meta(jid, pk["pick"])
+    meta, sha, created = raw_meta(job.get("alias_of", jid), pk["pick"])
     return {
-        "id": jid, "kind": job["kind"], "file": f.relative_to(ART).as_posix(),
+        "id": aid, "kind": job["kind"], "file": f.relative_to(ART).as_posix(),
         "width": im.width, "height": im.height, "transparent": transparent, "variants": variants,
         "bytes": f.stat().st_size + sum((ART / v["file"]).stat().st_size for v in variants),
         "source": {
@@ -154,16 +166,19 @@ def main():
     for jid, pk in picks().items():
         if jid not in JOBS or (ids and jid not in ids):
             continue
-        entries[jid] = process(jid, pk)
-        print("processed", jid, entries[jid]["width"], entries[jid]["height"], entries[jid]["bytes"])
-        if jid == "ui-button":
-            entries.update(button_states(entries[jid]))
+        for j2 in [jid] + [k for k, v in JOBS.items() if v.get("alias_of") == jid]:
+            e = process(j2, pk)
+            entries[e["id"]] = e
+            print("processed", e["id"], e["width"], e["height"], e["bytes"])
+            if e["id"] == "ui-button":
+                entries.update(button_states(e))
     if DERIVED.exists():
         for e in json.loads(DERIVED.read_text(encoding="utf-8")):
             e["bytes"] = (ART / e["file"]).stat().st_size + sum((ART / v["file"]).stat().st_size for v in e.get("variants", []))
             e.setdefault("license", LICENSE)
             entries[e["id"]] = e
-    order = list(JOBS) + [k for k in entries if k not in JOBS]
+    order = [ship_id(k) for k in JOBS] + [k for k in entries if k not in {ship_id(j) for j in JOBS}]
+    order = list(dict.fromkeys(order))
     assets = [entries[k] for k in order if k in entries]
     total = sum(e["bytes"] for e in assets)
     MANIFEST.write_text(json.dumps({

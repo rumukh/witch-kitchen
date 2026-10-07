@@ -2,8 +2,8 @@
   "schema": "witch-kitchen-art-manifest/1",
   "style_bible": "docs/art/STYLE_BIBLE.md",
   "base_path": "assets/art/",
-  "total_bytes": 2396362,
-  "count": 22,
+  "total_bytes": 7809424,
+  "count": 92,
   "assets": [
     {
       "id": "bg-tavern-night",
@@ -671,6 +671,2064 @@
       "review": {
         "status": "approved",
         "notes": "Six arms checked: poker, log, coal shovel, kettle, two folded. Real-alpha cutout re-render of approved kupa-r1-c1.png (original had a painted checkerboard)."
+      }
+    },
+    {
+      "id": "bg-mezhsvetye-day",
+      "kind": "background",
+      "file": "bg/bg-mezhsvetye-day.webp",
+      "width": 1920,
+      "height": 1080,
+      "transparent": false,
+      "variants": [
+        {
+          "file": "bg/bg-mezhsvetye-day-720.webp",
+          "width": 1280,
+          "height": 720,
+          "label": "720p"
+        }
+      ],
+      "bytes": 498612,
+      "source": {
+        "tool": "azure-image-generation skill (generate-image.ps1)",
+        "provider": "Azure OpenAI",
+        "model": "gpt-image-2.5-sunburst (deployment)",
+        "operation": "edit",
+        "quality": "high",
+        "prompt": "Image 1 is the tavern interior, the authority for layout, camera and art style. Repaint the same room by sleepy daytime (the in-between hour): keep the exact camera, stove, counter, stools, shelves, wall clock and carved windows. The stove is cold with a faint wisp of warmth, candles are out, soft pale sunlight with floating dust beams comes through the windows, faded linen and dusty ochre palette with pale azure. A large hand-drawn pictorial map with little painted trees, a river and tiny houses, without any lettering, is unrolled on the counter, held flat by a teacup and a candlestick. Through the right window, outside, a small old tram-stop sign on a pole (a blank round enamel plate with no letters or numbers) and a strip of tram rails in grass. Sleepy, quiet, empty. No people. No text.",
+        "derived_from": [
+          "bg-tavern-night"
+        ],
+        "raw_file": "bg-mezhsvetye-day-r1-c1.png",
+        "raw_sha256": "c36d57911b7756edac4490f2b15df3c1c95364d9d61567529a74d48211e064de",
+        "postprocess": "cover-crop to 16:9, Lanczos resize, WebP q84/q82"
+      },
+      "license": "generated with Azure OpenAI Image API (deployment gpt-image-2.5-sunburst) via the azure-image-generation helper; under the Microsoft Product Terms for Azure OpenAI the customer owns the output and Microsoft claims no rights in it, so commercial use is permitted (subject to the Azure OpenAI Code of Conduct). No stock or web imagery.",
+      "created": "2026-10-08",
+      "review": {
+        "status": "approved",
+        "notes": "Same layout as tavern night; map on counter, tram-stop sign outside right window."
+      }
+    },
+    {
+      "id": "guest-forest-1",
+      "kind": "guest",
+      "file": "guests/guest-forest-1.webp",
+      "width": 746,
+      "height": 768,
+      "transparent": true,
+      "variants": [],
+      "bytes": 182980,
+      "source": {
+        "tool": "azure-image-generation skill (generate-image.ps1)",
+        "provider": "Azure OpenAI",
+        "model": "gpt-image-2.5-sunburst (deployment)",
+        "operation": "generation",
+        "quality": "high",
+        "prompt": "Seated half-body portrait of a guest spirit visiting a cozy tavern, visible from the waist up as if sitting at a counter, forearms resting forward, three-quarter view facing slightly left, friendly and a little melancholic. Original character design, consistent clean silhouette, natural anatomy with exactly the stated number of arms, hands and fingers. A small old forest spirit with a broad brown porcini-mushroom cap for a hat, a round mossy face with a kind wrinkled smile, a cloak of green moss and fern fronds, a little acorn pendant. Moss greens and bark browns. Gouache painting on warm textured paper in the tradition of early-20th-century Russian book illustration: confident dark-brown ink contour over flat matte gouache fills, dry-brush edges, visible paper grain, decorative Slavic folk ornament. Warm candlelit palette of honey amber, ember orange, deep indigo and plum shadows. Cozy, gentle storybook mood; spirits are kind neighbours. Absolutely no text, letters, numerals, runes, writing, signature or watermark. Single subject, centered, fully visible with a small margin on all sides, isolated on a fully transparent background; no ground, no cast shadow, no frame, no border, no scenery.",
+        "derived_from": [],
+        "raw_file": "guest-forest-1-r1-c2.png",
+        "raw_sha256": "583a54046577712ef28178f725dabd3325e3c1d210d4d1f847bd773472a09265",
+        "postprocess": "alpha clean + trim + Lanczos resize, WebP with alpha (q90, lossless alpha)"
+      },
+      "license": "generated with Azure OpenAI Image API (deployment gpt-image-2.5-sunburst) via the azure-image-generation helper; under the Microsoft Product Terms for Azure OpenAI the customer owns the output and Microsoft claims no rights in it, so commercial use is permitted (subject to the Azure OpenAI Code of Conduct). No stock or web imagery.",
+      "created": "2026-10-08",
+      "review": {
+        "status": "approved",
+        "notes": "Reviewed: on-brief, clean alpha, no text."
+      }
+    },
+    {
+      "id": "guest-forest-2",
+      "kind": "guest",
+      "file": "guests/guest-forest-2.webp",
+      "width": 684,
+      "height": 768,
+      "transparent": true,
+      "variants": [],
+      "bytes": 154610,
+      "source": {
+        "tool": "azure-image-generation skill (generate-image.ps1)",
+        "provider": "Azure OpenAI",
+        "model": "gpt-image-2.5-sunburst (deployment)",
+        "operation": "generation",
+        "quality": "high",
+        "prompt": "Seated half-body portrait of a guest spirit visiting a cozy tavern, visible from the waist up as if sitting at a counter, forearms resting forward, three-quarter view facing slightly left, friendly and a little melancholic. Original character design, consistent clean silhouette, natural anatomy with exactly the stated number of arms, hands and fingers. A slender birch-tree maiden spirit with white-and-black birch-bark skin patterns on her arms, long pale-green hair with small birch leaves and catkins, a simple embroidered linen dress. Moss greens and bark browns. Gouache painting on warm textured paper in the tradition of early-20th-century Russian book illustration: confident dark-brown ink contour over flat matte gouache fills, dry-brush edges, visible paper grain, decorative Slavic folk ornament. Warm candlelit palette of honey amber, ember orange, deep indigo and plum shadows. Cozy, gentle storybook mood; spirits are kind neighbours. Absolutely no text, letters, numerals, runes, writing, signature or watermark. Single subject, centered, fully visible with a small margin on all sides, isolated on a fully transparent background; no ground, no cast shadow, no frame, no border, no scenery.",
+        "derived_from": [],
+        "raw_file": "guest-forest-2-r1-c1.png",
+        "raw_sha256": "dbbd4361409a3ad3c988e8f17f77238baa0668e86b49aab98f549448ddf6b838",
+        "postprocess": "alpha clean + trim + Lanczos resize, WebP with alpha (q90, lossless alpha)"
+      },
+      "license": "generated with Azure OpenAI Image API (deployment gpt-image-2.5-sunburst) via the azure-image-generation helper; under the Microsoft Product Terms for Azure OpenAI the customer owns the output and Microsoft claims no rights in it, so commercial use is permitted (subject to the Azure OpenAI Code of Conduct). No stock or web imagery.",
+      "created": "2026-10-08",
+      "review": {
+        "status": "approved",
+        "notes": "Reviewed: on-brief, clean alpha, no text."
+      }
+    },
+    {
+      "id": "guest-forest-3",
+      "kind": "guest",
+      "file": "guests/guest-forest-3.webp",
+      "width": 768,
+      "height": 754,
+      "transparent": true,
+      "variants": [],
+      "bytes": 163106,
+      "source": {
+        "tool": "azure-image-generation skill (generate-image.ps1)",
+        "provider": "Azure OpenAI",
+        "model": "gpt-image-2.5-sunburst (deployment)",
+        "operation": "generation",
+        "quality": "high",
+        "prompt": "Seated half-body portrait of a guest spirit visiting a cozy tavern, visible from the waist up as if sitting at a counter, forearms resting forward, three-quarter view facing slightly left, friendly and a little melancholic. Original character design, consistent clean silhouette, natural anatomy with exactly the stated number of arms, hands and fingers. A tall gentle elk-antlered woodcutter spirit with a soft brown fur coat, mossy beard, small bright eyes, a woven bast satchel; sad because his forest was cut, holding a small sapling in a pot. Moss greens and bark browns. Gouache painting on warm textured paper in the tradition of early-20th-century Russian book illustration: confident dark-brown ink contour over flat matte gouache fills, dry-brush edges, visible paper grain, decorative Slavic folk ornament. Warm candlelit palette of honey amber, ember orange, deep indigo and plum shadows. Cozy, gentle storybook mood; spirits are kind neighbours. Absolutely no text, letters, numerals, runes, writing, signature or watermark. Single subject, centered, fully visible with a small margin on all sides, isolated on a fully transparent background; no ground, no cast shadow, no frame, no border, no scenery.",
+        "derived_from": [],
+        "raw_file": "guest-forest-3-r1-c2.png",
+        "raw_sha256": "6b60029d1cb838c358bc702d29fac02aa93932cf98e2e624ab5cb208a1fb58a5",
+        "postprocess": "alpha clean + trim + Lanczos resize, WebP with alpha (q90, lossless alpha)"
+      },
+      "license": "generated with Azure OpenAI Image API (deployment gpt-image-2.5-sunburst) via the azure-image-generation helper; under the Microsoft Product Terms for Azure OpenAI the customer owns the output and Microsoft claims no rights in it, so commercial use is permitted (subject to the Azure OpenAI Code of Conduct). No stock or web imagery.",
+      "created": "2026-10-08",
+      "review": {
+        "status": "approved",
+        "notes": "Reviewed: on-brief, clean alpha, no text."
+      }
+    },
+    {
+      "id": "guest-river-1",
+      "kind": "guest",
+      "file": "guests/guest-river-1.webp",
+      "width": 723,
+      "height": 768,
+      "transparent": true,
+      "variants": [],
+      "bytes": 182764,
+      "source": {
+        "tool": "azure-image-generation skill (generate-image.ps1)",
+        "provider": "Azure OpenAI",
+        "model": "gpt-image-2.5-sunburst (deployment)",
+        "operation": "generation",
+        "quality": "high",
+        "prompt": "Seated half-body portrait of a guest spirit visiting a cozy tavern, visible from the waist up as if sitting at a counter, forearms resting forward, three-quarter view facing slightly left, friendly and a little melancholic. Original character design, consistent clean silhouette, natural anatomy with exactly the stated number of arms, hands and fingers. An old frog-faced river ferryman spirit with a wide reed hat, a green-turquoise patched coat dripping a little water, kind bulging eyes, webbed hands holding a tiny paddle. Glass-green and turquoise palette. Gouache painting on warm textured paper in the tradition of early-20th-century Russian book illustration: confident dark-brown ink contour over flat matte gouache fills, dry-brush edges, visible paper grain, decorative Slavic folk ornament. Warm candlelit palette of honey amber, ember orange, deep indigo and plum shadows. Cozy, gentle storybook mood; spirits are kind neighbours. Absolutely no text, letters, numerals, runes, writing, signature or watermark. Single subject, centered, fully visible with a small margin on all sides, isolated on a fully transparent background; no ground, no cast shadow, no frame, no border, no scenery.",
+        "derived_from": [],
+        "raw_file": "guest-river-1-r1-c1.png",
+        "raw_sha256": "b5efbc197a9a5c6cedfb863468f2a036c31a5098c51c489b209a5e9120f74015",
+        "postprocess": "alpha clean + trim + Lanczos resize, WebP with alpha (q90, lossless alpha)"
+      },
+      "license": "generated with Azure OpenAI Image API (deployment gpt-image-2.5-sunburst) via the azure-image-generation helper; under the Microsoft Product Terms for Azure OpenAI the customer owns the output and Microsoft claims no rights in it, so commercial use is permitted (subject to the Azure OpenAI Code of Conduct). No stock or web imagery.",
+      "created": "2026-10-08",
+      "review": {
+        "status": "approved",
+        "notes": "Reviewed: on-brief, clean alpha, no text."
+      }
+    },
+    {
+      "id": "guest-river-2",
+      "kind": "guest",
+      "file": "guests/guest-river-2.webp",
+      "width": 688,
+      "height": 768,
+      "transparent": true,
+      "variants": [],
+      "bytes": 130806,
+      "source": {
+        "tool": "azure-image-generation skill (generate-image.ps1)",
+        "provider": "Azure OpenAI",
+        "model": "gpt-image-2.5-sunburst (deployment)",
+        "operation": "generation",
+        "quality": "high",
+        "prompt": "Seated half-body portrait of a guest spirit visiting a cozy tavern, visible from the waist up as if sitting at a counter, forearms resting forward, three-quarter view facing slightly left, friendly and a little melancholic. Original character design, consistent clean silhouette, natural anatomy with exactly the stated number of arms, hands and fingers. A young river maiden spirit with long wet dark hair braided with water lilies, a shawl shimmering like fish scales, a string of river pearls, calm sad eyes. Glass-green and turquoise palette. Gouache painting on warm textured paper in the tradition of early-20th-century Russian book illustration: confident dark-brown ink contour over flat matte gouache fills, dry-brush edges, visible paper grain, decorative Slavic folk ornament. Warm candlelit palette of honey amber, ember orange, deep indigo and plum shadows. Cozy, gentle storybook mood; spirits are kind neighbours. Absolutely no text, letters, numerals, runes, writing, signature or watermark. Single subject, centered, fully visible with a small margin on all sides, isolated on a fully transparent background; no ground, no cast shadow, no frame, no border, no scenery.",
+        "derived_from": [],
+        "raw_file": "guest-river-2-r1-c1.png",
+        "raw_sha256": "630235aa065b6d366e85eeb24cc527b1855a75074c6940788647b08731b9d61d",
+        "postprocess": "alpha clean + trim + Lanczos resize, WebP with alpha (q90, lossless alpha)"
+      },
+      "license": "generated with Azure OpenAI Image API (deployment gpt-image-2.5-sunburst) via the azure-image-generation helper; under the Microsoft Product Terms for Azure OpenAI the customer owns the output and Microsoft claims no rights in it, so commercial use is permitted (subject to the Azure OpenAI Code of Conduct). No stock or web imagery.",
+      "created": "2026-10-08",
+      "review": {
+        "status": "approved",
+        "notes": "Reviewed: on-brief, clean alpha, no text."
+      }
+    },
+    {
+      "id": "guest-river-3",
+      "kind": "guest",
+      "file": "guests/guest-river-3.webp",
+      "width": 768,
+      "height": 766,
+      "transparent": true,
+      "variants": [],
+      "bytes": 153668,
+      "source": {
+        "tool": "azure-image-generation skill (generate-image.ps1)",
+        "provider": "Azure OpenAI",
+        "model": "gpt-image-2.5-sunburst (deployment)",
+        "operation": "generation",
+        "quality": "high",
+        "prompt": "Seated half-body portrait of a guest spirit visiting a cozy tavern, visible from the waist up as if sitting at a counter, forearms resting forward, three-quarter view facing slightly left, friendly and a little melancholic. Original character design, consistent clean silhouette, natural anatomy with exactly the stated number of arms, hands and fingers. A whiskered catfish-like old fisherman spirit with long drooping barbels, a knitted turquoise cap, a fishing net over one shoulder, a small glass float in his hand. Glass-green and turquoise palette. Gouache painting on warm textured paper in the tradition of early-20th-century Russian book illustration: confident dark-brown ink contour over flat matte gouache fills, dry-brush edges, visible paper grain, decorative Slavic folk ornament. Warm candlelit palette of honey amber, ember orange, deep indigo and plum shadows. Cozy, gentle storybook mood; spirits are kind neighbours. Absolutely no text, letters, numerals, runes, writing, signature or watermark. Single subject, centered, fully visible with a small margin on all sides, isolated on a fully transparent background; no ground, no cast shadow, no frame, no border, no scenery.",
+        "derived_from": [],
+        "raw_file": "guest-river-3-r1-c1.png",
+        "raw_sha256": "0601b2572022a457b812a009be78fd260399c0627799716e9323b9bd6170ca17",
+        "postprocess": "alpha clean + trim + Lanczos resize, WebP with alpha (q90, lossless alpha)"
+      },
+      "license": "generated with Azure OpenAI Image API (deployment gpt-image-2.5-sunburst) via the azure-image-generation helper; under the Microsoft Product Terms for Azure OpenAI the customer owns the output and Microsoft claims no rights in it, so commercial use is permitted (subject to the Azure OpenAI Code of Conduct). No stock or web imagery.",
+      "created": "2026-10-08",
+      "review": {
+        "status": "approved",
+        "notes": "Reviewed: on-brief, clean alpha, no text."
+      }
+    },
+    {
+      "id": "guest-city-1",
+      "kind": "guest",
+      "file": "guests/guest-city-1.webp",
+      "width": 629,
+      "height": 768,
+      "transparent": true,
+      "variants": [],
+      "bytes": 93872,
+      "source": {
+        "tool": "azure-image-generation skill (generate-image.ps1)",
+        "provider": "Azure OpenAI",
+        "model": "gpt-image-2.5-sunburst (deployment)",
+        "operation": "generation",
+        "quality": "high",
+        "prompt": "Seated half-body portrait of a guest spirit visiting a cozy tavern, visible from the waist up as if sitting at a counter, forearms resting forward, three-quarter view facing slightly left, friendly and a little melancholic. Original character design, consistent clean silhouette, natural anatomy with exactly the stated number of arms, hands and fingers. A tall thin streetlamp spirit gentleman: his head is an old wrought-iron street lantern glowing warm amber with a kind face in the glass, a long grey coat and a striped scarf. Warm asphalt greys and amber bulbs. Gouache painting on warm textured paper in the tradition of early-20th-century Russian book illustration: confident dark-brown ink contour over flat matte gouache fills, dry-brush edges, visible paper grain, decorative Slavic folk ornament. Warm candlelit palette of honey amber, ember orange, deep indigo and plum shadows. Cozy, gentle storybook mood; spirits are kind neighbours. Absolutely no text, letters, numerals, runes, writing, signature or watermark. Single subject, centered, fully visible with a small margin on all sides, isolated on a fully transparent background; no ground, no cast shadow, no frame, no border, no scenery.",
+        "derived_from": [],
+        "raw_file": "guest-city-1-r1-c2.png",
+        "raw_sha256": "717801df557054c9d27a1c6cbebccb318e0f546eec2a8d248afde2527b373cdd",
+        "postprocess": "alpha clean + trim + Lanczos resize, WebP with alpha (q90, lossless alpha)"
+      },
+      "license": "generated with Azure OpenAI Image API (deployment gpt-image-2.5-sunburst) via the azure-image-generation helper; under the Microsoft Product Terms for Azure OpenAI the customer owns the output and Microsoft claims no rights in it, so commercial use is permitted (subject to the Azure OpenAI Code of Conduct). No stock or web imagery.",
+      "created": "2026-10-08",
+      "review": {
+        "status": "approved",
+        "notes": "Reviewed: on-brief, clean alpha, no text."
+      }
+    },
+    {
+      "id": "guest-city-2",
+      "kind": "guest",
+      "file": "guests/guest-city-2.webp",
+      "width": 768,
+      "height": 705,
+      "transparent": true,
+      "variants": [],
+      "bytes": 151478,
+      "source": {
+        "tool": "azure-image-generation skill (generate-image.ps1)",
+        "provider": "Azure OpenAI",
+        "model": "gpt-image-2.5-sunburst (deployment)",
+        "operation": "generation",
+        "quality": "high",
+        "prompt": "Seated half-body portrait of a guest spirit visiting a cozy tavern, visible from the waist up as if sitting at a counter, forearms resting forward, three-quarter view facing slightly left, friendly and a little melancholic. Original character design, consistent clean silhouette, natural anatomy with exactly the stated number of arms, hands and fingers. A plump old courtyard cat spirit in a knitted vest and a cap, grey-tabby, holding a saucer of milk, tired but cheerful eyes. Warm asphalt greys and amber bulbs. Gouache painting on warm textured paper in the tradition of early-20th-century Russian book illustration: confident dark-brown ink contour over flat matte gouache fills, dry-brush edges, visible paper grain, decorative Slavic folk ornament. Warm candlelit palette of honey amber, ember orange, deep indigo and plum shadows. Cozy, gentle storybook mood; spirits are kind neighbours. Absolutely no text, letters, numerals, runes, writing, signature or watermark. Single subject, centered, fully visible with a small margin on all sides, isolated on a fully transparent background; no ground, no cast shadow, no frame, no border, no scenery.",
+        "derived_from": [],
+        "raw_file": "guest-city-2-r1-c2.png",
+        "raw_sha256": "e474c6317142f6bbf8b2b8d6e4eb0a10461e7822b6adcbe027d631cb57e5a0bc",
+        "postprocess": "alpha clean + trim + Lanczos resize, WebP with alpha (q90, lossless alpha)"
+      },
+      "license": "generated with Azure OpenAI Image API (deployment gpt-image-2.5-sunburst) via the azure-image-generation helper; under the Microsoft Product Terms for Azure OpenAI the customer owns the output and Microsoft claims no rights in it, so commercial use is permitted (subject to the Azure OpenAI Code of Conduct). No stock or web imagery.",
+      "created": "2026-10-08",
+      "review": {
+        "status": "approved",
+        "notes": "Reviewed: on-brief, clean alpha, no text."
+      }
+    },
+    {
+      "id": "guest-city-3",
+      "kind": "guest",
+      "file": "guests/guest-city-3.webp",
+      "width": 714,
+      "height": 768,
+      "transparent": true,
+      "variants": [],
+      "bytes": 107156,
+      "source": {
+        "tool": "azure-image-generation skill (generate-image.ps1)",
+        "provider": "Azure OpenAI",
+        "model": "gpt-image-2.5-sunburst (deployment)",
+        "operation": "generation",
+        "quality": "high",
+        "prompt": "Seated half-body portrait of a guest spirit visiting a cozy tavern, visible from the waist up as if sitting at a counter, forearms resting forward, three-quarter view facing slightly left, friendly and a little melancholic. Original character design, consistent clean silhouette, natural anatomy with exactly the stated number of arms, hands and fingers. A young postwoman spirit made of folded blank paper, with a paper-pleated skirt, a leather satchel full of blank envelopes without writing, a bicycle bell on her wrist, round glasses. Warm asphalt greys and amber bulbs. Gouache painting on warm textured paper in the tradition of early-20th-century Russian book illustration: confident dark-brown ink contour over flat matte gouache fills, dry-brush edges, visible paper grain, decorative Slavic folk ornament. Warm candlelit palette of honey amber, ember orange, deep indigo and plum shadows. Cozy, gentle storybook mood; spirits are kind neighbours. Absolutely no text, letters, numerals, runes, writing, signature or watermark. Single subject, centered, fully visible with a small margin on all sides, isolated on a fully transparent background; no ground, no cast shadow, no frame, no border, no scenery.",
+        "derived_from": [],
+        "raw_file": "guest-city-3-r1-c2.png",
+        "raw_sha256": "38f69cb8a40bf8a60c540b67d5961af15b32fe742168bc086b011d65d4c2e3f5",
+        "postprocess": "alpha clean + trim + Lanczos resize, WebP with alpha (q90, lossless alpha)"
+      },
+      "license": "generated with Azure OpenAI Image API (deployment gpt-image-2.5-sunburst) via the azure-image-generation helper; under the Microsoft Product Terms for Azure OpenAI the customer owns the output and Microsoft claims no rights in it, so commercial use is permitted (subject to the Azure OpenAI Code of Conduct). No stock or web imagery.",
+      "created": "2026-10-08",
+      "review": {
+        "status": "approved",
+        "notes": "Reviewed: on-brief, clean alpha, no text."
+      }
+    },
+    {
+      "id": "guest-memorial-1",
+      "kind": "guest",
+      "file": "guests/guest-memorial-1.webp",
+      "width": 766,
+      "height": 768,
+      "transparent": true,
+      "variants": [],
+      "bytes": 141594,
+      "source": {
+        "tool": "azure-image-generation skill (generate-image.ps1)",
+        "provider": "Azure OpenAI",
+        "model": "gpt-image-2.5-sunburst (deployment)",
+        "operation": "generation",
+        "quality": "high",
+        "prompt": "Seated half-body portrait of a guest spirit visiting a cozy tavern, visible from the waist up as if sitting at a counter, forearms resting forward, three-quarter view facing slightly left, friendly and a little melancholic. Original character design, consistent clean silhouette, natural anatomy with exactly the stated number of arms, hands and fingers. A gentle faceless shadow of an old woman in a soft headscarf, her face a smooth calm darkness with no features, holding a lit wax candle in both hands, a faint silver glow around her. Candle-silver and soft blue palette, peaceful, not scary. Gouache painting on warm textured paper in the tradition of early-20th-century Russian book illustration: confident dark-brown ink contour over flat matte gouache fills, dry-brush edges, visible paper grain, decorative Slavic folk ornament. Warm candlelit palette of honey amber, ember orange, deep indigo and plum shadows. Cozy, gentle storybook mood; spirits are kind neighbours. Absolutely no text, letters, numerals, runes, writing, signature or watermark. Single subject, centered, fully visible with a small margin on all sides, isolated on a fully transparent background; no ground, no cast shadow, no frame, no border, no scenery.",
+        "derived_from": [],
+        "raw_file": "guest-memorial-1-r1-c1.png",
+        "raw_sha256": "7b023bdb5348e2ee8768ab79951b4034339029c246b2cb2f45360d074dbf9b15",
+        "postprocess": "alpha clean + trim + Lanczos resize, WebP with alpha (q90, lossless alpha)"
+      },
+      "license": "generated with Azure OpenAI Image API (deployment gpt-image-2.5-sunburst) via the azure-image-generation helper; under the Microsoft Product Terms for Azure OpenAI the customer owns the output and Microsoft claims no rights in it, so commercial use is permitted (subject to the Azure OpenAI Code of Conduct). No stock or web imagery.",
+      "created": "2026-10-08",
+      "review": {
+        "status": "approved",
+        "notes": "Faceless shadow with candle; gentle."
+      }
+    },
+    {
+      "id": "guest-memorial-2",
+      "kind": "guest",
+      "file": "guests/guest-memorial-2.webp",
+      "width": 768,
+      "height": 748,
+      "transparent": true,
+      "variants": [],
+      "bytes": 120430,
+      "source": {
+        "tool": "azure-image-generation skill (generate-image.ps1)",
+        "provider": "Azure OpenAI",
+        "model": "gpt-image-2.5-sunburst (deployment)",
+        "operation": "generation",
+        "quality": "high",
+        "prompt": "Seated half-body portrait of a guest spirit visiting a cozy tavern, visible from the waist up as if sitting at a counter, forearms resting forward, three-quarter view facing slightly left, friendly and a little melancholic. Original character design, consistent clean silhouette, natural anatomy with exactly the stated number of arms, hands and fingers. A quiet faceless silhouette of an old man in a flat cap and an old soldier's greatcoat without insignia, his face a smooth soft shadow without features, holding a sprig of pussy willow, faint silver outline. Candle-silver and soft blue palette, peaceful, not scary. Gouache painting on warm textured paper in the tradition of early-20th-century Russian book illustration: confident dark-brown ink contour over flat matte gouache fills, dry-brush edges, visible paper grain, decorative Slavic folk ornament. Warm candlelit palette of honey amber, ember orange, deep indigo and plum shadows. Cozy, gentle storybook mood; spirits are kind neighbours. Absolutely no text, letters, numerals, runes, writing, signature or watermark. Single subject, centered, fully visible with a small margin on all sides, isolated on a fully transparent background; no ground, no cast shadow, no frame, no border, no scenery.",
+        "derived_from": [],
+        "raw_file": "guest-memorial-2-r1-c1.png",
+        "raw_sha256": "a9d473577e66477f260a8f2178a429e155d01fe6f2b1f5137e06fcd55bb86073",
+        "postprocess": "alpha clean + trim + Lanczos resize, WebP with alpha (q90, lossless alpha)"
+      },
+      "license": "generated with Azure OpenAI Image API (deployment gpt-image-2.5-sunburst) via the azure-image-generation helper; under the Microsoft Product Terms for Azure OpenAI the customer owns the output and Microsoft claims no rights in it, so commercial use is permitted (subject to the Azure OpenAI Code of Conduct). No stock or web imagery.",
+      "created": "2026-10-08",
+      "review": {
+        "status": "approved",
+        "notes": "Faceless shadow, willow sprig."
+      }
+    },
+    {
+      "id": "guest-memorial-3",
+      "kind": "guest",
+      "file": "guests/guest-memorial-3.webp",
+      "width": 715,
+      "height": 768,
+      "transparent": true,
+      "variants": [],
+      "bytes": 134206,
+      "source": {
+        "tool": "azure-image-generation skill (generate-image.ps1)",
+        "provider": "Azure OpenAI",
+        "model": "gpt-image-2.5-sunburst (deployment)",
+        "operation": "generation",
+        "quality": "high",
+        "prompt": "Seated half-body portrait of a guest spirit visiting a cozy tavern, visible from the waist up as if sitting at a counter, forearms resting forward, three-quarter view facing slightly left, friendly and a little melancholic. Original character design, consistent clean silhouette, natural anatomy with exactly the stated number of arms, hands and fingers. A translucent silvery-blue child-sized spirit with a soft smooth faceless head and a little knitted hat, holding a paper boat with a tiny candle in it, faint glow. Candle-silver and soft blue palette, tender and peaceful, not scary. Gouache painting on warm textured paper in the tradition of early-20th-century Russian book illustration: confident dark-brown ink contour over flat matte gouache fills, dry-brush edges, visible paper grain, decorative Slavic folk ornament. Warm candlelit palette of honey amber, ember orange, deep indigo and plum shadows. Cozy, gentle storybook mood; spirits are kind neighbours. Absolutely no text, letters, numerals, runes, writing, signature or watermark. Single subject, centered, fully visible with a small margin on all sides, isolated on a fully transparent background; no ground, no cast shadow, no frame, no border, no scenery.",
+        "derived_from": [],
+        "raw_file": "guest-memorial-3-r1-c1.png",
+        "raw_sha256": "0b880f9fed0e505038c580a4ffec846cc64da9e305426eb75db8ce92aff3a7ac",
+        "postprocess": "alpha clean + trim + Lanczos resize, WebP with alpha (q90, lossless alpha)"
+      },
+      "license": "generated with Azure OpenAI Image API (deployment gpt-image-2.5-sunburst) via the azure-image-generation helper; under the Microsoft Product Terms for Azure OpenAI the customer owns the output and Microsoft claims no rights in it, so commercial use is permitted (subject to the Azure OpenAI Code of Conduct). No stock or web imagery.",
+      "created": "2026-10-08",
+      "review": {
+        "status": "approved",
+        "notes": "Faceless child spirit (c2 rejected: hinted eyes)."
+      }
+    },
+    {
+      "id": "dish-nimbus_ramen",
+      "kind": "dish",
+      "file": "dishes/dish-nimbus_ramen.webp",
+      "width": 294,
+      "height": 384,
+      "transparent": true,
+      "variants": [],
+      "bytes": 33992,
+      "source": {
+        "tool": "azure-image-generation skill (generate-image.ps1)",
+        "provider": "Azure OpenAI",
+        "model": "gpt-image-2.5-sunburst (deployment)",
+        "operation": "generation",
+        "quality": "medium",
+        "prompt": "Game item illustration of a magical dish served in a cozy Slavic witch tavern, three-quarter top view, on a small painted folk-style plate or in a wooden or clay vessel. Nimbus ramen: a deep red-and-gold lacquered bowl of noodles in golden broth with a soft egg and spring onion; hovering just above the bowl is a tiny fluffy white cloud with a little face that cries a few rain drops from one side while laughing on the other, a small rainbow glint. Gouache painting on warm textured paper in the tradition of early-20th-century Russian book illustration: confident dark-brown ink contour over flat matte gouache fills, dry-brush edges, visible paper grain, decorative Slavic folk ornament. Warm candlelit palette of honey amber, ember orange, deep indigo and plum shadows. Cozy, gentle storybook mood; spirits are kind neighbours. Absolutely no text, letters, numerals, runes, writing, signature or watermark. Single subject, centered, fully visible with a small margin on all sides, isolated on a fully transparent background; no ground, no cast shadow, no frame, no border, no scenery.",
+        "derived_from": [],
+        "raw_file": "dish-nimbus-ramen-r1-c2.png",
+        "raw_sha256": "9a41fab04cd42e0a15f61505d7e3fb47ef0eacfb38377fc71c02e56a4cdfcb84",
+        "postprocess": "alpha clean + trim + Lanczos resize, WebP with alpha (q90, lossless alpha)"
+      },
+      "license": "generated with Azure OpenAI Image API (deployment gpt-image-2.5-sunburst) via the azure-image-generation helper; under the Microsoft Product Terms for Azure OpenAI the customer owns the output and Microsoft claims no rights in it, so commercial use is permitted (subject to the Azure OpenAI Code of Conduct). No stock or web imagery.",
+      "created": "2026-10-08",
+      "review": {
+        "status": "approved",
+        "notes": "Reviewed: on-brief, clean alpha, no text."
+      }
+    },
+    {
+      "id": "dish-smoke_tea",
+      "kind": "dish",
+      "file": "dishes/dish-smoke_tea.webp",
+      "width": 254,
+      "height": 384,
+      "transparent": true,
+      "variants": [],
+      "bytes": 34904,
+      "source": {
+        "tool": "azure-image-generation skill (generate-image.ps1)",
+        "provider": "Azure OpenAI",
+        "model": "gpt-image-2.5-sunburst (deployment)",
+        "operation": "edit",
+        "quality": "medium",
+        "prompt": "Image 1 is the style authority for dish rendering: match its gouache texture, ink contour, viewing angle, scale and lighting, but paint the new dish described. Game item illustration of a magical dish served in a cozy Slavic witch tavern, three-quarter top view, on a small painted folk-style plate or in a wooden or clay vessel. Smoke tea: a glass of dark amber tea in an ornate brass glass-holder, a slow curl of blue-grey smoke rising from it, a slice of lemon. Gouache painting on warm textured paper in the tradition of early-20th-century Russian book illustration: confident dark-brown ink contour over flat matte gouache fills, dry-brush edges, visible paper grain, decorative Slavic folk ornament. Warm candlelit palette of honey amber, ember orange, deep indigo and plum shadows. Cozy, gentle storybook mood; spirits are kind neighbours. Absolutely no text, letters, numerals, runes, writing, signature or watermark. Single subject, centered, fully visible with a small margin on all sides, isolated on a fully transparent background; no ground, no cast shadow, no frame, no border, no scenery.",
+        "derived_from": [
+          "dish-nimbus-ramen"
+        ],
+        "raw_file": "dish-smoke-tea-r1-c2.png",
+        "raw_sha256": "077835daaf179577db52dbf560d4ac9857ffbf370724d4aa87899dda90eebb00",
+        "postprocess": "alpha clean + trim + Lanczos resize, WebP with alpha (q90, lossless alpha)"
+      },
+      "license": "generated with Azure OpenAI Image API (deployment gpt-image-2.5-sunburst) via the azure-image-generation helper; under the Microsoft Product Terms for Azure OpenAI the customer owns the output and Microsoft claims no rights in it, so commercial use is permitted (subject to the Azure OpenAI Code of Conduct). No stock or web imagery.",
+      "created": "2026-10-08",
+      "review": {
+        "status": "approved",
+        "notes": "Reviewed: matches dish style authority, clean alpha, no text."
+      }
+    },
+    {
+      "id": "dish-tar_gingerbread",
+      "kind": "dish",
+      "file": "dishes/dish-tar_gingerbread.webp",
+      "width": 384,
+      "height": 334,
+      "transparent": true,
+      "variants": [],
+      "bytes": 49132,
+      "source": {
+        "tool": "azure-image-generation skill (generate-image.ps1)",
+        "provider": "Azure OpenAI",
+        "model": "gpt-image-2.5-sunburst (deployment)",
+        "operation": "edit",
+        "quality": "medium",
+        "prompt": "Image 1 is the style authority for dish rendering: match its gouache texture, ink contour, viewing angle, scale and lighting, but paint the new dish described. Game item illustration of a magical dish served in a cozy Slavic witch tavern, three-quarter top view, on a small painted folk-style plate or in a wooden or clay vessel. Tar gingerbread: three dark, glossy, almost black gingerbread cookies shaped like a horse, a bird and a round rosette, decorated with white folk-pattern icing, on a small wooden board. Gouache painting on warm textured paper in the tradition of early-20th-century Russian book illustration: confident dark-brown ink contour over flat matte gouache fills, dry-brush edges, visible paper grain, decorative Slavic folk ornament. Warm candlelit palette of honey amber, ember orange, deep indigo and plum shadows. Cozy, gentle storybook mood; spirits are kind neighbours. Absolutely no text, letters, numerals, runes, writing, signature or watermark. Single subject, centered, fully visible with a small margin on all sides, isolated on a fully transparent background; no ground, no cast shadow, no frame, no border, no scenery.",
+        "derived_from": [
+          "dish-nimbus-ramen"
+        ],
+        "raw_file": "dish-tar-gingerbread-r1-c1.png",
+        "raw_sha256": "03ee822132d865bcfac8c55f10075ecf5712d368180363d225d81de66e6fe192",
+        "postprocess": "alpha clean + trim + Lanczos resize, WebP with alpha (q90, lossless alpha)"
+      },
+      "license": "generated with Azure OpenAI Image API (deployment gpt-image-2.5-sunburst) via the azure-image-generation helper; under the Microsoft Product Terms for Azure OpenAI the customer owns the output and Microsoft claims no rights in it, so commercial use is permitted (subject to the Azure OpenAI Code of Conduct). No stock or web imagery.",
+      "created": "2026-10-08",
+      "review": {
+        "status": "approved",
+        "notes": "Reviewed: matches dish style authority, clean alpha, no text."
+      }
+    },
+    {
+      "id": "dish-fog_ukha",
+      "kind": "dish",
+      "file": "dishes/dish-fog_ukha.webp",
+      "width": 379,
+      "height": 384,
+      "transparent": true,
+      "variants": [],
+      "bytes": 44216,
+      "source": {
+        "tool": "azure-image-generation skill (generate-image.ps1)",
+        "provider": "Azure OpenAI",
+        "model": "gpt-image-2.5-sunburst (deployment)",
+        "operation": "edit",
+        "quality": "medium",
+        "prompt": "Image 1 is the style authority for dish rendering: match its gouache texture, ink contour, viewing angle, scale and lighting, but paint the new dish described. Game item illustration of a magical dish served in a cozy Slavic witch tavern, three-quarter top view, on a small painted folk-style plate or in a wooden or clay vessel. Fog ukha: a clay bowl of pale clear fish soup with potatoes and dill, soft white fog spilling over the rim like a little river mist. Gouache painting on warm textured paper in the tradition of early-20th-century Russian book illustration: confident dark-brown ink contour over flat matte gouache fills, dry-brush edges, visible paper grain, decorative Slavic folk ornament. Warm candlelit palette of honey amber, ember orange, deep indigo and plum shadows. Cozy, gentle storybook mood; spirits are kind neighbours. Absolutely no text, letters, numerals, runes, writing, signature or watermark. Single subject, centered, fully visible with a small margin on all sides, isolated on a fully transparent background; no ground, no cast shadow, no frame, no border, no scenery.",
+        "derived_from": [
+          "dish-nimbus-ramen"
+        ],
+        "raw_file": "dish-fog-ukha-r1-c1.png",
+        "raw_sha256": "59b5a41c2040c28ad07e2f0e97b02a7053676e73465232bd4e0013499771e2de",
+        "postprocess": "alpha clean + trim + Lanczos resize, WebP with alpha (q90, lossless alpha)"
+      },
+      "license": "generated with Azure OpenAI Image API (deployment gpt-image-2.5-sunburst) via the azure-image-generation helper; under the Microsoft Product Terms for Azure OpenAI the customer owns the output and Microsoft claims no rights in it, so commercial use is permitted (subject to the Azure OpenAI Code of Conduct). No stock or web imagery.",
+      "created": "2026-10-08",
+      "review": {
+        "status": "approved",
+        "notes": "Reviewed: matches dish style authority, clean alpha, no text."
+      }
+    },
+    {
+      "id": "dish-thunder_perepechi",
+      "kind": "dish",
+      "file": "dishes/dish-thunder_perepechi.webp",
+      "width": 384,
+      "height": 320,
+      "transparent": true,
+      "variants": [],
+      "bytes": 46000,
+      "source": {
+        "tool": "azure-image-generation skill (generate-image.ps1)",
+        "provider": "Azure OpenAI",
+        "model": "gpt-image-2.5-sunburst (deployment)",
+        "operation": "edit",
+        "quality": "medium",
+        "prompt": "Image 1 is the style authority for dish rendering: match its gouache texture, ink contour, viewing angle, scale and lighting, but paint the new dish described. Game item illustration of a magical dish served in a cozy Slavic witch tavern, three-quarter top view, on a small painted folk-style plate or in a wooden or clay vessel. Thunder perepechi: three small open-top round rye pies filled with golden egg and herbs, tiny bright-blue lightning sparks dancing above them, on a painted plate. Gouache painting on warm textured paper in the tradition of early-20th-century Russian book illustration: confident dark-brown ink contour over flat matte gouache fills, dry-brush edges, visible paper grain, decorative Slavic folk ornament. Warm candlelit palette of honey amber, ember orange, deep indigo and plum shadows. Cozy, gentle storybook mood; spirits are kind neighbours. Absolutely no text, letters, numerals, runes, writing, signature or watermark. Single subject, centered, fully visible with a small margin on all sides, isolated on a fully transparent background; no ground, no cast shadow, no frame, no border, no scenery.",
+        "derived_from": [
+          "dish-nimbus-ramen"
+        ],
+        "raw_file": "dish-thunder-perepechi-r1-c1.png",
+        "raw_sha256": "29697002a8e3b461fa6e0295deb5a313fcc7f92cd579e75b643cdcf379ce3400",
+        "postprocess": "alpha clean + trim + Lanczos resize, WebP with alpha (q90, lossless alpha)"
+      },
+      "license": "generated with Azure OpenAI Image API (deployment gpt-image-2.5-sunburst) via the azure-image-generation helper; under the Microsoft Product Terms for Azure OpenAI the customer owns the output and Microsoft claims no rights in it, so commercial use is permitted (subject to the Azure OpenAI Code of Conduct). No stock or web imagery.",
+      "created": "2026-10-08",
+      "review": {
+        "status": "approved",
+        "notes": "Reviewed: matches dish style authority, clean alpha, no text."
+      }
+    },
+    {
+      "id": "dish-amber_ryapushka",
+      "kind": "dish",
+      "file": "dishes/dish-amber_ryapushka.webp",
+      "width": 384,
+      "height": 304,
+      "transparent": true,
+      "variants": [],
+      "bytes": 44854,
+      "source": {
+        "tool": "azure-image-generation skill (generate-image.ps1)",
+        "provider": "Azure OpenAI",
+        "model": "gpt-image-2.5-sunburst (deployment)",
+        "operation": "edit",
+        "quality": "medium",
+        "prompt": "Image 1 is the style authority for dish rendering: match its gouache texture, ink contour, viewing angle, scale and lighting, but paint the new dish described. Game item illustration of a magical dish served in a cozy Slavic witch tavern, three-quarter top view, on a small painted folk-style plate or in a wooden or clay vessel. Amber ryapushka: three small whole fried silver fish laid in a row, glazed in a translucent golden amber coating, on a dark plate with lingonberries. Gouache painting on warm textured paper in the tradition of early-20th-century Russian book illustration: confident dark-brown ink contour over flat matte gouache fills, dry-brush edges, visible paper grain, decorative Slavic folk ornament. Warm candlelit palette of honey amber, ember orange, deep indigo and plum shadows. Cozy, gentle storybook mood; spirits are kind neighbours. Absolutely no text, letters, numerals, runes, writing, signature or watermark. Single subject, centered, fully visible with a small margin on all sides, isolated on a fully transparent background; no ground, no cast shadow, no frame, no border, no scenery.",
+        "derived_from": [
+          "dish-nimbus-ramen"
+        ],
+        "raw_file": "dish-amber-ryapushka-r1-c1.png",
+        "raw_sha256": "fb42506f3b9c0c32f00c9ab7adb15730f56ef48c177917bc93f9f1c3f270a6fc",
+        "postprocess": "alpha clean + trim + Lanczos resize, WebP with alpha (q90, lossless alpha)"
+      },
+      "license": "generated with Azure OpenAI Image API (deployment gpt-image-2.5-sunburst) via the azure-image-generation helper; under the Microsoft Product Terms for Azure OpenAI the customer owns the output and Microsoft claims no rights in it, so commercial use is permitted (subject to the Azure OpenAI Code of Conduct). No stock or web imagery.",
+      "created": "2026-10-08",
+      "review": {
+        "status": "approved",
+        "notes": "Reviewed: matches dish style authority, clean alpha, no text."
+      }
+    },
+    {
+      "id": "dish-postcard_sbiten",
+      "kind": "dish",
+      "file": "dishes/dish-postcard_sbiten.webp",
+      "width": 370,
+      "height": 384,
+      "transparent": true,
+      "variants": [],
+      "bytes": 46710,
+      "source": {
+        "tool": "azure-image-generation skill (generate-image.ps1)",
+        "provider": "Azure OpenAI",
+        "model": "gpt-image-2.5-sunburst (deployment)",
+        "operation": "edit",
+        "quality": "medium",
+        "prompt": "Image 1 is the style authority for dish rendering: match its gouache texture, ink contour, viewing angle, scale and lighting, but paint the new dish described. Game item illustration of a magical dish served in a cozy Slavic witch tavern, three-quarter top view, on a small painted folk-style plate or in a wooden or clay vessel. Postcard sbiten: a copper mug of hot spiced honey drink with steam and a cinnamon stick, an old faded blank picture postcard with no writing tucked behind it. Gouache painting on warm textured paper in the tradition of early-20th-century Russian book illustration: confident dark-brown ink contour over flat matte gouache fills, dry-brush edges, visible paper grain, decorative Slavic folk ornament. Warm candlelit palette of honey amber, ember orange, deep indigo and plum shadows. Cozy, gentle storybook mood; spirits are kind neighbours. Absolutely no text, letters, numerals, runes, writing, signature or watermark. Single subject, centered, fully visible with a small margin on all sides, isolated on a fully transparent background; no ground, no cast shadow, no frame, no border, no scenery.",
+        "derived_from": [
+          "dish-nimbus-ramen"
+        ],
+        "raw_file": "dish-postcard-sbiten-r1-c2.png",
+        "raw_sha256": "c35f64dabc9ab97caa7e646741f147d895101b94eb7c85139e55bcd5e56ca9eb",
+        "postprocess": "alpha clean + trim + Lanczos resize, WebP with alpha (q90, lossless alpha)"
+      },
+      "license": "generated with Azure OpenAI Image API (deployment gpt-image-2.5-sunburst) via the azure-image-generation helper; under the Microsoft Product Terms for Azure OpenAI the customer owns the output and Microsoft claims no rights in it, so commercial use is permitted (subject to the Azure OpenAI Code of Conduct). No stock or web imagery.",
+      "created": "2026-10-08",
+      "review": {
+        "status": "approved",
+        "notes": "Reviewed: matches dish style authority, clean alpha, no text."
+      }
+    },
+    {
+      "id": "dish-forgotten_kisel",
+      "kind": "dish",
+      "file": "dishes/dish-forgotten_kisel.webp",
+      "width": 294,
+      "height": 384,
+      "transparent": true,
+      "variants": [],
+      "bytes": 38834,
+      "source": {
+        "tool": "azure-image-generation skill (generate-image.ps1)",
+        "provider": "Azure OpenAI",
+        "model": "gpt-image-2.5-sunburst (deployment)",
+        "operation": "edit",
+        "quality": "medium",
+        "prompt": "Image 1 is the style authority for dish rendering: match its gouache texture, ink contour, viewing angle, scale and lighting, but paint the new dish described. Game item illustration of a magical dish served in a cozy Slavic witch tavern, three-quarter top view, on a small painted folk-style plate or in a wooden or clay vessel. Kissel of forgotten names: a tall glass of thick lilac-pink berry kissel with soft swirling pale ribbons of light inside, a sprig of mint. Gouache painting on warm textured paper in the tradition of early-20th-century Russian book illustration: confident dark-brown ink contour over flat matte gouache fills, dry-brush edges, visible paper grain, decorative Slavic folk ornament. Warm candlelit palette of honey amber, ember orange, deep indigo and plum shadows. Cozy, gentle storybook mood; spirits are kind neighbours. Absolutely no text, letters, numerals, runes, writing, signature or watermark. Single subject, centered, fully visible with a small margin on all sides, isolated on a fully transparent background; no ground, no cast shadow, no frame, no border, no scenery.",
+        "derived_from": [
+          "dish-nimbus-ramen"
+        ],
+        "raw_file": "dish-forgotten-names-kissel-r1-c2.png",
+        "raw_sha256": "6e67a6b846d7e76d5cbbae0d80c834764029a8a0ad0d5b8ac9549ab020c30f56",
+        "postprocess": "alpha clean + trim + Lanczos resize, WebP with alpha (q90, lossless alpha)"
+      },
+      "license": "generated with Azure OpenAI Image API (deployment gpt-image-2.5-sunburst) via the azure-image-generation helper; under the Microsoft Product Terms for Azure OpenAI the customer owns the output and Microsoft claims no rights in it, so commercial use is permitted (subject to the Azure OpenAI Code of Conduct). No stock or web imagery.",
+      "created": "2026-10-08",
+      "review": {
+        "status": "approved",
+        "notes": "Reviewed: matches dish style authority, clean alpha, no text."
+      }
+    },
+    {
+      "id": "dish-courage_tea",
+      "kind": "dish",
+      "file": "dishes/dish-courage_tea.webp",
+      "width": 325,
+      "height": 384,
+      "transparent": true,
+      "variants": [],
+      "bytes": 42644,
+      "source": {
+        "tool": "azure-image-generation skill (generate-image.ps1)",
+        "provider": "Azure OpenAI",
+        "model": "gpt-image-2.5-sunburst (deployment)",
+        "operation": "edit",
+        "quality": "medium",
+        "prompt": "Image 1 is the style authority for dish rendering: match its gouache texture, ink contour, viewing angle, scale and lighting, but paint the new dish described. Game item illustration of a magical dish served in a cozy Slavic witch tavern, three-quarter top view, on a small painted folk-style plate or in a wooden or clay vessel. Courage tea: a big blue enamel mug of strong red-brown tea with steam rising in the shape of a small brave flame, a lump of sugar on the saucer and a tiny knitted mitten beside it. Gouache painting on warm textured paper in the tradition of early-20th-century Russian book illustration: confident dark-brown ink contour over flat matte gouache fills, dry-brush edges, visible paper grain, decorative Slavic folk ornament. Warm candlelit palette of honey amber, ember orange, deep indigo and plum shadows. Cozy, gentle storybook mood; spirits are kind neighbours. Absolutely no text, letters, numerals, runes, writing, signature or watermark. Single subject, centered, fully visible with a small margin on all sides, isolated on a fully transparent background; no ground, no cast shadow, no frame, no border, no scenery.",
+        "derived_from": [
+          "dish-nimbus-ramen"
+        ],
+        "raw_file": "dish-courage-tea-r1-c2.png",
+        "raw_sha256": "c8b25935cbcc157e06060ed69d78a9a822bb3c5d3acbdb62af13819081d4d542",
+        "postprocess": "alpha clean + trim + Lanczos resize, WebP with alpha (q90, lossless alpha)"
+      },
+      "license": "generated with Azure OpenAI Image API (deployment gpt-image-2.5-sunburst) via the azure-image-generation helper; under the Microsoft Product Terms for Azure OpenAI the customer owns the output and Microsoft claims no rights in it, so commercial use is permitted (subject to the Azure OpenAI Code of Conduct). No stock or web imagery.",
+      "created": "2026-10-08",
+      "review": {
+        "status": "approved",
+        "notes": "Reviewed: matches dish style authority, clean alpha, no text."
+      }
+    },
+    {
+      "id": "dish-empty_shchi",
+      "kind": "dish",
+      "file": "dishes/dish-empty_shchi.webp",
+      "width": 384,
+      "height": 359,
+      "transparent": true,
+      "variants": [],
+      "bytes": 38022,
+      "source": {
+        "tool": "azure-image-generation skill (generate-image.ps1)",
+        "provider": "Azure OpenAI",
+        "model": "gpt-image-2.5-sunburst (deployment)",
+        "operation": "edit",
+        "quality": "medium",
+        "prompt": "Image 1 is the style authority for dish rendering: match its gouache texture, ink contour, viewing angle, scale and lighting, but paint the new dish described. Game item illustration of a magical dish served in a cozy Slavic witch tavern, three-quarter top view, on a small painted folk-style plate or in a wooden or clay vessel. Empty shchi: a wooden bowl of very clear, pale, almost empty cabbage soup with a single cabbage leaf, a dull muted gold shimmer at the bottom like old coins, a wooden spoon; quiet and plain. Gouache painting on warm textured paper in the tradition of early-20th-century Russian book illustration: confident dark-brown ink contour over flat matte gouache fills, dry-brush edges, visible paper grain, decorative Slavic folk ornament. Warm candlelit palette of honey amber, ember orange, deep indigo and plum shadows. Cozy, gentle storybook mood; spirits are kind neighbours. Absolutely no text, letters, numerals, runes, writing, signature or watermark. Single subject, centered, fully visible with a small margin on all sides, isolated on a fully transparent background; no ground, no cast shadow, no frame, no border, no scenery.",
+        "derived_from": [
+          "dish-nimbus-ramen"
+        ],
+        "raw_file": "dish-empty-shchi-r1-c1.png",
+        "raw_sha256": "887c5e8d42a683cd9c6e8b257af534c5550b23841b22833d7cfdcde18c727bb2",
+        "postprocess": "alpha clean + trim + Lanczos resize, WebP with alpha (q90, lossless alpha)"
+      },
+      "license": "generated with Azure OpenAI Image API (deployment gpt-image-2.5-sunburst) via the azure-image-generation helper; under the Microsoft Product Terms for Azure OpenAI the customer owns the output and Microsoft claims no rights in it, so commercial use is permitted (subject to the Azure OpenAI Code of Conduct). No stock or web imagery.",
+      "created": "2026-10-08",
+      "review": {
+        "status": "approved",
+        "notes": "Reviewed: matches dish style authority, clean alpha, no text."
+      }
+    },
+    {
+      "id": "dish-tram_boltushka",
+      "kind": "dish",
+      "file": "dishes/dish-tram_boltushka.webp",
+      "width": 373,
+      "height": 384,
+      "transparent": true,
+      "variants": [],
+      "bytes": 49676,
+      "source": {
+        "tool": "azure-image-generation skill (generate-image.ps1)",
+        "provider": "Azure OpenAI",
+        "model": "gpt-image-2.5-sunburst (deployment)",
+        "operation": "edit",
+        "quality": "medium",
+        "prompt": "Image 1 is the style authority for dish rendering: match its gouache texture, ink contour, viewing angle, scale and lighting, but paint the new dish described. Game item illustration of a magical dish served in a cozy Slavic witch tavern, three-quarter top view, on a small painted folk-style plate or in a wooden or clay vessel. Tram-ticket boltushka: a teacup of fluffy whipped golden batter with a small blank paper tram ticket stuck in it like a little flag, tiny electric sparks around the rim. Gouache painting on warm textured paper in the tradition of early-20th-century Russian book illustration: confident dark-brown ink contour over flat matte gouache fills, dry-brush edges, visible paper grain, decorative Slavic folk ornament. Warm candlelit palette of honey amber, ember orange, deep indigo and plum shadows. Cozy, gentle storybook mood; spirits are kind neighbours. Absolutely no text, letters, numerals, runes, writing, signature or watermark. Single subject, centered, fully visible with a small margin on all sides, isolated on a fully transparent background; no ground, no cast shadow, no frame, no border, no scenery.",
+        "derived_from": [
+          "dish-nimbus-ramen"
+        ],
+        "raw_file": "dish-tram-ticket-boltushka-r1-c2.png",
+        "raw_sha256": "6c47ece9db8c9e912576ef7368e56b933acfc2393b63608666a410a5797c31fc",
+        "postprocess": "alpha clean + trim + Lanczos resize, WebP with alpha (q90, lossless alpha)"
+      },
+      "license": "generated with Azure OpenAI Image API (deployment gpt-image-2.5-sunburst) via the azure-image-generation helper; under the Microsoft Product Terms for Azure OpenAI the customer owns the output and Microsoft claims no rights in it, so commercial use is permitted (subject to the Azure OpenAI Code of Conduct). No stock or web imagery.",
+      "created": "2026-10-08",
+      "review": {
+        "status": "approved",
+        "notes": "Reviewed: matches dish style authority, clean alpha, no text."
+      }
+    },
+    {
+      "id": "dish-pryazhenets",
+      "kind": "dish",
+      "file": "dishes/dish-pryazhenets.webp",
+      "width": 384,
+      "height": 303,
+      "transparent": true,
+      "variants": [],
+      "bytes": 45330,
+      "source": {
+        "tool": "azure-image-generation skill (generate-image.ps1)",
+        "provider": "Azure OpenAI",
+        "model": "gpt-image-2.5-sunburst (deployment)",
+        "operation": "edit",
+        "quality": "medium",
+        "prompt": "Image 1 is the style authority for dish rendering: match its gouache texture, ink contour, viewing angle, scale and lighting, but paint the new dish described. Game item illustration of a magical dish served in a cozy Slavic witch tavern, three-quarter top view, on a small painted folk-style plate or in a wooden or clay vessel. Pryazhenets: a grand festive braided ring loaf of golden bread with many glowing threads of different colours woven through the braid (gold, blue, red, violet, sepia, grey-blue, moss), on an embroidered towel, softly radiant. Gouache painting on warm textured paper in the tradition of early-20th-century Russian book illustration: confident dark-brown ink contour over flat matte gouache fills, dry-brush edges, visible paper grain, decorative Slavic folk ornament. Warm candlelit palette of honey amber, ember orange, deep indigo and plum shadows. Cozy, gentle storybook mood; spirits are kind neighbours. Absolutely no text, letters, numerals, runes, writing, signature or watermark. Single subject, centered, fully visible with a small margin on all sides, isolated on a fully transparent background; no ground, no cast shadow, no frame, no border, no scenery.",
+        "derived_from": [
+          "dish-nimbus-ramen"
+        ],
+        "raw_file": "dish-pryazhenets-r1-c1.png",
+        "raw_sha256": "25dae025fe2a99cf92144b0a372bd19d2209d9565fc9bdc16c7fdbe44d0722aa",
+        "postprocess": "alpha clean + trim + Lanczos resize, WebP with alpha (q90, lossless alpha)"
+      },
+      "license": "generated with Azure OpenAI Image API (deployment gpt-image-2.5-sunburst) via the azure-image-generation helper; under the Microsoft Product Terms for Azure OpenAI the customer owns the output and Microsoft claims no rights in it, so commercial use is permitted (subject to the Azure OpenAI Code of Conduct). No stock or web imagery.",
+      "created": "2026-10-08",
+      "review": {
+        "status": "approved",
+        "notes": "Reviewed: matches dish style authority, clean alpha, no text."
+      }
+    },
+    {
+      "id": "dish-memory_pie",
+      "kind": "dish",
+      "file": "dishes/dish-memory_pie.webp",
+      "width": 366,
+      "height": 384,
+      "transparent": true,
+      "variants": [],
+      "bytes": 39614,
+      "source": {
+        "tool": "azure-image-generation skill (generate-image.ps1)",
+        "provider": "Azure OpenAI",
+        "model": "gpt-image-2.5-sunburst (deployment)",
+        "operation": "edit",
+        "quality": "medium",
+        "prompt": "Image 1 is the style authority for dish rendering: match its gouache texture, ink contour, viewing angle, scale and lighting, but paint the new dish described. Game item illustration of a magical dish served in a cozy Slavic witch tavern, three-quarter top view, on a small painted folk-style plate or in a wooden or clay vessel. Memory pie: a round golden pie with a lattice top and a little pastry bird, a single glowing warm silver thread rising from the crust and curling into the air. Gouache painting on warm textured paper in the tradition of early-20th-century Russian book illustration: confident dark-brown ink contour over flat matte gouache fills, dry-brush edges, visible paper grain, decorative Slavic folk ornament. Warm candlelit palette of honey amber, ember orange, deep indigo and plum shadows. Cozy, gentle storybook mood; spirits are kind neighbours. Absolutely no text, letters, numerals, runes, writing, signature or watermark. Single subject, centered, fully visible with a small margin on all sides, isolated on a fully transparent background; no ground, no cast shadow, no frame, no border, no scenery.",
+        "derived_from": [
+          "dish-nimbus-ramen"
+        ],
+        "raw_file": "dish-memory-pie-r1-c2.png",
+        "raw_sha256": "a8e3684437e22fc7ffb7340b3fc27d0f348f32e7fc84d7938600ddbc02eb68c2",
+        "postprocess": "alpha clean + trim + Lanczos resize, WebP with alpha (q90, lossless alpha)"
+      },
+      "license": "generated with Azure OpenAI Image API (deployment gpt-image-2.5-sunburst) via the azure-image-generation helper; under the Microsoft Product Terms for Azure OpenAI the customer owns the output and Microsoft claims no rights in it, so commercial use is permitted (subject to the Azure OpenAI Code of Conduct). No stock or web imagery.",
+      "created": "2026-10-08",
+      "review": {
+        "status": "approved",
+        "notes": "Reviewed: matches dish style authority, clean alpha, no text."
+      }
+    },
+    {
+      "id": "icon-heat",
+      "kind": "icon",
+      "file": "ui/icons/icon-heat.webp",
+      "width": 195,
+      "height": 256,
+      "transparent": true,
+      "variants": [],
+      "bytes": 10620,
+      "source": {
+        "tool": "azure-image-generation skill (generate-image.ps1)",
+        "provider": "Azure OpenAI",
+        "model": "gpt-image-2.5-sunburst (deployment)",
+        "operation": "generation",
+        "quality": "medium",
+        "prompt": "Small game UI icon, bold readable silhouette, simple shapes, thick dark-brown ink contour and flat gouache fill, slight paper texture, warm folk-art palette, front view, readable at 48 pixels. A single stylised flame of warm stove fire, orange and gold with a red core, folk-ornament curl at the tip. Gouache painting on warm textured paper in the tradition of early-20th-century Russian book illustration: confident dark-brown ink contour over flat matte gouache fills, dry-brush edges, visible paper grain, decorative Slavic folk ornament. Warm candlelit palette of honey amber, ember orange, deep indigo and plum shadows. Cozy, gentle storybook mood; spirits are kind neighbours. Absolutely no text, letters, numerals, runes, writing, signature or watermark. Single subject, centered, fully visible with a small margin on all sides, isolated on a fully transparent background; no ground, no cast shadow, no frame, no border, no scenery.",
+        "derived_from": [],
+        "raw_file": "icon-heat-r1-c1.png",
+        "raw_sha256": "0ac1e616fb73a5a0dc7c6aa4eb979d8b19e9eebcfe0e89142fc40a1f90e5eccf",
+        "postprocess": "alpha clean + trim + Lanczos resize, WebP with alpha (q90, lossless alpha)"
+      },
+      "license": "generated with Azure OpenAI Image API (deployment gpt-image-2.5-sunburst) via the azure-image-generation helper; under the Microsoft Product Terms for Azure OpenAI the customer owns the output and Microsoft claims no rights in it, so commercial use is permitted (subject to the Azure OpenAI Code of Conduct). No stock or web imagery.",
+      "created": "2026-10-08",
+      "review": {
+        "status": "approved",
+        "notes": "Reviewed: on-brief, clean alpha, no text."
+      }
+    },
+    {
+      "id": "icon-candle",
+      "kind": "icon",
+      "file": "ui/icons/icon-candle.webp",
+      "width": 165,
+      "height": 256,
+      "transparent": true,
+      "variants": [],
+      "bytes": 9332,
+      "source": {
+        "tool": "azure-image-generation skill (generate-image.ps1)",
+        "provider": "Azure OpenAI",
+        "model": "gpt-image-2.5-sunburst (deployment)",
+        "operation": "edit",
+        "quality": "medium",
+        "prompt": "Image 1 is the style authority for icons: match its contour weight, flat gouache fill, palette and scale, but draw the new object described. Small game UI icon, bold readable silhouette, simple shapes, thick dark-brown ink contour and flat gouache fill, slight paper texture, warm folk-art palette, front view, readable at 48 pixels. A short white wax candle in a small brass holder with a calm flame and a drip of wax. Gouache painting on warm textured paper in the tradition of early-20th-century Russian book illustration: confident dark-brown ink contour over flat matte gouache fills, dry-brush edges, visible paper grain, decorative Slavic folk ornament. Warm candlelit palette of honey amber, ember orange, deep indigo and plum shadows. Cozy, gentle storybook mood; spirits are kind neighbours. Absolutely no text, letters, numerals, runes, writing, signature or watermark. Single subject, centered, fully visible with a small margin on all sides, isolated on a fully transparent background; no ground, no cast shadow, no frame, no border, no scenery.",
+        "derived_from": [
+          "icon-heat"
+        ],
+        "raw_file": "icon-patience-r1-c2.png",
+        "raw_sha256": "d7f68051e6feaa4b9c457ceadc009520b1f5522a0d18ddb3ccd40cd482d73680",
+        "postprocess": "alpha clean + trim + Lanczos resize, WebP with alpha (q90, lossless alpha)"
+      },
+      "license": "generated with Azure OpenAI Image API (deployment gpt-image-2.5-sunburst) via the azure-image-generation helper; under the Microsoft Product Terms for Azure OpenAI the customer owns the output and Microsoft claims no rights in it, so commercial use is permitted (subject to the Azure OpenAI Code of Conduct). No stock or web imagery.",
+      "created": "2026-10-08",
+      "review": {
+        "status": "approved",
+        "notes": "Reviewed at 48-256 px: readable silhouette, matches icon style authority, no text."
+      }
+    },
+    {
+      "id": "icon-key",
+      "kind": "icon",
+      "file": "ui/icons/icon-key.webp",
+      "width": 183,
+      "height": 256,
+      "transparent": true,
+      "variants": [],
+      "bytes": 10060,
+      "source": {
+        "tool": "azure-image-generation skill (generate-image.ps1)",
+        "provider": "Azure OpenAI",
+        "model": "gpt-image-2.5-sunburst (deployment)",
+        "operation": "edit",
+        "quality": "medium",
+        "prompt": "Image 1 is the style authority for icons: match its contour weight, flat gouache fill, palette and scale, but draw the new object described. Small game UI icon, bold readable silhouette, simple shapes, thick dark-brown ink contour and flat gouache fill, slight paper texture, warm folk-art palette, front view, readable at 48 pixels. An ornate old brass clock-winding key with a trefoil bow. Gouache painting on warm textured paper in the tradition of early-20th-century Russian book illustration: confident dark-brown ink contour over flat matte gouache fills, dry-brush edges, visible paper grain, decorative Slavic folk ornament. Warm candlelit palette of honey amber, ember orange, deep indigo and plum shadows. Cozy, gentle storybook mood; spirits are kind neighbours. Absolutely no text, letters, numerals, runes, writing, signature or watermark. Single subject, centered, fully visible with a small margin on all sides, isolated on a fully transparent background; no ground, no cast shadow, no frame, no border, no scenery.",
+        "derived_from": [
+          "icon-heat"
+        ],
+        "raw_file": "icon-key-r1-c1.png",
+        "raw_sha256": "e29e8bc8b63352263b5b1b105bd45f7198a2cfb7fea266b15243309ac682ef9b",
+        "postprocess": "alpha clean + trim + Lanczos resize, WebP with alpha (q90, lossless alpha)"
+      },
+      "license": "generated with Azure OpenAI Image API (deployment gpt-image-2.5-sunburst) via the azure-image-generation helper; under the Microsoft Product Terms for Azure OpenAI the customer owns the output and Microsoft claims no rights in it, so commercial use is permitted (subject to the Azure OpenAI Code of Conduct). No stock or web imagery.",
+      "created": "2026-10-08",
+      "review": {
+        "status": "approved",
+        "notes": "Reviewed at 48-256 px: readable silhouette, matches icon style authority, no text."
+      }
+    },
+    {
+      "id": "icon-thread",
+      "kind": "icon",
+      "file": "ui/icons/icon-thread.webp",
+      "width": 256,
+      "height": 245,
+      "transparent": true,
+      "variants": [],
+      "bytes": 16370,
+      "source": {
+        "tool": "azure-image-generation skill (generate-image.ps1)",
+        "provider": "Azure OpenAI",
+        "model": "gpt-image-2.5-sunburst (deployment)",
+        "operation": "edit",
+        "quality": "medium",
+        "prompt": "Image 1 is the style authority for icons: match its contour weight, flat gouache fill, palette and scale, but draw the new object described. Small game UI icon, bold readable silhouette, simple shapes, thick dark-brown ink contour and flat gouache fill, slight paper texture, warm folk-art palette, front view, readable at 48 pixels. A small wooden spool with a glowing warm silver thread unwinding in a gentle curl. Gouache painting on warm textured paper in the tradition of early-20th-century Russian book illustration: confident dark-brown ink contour over flat matte gouache fills, dry-brush edges, visible paper grain, decorative Slavic folk ornament. Warm candlelit palette of honey amber, ember orange, deep indigo and plum shadows. Cozy, gentle storybook mood; spirits are kind neighbours. Absolutely no text, letters, numerals, runes, writing, signature or watermark. Single subject, centered, fully visible with a small margin on all sides, isolated on a fully transparent background; no ground, no cast shadow, no frame, no border, no scenery.",
+        "derived_from": [
+          "icon-heat"
+        ],
+        "raw_file": "icon-memory-thread-r1-c2.png",
+        "raw_sha256": "c5c46b56a63f1a49fbaf8203080fb762788a57aae42c2222f5816b48f46aee36",
+        "postprocess": "alpha clean + trim + Lanczos resize, WebP with alpha (q90, lossless alpha)"
+      },
+      "license": "generated with Azure OpenAI Image API (deployment gpt-image-2.5-sunburst) via the azure-image-generation helper; under the Microsoft Product Terms for Azure OpenAI the customer owns the output and Microsoft claims no rights in it, so commercial use is permitted (subject to the Azure OpenAI Code of Conduct). No stock or web imagery.",
+      "created": "2026-10-08",
+      "review": {
+        "status": "approved",
+        "notes": "Reviewed at 48-256 px: readable silhouette, matches icon style authority, no text."
+      }
+    },
+    {
+      "id": "icon-empty-gold",
+      "kind": "icon",
+      "file": "ui/icons/icon-empty-gold.webp",
+      "width": 251,
+      "height": 256,
+      "transparent": true,
+      "variants": [],
+      "bytes": 11732,
+      "source": {
+        "tool": "azure-image-generation skill (generate-image.ps1)",
+        "provider": "Azure OpenAI",
+        "model": "gpt-image-2.5-sunburst (deployment)",
+        "operation": "edit",
+        "quality": "medium",
+        "prompt": "Image 1 is the style authority for icons: match its contour weight, flat gouache fill, palette and scale, but draw the new object described. Small game UI icon, bold readable silhouette, simple shapes, thick dark-brown ink contour and flat gouache fill, slight paper texture, warm folk-art palette, front view, readable at 48 pixels. A dull hollow gold coin with an empty ring in the centre, a faint grey shimmer, plain without any marks. Gouache painting on warm textured paper in the tradition of early-20th-century Russian book illustration: confident dark-brown ink contour over flat matte gouache fills, dry-brush edges, visible paper grain, decorative Slavic folk ornament. Warm candlelit palette of honey amber, ember orange, deep indigo and plum shadows. Cozy, gentle storybook mood; spirits are kind neighbours. Absolutely no text, letters, numerals, runes, writing, signature or watermark. Single subject, centered, fully visible with a small margin on all sides, isolated on a fully transparent background; no ground, no cast shadow, no frame, no border, no scenery.",
+        "derived_from": [
+          "icon-heat"
+        ],
+        "raw_file": "icon-empty-gold-r1-c1.png",
+        "raw_sha256": "f6baa81388c5becfd126c77b9d415dd488089976a8b5b6b4780f5ae2f42c3c6c",
+        "postprocess": "alpha clean + trim + Lanczos resize, WebP with alpha (q90, lossless alpha)"
+      },
+      "license": "generated with Azure OpenAI Image API (deployment gpt-image-2.5-sunburst) via the azure-image-generation helper; under the Microsoft Product Terms for Azure OpenAI the customer owns the output and Microsoft claims no rights in it, so commercial use is permitted (subject to the Azure OpenAI Code of Conduct). No stock or web imagery.",
+      "created": "2026-10-08",
+      "review": {
+        "status": "approved",
+        "notes": "Reviewed at 48-256 px: readable silhouette, matches icon style authority, no text."
+      }
+    },
+    {
+      "id": "icon-sparks",
+      "kind": "icon",
+      "file": "ui/icons/icon-sparks.webp",
+      "width": 228,
+      "height": 256,
+      "transparent": true,
+      "variants": [],
+      "bytes": 10856,
+      "source": {
+        "tool": "azure-image-generation skill (generate-image.ps1)",
+        "provider": "Azure OpenAI",
+        "model": "gpt-image-2.5-sunburst (deployment)",
+        "operation": "edit",
+        "quality": "medium",
+        "prompt": "Image 1 is the style authority for icons: match its contour weight, flat gouache fill, palette and scale, but draw the new object described. Small game UI icon, bold readable silhouette, simple shapes, thick dark-brown ink contour and flat gouache fill, slight paper texture, warm folk-art palette, front view, readable at 48 pixels. Three small bright golden sparks like tiny stars, a cluster of glittering embers. Gouache painting on warm textured paper in the tradition of early-20th-century Russian book illustration: confident dark-brown ink contour over flat matte gouache fills, dry-brush edges, visible paper grain, decorative Slavic folk ornament. Warm candlelit palette of honey amber, ember orange, deep indigo and plum shadows. Cozy, gentle storybook mood; spirits are kind neighbours. Absolutely no text, letters, numerals, runes, writing, signature or watermark. Single subject, centered, fully visible with a small margin on all sides, isolated on a fully transparent background; no ground, no cast shadow, no frame, no border, no scenery.",
+        "derived_from": [
+          "icon-heat"
+        ],
+        "raw_file": "icon-sparks-r1-c1.png",
+        "raw_sha256": "5b6bc77e0b91d101485f12619cb11e60ac2424a69f78250b39ff8e523ffbecc3",
+        "postprocess": "alpha clean + trim + Lanczos resize, WebP with alpha (q90, lossless alpha)"
+      },
+      "license": "generated with Azure OpenAI Image API (deployment gpt-image-2.5-sunburst) via the azure-image-generation helper; under the Microsoft Product Terms for Azure OpenAI the customer owns the output and Microsoft claims no rights in it, so commercial use is permitted (subject to the Azure OpenAI Code of Conduct). No stock or web imagery.",
+      "created": "2026-10-08",
+      "review": {
+        "status": "approved",
+        "notes": "Reviewed at 48-256 px: readable silhouette, matches icon style authority, no text."
+      }
+    },
+    {
+      "id": "icon-story",
+      "kind": "icon",
+      "file": "ui/icons/icon-story.webp",
+      "width": 166,
+      "height": 256,
+      "transparent": true,
+      "variants": [],
+      "bytes": 12730,
+      "source": {
+        "tool": "azure-image-generation skill (generate-image.ps1)",
+        "provider": "Azure OpenAI",
+        "model": "gpt-image-2.5-sunburst (deployment)",
+        "operation": "edit",
+        "quality": "medium",
+        "prompt": "Image 1 is the style authority for icons: match its contour weight, flat gouache fill, palette and scale, but draw the new object described. Small game UI icon, bold readable silhouette, simple shapes, thick dark-brown ink contour and flat gouache fill, slight paper texture, warm folk-art palette, front view, readable at 48 pixels. A small upright card with a rounded ornament border and a tiny painted house in the centre. Gouache painting on warm textured paper in the tradition of early-20th-century Russian book illustration: confident dark-brown ink contour over flat matte gouache fills, dry-brush edges, visible paper grain, decorative Slavic folk ornament. Warm candlelit palette of honey amber, ember orange, deep indigo and plum shadows. Cozy, gentle storybook mood; spirits are kind neighbours. Absolutely no text, letters, numerals, runes, writing, signature or watermark. Single subject, centered, fully visible with a small margin on all sides, isolated on a fully transparent background; no ground, no cast shadow, no frame, no border, no scenery.",
+        "derived_from": [
+          "icon-heat"
+        ],
+        "raw_file": "icon-story-card-r1-c1.png",
+        "raw_sha256": "b1e03050984c797c2ebfb3c06345ec10bfbfe127a222569f499cc385c8ef6c1d",
+        "postprocess": "alpha clean + trim + Lanczos resize, WebP with alpha (q90, lossless alpha)"
+      },
+      "license": "generated with Azure OpenAI Image API (deployment gpt-image-2.5-sunburst) via the azure-image-generation helper; under the Microsoft Product Terms for Azure OpenAI the customer owns the output and Microsoft claims no rights in it, so commercial use is permitted (subject to the Azure OpenAI Code of Conduct). No stock or web imagery.",
+      "created": "2026-10-08",
+      "review": {
+        "status": "approved",
+        "notes": "Reviewed at 48-256 px: readable silhouette, matches icon style authority, no text."
+      }
+    },
+    {
+      "id": "icon-water",
+      "kind": "icon",
+      "file": "ui/icons/icon-water.webp",
+      "width": 185,
+      "height": 256,
+      "transparent": true,
+      "variants": [],
+      "bytes": 10746,
+      "source": {
+        "tool": "azure-image-generation skill (generate-image.ps1)",
+        "provider": "Azure OpenAI",
+        "model": "gpt-image-2.5-sunburst (deployment)",
+        "operation": "edit",
+        "quality": "medium",
+        "prompt": "Image 1 is the style authority for icons: match its contour weight, flat gouache fill, palette and scale, but draw the new object described. Small game UI icon, bold readable silhouette, simple shapes, thick dark-brown ink contour and flat gouache fill, slight paper texture, warm folk-art palette, front view, readable at 48 pixels. A single round drop of clear turquoise river water with a highlight and a tiny wave inside. Gouache painting on warm textured paper in the tradition of early-20th-century Russian book illustration: confident dark-brown ink contour over flat matte gouache fills, dry-brush edges, visible paper grain, decorative Slavic folk ornament. Warm candlelit palette of honey amber, ember orange, deep indigo and plum shadows. Cozy, gentle storybook mood; spirits are kind neighbours. Absolutely no text, letters, numerals, runes, writing, signature or watermark. Single subject, centered, fully visible with a small margin on all sides, isolated on a fully transparent background; no ground, no cast shadow, no frame, no border, no scenery.",
+        "derived_from": [
+          "icon-heat"
+        ],
+        "raw_file": "icon-water-r1-c1.png",
+        "raw_sha256": "66dcbf61d6d2a631b40f2ecb8f5e6cd1ca489f85729cdac52cc6ca53468bf575",
+        "postprocess": "alpha clean + trim + Lanczos resize, WebP with alpha (q90, lossless alpha)"
+      },
+      "license": "generated with Azure OpenAI Image API (deployment gpt-image-2.5-sunburst) via the azure-image-generation helper; under the Microsoft Product Terms for Azure OpenAI the customer owns the output and Microsoft claims no rights in it, so commercial use is permitted (subject to the Azure OpenAI Code of Conduct). No stock or web imagery.",
+      "created": "2026-10-08",
+      "review": {
+        "status": "approved",
+        "notes": "Reviewed at 48-256 px: readable silhouette, matches icon style authority, no text."
+      }
+    },
+    {
+      "id": "icon-burner",
+      "kind": "icon",
+      "file": "ui/icons/icon-burner.webp",
+      "width": 256,
+      "height": 255,
+      "transparent": true,
+      "variants": [],
+      "bytes": 16642,
+      "source": {
+        "tool": "azure-image-generation skill (generate-image.ps1)",
+        "provider": "Azure OpenAI",
+        "model": "gpt-image-2.5-sunburst (deployment)",
+        "operation": "edit",
+        "quality": "medium",
+        "prompt": "Image 1 is the style authority for icons: match its contour weight, flat gouache fill, palette and scale, but draw the new object described. Small game UI icon, bold readable silhouette, simple shapes, thick dark-brown ink contour and flat gouache fill, slight paper texture, warm folk-art palette, front view, readable at 48 pixels. A round cast-iron stove burner ring seen from above with a soft glow beneath. Gouache painting on warm textured paper in the tradition of early-20th-century Russian book illustration: confident dark-brown ink contour over flat matte gouache fills, dry-brush edges, visible paper grain, decorative Slavic folk ornament. Warm candlelit palette of honey amber, ember orange, deep indigo and plum shadows. Cozy, gentle storybook mood; spirits are kind neighbours. Absolutely no text, letters, numerals, runes, writing, signature or watermark. Single subject, centered, fully visible with a small margin on all sides, isolated on a fully transparent background; no ground, no cast shadow, no frame, no border, no scenery.",
+        "derived_from": [
+          "icon-heat"
+        ],
+        "raw_file": "icon-burner-r1-c2.png",
+        "raw_sha256": "5961f09d4b21352a5d308dfeeb3ba64a7f193691320a23e0095dc949c781f4d8",
+        "postprocess": "alpha clean + trim + Lanczos resize, WebP with alpha (q90, lossless alpha)"
+      },
+      "license": "generated with Azure OpenAI Image API (deployment gpt-image-2.5-sunburst) via the azure-image-generation helper; under the Microsoft Product Terms for Azure OpenAI the customer owns the output and Microsoft claims no rights in it, so commercial use is permitted (subject to the Azure OpenAI Code of Conduct). No stock or web imagery.",
+      "created": "2026-10-08",
+      "review": {
+        "status": "approved",
+        "notes": "Reviewed at 48-256 px: readable silhouette, matches icon style authority, no text."
+      }
+    },
+    {
+      "id": "icon-tray",
+      "kind": "icon",
+      "file": "ui/icons/icon-tray.webp",
+      "width": 256,
+      "height": 192,
+      "transparent": true,
+      "variants": [],
+      "bytes": 14080,
+      "source": {
+        "tool": "azure-image-generation skill (generate-image.ps1)",
+        "provider": "Azure OpenAI",
+        "model": "gpt-image-2.5-sunburst (deployment)",
+        "operation": "edit",
+        "quality": "medium",
+        "prompt": "Image 1 is the style authority for icons: match its contour weight, flat gouache fill, palette and scale, but draw the new object described. Small game UI icon, bold readable silhouette, simple shapes, thick dark-brown ink contour and flat gouache fill, slight paper texture, warm folk-art palette, front view, readable at 48 pixels. A round painted wooden serving tray with red-and-gold folk flowers, seen at a slight angle, empty. Gouache painting on warm textured paper in the tradition of early-20th-century Russian book illustration: confident dark-brown ink contour over flat matte gouache fills, dry-brush edges, visible paper grain, decorative Slavic folk ornament. Warm candlelit palette of honey amber, ember orange, deep indigo and plum shadows. Cozy, gentle storybook mood; spirits are kind neighbours. Absolutely no text, letters, numerals, runes, writing, signature or watermark. Single subject, centered, fully visible with a small margin on all sides, isolated on a fully transparent background; no ground, no cast shadow, no frame, no border, no scenery.",
+        "derived_from": [
+          "icon-heat"
+        ],
+        "raw_file": "icon-tray-r1-c2.png",
+        "raw_sha256": "7b8c07b0a76370363bbc3958fb2961f3ff6356ce8140814e0ab7c3a2a08fca0d",
+        "postprocess": "alpha clean + trim + Lanczos resize, WebP with alpha (q90, lossless alpha)"
+      },
+      "license": "generated with Azure OpenAI Image API (deployment gpt-image-2.5-sunburst) via the azure-image-generation helper; under the Microsoft Product Terms for Azure OpenAI the customer owns the output and Microsoft claims no rights in it, so commercial use is permitted (subject to the Azure OpenAI Code of Conduct). No stock or web imagery.",
+      "created": "2026-10-08",
+      "review": {
+        "status": "approved",
+        "notes": "Reviewed at 48-256 px: readable silhouette, matches icon style authority, no text."
+      }
+    },
+    {
+      "id": "icon-broom",
+      "kind": "icon",
+      "file": "ui/icons/icon-broom.webp",
+      "width": 205,
+      "height": 256,
+      "transparent": true,
+      "variants": [],
+      "bytes": 13136,
+      "source": {
+        "tool": "azure-image-generation skill (generate-image.ps1)",
+        "provider": "Azure OpenAI",
+        "model": "gpt-image-2.5-sunburst (deployment)",
+        "operation": "edit",
+        "quality": "medium",
+        "prompt": "Image 1 is the style authority for icons: match its contour weight, flat gouache fill, palette and scale, but draw the new object described. Small game UI icon, bold readable silhouette, simple shapes, thick dark-brown ink contour and flat gouache fill, slight paper texture, warm folk-art palette, front view, readable at 48 pixels. A small birch-twig broom tied with red string. Gouache painting on warm textured paper in the tradition of early-20th-century Russian book illustration: confident dark-brown ink contour over flat matte gouache fills, dry-brush edges, visible paper grain, decorative Slavic folk ornament. Warm candlelit palette of honey amber, ember orange, deep indigo and plum shadows. Cozy, gentle storybook mood; spirits are kind neighbours. Absolutely no text, letters, numerals, runes, writing, signature or watermark. Single subject, centered, fully visible with a small margin on all sides, isolated on a fully transparent background; no ground, no cast shadow, no frame, no border, no scenery.",
+        "derived_from": [
+          "icon-heat"
+        ],
+        "raw_file": "icon-broom-r1-c2.png",
+        "raw_sha256": "1044e57e3f0a084cabeba952e2ef9a34bb660a7ffd741cb981275ea7fe8d36a9",
+        "postprocess": "alpha clean + trim + Lanczos resize, WebP with alpha (q90, lossless alpha)"
+      },
+      "license": "generated with Azure OpenAI Image API (deployment gpt-image-2.5-sunburst) via the azure-image-generation helper; under the Microsoft Product Terms for Azure OpenAI the customer owns the output and Microsoft claims no rights in it, so commercial use is permitted (subject to the Azure OpenAI Code of Conduct). No stock or web imagery.",
+      "created": "2026-10-08",
+      "review": {
+        "status": "approved",
+        "notes": "Reviewed at 48-256 px: readable silhouette, matches icon style authority, no text."
+      }
+    },
+    {
+      "id": "icon-cuckoo",
+      "kind": "icon",
+      "file": "ui/icons/icon-cuckoo.webp",
+      "width": 217,
+      "height": 256,
+      "transparent": true,
+      "variants": [],
+      "bytes": 13484,
+      "source": {
+        "tool": "azure-image-generation skill (generate-image.ps1)",
+        "provider": "Azure OpenAI",
+        "model": "gpt-image-2.5-sunburst (deployment)",
+        "operation": "edit",
+        "quality": "medium",
+        "prompt": "Image 1 is the style authority for icons: match its contour weight, flat gouache fill, palette and scale, but draw the new object described. Small game UI icon, bold readable silhouette, simple shapes, thick dark-brown ink contour and flat gouache fill, slight paper texture, warm folk-art palette, front view, readable at 48 pixels. A small carved wooden cuckoo bird peeking out of a tiny arched clock door. Gouache painting on warm textured paper in the tradition of early-20th-century Russian book illustration: confident dark-brown ink contour over flat matte gouache fills, dry-brush edges, visible paper grain, decorative Slavic folk ornament. Warm candlelit palette of honey amber, ember orange, deep indigo and plum shadows. Cozy, gentle storybook mood; spirits are kind neighbours. Absolutely no text, letters, numerals, runes, writing, signature or watermark. Single subject, centered, fully visible with a small margin on all sides, isolated on a fully transparent background; no ground, no cast shadow, no frame, no border, no scenery.",
+        "derived_from": [
+          "icon-heat"
+        ],
+        "raw_file": "icon-cuckoo-r1-c2.png",
+        "raw_sha256": "21c73d2a87221086aea5f52b55d3e365dc148923a4bc0ac73d876500d0ee4cb7",
+        "postprocess": "alpha clean + trim + Lanczos resize, WebP with alpha (q90, lossless alpha)"
+      },
+      "license": "generated with Azure OpenAI Image API (deployment gpt-image-2.5-sunburst) via the azure-image-generation helper; under the Microsoft Product Terms for Azure OpenAI the customer owns the output and Microsoft claims no rights in it, so commercial use is permitted (subject to the Azure OpenAI Code of Conduct). No stock or web imagery.",
+      "created": "2026-10-08",
+      "review": {
+        "status": "approved",
+        "notes": "Reviewed at 48-256 px: readable silhouette, matches icon style authority, no text."
+      }
+    },
+    {
+      "id": "icon-tram-ticket",
+      "kind": "icon",
+      "file": "ui/icons/icon-tram-ticket.webp",
+      "width": 256,
+      "height": 243,
+      "transparent": true,
+      "variants": [],
+      "bytes": 11200,
+      "source": {
+        "tool": "azure-image-generation skill (generate-image.ps1)",
+        "provider": "Azure OpenAI",
+        "model": "gpt-image-2.5-sunburst (deployment)",
+        "operation": "edit",
+        "quality": "medium",
+        "prompt": "Image 1 is the style authority for icons: match its contour weight, flat gouache fill, palette and scale, but draw the new object described. Small game UI icon, bold readable silhouette, simple shapes, thick dark-brown ink contour and flat gouache fill, slight paper texture, warm folk-art palette, front view, readable at 48 pixels. A small blank paper tram ticket with a torn edge and a punched hole, no writing. Gouache painting on warm textured paper in the tradition of early-20th-century Russian book illustration: confident dark-brown ink contour over flat matte gouache fills, dry-brush edges, visible paper grain, decorative Slavic folk ornament. Warm candlelit palette of honey amber, ember orange, deep indigo and plum shadows. Cozy, gentle storybook mood; spirits are kind neighbours. Absolutely no text, letters, numerals, runes, writing, signature or watermark. Single subject, centered, fully visible with a small margin on all sides, isolated on a fully transparent background; no ground, no cast shadow, no frame, no border, no scenery.",
+        "derived_from": [
+          "icon-heat"
+        ],
+        "raw_file": "icon-tram-ticket-r1-c2.png",
+        "raw_sha256": "344852a4a5728d3d50c09f99236853ed0f452f9c19671cd85bae904427ed878b",
+        "postprocess": "alpha clean + trim + Lanczos resize, WebP with alpha (q90, lossless alpha)"
+      },
+      "license": "generated with Azure OpenAI Image API (deployment gpt-image-2.5-sunburst) via the azure-image-generation helper; under the Microsoft Product Terms for Azure OpenAI the customer owns the output and Microsoft claims no rights in it, so commercial use is permitted (subject to the Azure OpenAI Code of Conduct). No stock or web imagery.",
+      "created": "2026-10-08",
+      "review": {
+        "status": "approved",
+        "notes": "Reviewed at 48-256 px: readable silhouette, matches icon style authority, no text."
+      }
+    },
+    {
+      "id": "icon-silence-jar",
+      "kind": "icon",
+      "file": "ui/icons/icon-silence-jar.webp",
+      "width": 176,
+      "height": 256,
+      "transparent": true,
+      "variants": [],
+      "bytes": 13564,
+      "source": {
+        "tool": "azure-image-generation skill (generate-image.ps1)",
+        "provider": "Azure OpenAI",
+        "model": "gpt-image-2.5-sunburst (deployment)",
+        "operation": "edit",
+        "quality": "medium",
+        "prompt": "Image 1 is the style authority for icons: match its contour weight, flat gouache fill, palette and scale, but draw the new object described. Small game UI icon, bold readable silhouette, simple shapes, thick dark-brown ink contour and flat gouache fill, slight paper texture, warm folk-art palette, front view, readable at 48 pixels. A tall dark-blue clay jar sealed with wax and a cloth, a soft quiet glow and a little closed-eyes motif on it. Gouache painting on warm textured paper in the tradition of early-20th-century Russian book illustration: confident dark-brown ink contour over flat matte gouache fills, dry-brush edges, visible paper grain, decorative Slavic folk ornament. Warm candlelit palette of honey amber, ember orange, deep indigo and plum shadows. Cozy, gentle storybook mood; spirits are kind neighbours. Absolutely no text, letters, numerals, runes, writing, signature or watermark. Single subject, centered, fully visible with a small margin on all sides, isolated on a fully transparent background; no ground, no cast shadow, no frame, no border, no scenery.",
+        "derived_from": [
+          "icon-heat"
+        ],
+        "raw_file": "icon-silence-jar-r1-c1.png",
+        "raw_sha256": "bd054c679752e4d5146eb76abda5c02ec8388c46947577a94fe4d31667074ceb",
+        "postprocess": "alpha clean + trim + Lanczos resize, WebP with alpha (q90, lossless alpha)"
+      },
+      "license": "generated with Azure OpenAI Image API (deployment gpt-image-2.5-sunburst) via the azure-image-generation helper; under the Microsoft Product Terms for Azure OpenAI the customer owns the output and Microsoft claims no rights in it, so commercial use is permitted (subject to the Azure OpenAI Code of Conduct). No stock or web imagery.",
+      "created": "2026-10-08",
+      "review": {
+        "status": "approved",
+        "notes": "Reviewed at 48-256 px: readable silhouette, matches icon style authority, no text."
+      }
+    },
+    {
+      "id": "icon-chair",
+      "kind": "icon",
+      "file": "ui/icons/icon-chair.webp",
+      "width": 243,
+      "height": 256,
+      "transparent": true,
+      "variants": [],
+      "bytes": 15208,
+      "source": {
+        "tool": "azure-image-generation skill (generate-image.ps1)",
+        "provider": "Azure OpenAI",
+        "model": "gpt-image-2.5-sunburst (deployment)",
+        "operation": "edit",
+        "quality": "medium",
+        "prompt": "Image 1 is the style authority for icons: match its contour weight, flat gouache fill, palette and scale, but draw the new object described. Small game UI icon, bold readable silhouette, simple shapes, thick dark-brown ink contour and flat gouache fill, slight paper texture, warm folk-art palette, front view, readable at 48 pixels. A simple carved wooden stool with a small plus-shaped sparkle beside it. Gouache painting on warm textured paper in the tradition of early-20th-century Russian book illustration: confident dark-brown ink contour over flat matte gouache fills, dry-brush edges, visible paper grain, decorative Slavic folk ornament. Warm candlelit palette of honey amber, ember orange, deep indigo and plum shadows. Cozy, gentle storybook mood; spirits are kind neighbours. Absolutely no text, letters, numerals, runes, writing, signature or watermark. Single subject, centered, fully visible with a small margin on all sides, isolated on a fully transparent background; no ground, no cast shadow, no frame, no border, no scenery.",
+        "derived_from": [
+          "icon-heat"
+        ],
+        "raw_file": "icon-upgrade-chair-r1-c2.png",
+        "raw_sha256": "2dbb9995dabd35ad8c77b407db5dcbd468bfe6fed27f506288b699a388d28bba",
+        "postprocess": "alpha clean + trim + Lanczos resize, WebP with alpha (q90, lossless alpha)"
+      },
+      "license": "generated with Azure OpenAI Image API (deployment gpt-image-2.5-sunburst) via the azure-image-generation helper; under the Microsoft Product Terms for Azure OpenAI the customer owns the output and Microsoft claims no rights in it, so commercial use is permitted (subject to the Azure OpenAI Code of Conduct). No stock or web imagery.",
+      "created": "2026-10-08",
+      "review": {
+        "status": "approved",
+        "notes": "Reviewed at 48-256 px: readable silhouette, matches icon style authority, no text."
+      }
+    },
+    {
+      "id": "icon-shelf",
+      "kind": "icon",
+      "file": "ui/icons/icon-shelf.webp",
+      "width": 256,
+      "height": 204,
+      "transparent": true,
+      "variants": [],
+      "bytes": 10948,
+      "source": {
+        "tool": "azure-image-generation skill (generate-image.ps1)",
+        "provider": "Azure OpenAI",
+        "model": "gpt-image-2.5-sunburst (deployment)",
+        "operation": "edit",
+        "quality": "medium",
+        "prompt": "Image 1 is the style authority for icons: match its contour weight, flat gouache fill, palette and scale, but draw the new object described. Small game UI icon, bold readable silhouette, simple shapes, thick dark-brown ink contour and flat gouache fill, slight paper texture, warm folk-art palette, front view, readable at 48 pixels. A carved wooden wall shelf with two empty little jars on it. Gouache painting on warm textured paper in the tradition of early-20th-century Russian book illustration: confident dark-brown ink contour over flat matte gouache fills, dry-brush edges, visible paper grain, decorative Slavic folk ornament. Warm candlelit palette of honey amber, ember orange, deep indigo and plum shadows. Cozy, gentle storybook mood; spirits are kind neighbours. Absolutely no text, letters, numerals, runes, writing, signature or watermark. Single subject, centered, fully visible with a small margin on all sides, isolated on a fully transparent background; no ground, no cast shadow, no frame, no border, no scenery.",
+        "derived_from": [
+          "icon-heat"
+        ],
+        "raw_file": "icon-upgrade-shelf-r1-c1.png",
+        "raw_sha256": "e8070398b46c6d68dc3b933a1702acd7e322f03fd8a1a8d0a1088c2ef4db76cd",
+        "postprocess": "alpha clean + trim + Lanczos resize, WebP with alpha (q90, lossless alpha)"
+      },
+      "license": "generated with Azure OpenAI Image API (deployment gpt-image-2.5-sunburst) via the azure-image-generation helper; under the Microsoft Product Terms for Azure OpenAI the customer owns the output and Microsoft claims no rights in it, so commercial use is permitted (subject to the Azure OpenAI Code of Conduct). No stock or web imagery.",
+      "created": "2026-10-08",
+      "review": {
+        "status": "approved",
+        "notes": "Reviewed at 48-256 px: readable silhouette, matches icon style authority, no text."
+      }
+    },
+    {
+      "id": "icon-mittens",
+      "kind": "icon",
+      "file": "ui/icons/icon-mittens.webp",
+      "width": 256,
+      "height": 248,
+      "transparent": true,
+      "variants": [],
+      "bytes": 14308,
+      "source": {
+        "tool": "azure-image-generation skill (generate-image.ps1)",
+        "provider": "Azure OpenAI",
+        "model": "gpt-image-2.5-sunburst (deployment)",
+        "operation": "edit",
+        "quality": "medium",
+        "prompt": "Image 1 is the style authority for icons: match its contour weight, flat gouache fill, palette and scale, but draw the new object described. Small game UI icon, bold readable silhouette, simple shapes, thick dark-brown ink contour and flat gouache fill, slight paper texture, warm folk-art palette, front view, readable at 48 pixels. A pair of thick soot-smudged red knitted oven mittens. Gouache painting on warm textured paper in the tradition of early-20th-century Russian book illustration: confident dark-brown ink contour over flat matte gouache fills, dry-brush edges, visible paper grain, decorative Slavic folk ornament. Warm candlelit palette of honey amber, ember orange, deep indigo and plum shadows. Cozy, gentle storybook mood; spirits are kind neighbours. Absolutely no text, letters, numerals, runes, writing, signature or watermark. Single subject, centered, fully visible with a small margin on all sides, isolated on a fully transparent background; no ground, no cast shadow, no frame, no border, no scenery.",
+        "derived_from": [
+          "icon-heat"
+        ],
+        "raw_file": "icon-upgrade-mittens-r1-c2.png",
+        "raw_sha256": "ccdc6af3db1ef975cea3ef3610fcb11eed636b3141435a95f5d93a13a0dc921c",
+        "postprocess": "alpha clean + trim + Lanczos resize, WebP with alpha (q90, lossless alpha)"
+      },
+      "license": "generated with Azure OpenAI Image API (deployment gpt-image-2.5-sunburst) via the azure-image-generation helper; under the Microsoft Product Terms for Azure OpenAI the customer owns the output and Microsoft claims no rights in it, so commercial use is permitted (subject to the Azure OpenAI Code of Conduct). No stock or web imagery.",
+      "created": "2026-10-08",
+      "review": {
+        "status": "approved",
+        "notes": "Reviewed at 48-256 px: readable silhouette, matches icon style authority, no text."
+      }
+    },
+    {
+      "id": "icon-double-burner",
+      "kind": "icon",
+      "file": "ui/icons/icon-double-burner.webp",
+      "width": 254,
+      "height": 256,
+      "transparent": true,
+      "variants": [],
+      "bytes": 16584,
+      "source": {
+        "tool": "azure-image-generation skill (generate-image.ps1)",
+        "provider": "Azure OpenAI",
+        "model": "gpt-image-2.5-sunburst (deployment)",
+        "operation": "edit",
+        "quality": "medium",
+        "prompt": "Image 1 is the style authority for icons: match its contour weight, flat gouache fill, palette and scale, but draw the new object described. Small game UI icon, bold readable silhouette, simple shapes, thick dark-brown ink contour and flat gouache fill, slight paper texture, warm folk-art palette, front view, readable at 48 pixels. A small whitewashed Russian stove with two arched fire mouths side by side, both glowing. Gouache painting on warm textured paper in the tradition of early-20th-century Russian book illustration: confident dark-brown ink contour over flat matte gouache fills, dry-brush edges, visible paper grain, decorative Slavic folk ornament. Warm candlelit palette of honey amber, ember orange, deep indigo and plum shadows. Cozy, gentle storybook mood; spirits are kind neighbours. Absolutely no text, letters, numerals, runes, writing, signature or watermark. Single subject, centered, fully visible with a small margin on all sides, isolated on a fully transparent background; no ground, no cast shadow, no frame, no border, no scenery.",
+        "derived_from": [
+          "icon-heat"
+        ],
+        "raw_file": "icon-upgrade-double-stove-r1-c2.png",
+        "raw_sha256": "3c46870e4c7cef4c71defb65f876619cc8f349464517bc8d58d6afeb41fca63e",
+        "postprocess": "alpha clean + trim + Lanczos resize, WebP with alpha (q90, lossless alpha)"
+      },
+      "license": "generated with Azure OpenAI Image API (deployment gpt-image-2.5-sunburst) via the azure-image-generation helper; under the Microsoft Product Terms for Azure OpenAI the customer owns the output and Microsoft claims no rights in it, so commercial use is permitted (subject to the Azure OpenAI Code of Conduct). No stock or web imagery.",
+      "created": "2026-10-08",
+      "review": {
+        "status": "approved",
+        "notes": "Reviewed at 48-256 px: readable silhouette, matches icon style authority, no text."
+      }
+    },
+    {
+      "id": "door-forest-open",
+      "kind": "icon",
+      "file": "ui/icons/door-forest-open.webp",
+      "width": 316,
+      "height": 384,
+      "transparent": true,
+      "variants": [],
+      "bytes": 25924,
+      "source": {
+        "tool": "azure-image-generation skill (generate-image.ps1)",
+        "provider": "Azure OpenAI",
+        "model": "gpt-image-2.5-sunburst (deployment)",
+        "operation": "edit",
+        "quality": "medium",
+        "prompt": "Image 1 is the style authority for icons: match its contour weight, flat gouache fill, palette and scale, but draw the new object described. Small game UI icon, bold readable silhouette, simple shapes, thick dark-brown ink contour and flat gouache fill, slight paper texture, warm folk-art palette, front view, readable at 48 pixels. An arched carved wooden door standing open, revealing a mossy night forest with fern and fireflies inside the doorway; green and bark palette. Gouache painting on warm textured paper in the tradition of early-20th-century Russian book illustration: confident dark-brown ink contour over flat matte gouache fills, dry-brush edges, visible paper grain, decorative Slavic folk ornament. Warm candlelit palette of honey amber, ember orange, deep indigo and plum shadows. Cozy, gentle storybook mood; spirits are kind neighbours. Absolutely no text, letters, numerals, runes, writing, signature or watermark. Single subject, centered, fully visible with a small margin on all sides, isolated on a fully transparent background; no ground, no cast shadow, no frame, no border, no scenery.",
+        "derived_from": [
+          "icon-heat"
+        ],
+        "raw_file": "door-forest-r1-c1.png",
+        "raw_sha256": "a91ab19a0a83389b6a7c1cbde5d4f54b3a7806e947a27a95f9231b70fb28fd25",
+        "postprocess": "alpha clean + trim + Lanczos resize, WebP with alpha (q90, lossless alpha)"
+      },
+      "license": "generated with Azure OpenAI Image API (deployment gpt-image-2.5-sunburst) via the azure-image-generation helper; under the Microsoft Product Terms for Azure OpenAI the customer owns the output and Microsoft claims no rights in it, so commercial use is permitted (subject to the Azure OpenAI Code of Conduct). No stock or web imagery.",
+      "created": "2026-10-08",
+      "review": {
+        "status": "approved",
+        "notes": "Reviewed at 48-256 px: readable silhouette, matches icon style authority, no text."
+      }
+    },
+    {
+      "id": "door-river-open",
+      "kind": "icon",
+      "file": "ui/icons/door-river-open.webp",
+      "width": 287,
+      "height": 384,
+      "transparent": true,
+      "variants": [],
+      "bytes": 25076,
+      "source": {
+        "tool": "azure-image-generation skill (generate-image.ps1)",
+        "provider": "Azure OpenAI",
+        "model": "gpt-image-2.5-sunburst (deployment)",
+        "operation": "edit",
+        "quality": "medium",
+        "prompt": "Image 1 is the style authority for icons: match its contour weight, flat gouache fill, palette and scale, but draw the new object described. Small game UI icon, bold readable silhouette, simple shapes, thick dark-brown ink contour and flat gouache fill, slight paper texture, warm folk-art palette, front view, readable at 48 pixels. An arched carved wooden door standing open, revealing a turquoise night river with reeds and a moon reflection inside the doorway; glass and turquoise palette. Gouache painting on warm textured paper in the tradition of early-20th-century Russian book illustration: confident dark-brown ink contour over flat matte gouache fills, dry-brush edges, visible paper grain, decorative Slavic folk ornament. Warm candlelit palette of honey amber, ember orange, deep indigo and plum shadows. Cozy, gentle storybook mood; spirits are kind neighbours. Absolutely no text, letters, numerals, runes, writing, signature or watermark. Single subject, centered, fully visible with a small margin on all sides, isolated on a fully transparent background; no ground, no cast shadow, no frame, no border, no scenery.",
+        "derived_from": [
+          "icon-heat"
+        ],
+        "raw_file": "door-river-r1-c1.png",
+        "raw_sha256": "a381eed58bce46e4d909853d5f0c6c393ea6e11c7dc2dd0fa34894dcf8eaa790",
+        "postprocess": "alpha clean + trim + Lanczos resize, WebP with alpha (q90, lossless alpha)"
+      },
+      "license": "generated with Azure OpenAI Image API (deployment gpt-image-2.5-sunburst) via the azure-image-generation helper; under the Microsoft Product Terms for Azure OpenAI the customer owns the output and Microsoft claims no rights in it, so commercial use is permitted (subject to the Azure OpenAI Code of Conduct). No stock or web imagery.",
+      "created": "2026-10-08",
+      "review": {
+        "status": "approved",
+        "notes": "Reviewed at 48-256 px: readable silhouette, matches icon style authority, no text."
+      }
+    },
+    {
+      "id": "door-city-open",
+      "kind": "icon",
+      "file": "ui/icons/door-city-open.webp",
+      "width": 269,
+      "height": 384,
+      "transparent": true,
+      "variants": [],
+      "bytes": 24920,
+      "source": {
+        "tool": "azure-image-generation skill (generate-image.ps1)",
+        "provider": "Azure OpenAI",
+        "model": "gpt-image-2.5-sunburst (deployment)",
+        "operation": "edit",
+        "quality": "medium",
+        "prompt": "Image 1 is the style authority for icons: match its contour weight, flat gouache fill, palette and scale, but draw the new object described. Small game UI icon, bold readable silhouette, simple shapes, thick dark-brown ink contour and flat gouache fill, slight paper texture, warm folk-art palette, front view, readable at 48 pixels. An arched carved wooden door standing open, revealing a small night city street with warm amber streetlamps and brick houses inside the doorway; asphalt grey and amber palette. Gouache painting on warm textured paper in the tradition of early-20th-century Russian book illustration: confident dark-brown ink contour over flat matte gouache fills, dry-brush edges, visible paper grain, decorative Slavic folk ornament. Warm candlelit palette of honey amber, ember orange, deep indigo and plum shadows. Cozy, gentle storybook mood; spirits are kind neighbours. Absolutely no text, letters, numerals, runes, writing, signature or watermark. Single subject, centered, fully visible with a small margin on all sides, isolated on a fully transparent background; no ground, no cast shadow, no frame, no border, no scenery.",
+        "derived_from": [
+          "icon-heat"
+        ],
+        "raw_file": "door-city-r1-c2.png",
+        "raw_sha256": "651a909971776a7202b2cfbc032da0c2b1d7598facf4464e8de069278e6a6896",
+        "postprocess": "alpha clean + trim + Lanczos resize, WebP with alpha (q90, lossless alpha)"
+      },
+      "license": "generated with Azure OpenAI Image API (deployment gpt-image-2.5-sunburst) via the azure-image-generation helper; under the Microsoft Product Terms for Azure OpenAI the customer owns the output and Microsoft claims no rights in it, so commercial use is permitted (subject to the Azure OpenAI Code of Conduct). No stock or web imagery.",
+      "created": "2026-10-08",
+      "review": {
+        "status": "approved",
+        "notes": "Reviewed at 48-256 px: readable silhouette, matches icon style authority, no text."
+      }
+    },
+    {
+      "id": "door-memorial-open",
+      "kind": "icon",
+      "file": "ui/icons/door-memorial-open.webp",
+      "width": 308,
+      "height": 384,
+      "transparent": true,
+      "variants": [],
+      "bytes": 30118,
+      "source": {
+        "tool": "azure-image-generation skill (generate-image.ps1)",
+        "provider": "Azure OpenAI",
+        "model": "gpt-image-2.5-sunburst (deployment)",
+        "operation": "edit",
+        "quality": "medium",
+        "prompt": "Image 1 is the style authority for icons: match its contour weight, flat gouache fill, palette and scale, but draw the new object described. Small game UI icon, bold readable silhouette, simple shapes, thick dark-brown ink contour and flat gouache fill, slight paper texture, warm folk-art palette, front view, readable at 48 pixels. An arched carved wooden door standing open, revealing a quiet night birch grove with many small candles glowing in silver and soft blue inside the doorway; peaceful. Gouache painting on warm textured paper in the tradition of early-20th-century Russian book illustration: confident dark-brown ink contour over flat matte gouache fills, dry-brush edges, visible paper grain, decorative Slavic folk ornament. Warm candlelit palette of honey amber, ember orange, deep indigo and plum shadows. Cozy, gentle storybook mood; spirits are kind neighbours. Absolutely no text, letters, numerals, runes, writing, signature or watermark. Single subject, centered, fully visible with a small margin on all sides, isolated on a fully transparent background; no ground, no cast shadow, no frame, no border, no scenery.",
+        "derived_from": [
+          "icon-heat"
+        ],
+        "raw_file": "door-memorial-r1-c1.png",
+        "raw_sha256": "c7d0c0ec4d21ebf5262cc32c4efca340df404118b7edba3fded2d305b5dfaf1f",
+        "postprocess": "alpha clean + trim + Lanczos resize, WebP with alpha (q90, lossless alpha)"
+      },
+      "license": "generated with Azure OpenAI Image API (deployment gpt-image-2.5-sunburst) via the azure-image-generation helper; under the Microsoft Product Terms for Azure OpenAI the customer owns the output and Microsoft claims no rights in it, so commercial use is permitted (subject to the Azure OpenAI Code of Conduct). No stock or web imagery.",
+      "created": "2026-10-08",
+      "review": {
+        "status": "approved",
+        "notes": "Reviewed at 48-256 px: readable silhouette, matches icon style authority, no text."
+      }
+    },
+    {
+      "id": "ui-frame",
+      "kind": "ui",
+      "file": "ui/ui-frame.webp",
+      "width": 512,
+      "height": 510,
+      "transparent": true,
+      "variants": [],
+      "bytes": 55812,
+      "source": {
+        "tool": "azure-image-generation skill (generate-image.ps1)",
+        "provider": "Azure OpenAI",
+        "model": "gpt-image-2.5-sunburst (deployment)",
+        "operation": "generation",
+        "quality": "high",
+        "prompt": "Game user-interface element, front orthographic view, perfectly symmetrical, flat, clean edges. An ornamental rectangular frame: a uniform border band of carved and painted wood in the style of Slavic carved window frames, warm honey wood with red, gold and deep-green folk ornament, a rosette in each of the four corners, the four straight sides are a simple evenly repeating pattern of the same thickness all around. The entire inside of the frame is empty and fully transparent. Gouache painting on warm textured paper in the tradition of early-20th-century Russian book illustration: confident dark-brown ink contour over flat matte gouache fills, dry-brush edges, visible paper grain, decorative Slavic folk ornament. Warm candlelit palette of honey amber, ember orange, deep indigo and plum shadows. Cozy, gentle storybook mood; spirits are kind neighbours. Absolutely no text, letters, numerals, runes, writing, signature or watermark. Isolated on a fully transparent background.",
+        "derived_from": [],
+        "raw_file": "ui-frame-r1-c2.png",
+        "raw_sha256": "74dcf2bea0c530091fad5627c19ead8068ab1d7e07416c92e440b5182dbf8bab",
+        "postprocess": "alpha clean + trim + Lanczos resize, WebP with alpha (q90, lossless alpha)"
+      },
+      "license": "generated with Azure OpenAI Image API (deployment gpt-image-2.5-sunburst) via the azure-image-generation helper; under the Microsoft Product Terms for Azure OpenAI the customer owns the output and Microsoft claims no rights in it, so commercial use is permitted (subject to the Azure OpenAI Code of Conduct). No stock or web imagery.",
+      "created": "2026-10-08",
+      "review": {
+        "status": "approved",
+        "notes": "Use as CSS border-image (slice ~22%)."
+      }
+    },
+    {
+      "id": "ui-panel-paper",
+      "kind": "ui",
+      "file": "ui/ui-panel-paper.webp",
+      "width": 512,
+      "height": 512,
+      "transparent": false,
+      "variants": [],
+      "bytes": 15190,
+      "source": {
+        "tool": "azure-image-generation skill (generate-image.ps1)",
+        "provider": "Azure OpenAI",
+        "model": "gpt-image-2.5-sunburst (deployment)",
+        "operation": "generation",
+        "quality": "medium",
+        "prompt": "Seamless flat texture of warm cream handmade paper with subtle gouache wash variations and soft fibres, evenly lit, no objects, no ornament, no vignette, no text, uniform over the whole image.",
+        "derived_from": [],
+        "raw_file": "ui-panel-paper-r1-c2.png",
+        "raw_sha256": "beb20d4899c5518a5a6a3cf8a492641c44e5fb575071f320499a8c83524e357f",
+        "postprocess": "Lanczos resize, half-offset cross-fade to make seamlessly tileable, WebP q86"
+      },
+      "license": "generated with Azure OpenAI Image API (deployment gpt-image-2.5-sunburst) via the azure-image-generation helper; under the Microsoft Product Terms for Azure OpenAI the customer owns the output and Microsoft claims no rights in it, so commercial use is permitted (subject to the Azure OpenAI Code of Conduct). No stock or web imagery.",
+      "created": "2026-10-08",
+      "review": {
+        "status": "approved",
+        "notes": "Made seamless by half-offset cross-fade."
+      }
+    },
+    {
+      "id": "ui-button",
+      "kind": "ui",
+      "file": "ui/ui-button.webp",
+      "width": 512,
+      "height": 154,
+      "transparent": true,
+      "variants": [],
+      "bytes": 22500,
+      "source": {
+        "tool": "azure-image-generation skill (generate-image.ps1)",
+        "provider": "Azure OpenAI",
+        "model": "gpt-image-2.5-sunburst (deployment)",
+        "operation": "generation",
+        "quality": "high",
+        "prompt": "Game user-interface element, front orthographic view, perfectly symmetrical, flat, clean edges. A wide horizontal button plaque: a rounded rectangle of painted honey-coloured wood with a thin dark-red inner line, small carved folk-ornament scrolls at the left and right ends, the centre is plain and empty for a label. Gouache painting on warm textured paper in the tradition of early-20th-century Russian book illustration: confident dark-brown ink contour over flat matte gouache fills, dry-brush edges, visible paper grain, decorative Slavic folk ornament. Warm candlelit palette of honey amber, ember orange, deep indigo and plum shadows. Cozy, gentle storybook mood; spirits are kind neighbours. Absolutely no text, letters, numerals, runes, writing, signature or watermark. Isolated on a fully transparent background.",
+        "derived_from": [],
+        "raw_file": "ui-button-r1-c1.png",
+        "raw_sha256": "a3eabec7f0b4750d1a96fc08be73fc5596499b5378799f253d892b92c39c8efc",
+        "postprocess": "alpha clean + trim + Lanczos resize, WebP with alpha (q90, lossless alpha)"
+      },
+      "license": "generated with Azure OpenAI Image API (deployment gpt-image-2.5-sunburst) via the azure-image-generation helper; under the Microsoft Product Terms for Azure OpenAI the customer owns the output and Microsoft claims no rights in it, so commercial use is permitted (subject to the Azure OpenAI Code of Conduct). No stock or web imagery.",
+      "created": "2026-10-08",
+      "review": {
+        "status": "approved",
+        "notes": "Reviewed: on-brief, clean alpha, no text."
+      }
+    },
+    {
+      "id": "card-story-back",
+      "kind": "card",
+      "file": "ui/cards/card-story-back.webp",
+      "width": 506,
+      "height": 768,
+      "transparent": true,
+      "variants": [],
+      "bytes": 161232,
+      "source": {
+        "tool": "azure-image-generation skill (generate-image.ps1)",
+        "provider": "Azure OpenAI",
+        "model": "gpt-image-2.5-sunburst (deployment)",
+        "operation": "generation",
+        "quality": "high",
+        "prompt": "A tall vertical game card with rounded corners, 2:3 proportions, front view, filling the whole height. The card back: deep indigo with a symmetric gold-and-red folk ornament, a sun rosette in the middle, a carved border. Gouache painting on warm textured paper in the tradition of early-20th-century Russian book illustration: confident dark-brown ink contour over flat matte gouache fills, dry-brush edges, visible paper grain, decorative Slavic folk ornament. Warm candlelit palette of honey amber, ember orange, deep indigo and plum shadows. Cozy, gentle storybook mood; spirits are kind neighbours. Absolutely no text, letters, numerals, runes, writing, signature or watermark. Isolated on a fully transparent background.",
+        "derived_from": [],
+        "raw_file": "card-story-back-r1-c1.png",
+        "raw_sha256": "e2fc7487c7042137ff7c44f921d49abafc71e2831e2ee83562732dbaf2c9a1df",
+        "postprocess": "alpha clean + trim + Lanczos resize, WebP with alpha (q90, lossless alpha)"
+      },
+      "license": "generated with Azure OpenAI Image API (deployment gpt-image-2.5-sunburst) via the azure-image-generation helper; under the Microsoft Product Terms for Azure OpenAI the customer owns the output and Microsoft claims no rights in it, so commercial use is permitted (subject to the Azure OpenAI Code of Conduct). No stock or web imagery.",
+      "created": "2026-10-08",
+      "review": {
+        "status": "approved",
+        "notes": "Reviewed: on-brief, clean alpha, no text."
+      }
+    },
+    {
+      "id": "card-story-frame",
+      "kind": "card",
+      "file": "ui/cards/card-story-frame.webp",
+      "width": 511,
+      "height": 768,
+      "transparent": true,
+      "variants": [],
+      "bytes": 79410,
+      "source": {
+        "tool": "azure-image-generation skill (generate-image.ps1)",
+        "provider": "Azure OpenAI",
+        "model": "gpt-image-2.5-sunburst (deployment)",
+        "operation": "generation",
+        "quality": "high",
+        "prompt": "A tall vertical game card with rounded corners, 2:3 proportions, front view, filling the whole height. The card face frame only: an ornate folk-ornament border in honey wood and red, with a large empty fully transparent window in the middle for a picture. Gouache painting on warm textured paper in the tradition of early-20th-century Russian book illustration: confident dark-brown ink contour over flat matte gouache fills, dry-brush edges, visible paper grain, decorative Slavic folk ornament. Warm candlelit palette of honey amber, ember orange, deep indigo and plum shadows. Cozy, gentle storybook mood; spirits are kind neighbours. Absolutely no text, letters, numerals, runes, writing, signature or watermark. Isolated on a fully transparent background.",
+        "derived_from": [],
+        "raw_file": "card-story-frame-r1-c2.png",
+        "raw_sha256": "2bc078de22c49e1d2fec06840c5e3722b3b0e155955a52b56b3af80ac31082c0",
+        "postprocess": "alpha clean + trim + Lanczos resize, WebP with alpha (q90, lossless alpha)"
+      },
+      "license": "generated with Azure OpenAI Image API (deployment gpt-image-2.5-sunburst) via the azure-image-generation helper; under the Microsoft Product Terms for Azure OpenAI the customer owns the output and Microsoft claims no rights in it, so commercial use is permitted (subject to the Azure OpenAI Code of Conduct). No stock or web imagery.",
+      "created": "2026-10-08",
+      "review": {
+        "status": "approved",
+        "notes": "Reviewed: on-brief, clean alpha, no text."
+      }
+    },
+    {
+      "id": "tarot-guest",
+      "kind": "card",
+      "file": "ui/cards/tarot-guest.webp",
+      "width": 490,
+      "height": 768,
+      "transparent": true,
+      "variants": [],
+      "bytes": 135338,
+      "source": {
+        "tool": "azure-image-generation skill (generate-image.ps1)",
+        "provider": "Azure OpenAI",
+        "model": "gpt-image-2.5-sunburst (deployment)",
+        "operation": "generation",
+        "quality": "high",
+        "prompt": "A tall vertical game card with rounded corners, 2:3 proportions, front view, filling the whole height. Grandmother's fortune card 'Guest': inside an ornate folk border, an open tavern door at night with the soft silhouette of a visitor in the doorway and a warm lantern. Gouache painting on warm textured paper in the tradition of early-20th-century Russian book illustration: confident dark-brown ink contour over flat matte gouache fills, dry-brush edges, visible paper grain, decorative Slavic folk ornament. Warm candlelit palette of honey amber, ember orange, deep indigo and plum shadows. Cozy, gentle storybook mood; spirits are kind neighbours. Absolutely no text, letters, numerals, runes, writing, signature or watermark. Isolated on a fully transparent background.",
+        "derived_from": [],
+        "raw_file": "tarot-guest-r1-c1.png",
+        "raw_sha256": "5b94cc574d2eee4f6af9df5a27cd818120100ceb73cc3d631eeba1e3f4a3bae4",
+        "postprocess": "alpha clean + trim + Lanczos resize, WebP with alpha (q90, lossless alpha)"
+      },
+      "license": "generated with Azure OpenAI Image API (deployment gpt-image-2.5-sunburst) via the azure-image-generation helper; under the Microsoft Product Terms for Azure OpenAI the customer owns the output and Microsoft claims no rights in it, so commercial use is permitted (subject to the Azure OpenAI Code of Conduct). No stock or web imagery.",
+      "created": "2026-10-08",
+      "review": {
+        "status": "approved",
+        "notes": "Visitor silhouette in doorway."
+      }
+    },
+    {
+      "id": "tarot-wind",
+      "kind": "card",
+      "file": "ui/cards/tarot-wind.webp",
+      "width": 470,
+      "height": 768,
+      "transparent": true,
+      "variants": [],
+      "bytes": 154932,
+      "source": {
+        "tool": "azure-image-generation skill (generate-image.ps1)",
+        "provider": "Azure OpenAI",
+        "model": "gpt-image-2.5-sunburst (deployment)",
+        "operation": "generation",
+        "quality": "high",
+        "prompt": "A tall vertical game card with rounded corners, 2:3 proportions, front view, filling the whole height. Grandmother's fortune card 'Wind': inside an ornate folk border, a swirling wind carrying autumn leaves, a feather and a birch twig across a night sky. Gouache painting on warm textured paper in the tradition of early-20th-century Russian book illustration: confident dark-brown ink contour over flat matte gouache fills, dry-brush edges, visible paper grain, decorative Slavic folk ornament. Warm candlelit palette of honey amber, ember orange, deep indigo and plum shadows. Cozy, gentle storybook mood; spirits are kind neighbours. Absolutely no text, letters, numerals, runes, writing, signature or watermark. Isolated on a fully transparent background.",
+        "derived_from": [],
+        "raw_file": "tarot-wind-r1-c2.png",
+        "raw_sha256": "b5b0a4fd076671da5136d7aa25b895d758f058c17d12117e9fdd605da9bffb06",
+        "postprocess": "alpha clean + trim + Lanczos resize, WebP with alpha (q90, lossless alpha)"
+      },
+      "license": "generated with Azure OpenAI Image API (deployment gpt-image-2.5-sunburst) via the azure-image-generation helper; under the Microsoft Product Terms for Azure OpenAI the customer owns the output and Microsoft claims no rights in it, so commercial use is permitted (subject to the Azure OpenAI Code of Conduct). No stock or web imagery.",
+      "created": "2026-10-08",
+      "review": {
+        "status": "approved",
+        "notes": "Wind spirit carrying leaves."
+      }
+    },
+    {
+      "id": "tarot-whisper",
+      "kind": "card",
+      "file": "ui/cards/tarot-whisper.webp",
+      "width": 482,
+      "height": 768,
+      "transparent": true,
+      "variants": [],
+      "bytes": 137230,
+      "source": {
+        "tool": "azure-image-generation skill (generate-image.ps1)",
+        "provider": "Azure OpenAI",
+        "model": "gpt-image-2.5-sunburst (deployment)",
+        "operation": "generation",
+        "quality": "high",
+        "prompt": "A tall vertical game card with rounded corners, 2:3 proportions, front view, filling the whole height. Grandmother's fortune card 'Whisper': inside an ornate folk border, a small carved cuckoo at an open clock door with a golden ribbon of whisper curling out, and a sprig of herbs. Gouache painting on warm textured paper in the tradition of early-20th-century Russian book illustration: confident dark-brown ink contour over flat matte gouache fills, dry-brush edges, visible paper grain, decorative Slavic folk ornament. Warm candlelit palette of honey amber, ember orange, deep indigo and plum shadows. Cozy, gentle storybook mood; spirits are kind neighbours. Absolutely no text, letters, numerals, runes, writing, signature or watermark. Isolated on a fully transparent background.",
+        "derived_from": [],
+        "raw_file": "tarot-whisper-r1-c1.png",
+        "raw_sha256": "5c42a0fb8cb9d513b194110360de7bc21b56c898a63185fe1f5f97a85462326f",
+        "postprocess": "alpha clean + trim + Lanczos resize, WebP with alpha (q90, lossless alpha)"
+      },
+      "license": "generated with Azure OpenAI Image API (deployment gpt-image-2.5-sunburst) via the azure-image-generation helper; under the Microsoft Product Terms for Azure OpenAI the customer owns the output and Microsoft claims no rights in it, so commercial use is permitted (subject to the Azure OpenAI Code of Conduct). No stock or web imagery.",
+      "created": "2026-10-08",
+      "review": {
+        "status": "approved",
+        "notes": "Cuckoo at clock door with golden whisper ribbon."
+      }
+    },
+    {
+      "id": "title-logo-ornament",
+      "kind": "title",
+      "file": "title/title-logo-ornament.webp",
+      "width": 1024,
+      "height": 640,
+      "transparent": true,
+      "variants": [],
+      "bytes": 137434,
+      "source": {
+        "tool": "azure-image-generation skill (generate-image.ps1)",
+        "provider": "Azure OpenAI",
+        "model": "gpt-image-2.5-sunburst (deployment)",
+        "operation": "generation",
+        "quality": "high",
+        "prompt": "Game user-interface element, front orthographic view, perfectly symmetrical, flat, clean edges. A decorative horizontal title cartouche: a wide carved-wood folk-ornament banner shaped like the top of a carved window frame, with a sun rosette, birds and twisting vines on both sides and a small pendulum clock and crossroads signpost motif at the top centre; a large plain empty cream band across the middle for the title. Gouache painting on warm textured paper in the tradition of early-20th-century Russian book illustration: confident dark-brown ink contour over flat matte gouache fills, dry-brush edges, visible paper grain, decorative Slavic folk ornament. Warm candlelit palette of honey amber, ember orange, deep indigo and plum shadows. Cozy, gentle storybook mood; spirits are kind neighbours. Absolutely no text, letters, numerals, runes, writing, signature or watermark. Isolated on a fully transparent background.",
+        "derived_from": [],
+        "raw_file": "title-logo-ornament-r1-c2.png",
+        "raw_sha256": "17c95b0c161f14409fbfea096b00c267bbf4f4d4b98027db84f9e8867e367083",
+        "postprocess": "alpha clean + trim + Lanczos resize, WebP with alpha (q90, lossless alpha)"
+      },
+      "license": "generated with Azure OpenAI Image API (deployment gpt-image-2.5-sunburst) via the azure-image-generation helper; under the Microsoft Product Terms for Azure OpenAI the customer owns the output and Microsoft claims no rights in it, so commercial use is permitted (subject to the Azure OpenAI Code of Conduct). No stock or web imagery.",
+      "created": "2026-10-08",
+      "review": {
+        "status": "approved",
+        "notes": "Empty cream band for UI title text."
+      }
+    },
+    {
+      "id": "char-commis",
+      "kind": "character",
+      "file": "characters/char-commis.webp",
+      "width": 768,
+      "height": 768,
+      "transparent": true,
+      "variants": [],
+      "bytes": 73922,
+      "source": {
+        "tool": "azure-image-generation skill (generate-image.ps1)",
+        "provider": "Azure OpenAI",
+        "model": "gpt-image-2.5-sunburst (deployment)",
+        "operation": "generation",
+        "quality": "high",
+        "prompt": "Original character design, consistent clean silhouette, natural anatomy with exactly the stated number of arms, hands and fingers. The travelling merchant from the Mirror: tall, thin, all in soft greys, a long grey coat, a wide-brimmed grey hat, a tall wooden peddler's box on his back with a round silver mirror set in it, his face softly silvery and reflective with sad kind eyes, holding a small grey glass vial. Three-quarter-length view. Gouache painting on warm textured paper in the tradition of early-20th-century Russian book illustration: confident dark-brown ink contour over flat matte gouache fills, dry-brush edges, visible paper grain, decorative Slavic folk ornament. Warm candlelit palette of honey amber, ember orange, deep indigo and plum shadows. Cozy, gentle storybook mood; spirits are kind neighbours. Absolutely no text, letters, numerals, runes, writing, signature or watermark. Single subject, centered, fully visible with a small margin on all sides, isolated on a fully transparent background; no ground, no cast shadow, no frame, no border, no scenery.",
+        "derived_from": [],
+        "raw_file": "commis-mirror-r1-c2.png",
+        "raw_sha256": "7266dd9a342145982247fa306f9baa046de6c37c5a7152ed25b8daf619dece08",
+        "postprocess": "alpha clean + trim + Lanczos resize, WebP with alpha (q90, lossless alpha)"
+      },
+      "license": "generated with Azure OpenAI Image API (deployment gpt-image-2.5-sunburst) via the azure-image-generation helper; under the Microsoft Product Terms for Azure OpenAI the customer owns the output and Microsoft claims no rights in it, so commercial use is permitted (subject to the Azure OpenAI Code of Conduct). No stock or web imagery.",
+      "created": "2026-10-08",
+      "review": {
+        "status": "approved",
+        "notes": "Grey peddler with mirror box."
+      }
+    },
+    {
+      "id": "char-tram33",
+      "kind": "character",
+      "file": "characters/char-tram33.webp",
+      "width": 768,
+      "height": 768,
+      "transparent": true,
+      "variants": [],
+      "bytes": 79802,
+      "source": {
+        "tool": "azure-image-generation skill (generate-image.ps1)",
+        "provider": "Azure OpenAI",
+        "model": "gpt-image-2.5-sunburst (deployment)",
+        "operation": "generation",
+        "quality": "high",
+        "prompt": "Original character design, consistent clean silhouette, natural anatomy with exactly the stated number of arms, hands and fingers. The spirit of the cancelled tram line 33: a friendly little conductor spirit whose head is an old round tram headlamp glowing warm with two kind eyes, wearing a faded red-and-cream tram conductor's coat with brass buttons and a leather ticket bag, a trolley pole on his back with tiny sparks at its tip. Three-quarter-length view. Gouache painting on warm textured paper in the tradition of early-20th-century Russian book illustration: confident dark-brown ink contour over flat matte gouache fills, dry-brush edges, visible paper grain, decorative Slavic folk ornament. Warm candlelit palette of honey amber, ember orange, deep indigo and plum shadows. Cozy, gentle storybook mood; spirits are kind neighbours. Absolutely no text, letters, numerals, runes, writing, signature or watermark. Single subject, centered, fully visible with a small margin on all sides, isolated on a fully transparent background; no ground, no cast shadow, no frame, no border, no scenery.",
+        "derived_from": [],
+        "raw_file": "tram33-spirit-r1-c2.png",
+        "raw_sha256": "7adae226cb22d29835c752e686870d04fa4a3c4d23dfff63e38ece9ed68bf55f",
+        "postprocess": "alpha clean + trim + Lanczos resize, WebP with alpha (q90, lossless alpha)"
+      },
+      "license": "generated with Azure OpenAI Image API (deployment gpt-image-2.5-sunburst) via the azure-image-generation helper; under the Microsoft Product Terms for Azure OpenAI the customer owns the output and Microsoft claims no rights in it, so commercial use is permitted (subject to the Azure OpenAI Code of Conduct). No stock or web imagery.",
+      "created": "2026-10-08",
+      "review": {
+        "status": "approved",
+        "notes": "Headlamp head, conductor coat, trolley pole."
+      }
+    },
+    {
+      "id": "char-prosha",
+      "kind": "character",
+      "file": "characters/char-prosha.webp",
+      "width": 768,
+      "height": 768,
+      "transparent": true,
+      "variants": [],
+      "bytes": 118968,
+      "source": {
+        "tool": "azure-image-generation skill (generate-image.ps1)",
+        "provider": "Azure OpenAI",
+        "model": "gpt-image-2.5-sunburst (deployment)",
+        "operation": "generation",
+        "quality": "high",
+        "prompt": "Original character design, consistent clean silhouette, natural anatomy with exactly the stated number of arms, hands and fingers. Prosha, the domovoy house spirit: a small, shaggy, round, bustling house elder with a big fluffy beard and brown fur, a red kaftan with a sash, bast shoes, a little broom in one hand and a bundle of keys on his belt, cheerful and fussy. Full body. Gouache painting on warm textured paper in the tradition of early-20th-century Russian book illustration: confident dark-brown ink contour over flat matte gouache fills, dry-brush edges, visible paper grain, decorative Slavic folk ornament. Warm candlelit palette of honey amber, ember orange, deep indigo and plum shadows. Cozy, gentle storybook mood; spirits are kind neighbours. Absolutely no text, letters, numerals, runes, writing, signature or watermark. Single subject, centered, fully visible with a small margin on all sides, isolated on a fully transparent background; no ground, no cast shadow, no frame, no border, no scenery.",
+        "derived_from": [],
+        "raw_file": "prosha-r1-c1.png",
+        "raw_sha256": "b07783c13e871a5be48feb0349f8f57cbfb1ae75dbb248fc40a515317e3e5920",
+        "postprocess": "alpha clean + trim + Lanczos resize, WebP with alpha (q90, lossless alpha)"
+      },
+      "license": "generated with Azure OpenAI Image API (deployment gpt-image-2.5-sunburst) via the azure-image-generation helper; under the Microsoft Product Terms for Azure OpenAI the customer owns the output and Microsoft claims no rights in it, so commercial use is permitted (subject to the Azure OpenAI Code of Conduct). No stock or web imagery.",
+      "created": "2026-10-08",
+      "review": {
+        "status": "approved",
+        "notes": "Domovoy with broom and keys."
+      }
+    },
+    {
+      "id": "char-guardian",
+      "kind": "character",
+      "file": "characters/char-guardian.webp",
+      "width": 768,
+      "height": 768,
+      "transparent": true,
+      "variants": [],
+      "bytes": 102854,
+      "source": {
+        "tool": "azure-image-generation skill (generate-image.ps1)",
+        "provider": "Azure OpenAI",
+        "model": "gpt-image-2.5-sunburst (deployment)",
+        "operation": "generation",
+        "quality": "high",
+        "prompt": "Original character design, consistent clean silhouette, natural anatomy with exactly the stated number of arms, hands and fingers. The Guardian of the Crossroads: a tall serene radiant spirit wearing a cloak sewn from four patches (moss-green forest, turquoise river, amber city, silver-blue candlelit), antlers like crossroads signposts, a soft dawn sun glowing in the chest, a calm kind face, arms open in welcome. Full body. Gouache painting on warm textured paper in the tradition of early-20th-century Russian book illustration: confident dark-brown ink contour over flat matte gouache fills, dry-brush edges, visible paper grain, decorative Slavic folk ornament. Warm candlelit palette of honey amber, ember orange, deep indigo and plum shadows. Cozy, gentle storybook mood; spirits are kind neighbours. Absolutely no text, letters, numerals, runes, writing, signature or watermark. Single subject, centered, fully visible with a small margin on all sides, isolated on a fully transparent background; no ground, no cast shadow, no frame, no border, no scenery.",
+        "derived_from": [],
+        "raw_file": "guardian-r1-c1.png",
+        "raw_sha256": "bee9f9063b115007736218f034a52385addc767cc4924de0957b3d70e22a23ea",
+        "postprocess": "alpha clean + trim + Lanczos resize, WebP with alpha (q90, lossless alpha)"
+      },
+      "license": "generated with Azure OpenAI Image API (deployment gpt-image-2.5-sunburst) via the azure-image-generation helper; under the Microsoft Product Terms for Azure OpenAI the customer owns the output and Microsoft claims no rights in it, so commercial use is permitted (subject to the Azure OpenAI Code of Conduct). No stock or web imagery.",
+      "created": "2026-10-08",
+      "review": {
+        "status": "approved",
+        "notes": "Four-patch cloak (forest/river/city/candle), signpost antlers, sun in chest."
+      }
+    },
+    {
+      "id": "bg-door-forest",
+      "kind": "background",
+      "file": "bg/bg-door-forest.webp",
+      "width": 1920,
+      "height": 1080,
+      "transparent": false,
+      "variants": [
+        {
+          "file": "bg/bg-door-forest-720.webp",
+          "width": 1280,
+          "height": 720,
+          "label": "720p"
+        }
+      ],
+      "bytes": 729616,
+      "source": {
+        "tool": "azure-image-generation skill (generate-image.ps1)",
+        "provider": "Azure OpenAI",
+        "model": "gpt-image-2.5-sunburst (deployment)",
+        "operation": "generation",
+        "quality": "high",
+        "prompt": "Wide 16:9 view through the open double doors of a cozy carved wooden tavern, the doorway framed by ornate Slavic carved nalichnik ornament at the edges of the image, looking out into another world at night: a deep old mossy forest with huge fir trunks, ferns, mushrooms, fireflies and a winding path; moss greens and bark browns, soft green moonlight. No people. Gouache painting on warm textured paper in the tradition of early-20th-century Russian book illustration: confident dark-brown ink contour over flat matte gouache fills, dry-brush edges, visible paper grain, decorative Slavic folk ornament. Warm candlelit palette of honey amber, ember orange, deep indigo and plum shadows. Cozy, gentle storybook mood; spirits are kind neighbours. Absolutely no text, letters, numerals, runes, writing, signature or watermark.",
+        "derived_from": [],
+        "raw_file": "bg-door-forest-r1-c1.png",
+        "raw_sha256": "726f0a547cd06ebfe30b7337e534f0a812370b8ac4f227495dce3de51bfc01bb",
+        "postprocess": "cover-crop to 16:9, Lanczos resize, WebP q84/q82"
+      },
+      "license": "generated with Azure OpenAI Image API (deployment gpt-image-2.5-sunburst) via the azure-image-generation helper; under the Microsoft Product Terms for Azure OpenAI the customer owns the output and Microsoft claims no rights in it, so commercial use is permitted (subject to the Azure OpenAI Code of Conduct). No stock or web imagery.",
+      "created": "2026-10-08",
+      "review": {
+        "status": "approved",
+        "notes": "Forest seen through carved tavern doors."
+      }
+    },
+    {
+      "id": "door-forest-closed",
+      "kind": "icon",
+      "file": "ui/icons/door-forest-closed.webp",
+      "width": 298,
+      "height": 384,
+      "transparent": true,
+      "variants": [],
+      "bytes": 25480,
+      "source": {
+        "tool": "azure-image-generation skill (generate-image.ps1)",
+        "provider": "Azure OpenAI",
+        "model": "gpt-image-2.5-sunburst (deployment)",
+        "operation": "edit",
+        "quality": "medium",
+        "prompt": "Image 1 is the style authority for icons: match its contour weight, flat gouache fill, palette and scale, but draw the new object described. Small game UI icon, bold readable silhouette, simple shapes, thick dark-brown ink contour and flat gouache fill, slight paper texture, warm folk-art palette, front view, readable at 48 pixels. An arched carved wooden door, firmly CLOSED, painted moss-green and bark-brown with a carved fir-tree motif, an iron ring handle and a small padlock-free latch. Gouache painting on warm textured paper in the tradition of early-20th-century Russian book illustration: confident dark-brown ink contour over flat matte gouache fills, dry-brush edges, visible paper grain, decorative Slavic folk ornament. Warm candlelit palette of honey amber, ember orange, deep indigo and plum shadows. Cozy, gentle storybook mood; spirits are kind neighbours. Absolutely no text, letters, numerals, runes, writing, signature or watermark. Single subject, centered, fully visible with a small margin on all sides, isolated on a fully transparent background; no ground, no cast shadow, no frame, no border, no scenery.",
+        "derived_from": [
+          "door-forest"
+        ],
+        "raw_file": "door-forest-closed-r1-c2.png",
+        "raw_sha256": "da9821e0c29c33f098552fe519e199756e2c3912457019d1f5e70b7614d55ec9",
+        "postprocess": "alpha clean + trim + Lanczos resize, WebP with alpha (q90, lossless alpha)"
+      },
+      "license": "generated with Azure OpenAI Image API (deployment gpt-image-2.5-sunburst) via the azure-image-generation helper; under the Microsoft Product Terms for Azure OpenAI the customer owns the output and Microsoft claims no rights in it, so commercial use is permitted (subject to the Azure OpenAI Code of Conduct). No stock or web imagery.",
+      "created": "2026-10-08",
+      "review": {
+        "status": "approved",
+        "notes": "Closed variant of door-forest."
+      }
+    },
+    {
+      "id": "door-river-closed",
+      "kind": "icon",
+      "file": "ui/icons/door-river-closed.webp",
+      "width": 265,
+      "height": 384,
+      "transparent": true,
+      "variants": [],
+      "bytes": 26656,
+      "source": {
+        "tool": "azure-image-generation skill (generate-image.ps1)",
+        "provider": "Azure OpenAI",
+        "model": "gpt-image-2.5-sunburst (deployment)",
+        "operation": "edit",
+        "quality": "medium",
+        "prompt": "Image 1 is the style authority for icons: match its contour weight, flat gouache fill, palette and scale, but draw the new object described. Small game UI icon, bold readable silhouette, simple shapes, thick dark-brown ink contour and flat gouache fill, slight paper texture, warm folk-art palette, front view, readable at 48 pixels. An arched carved wooden door, firmly CLOSED, painted turquoise and glass-green with a carved wave and fish motif, an iron ring handle and a small padlock-free latch. Gouache painting on warm textured paper in the tradition of early-20th-century Russian book illustration: confident dark-brown ink contour over flat matte gouache fills, dry-brush edges, visible paper grain, decorative Slavic folk ornament. Warm candlelit palette of honey amber, ember orange, deep indigo and plum shadows. Cozy, gentle storybook mood; spirits are kind neighbours. Absolutely no text, letters, numerals, runes, writing, signature or watermark. Single subject, centered, fully visible with a small margin on all sides, isolated on a fully transparent background; no ground, no cast shadow, no frame, no border, no scenery.",
+        "derived_from": [
+          "door-river"
+        ],
+        "raw_file": "door-river-closed-r1-c2.png",
+        "raw_sha256": "6738348e60971388e1a489cc43912a1589e14dbebf50bffb8429d705fb63ccdf",
+        "postprocess": "alpha clean + trim + Lanczos resize, WebP with alpha (q90, lossless alpha)"
+      },
+      "license": "generated with Azure OpenAI Image API (deployment gpt-image-2.5-sunburst) via the azure-image-generation helper; under the Microsoft Product Terms for Azure OpenAI the customer owns the output and Microsoft claims no rights in it, so commercial use is permitted (subject to the Azure OpenAI Code of Conduct). No stock or web imagery.",
+      "created": "2026-10-08",
+      "review": {
+        "status": "approved",
+        "notes": "Closed variant of door-river."
+      }
+    },
+    {
+      "id": "door-city-closed",
+      "kind": "icon",
+      "file": "ui/icons/door-city-closed.webp",
+      "width": 276,
+      "height": 384,
+      "transparent": true,
+      "variants": [],
+      "bytes": 25878,
+      "source": {
+        "tool": "azure-image-generation skill (generate-image.ps1)",
+        "provider": "Azure OpenAI",
+        "model": "gpt-image-2.5-sunburst (deployment)",
+        "operation": "edit",
+        "quality": "medium",
+        "prompt": "Image 1 is the style authority for icons: match its contour weight, flat gouache fill, palette and scale, but draw the new object described. Small game UI icon, bold readable silhouette, simple shapes, thick dark-brown ink contour and flat gouache fill, slight paper texture, warm folk-art palette, front view, readable at 48 pixels. An arched carved wooden door, firmly CLOSED, painted warm grey and amber with a carved streetlamp motif, an iron ring handle and a small padlock-free latch. Gouache painting on warm textured paper in the tradition of early-20th-century Russian book illustration: confident dark-brown ink contour over flat matte gouache fills, dry-brush edges, visible paper grain, decorative Slavic folk ornament. Warm candlelit palette of honey amber, ember orange, deep indigo and plum shadows. Cozy, gentle storybook mood; spirits are kind neighbours. Absolutely no text, letters, numerals, runes, writing, signature or watermark. Single subject, centered, fully visible with a small margin on all sides, isolated on a fully transparent background; no ground, no cast shadow, no frame, no border, no scenery.",
+        "derived_from": [
+          "door-city"
+        ],
+        "raw_file": "door-city-closed-r1-c1.png",
+        "raw_sha256": "74dc4b867f9a452f8d54960d3238d74d1942f68d946e1fa07183f8b7e1f02574",
+        "postprocess": "alpha clean + trim + Lanczos resize, WebP with alpha (q90, lossless alpha)"
+      },
+      "license": "generated with Azure OpenAI Image API (deployment gpt-image-2.5-sunburst) via the azure-image-generation helper; under the Microsoft Product Terms for Azure OpenAI the customer owns the output and Microsoft claims no rights in it, so commercial use is permitted (subject to the Azure OpenAI Code of Conduct). No stock or web imagery.",
+      "created": "2026-10-08",
+      "review": {
+        "status": "approved",
+        "notes": "Closed variant of door-city."
+      }
+    },
+    {
+      "id": "door-memorial-closed",
+      "kind": "icon",
+      "file": "ui/icons/door-memorial-closed.webp",
+      "width": 273,
+      "height": 384,
+      "transparent": true,
+      "variants": [],
+      "bytes": 25580,
+      "source": {
+        "tool": "azure-image-generation skill (generate-image.ps1)",
+        "provider": "Azure OpenAI",
+        "model": "gpt-image-2.5-sunburst (deployment)",
+        "operation": "edit",
+        "quality": "medium",
+        "prompt": "Image 1 is the style authority for icons: match its contour weight, flat gouache fill, palette and scale, but draw the new object described. Small game UI icon, bold readable silhouette, simple shapes, thick dark-brown ink contour and flat gouache fill, slight paper texture, warm folk-art palette, front view, readable at 48 pixels. An arched carved wooden door, firmly CLOSED, painted silver and soft blue with a carved candle motif, an iron ring handle and a small padlock-free latch. Gouache painting on warm textured paper in the tradition of early-20th-century Russian book illustration: confident dark-brown ink contour over flat matte gouache fills, dry-brush edges, visible paper grain, decorative Slavic folk ornament. Warm candlelit palette of honey amber, ember orange, deep indigo and plum shadows. Cozy, gentle storybook mood; spirits are kind neighbours. Absolutely no text, letters, numerals, runes, writing, signature or watermark. Single subject, centered, fully visible with a small margin on all sides, isolated on a fully transparent background; no ground, no cast shadow, no frame, no border, no scenery.",
+        "derived_from": [
+          "door-memorial"
+        ],
+        "raw_file": "door-memorial-closed-r1-c2.png",
+        "raw_sha256": "af3cf206f6dc139b61a021554cd849ac5261d72d1608bf3a780e4b4e07b235af",
+        "postprocess": "alpha clean + trim + Lanczos resize, WebP with alpha (q90, lossless alpha)"
+      },
+      "license": "generated with Azure OpenAI Image API (deployment gpt-image-2.5-sunburst) via the azure-image-generation helper; under the Microsoft Product Terms for Azure OpenAI the customer owns the output and Microsoft claims no rights in it, so commercial use is permitted (subject to the Azure OpenAI Code of Conduct). No stock or web imagery.",
+      "created": "2026-10-08",
+      "review": {
+        "status": "approved",
+        "notes": "Closed variant of door-memorial."
+      }
+    },
+    {
+      "id": "char-kupa-portrait",
+      "kind": "character",
+      "file": "characters/char-kupa-portrait.webp",
+      "width": 768,
+      "height": 768,
+      "transparent": true,
+      "variants": [],
+      "bytes": 135580,
+      "source": {
+        "tool": "azure-image-generation skill (generate-image.ps1)",
+        "provider": "Azure OpenAI",
+        "model": "gpt-image-2.5-sunburst (deployment)",
+        "operation": "edit",
+        "quality": "high",
+        "prompt": "Image 1 is the approved artwork and the absolute authority. Reproduce it exactly: the same subject, pose, face, expression, clothing, colours, line work, gouache texture, proportions and framing. Keep every part of the subject. Output it as a clean cutout: everything that is not the subject (including any painted checkerboard or plain backdrop) becomes fully transparent background.",
+        "derived_from": [
+          "kupa (approved non-transparent pick, re-rendered as cutout)"
+        ],
+        "raw_file": "kupa-r2.png",
+        "raw_sha256": "357651cce1a12ba381022234ea325ae6fb82d0ec56d90907a26cd561fccfa90a",
+        "postprocess": "alpha clean + trim + Lanczos resize, WebP with alpha (q90, lossless alpha)"
+      },
+      "license": "generated with Azure OpenAI Image API (deployment gpt-image-2.5-sunburst) via the azure-image-generation helper; under the Microsoft Product Terms for Azure OpenAI the customer owns the output and Microsoft claims no rights in it, so commercial use is permitted (subject to the Azure OpenAI Code of Conduct). No stock or web imagery.",
+      "created": "2026-10-08",
+      "review": {
+        "status": "approved",
+        "notes": "Six arms checked: poker, log, coal shovel, kettle, two folded. Real-alpha cutout re-render of approved kupa-r1-c1.png (original had a painted checkerboard)."
+      }
+    },
+    {
+      "id": "ui-button-normal",
+      "kind": "ui",
+      "file": "ui/ui-button-normal.webp",
+      "width": 512,
+      "height": 154,
+      "transparent": true,
+      "variants": [],
+      "bytes": 21842,
+      "source": {
+        "tool": "azure-image-generation skill (generate-image.ps1)",
+        "provider": "Azure OpenAI",
+        "model": "gpt-image-2.5-sunburst (deployment)",
+        "operation": "generation",
+        "quality": "high",
+        "prompt": "Game user-interface element, front orthographic view, perfectly symmetrical, flat, clean edges. A wide horizontal button plaque: a rounded rectangle of painted honey-coloured wood with a thin dark-red inner line, small carved folk-ornament scrolls at the left and right ends, the centre is plain and empty for a label. Gouache painting on warm textured paper in the tradition of early-20th-century Russian book illustration: confident dark-brown ink contour over flat matte gouache fills, dry-brush edges, visible paper grain, decorative Slavic folk ornament. Warm candlelit palette of honey amber, ember orange, deep indigo and plum shadows. Cozy, gentle storybook mood; spirits are kind neighbours. Absolutely no text, letters, numerals, runes, writing, signature or watermark. Isolated on a fully transparent background.",
+        "derived_from": [
+          "ui-button"
+        ],
+        "raw_file": "ui-button-r1-c1.png",
+        "raw_sha256": "a3eabec7f0b4750d1a96fc08be73fc5596499b5378799f253d892b92c39c8efc",
+        "postprocess": "deterministic PIL derivation from ui-button (normal state)"
+      },
+      "license": "generated with Azure OpenAI Image API (deployment gpt-image-2.5-sunburst) via the azure-image-generation helper; under the Microsoft Product Terms for Azure OpenAI the customer owns the output and Microsoft claims no rights in it, so commercial use is permitted (subject to the Azure OpenAI Code of Conduct). No stock or web imagery.",
+      "created": "2026-10-08",
+      "review": {
+        "status": "approved",
+        "notes": "Reviewed: on-brief, clean alpha, no text."
+      }
+    },
+    {
+      "id": "ui-button-hover",
+      "kind": "ui",
+      "file": "ui/ui-button-hover.webp",
+      "width": 512,
+      "height": 154,
+      "transparent": true,
+      "variants": [],
+      "bytes": 22416,
+      "source": {
+        "tool": "azure-image-generation skill (generate-image.ps1)",
+        "provider": "Azure OpenAI",
+        "model": "gpt-image-2.5-sunburst (deployment)",
+        "operation": "generation",
+        "quality": "high",
+        "prompt": "Game user-interface element, front orthographic view, perfectly symmetrical, flat, clean edges. A wide horizontal button plaque: a rounded rectangle of painted honey-coloured wood with a thin dark-red inner line, small carved folk-ornament scrolls at the left and right ends, the centre is plain and empty for a label. Gouache painting on warm textured paper in the tradition of early-20th-century Russian book illustration: confident dark-brown ink contour over flat matte gouache fills, dry-brush edges, visible paper grain, decorative Slavic folk ornament. Warm candlelit palette of honey amber, ember orange, deep indigo and plum shadows. Cozy, gentle storybook mood; spirits are kind neighbours. Absolutely no text, letters, numerals, runes, writing, signature or watermark. Isolated on a fully transparent background.",
+        "derived_from": [
+          "ui-button"
+        ],
+        "raw_file": "ui-button-r1-c1.png",
+        "raw_sha256": "a3eabec7f0b4750d1a96fc08be73fc5596499b5378799f253d892b92c39c8efc",
+        "postprocess": "deterministic PIL derivation from ui-button (hover state)"
+      },
+      "license": "generated with Azure OpenAI Image API (deployment gpt-image-2.5-sunburst) via the azure-image-generation helper; under the Microsoft Product Terms for Azure OpenAI the customer owns the output and Microsoft claims no rights in it, so commercial use is permitted (subject to the Azure OpenAI Code of Conduct). No stock or web imagery.",
+      "created": "2026-10-08",
+      "review": {
+        "status": "approved",
+        "notes": "Reviewed: on-brief, clean alpha, no text."
+      }
+    },
+    {
+      "id": "ui-button-pressed",
+      "kind": "ui",
+      "file": "ui/ui-button-pressed.webp",
+      "width": 512,
+      "height": 154,
+      "transparent": true,
+      "variants": [],
+      "bytes": 18542,
+      "source": {
+        "tool": "azure-image-generation skill (generate-image.ps1)",
+        "provider": "Azure OpenAI",
+        "model": "gpt-image-2.5-sunburst (deployment)",
+        "operation": "generation",
+        "quality": "high",
+        "prompt": "Game user-interface element, front orthographic view, perfectly symmetrical, flat, clean edges. A wide horizontal button plaque: a rounded rectangle of painted honey-coloured wood with a thin dark-red inner line, small carved folk-ornament scrolls at the left and right ends, the centre is plain and empty for a label. Gouache painting on warm textured paper in the tradition of early-20th-century Russian book illustration: confident dark-brown ink contour over flat matte gouache fills, dry-brush edges, visible paper grain, decorative Slavic folk ornament. Warm candlelit palette of honey amber, ember orange, deep indigo and plum shadows. Cozy, gentle storybook mood; spirits are kind neighbours. Absolutely no text, letters, numerals, runes, writing, signature or watermark. Isolated on a fully transparent background.",
+        "derived_from": [
+          "ui-button"
+        ],
+        "raw_file": "ui-button-r1-c1.png",
+        "raw_sha256": "a3eabec7f0b4750d1a96fc08be73fc5596499b5378799f253d892b92c39c8efc",
+        "postprocess": "deterministic PIL derivation from ui-button (pressed state)"
+      },
+      "license": "generated with Azure OpenAI Image API (deployment gpt-image-2.5-sunburst) via the azure-image-generation helper; under the Microsoft Product Terms for Azure OpenAI the customer owns the output and Microsoft claims no rights in it, so commercial use is permitted (subject to the Azure OpenAI Code of Conduct). No stock or web imagery.",
+      "created": "2026-10-08",
+      "review": {
+        "status": "approved",
+        "notes": "Reviewed: on-brief, clean alpha, no text."
       }
     }
   ]
