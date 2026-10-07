@@ -1,0 +1,4541 @@
+{
+ "schema": "krestets-audio-manifest/1",
+ "generated": "2026-10-08",
+ "sampleRate": 48000,
+ "formats": {
+  "primary": "ogg (Vorbis)",
+  "fallback": "m4a (AAC-LC)"
+ },
+ "loudnessTargets": {
+  "music": "-18 LUFS integrated",
+  "ambience": "-24 LUFS integrated",
+  "voice": "-20 LUFS integrated",
+  "sfx": "sample peak <= -3 dBFS"
+ },
+ "loopPointsUnit": "samples at 48000 Hz; loopStart/loopEnd refer to the decoded stream; every looping file is exactly one loop (loopStart 0, loopEnd = samples)",
+ "busMap": {
+  "music": "music",
+  "ambience": "ambience",
+  "effects": "sfx except ui-*/undo",
+  "ui": "ui-*, undo",
+  "voice": "whisper.*, murmur-*"
+ },
+ "notes": [
+  "All measurements (LUFS, peaks, decoded sample counts, seam checks) are taken from the encoded OGG files with ffmpeg ebur128.",
+  "AAC (m4a) decodes start-aligned (priming removed via the MP4 edit list) but can carry up to 1024 trailing padding samples (see decodedSamples). Always loop with loopEnd from this manifest; prefer OGG for loops.",
+  "Seam check (seam = decoded OGG, seamMaster = pre-codec master): the sample jump N-1 -> 0 must be <= 2x the file's own 99.9th-percentile sample step, and the 5 ms RMS step across the seam <= max(file p99, 3 dB).",
+  "Grandmother whispers are synthetic TTS for the vertical slice; release voices require PM approval (Q40)."
+ ],
+ "totals": {
+  "bytes": {
+   "ogg": 6833997,
+   "m4a": 7134395
+  },
+  "megabytes": 13.97,
+  "cues": 83
+ },
+ "cues": [
+  {
+   "id": "chime-wind",
+   "kind": "sfx",
+   "bus": "effects",
+   "files": {
+    "ogg": "assets/audio/sfx/chime-wind.ogg",
+    "m4a": "assets/audio/sfx/chime-wind.m4a"
+   },
+   "sampleRate": 48000,
+   "channels": 2,
+   "duration": 4.7029,
+   "samples": 225737,
+   "loop": false,
+   "lufs": -16.6,
+   "truePeakDbtp": -4.1,
+   "samplePeakDbfs": -4.1,
+   "decodedSamples": {
+    "ogg": 225737,
+    "m4a": 226304
+   },
+   "bytes": {
+    "ogg": 54193,
+    "m4a": 76201
+   },
+   "date": "2026-10-08",
+   "tool": "tools/audio/make_sfx.py (numpy/scipy procedural synthesis)",
+   "settings": {
+    "design": "Wind-change chime: three rising soft bells G4-B4-D5 over a breath of air.",
+    "seed": 7895243,
+    "targetPeakDbfs": -3.5
+   },
+   "license": "Original procedural synthesis written for this project (tools/audio); no samples or third-party recordings. Owned by the project; commercial use permitted (Q05).",
+   "notes": ""
+  },
+  {
+   "id": "chime-midnight",
+   "kind": "sfx",
+   "bus": "effects",
+   "files": {
+    "ogg": "assets/audio/sfx/chime-midnight.ogg",
+    "m4a": "assets/audio/sfx/chime-midnight.m4a"
+   },
+   "sampleRate": 48000,
+   "channels": 2,
+   "duration": 7.1,
+   "samples": 340800,
+   "loop": false,
+   "lufs": -15.6,
+   "truePeakDbtp": -4.0,
+   "samplePeakDbfs": -4.0,
+   "decodedSamples": {
+    "ogg": 340800,
+    "m4a": 340992
+   },
+   "bytes": {
+    "ogg": 54419,
+    "m4a": 117207
+   },
+   "date": "2026-10-08",
+   "tool": "tools/audio/make_sfx.py (numpy/scipy procedural synthesis)",
+   "settings": {
+    "design": "Midnight chime: deep wall-clock bell motif D4-G4-B4-A4 then a low G3 strike.",
+    "seed": 11205385,
+    "targetPeakDbfs": -3.5
+   },
+   "license": "Original procedural synthesis written for this project (tools/audio); no samples or third-party recordings. Owned by the project; commercial use permitted (Q05).",
+   "notes": ""
+  },
+  {
+   "id": "chime-predawn",
+   "kind": "sfx",
+   "bus": "effects",
+   "files": {
+    "ogg": "assets/audio/sfx/chime-predawn.ogg",
+    "m4a": "assets/audio/sfx/chime-predawn.m4a"
+   },
+   "sampleRate": 48000,
+   "channels": 2,
+   "duration": 5.3664,
+   "samples": 257586,
+   "loop": false,
+   "lufs": -15.5,
+   "truePeakDbtp": -4.1,
+   "samplePeakDbfs": -4.1,
+   "decodedSamples": {
+    "ogg": 257586,
+    "m4a": 258048
+   },
+   "bytes": {
+    "ogg": 45318,
+    "m4a": 86410
+   },
+   "date": "2026-10-08",
+   "tool": "tools/audio/make_sfx.py (numpy/scipy procedural synthesis)",
+   "settings": {
+    "design": "Predawn chime: brisker bright motif E5-D5-B4-D5 with a doubled final strike.",
+    "seed": 10421404,
+    "targetPeakDbfs": -3.5
+   },
+   "license": "Original procedural synthesis written for this project (tools/audio); no samples or third-party recordings. Owned by the project; commercial use permitted (Q05).",
+   "notes": ""
+  },
+  {
+   "id": "chime-dawn",
+   "kind": "sfx",
+   "bus": "effects",
+   "files": {
+    "ogg": "assets/audio/sfx/chime-dawn.ogg",
+    "m4a": "assets/audio/sfx/chime-dawn.m4a"
+   },
+   "sampleRate": 48000,
+   "channels": 2,
+   "duration": 5.9346,
+   "samples": 284862,
+   "loop": false,
+   "lufs": -18.1,
+   "truePeakDbtp": -4.3,
+   "samplePeakDbfs": -4.3,
+   "decodedSamples": {
+    "ogg": 284862,
+    "m4a": 285696
+   },
+   "bytes": {
+    "ogg": 61505,
+    "m4a": 95326
+   },
+   "date": "2026-10-08",
+   "tool": "tools/audio/make_sfx.py (numpy/scipy procedural synthesis)",
+   "settings": {
+    "design": "Dawn chime: warm rising arpeggio G4-B4-D5-G5 resolving with a sparkle.",
+    "seed": 7831891,
+    "targetPeakDbfs": -3.5
+   },
+   "license": "Original procedural synthesis written for this project (tools/audio); no samples or third-party recordings. Owned by the project; commercial use permitted (Q05).",
+   "notes": ""
+  },
+  {
+   "id": "cuckoo",
+   "kind": "sfx",
+   "bus": "effects",
+   "files": {
+    "ogg": "assets/audio/sfx/cuckoo.ogg",
+    "m4a": "assets/audio/sfx/cuckoo.m4a"
+   },
+   "sampleRate": 48000,
+   "channels": 2,
+   "duration": 2.6226,
+   "samples": 125887,
+   "loop": false,
+   "lufs": -13.5,
+   "truePeakDbtp": -7.5,
+   "samplePeakDbfs": -7.5,
+   "decodedSamples": {
+    "ogg": 125887,
+    "m4a": 125952
+   },
+   "bytes": {
+    "ogg": 29877,
+    "m4a": 42825
+   },
+   "date": "2026-10-08",
+   "tool": "tools/audio/make_sfx.py (numpy/scipy procedural synthesis)",
+   "settings": {
+    "design": "Wooden cuckoo pipe: two falling-third calls D5-B4, with the little door click.",
+    "seed": 5099836,
+    "targetPeakDbfs": -7
+   },
+   "license": "Original procedural synthesis written for this project (tools/audio); no samples or third-party recordings. Owned by the project; commercial use permitted (Q05).",
+   "notes": ""
+  },
+  {
+   "id": "jar-pick",
+   "kind": "sfx",
+   "bus": "effects",
+   "files": {
+    "ogg": "assets/audio/sfx/jar-pick.ogg",
+    "m4a": "assets/audio/sfx/jar-pick.m4a"
+   },
+   "sampleRate": 48000,
+   "channels": 2,
+   "duration": 0.8541,
+   "samples": 40999,
+   "loop": false,
+   "lufs": -16.6,
+   "truePeakDbtp": -5.1,
+   "samplePeakDbfs": -5.1,
+   "decodedSamples": {
+    "ogg": 40871,
+    "m4a": 41984
+   },
+   "bytes": {
+    "ogg": 12939,
+    "m4a": 14423
+   },
+   "date": "2026-10-08",
+   "tool": "tools/audio/make_sfx.py (numpy/scipy procedural synthesis)",
+   "settings": {
+    "design": "Lift a small glass jar: soft glass tick and a tiny upward air lift.",
+    "seed": 6216415,
+    "targetPeakDbfs": -5
+   },
+   "license": "Original procedural synthesis written for this project (tools/audio); no samples or third-party recordings. Owned by the project; commercial use permitted (Q05).",
+   "notes": ""
+  },
+  {
+   "id": "jar-place",
+   "kind": "sfx",
+   "bus": "effects",
+   "files": {
+    "ogg": "assets/audio/sfx/jar-place.ogg",
+    "m4a": "assets/audio/sfx/jar-place.m4a"
+   },
+   "sampleRate": 48000,
+   "channels": 2,
+   "duration": 0.8016,
+   "samples": 38478,
+   "loop": false,
+   "lufs": -27.3,
+   "truePeakDbtp": -6.0,
+   "samplePeakDbfs": -6.0,
+   "decodedSamples": {
+    "ogg": 38350,
+    "m4a": 38912
+   },
+   "bytes": {
+    "ogg": 12545,
+    "m4a": 13299
+   },
+   "date": "2026-10-08",
+   "tool": "tools/audio/make_sfx.py (numpy/scipy procedural synthesis)",
+   "settings": {
+    "design": "Set a jar down on a wooden shelf: muted wooden tap plus glass ring.",
+    "seed": 6960801,
+    "targetPeakDbfs": -5
+   },
+   "license": "Original procedural synthesis written for this project (tools/audio); no samples or third-party recordings. Owned by the project; commercial use permitted (Q05).",
+   "notes": ""
+  },
+  {
+   "id": "jar-swap",
+   "kind": "sfx",
+   "bus": "effects",
+   "files": {
+    "ogg": "assets/audio/sfx/jar-swap.ogg",
+    "m4a": "assets/audio/sfx/jar-swap.m4a"
+   },
+   "sampleRate": 48000,
+   "channels": 2,
+   "duration": 1.0274,
+   "samples": 49317,
+   "loop": false,
+   "lufs": -16.1,
+   "truePeakDbtp": -5.5,
+   "samplePeakDbfs": -5.5,
+   "decodedSamples": {
+    "ogg": 49317,
+    "m4a": 50176
+   },
+   "bytes": {
+    "ogg": 14122,
+    "m4a": 17134
+   },
+   "date": "2026-10-08",
+   "tool": "tools/audio/make_sfx.py (numpy/scipy procedural synthesis)",
+   "settings": {
+    "design": "Two jars trade places: two light glass clinks a fifth apart.",
+    "seed": 6374795,
+    "targetPeakDbfs": -5
+   },
+   "license": "Original procedural synthesis written for this project (tools/audio); no samples or third-party recordings. Owned by the project; commercial use permitted (Q05).",
+   "notes": ""
+  },
+  {
+   "id": "listen-extract",
+   "kind": "sfx",
+   "bus": "effects",
+   "files": {
+    "ogg": "assets/audio/sfx/listen-extract.ogg",
+    "m4a": "assets/audio/sfx/listen-extract.m4a"
+   },
+   "sampleRate": 48000,
+   "channels": 2,
+   "duration": 2.2013,
+   "samples": 105662,
+   "loop": false,
+   "lufs": -18.0,
+   "truePeakDbtp": -5.8,
+   "samplePeakDbfs": -5.8,
+   "decodedSamples": {
+    "ogg": 105662,
+    "m4a": 106496
+   },
+   "bytes": {
+    "ogg": 31509,
+    "m4a": 35994
+   },
+   "date": "2026-10-08",
+   "tool": "tools/audio/make_sfx.py (numpy/scipy procedural synthesis)",
+   "settings": {
+    "design": "A feeling is drawn out of a guest: soft rising sparkle.",
+    "seed": 11585497,
+    "targetPeakDbfs": -5
+   },
+   "license": "Original procedural synthesis written for this project (tools/audio); no samples or third-party recordings. Owned by the project; commercial use permitted (Q05).",
+   "notes": ""
+  },
+  {
+   "id": "pour",
+   "kind": "sfx",
+   "bus": "effects",
+   "files": {
+    "ogg": "assets/audio/sfx/pour.ogg",
+    "m4a": "assets/audio/sfx/pour.m4a"
+   },
+   "sampleRate": 48000,
+   "channels": 2,
+   "duration": 1.9043,
+   "samples": 91407,
+   "loop": false,
+   "lufs": -20.0,
+   "truePeakDbtp": -6.0,
+   "samplePeakDbfs": -6.0,
+   "decodedSamples": {
+    "ogg": 91407,
+    "m4a": 92160
+   },
+   "bytes": {
+    "ogg": 26237,
+    "m4a": 31261
+   },
+   "date": "2026-10-08",
+   "tool": "tools/audio/make_sfx.py (numpy/scipy procedural synthesis)",
+   "settings": {
+    "design": "Liquid poured into a pot: bubble stream over a soft trickle.",
+    "seed": 3595226,
+    "targetPeakDbfs": -5
+   },
+   "license": "Original procedural synthesis written for this project (tools/audio); no samples or third-party recordings. Owned by the project; commercial use permitted (Q05).",
+   "notes": ""
+  },
+  {
+   "id": "stove-ignite",
+   "kind": "sfx",
+   "bus": "effects",
+   "files": {
+    "ogg": "assets/audio/sfx/stove-ignite.ogg",
+    "m4a": "assets/audio/sfx/stove-ignite.m4a"
+   },
+   "sampleRate": 48000,
+   "channels": 2,
+   "duration": 2.3065,
+   "samples": 110714,
+   "loop": false,
+   "lufs": -23.5,
+   "truePeakDbtp": -5.8,
+   "samplePeakDbfs": -6.2,
+   "decodedSamples": {
+    "ogg": 110714,
+    "m4a": 111616
+   },
+   "bytes": {
+    "ogg": 35456,
+    "m4a": 37960
+   },
+   "date": "2026-10-08",
+   "tool": "tools/audio/make_sfx.py (numpy/scipy procedural synthesis)",
+   "settings": {
+    "design": "Stove catches: match-like strike, then a warm rising flame.",
+    "seed": 9867074,
+    "targetPeakDbfs": -4
+   },
+   "license": "Original procedural synthesis written for this project (tools/audio); no samples or third-party recordings. Owned by the project; commercial use permitted (Q05).",
+   "notes": ""
+  },
+  {
+   "id": "stove-whoosh",
+   "kind": "sfx",
+   "bus": "effects",
+   "files": {
+    "ogg": "assets/audio/sfx/stove-whoosh.ogg",
+    "m4a": "assets/audio/sfx/stove-whoosh.m4a"
+   },
+   "sampleRate": 48000,
+   "channels": 2,
+   "duration": 1.9551,
+   "samples": 93845,
+   "loop": false,
+   "lufs": -20.4,
+   "truePeakDbtp": -4.8,
+   "samplePeakDbfs": -4.8,
+   "decodedSamples": {
+    "ogg": 93845,
+    "m4a": 94208
+   },
+   "bytes": {
+    "ogg": 23890,
+    "m4a": 32007
+   },
+   "date": "2026-10-08",
+   "tool": "tools/audio/make_sfx.py (numpy/scipy procedural synthesis)",
+   "settings": {
+    "design": "Fire breathes up in the stove: low warm whoosh.",
+    "seed": 10057130,
+    "targetPeakDbfs": -4
+   },
+   "license": "Original procedural synthesis written for this project (tools/audio); no samples or third-party recordings. Owned by the project; commercial use permitted (Q05).",
+   "notes": ""
+  },
+  {
+   "id": "burn",
+   "kind": "sfx",
+   "bus": "effects",
+   "files": {
+    "ogg": "assets/audio/sfx/burn.ogg",
+    "m4a": "assets/audio/sfx/burn.m4a"
+   },
+   "sampleRate": 48000,
+   "channels": 2,
+   "duration": 2.3692,
+   "samples": 113723,
+   "loop": false,
+   "lufs": -21.4,
+   "truePeakDbtp": -5.2,
+   "samplePeakDbfs": -5.2,
+   "decodedSamples": {
+    "ogg": 113723,
+    "m4a": 114688
+   },
+   "bytes": {
+    "ogg": 39050,
+    "m4a": 38934
+   },
+   "date": "2026-10-08",
+   "tool": "tools/audio/make_sfx.py (numpy/scipy procedural synthesis)",
+   "settings": {
+    "design": "Something is fed to the fire: soft flare with crackles, not harsh.",
+    "seed": 3476441,
+    "targetPeakDbfs": -4
+   },
+   "license": "Original procedural synthesis written for this project (tools/audio); no samples or third-party recordings. Owned by the project; commercial use permitted (Q05).",
+   "notes": ""
+  },
+  {
+   "id": "dish-discard",
+   "kind": "sfx",
+   "bus": "effects",
+   "files": {
+    "ogg": "assets/audio/sfx/dish-discard.ogg",
+    "m4a": "assets/audio/sfx/dish-discard.m4a"
+   },
+   "sampleRate": 48000,
+   "channels": 2,
+   "duration": 2.4185,
+   "samples": 116087,
+   "loop": false,
+   "lufs": -19.3,
+   "truePeakDbtp": -5.0,
+   "samplePeakDbfs": -5.0,
+   "decodedSamples": {
+    "ogg": 116087,
+    "m4a": 116736
+   },
+   "bytes": {
+    "ogg": 37465,
+    "m4a": 39703
+   },
+   "date": "2026-10-08",
+   "tool": "tools/audio/make_sfx.py (numpy/scipy procedural synthesis)",
+   "settings": {
+    "design": "A dish is given to the stove: plate slide on wood, then a gentle flare.",
+    "seed": 9494881,
+    "targetPeakDbfs": -4
+   },
+   "license": "Original procedural synthesis written for this project (tools/audio); no samples or third-party recordings. Owned by the project; commercial use permitted (Q05).",
+   "notes": ""
+  },
+  {
+   "id": "brew-ready-bell",
+   "kind": "sfx",
+   "bus": "effects",
+   "files": {
+    "ogg": "assets/audio/sfx/brew-ready-bell.ogg",
+    "m4a": "assets/audio/sfx/brew-ready-bell.m4a"
+   },
+   "sampleRate": 48000,
+   "channels": 2,
+   "duration": 2.8072,
+   "samples": 134748,
+   "loop": false,
+   "lufs": -17.7,
+   "truePeakDbtp": -4.7,
+   "samplePeakDbfs": -4.7,
+   "decodedSamples": {
+    "ogg": 134748,
+    "m4a": 135168
+   },
+   "bytes": {
+    "ogg": 29467,
+    "m4a": 45765
+   },
+   "date": "2026-10-08",
+   "tool": "tools/audio/make_sfx.py (numpy/scipy procedural synthesis)",
+   "settings": {
+    "design": "Dish ready: small kitchen bell, two bright dings D6 then B5.",
+    "seed": 11640930,
+    "targetPeakDbfs": -4
+   },
+   "license": "Original procedural synthesis written for this project (tools/audio); no samples or third-party recordings. Owned by the project; commercial use permitted (Q05).",
+   "notes": ""
+  },
+  {
+   "id": "serve-plate",
+   "kind": "sfx",
+   "bus": "effects",
+   "files": {
+    "ogg": "assets/audio/sfx/serve-plate.ogg",
+    "m4a": "assets/audio/sfx/serve-plate.m4a"
+   },
+   "sampleRate": 48000,
+   "channels": 2,
+   "duration": 0.997,
+   "samples": 47856,
+   "loop": false,
+   "lufs": -23.4,
+   "truePeakDbtp": -4.5,
+   "samplePeakDbfs": -4.6,
+   "decodedSamples": {
+    "ogg": 48832,
+    "m4a": 48128
+   },
+   "bytes": {
+    "ogg": 14825,
+    "m4a": 16525
+   },
+   "date": "2026-10-08",
+   "tool": "tools/audio/make_sfx.py (numpy/scipy procedural synthesis)",
+   "settings": {
+    "design": "Clay plate set on the counter: wooden thunk plus ceramic ring.",
+    "seed": 8932632,
+    "targetPeakDbfs": -4
+   },
+   "license": "Original procedural synthesis written for this project (tools/audio); no samples or third-party recordings. Owned by the project; commercial use permitted (Q05).",
+   "notes": ""
+  },
+  {
+   "id": "heat-gain",
+   "kind": "sfx",
+   "bus": "effects",
+   "files": {
+    "ogg": "assets/audio/sfx/heat-gain.ogg",
+    "m4a": "assets/audio/sfx/heat-gain.m4a"
+   },
+   "sampleRate": 48000,
+   "channels": 2,
+   "duration": 1.9478,
+   "samples": 93492,
+   "loop": false,
+   "lufs": -15.7,
+   "truePeakDbtp": -5.6,
+   "samplePeakDbfs": -5.6,
+   "decodedSamples": {
+    "ogg": 93492,
+    "m4a": 94208
+   },
+   "bytes": {
+    "ogg": 28638,
+    "m4a": 32031
+   },
+   "date": "2026-10-08",
+   "tool": "tools/audio/make_sfx.py (numpy/scipy procedural synthesis)",
+   "settings": {
+    "design": "Heat added: warm upward breath and a few cosy crackles.",
+    "seed": 6952882,
+    "targetPeakDbfs": -5
+   },
+   "license": "Original procedural synthesis written for this project (tools/audio); no samples or third-party recordings. Owned by the project; commercial use permitted (Q05).",
+   "notes": ""
+  },
+  {
+   "id": "water-charge",
+   "kind": "sfx",
+   "bus": "effects",
+   "files": {
+    "ogg": "assets/audio/sfx/water-charge.ogg",
+    "m4a": "assets/audio/sfx/water-charge.m4a"
+   },
+   "sampleRate": 48000,
+   "channels": 2,
+   "duration": 2.1603,
+   "samples": 103695,
+   "loop": false,
+   "lufs": -20.1,
+   "truePeakDbtp": -5.8,
+   "samplePeakDbfs": -5.8,
+   "decodedSamples": {
+    "ogg": 103695,
+    "m4a": 104448
+   },
+   "bytes": {
+    "ogg": 31595,
+    "m4a": 37332
+   },
+   "date": "2026-10-08",
+   "tool": "tools/audio/make_sfx.py (numpy/scipy procedural synthesis)",
+   "settings": {
+    "design": "Water charged with a feeling: bubbling rise ending in a glassy sparkle.",
+    "seed": 9581990,
+    "targetPeakDbfs": -5
+   },
+   "license": "Original procedural synthesis written for this project (tools/audio); no samples or third-party recordings. Owned by the project; commercial use permitted (Q05).",
+   "notes": ""
+  },
+  {
+   "id": "coins-sparks",
+   "kind": "sfx",
+   "bus": "effects",
+   "files": {
+    "ogg": "assets/audio/sfx/coins-sparks.ogg",
+    "m4a": "assets/audio/sfx/coins-sparks.m4a"
+   },
+   "sampleRate": 48000,
+   "channels": 2,
+   "duration": 1.7122,
+   "samples": 82186,
+   "loop": false,
+   "lufs": -15.6,
+   "truePeakDbtp": -4.3,
+   "samplePeakDbfs": -4.4,
+   "decodedSamples": {
+    "ogg": 82186,
+    "m4a": 82944
+   },
+   "bytes": {
+    "ogg": 26727,
+    "m4a": 30791
+   },
+   "date": "2026-10-08",
+   "tool": "tools/audio/make_sfx.py (numpy/scipy procedural synthesis)",
+   "settings": {
+    "design": "Sparks (iskorki) earned: little coin tinkles plus warm sparkle.",
+    "seed": 9859155,
+    "targetPeakDbfs": -4
+   },
+   "license": "Original procedural synthesis written for this project (tools/audio); no samples or third-party recordings. Owned by the project; commercial use permitted (Q05).",
+   "notes": ""
+  },
+  {
+   "id": "key-gain",
+   "kind": "sfx",
+   "bus": "effects",
+   "files": {
+    "ogg": "assets/audio/sfx/key-gain.ogg",
+    "m4a": "assets/audio/sfx/key-gain.m4a"
+   },
+   "sampleRate": 48000,
+   "channels": 2,
+   "duration": 3.2666,
+   "samples": 156797,
+   "loop": false,
+   "lufs": -17.9,
+   "truePeakDbtp": -4.6,
+   "samplePeakDbfs": -4.6,
+   "decodedSamples": {
+    "ogg": 156797,
+    "m4a": 157696
+   },
+   "bytes": {
+    "ogg": 36695,
+    "m4a": 54052
+   },
+   "date": "2026-10-08",
+   "tool": "tools/audio/make_sfx.py (numpy/scipy procedural synthesis)",
+   "settings": {
+    "design": "Key received: a soft key jingle and a warm two-note chime G5-D6.",
+    "seed": 6248091,
+    "targetPeakDbfs": -4
+   },
+   "license": "Original procedural synthesis written for this project (tools/audio); no samples or third-party recordings. Owned by the project; commercial use permitted (Q05).",
+   "notes": ""
+  },
+  {
+   "id": "thread-snap",
+   "kind": "sfx",
+   "bus": "effects",
+   "files": {
+    "ogg": "assets/audio/sfx/thread-snap.ogg",
+    "m4a": "assets/audio/sfx/thread-snap.m4a"
+   },
+   "sampleRate": 48000,
+   "channels": 2,
+   "duration": 1.993,
+   "samples": 95666,
+   "loop": false,
+   "lufs": -23.9,
+   "truePeakDbtp": -6.7,
+   "samplePeakDbfs": -6.7,
+   "decodedSamples": {
+    "ogg": 95666,
+    "m4a": 96256
+   },
+   "bytes": {
+    "ogg": 22513,
+    "m4a": 31697
+   },
+   "date": "2026-10-08",
+   "tool": "tools/audio/make_sfx.py (numpy/scipy procedural synthesis)",
+   "settings": {
+    "design": "A thread is lost: soft muffled string pluck that sags downward, gentle not punishing.",
+    "seed": 8798009,
+    "targetPeakDbfs": -6
+   },
+   "license": "Original procedural synthesis written for this project (tools/audio); no samples or third-party recordings. Owned by the project; commercial use permitted (Q05).",
+   "notes": ""
+  },
+  {
+   "id": "achievement",
+   "kind": "sfx",
+   "bus": "effects",
+   "files": {
+    "ogg": "assets/audio/sfx/achievement.ogg",
+    "m4a": "assets/audio/sfx/achievement.m4a"
+   },
+   "sampleRate": 48000,
+   "channels": 2,
+   "duration": 3.6236,
+   "samples": 173934,
+   "loop": false,
+   "lufs": -14.7,
+   "truePeakDbtp": -4.2,
+   "samplePeakDbfs": -4.2,
+   "decodedSamples": {
+    "ogg": 173934,
+    "m4a": 174080
+   },
+   "bytes": {
+    "ogg": 47803,
+    "m4a": 58452
+   },
+   "date": "2026-10-08",
+   "tool": "tools/audio/make_sfx.py (numpy/scipy procedural synthesis)",
+   "settings": {
+    "design": "Achievement: music-box arpeggio G5-B5-D6-G6 with glittering tail.",
+    "seed": 9193959,
+    "targetPeakDbfs": -3.5
+   },
+   "license": "Original procedural synthesis written for this project (tools/audio); no samples or third-party recordings. Owned by the project; commercial use permitted (Q05).",
+   "notes": ""
+  },
+  {
+   "id": "experiment-success",
+   "kind": "sfx",
+   "bus": "effects",
+   "files": {
+    "ogg": "assets/audio/sfx/experiment-success.ogg",
+    "m4a": "assets/audio/sfx/experiment-success.m4a"
+   },
+   "sampleRate": 48000,
+   "channels": 2,
+   "duration": 3.048,
+   "samples": 146306,
+   "loop": false,
+   "lufs": -17.3,
+   "truePeakDbtp": -4.7,
+   "samplePeakDbfs": -4.7,
+   "decodedSamples": {
+    "ogg": 146306,
+    "m4a": 146432
+   },
+   "bytes": {
+    "ogg": 35894,
+    "m4a": 51622
+   },
+   "date": "2026-10-08",
+   "tool": "tools/audio/make_sfx.py (numpy/scipy procedural synthesis)",
+   "settings": {
+    "design": "Kitchen experiment worked: happy bubble pop then rising chimes D5-G5-B5.",
+    "seed": 15006505,
+    "targetPeakDbfs": -4
+   },
+   "license": "Original procedural synthesis written for this project (tools/audio); no samples or third-party recordings. Owned by the project; commercial use permitted (Q05).",
+   "notes": ""
+  },
+  {
+   "id": "experiment-fail",
+   "kind": "sfx",
+   "bus": "effects",
+   "files": {
+    "ogg": "assets/audio/sfx/experiment-fail.ogg",
+    "m4a": "assets/audio/sfx/experiment-fail.m4a"
+   },
+   "sampleRate": 48000,
+   "channels": 2,
+   "duration": 2.2072,
+   "samples": 105947,
+   "loop": false,
+   "lufs": -17.4,
+   "truePeakDbtp": -6.7,
+   "samplePeakDbfs": -6.7,
+   "decodedSamples": {
+    "ogg": 105947,
+    "m4a": 106496
+   },
+   "bytes": {
+    "ogg": 29729,
+    "m4a": 36104
+   },
+   "date": "2026-10-08",
+   "tool": "tools/audio/make_sfx.py (numpy/scipy procedural synthesis)",
+   "settings": {
+    "design": "Experiment fizzles: soft hiss that settles down, with a mild two-note drop.",
+    "seed": 12242774,
+    "targetPeakDbfs": -6
+   },
+   "license": "Original procedural synthesis written for this project (tools/audio); no samples or third-party recordings. Owned by the project; commercial use permitted (Q05).",
+   "notes": ""
+  },
+  {
+   "id": "guest-arrive-door",
+   "kind": "sfx",
+   "bus": "effects",
+   "files": {
+    "ogg": "assets/audio/sfx/guest-arrive-door.ogg",
+    "m4a": "assets/audio/sfx/guest-arrive-door.m4a"
+   },
+   "sampleRate": 48000,
+   "channels": 2,
+   "duration": 2.7149,
+   "samples": 130316,
+   "loop": false,
+   "lufs": -17.5,
+   "truePeakDbtp": -4.6,
+   "samplePeakDbfs": -4.6,
+   "decodedSamples": {
+    "ogg": 130316,
+    "m4a": 131072
+   },
+   "bytes": {
+    "ogg": 34703,
+    "m4a": 46395
+   },
+   "date": "2026-10-08",
+   "tool": "tools/audio/make_sfx.py (numpy/scipy procedural synthesis)",
+   "settings": {
+    "design": "Guest arrives: short friendly door creak and a little door bell.",
+    "seed": 13676113,
+    "targetPeakDbfs": -4
+   },
+   "license": "Original procedural synthesis written for this project (tools/audio); no samples or third-party recordings. Owned by the project; commercial use permitted (Q05).",
+   "notes": ""
+  },
+  {
+   "id": "guest-leave",
+   "kind": "sfx",
+   "bus": "effects",
+   "files": {
+    "ogg": "assets/audio/sfx/guest-leave.ogg",
+    "m4a": "assets/audio/sfx/guest-leave.m4a"
+   },
+   "sampleRate": 48000,
+   "channels": 2,
+   "duration": 2.4767,
+   "samples": 118883,
+   "loop": false,
+   "lufs": -21.3,
+   "truePeakDbtp": -5.7,
+   "samplePeakDbfs": -5.7,
+   "decodedSamples": {
+    "ogg": 118883,
+    "m4a": 119808
+   },
+   "bytes": {
+    "ogg": 31017,
+    "m4a": 40995
+   },
+   "date": "2026-10-08",
+   "tool": "tools/audio/make_sfx.py (numpy/scipy procedural synthesis)",
+   "settings": {
+    "design": "Guest leaves: soft door close and a lower, slower little bell.",
+    "seed": 8885118,
+    "targetPeakDbfs": -5
+   },
+   "license": "Original procedural synthesis written for this project (tools/audio); no samples or third-party recordings. Owned by the project; commercial use permitted (Q05).",
+   "notes": ""
+  },
+  {
+   "id": "broom-clean",
+   "kind": "sfx",
+   "bus": "effects",
+   "files": {
+    "ogg": "assets/audio/sfx/broom-clean.ogg",
+    "m4a": "assets/audio/sfx/broom-clean.m4a"
+   },
+   "sampleRate": 48000,
+   "channels": 2,
+   "duration": 1.6887,
+   "samples": 81059,
+   "loop": false,
+   "lufs": -21.2,
+   "truePeakDbtp": -7.4,
+   "samplePeakDbfs": -7.9,
+   "decodedSamples": {
+    "ogg": 81059,
+    "m4a": 81920
+   },
+   "bytes": {
+    "ogg": 26256,
+    "m4a": 28087
+   },
+   "date": "2026-10-08",
+   "tool": "tools/audio/make_sfx.py (numpy/scipy procedural synthesis)",
+   "settings": {
+    "design": "Broom sweeps the table area: three soft bristle swishes.",
+    "seed": 8734657,
+    "targetPeakDbfs": -6
+   },
+   "license": "Original procedural synthesis written for this project (tools/audio); no samples or third-party recordings. Owned by the project; commercial use permitted (Q05).",
+   "notes": ""
+  },
+  {
+   "id": "page-turn",
+   "kind": "sfx",
+   "bus": "effects",
+   "files": {
+    "ogg": "assets/audio/sfx/page-turn.ogg",
+    "m4a": "assets/audio/sfx/page-turn.m4a"
+   },
+   "sampleRate": 48000,
+   "channels": 2,
+   "duration": 1.1929,
+   "samples": 57259,
+   "loop": false,
+   "lufs": -20.8,
+   "truePeakDbtp": -6.6,
+   "samplePeakDbfs": -6.6,
+   "decodedSamples": {
+    "ogg": 57259,
+    "m4a": 57344
+   },
+   "bytes": {
+    "ogg": 18846,
+    "m4a": 20495
+   },
+   "date": "2026-10-08",
+   "tool": "tools/audio/make_sfx.py (numpy/scipy procedural synthesis)",
+   "settings": {
+    "design": "Book page turns: paper flutter and a soft settle.",
+    "seed": 7245885,
+    "targetPeakDbfs": -6
+   },
+   "license": "Original procedural synthesis written for this project (tools/audio); no samples or third-party recordings. Owned by the project; commercial use permitted (Q05).",
+   "notes": ""
+  },
+  {
+   "id": "card-flip",
+   "kind": "sfx",
+   "bus": "effects",
+   "files": {
+    "ogg": "assets/audio/sfx/card-flip.ogg",
+    "m4a": "assets/audio/sfx/card-flip.m4a"
+   },
+   "sampleRate": 48000,
+   "channels": 2,
+   "duration": 0.9871,
+   "samples": 47382,
+   "loop": false,
+   "lufs": -23.8,
+   "truePeakDbtp": -6.9,
+   "samplePeakDbfs": -6.9,
+   "decodedSamples": {
+    "ogg": 47254,
+    "m4a": 48128
+   },
+   "bytes": {
+    "ogg": 15871,
+    "m4a": 16888
+   },
+   "date": "2026-10-08",
+   "tool": "tools/audio/make_sfx.py (numpy/scipy procedural synthesis)",
+   "settings": {
+    "design": "Card flips over: quick air swish and a crisp soft snap.",
+    "seed": 6984558,
+    "targetPeakDbfs": -6
+   },
+   "license": "Original procedural synthesis written for this project (tools/audio); no samples or third-party recordings. Owned by the project; commercial use permitted (Q05).",
+   "notes": ""
+  },
+  {
+   "id": "tarot-reveal",
+   "kind": "sfx",
+   "bus": "effects",
+   "files": {
+    "ogg": "assets/audio/sfx/tarot-reveal.ogg",
+    "m4a": "assets/audio/sfx/tarot-reveal.m4a"
+   },
+   "sampleRate": 48000,
+   "channels": 2,
+   "duration": 4.32,
+   "samples": 207360,
+   "loop": false,
+   "lufs": -16.5,
+   "truePeakDbtp": -4.4,
+   "samplePeakDbfs": -4.5,
+   "decodedSamples": {
+    "ogg": 207360,
+    "m4a": 207872
+   },
+   "bytes": {
+    "ogg": 49185,
+    "m4a": 69794
+   },
+   "date": "2026-10-08",
+   "tool": "tools/audio/make_sfx.py (numpy/scipy procedural synthesis)",
+   "settings": {
+    "design": "Grandmother's card reveal: card flip then a low bell and gentle shimmer.",
+    "seed": 9803722,
+    "targetPeakDbfs": -4
+   },
+   "license": "Original procedural synthesis written for this project (tools/audio); no samples or third-party recordings. Owned by the project; commercial use permitted (Q05).",
+   "notes": ""
+  },
+  {
+   "id": "tram-bell",
+   "kind": "sfx",
+   "bus": "effects",
+   "files": {
+    "ogg": "assets/audio/sfx/tram-bell.ogg",
+    "m4a": "assets/audio/sfx/tram-bell.m4a"
+   },
+   "sampleRate": 48000,
+   "channels": 2,
+   "duration": 2.6463,
+   "samples": 127023,
+   "loop": false,
+   "lufs": -15.7,
+   "truePeakDbtp": -4.2,
+   "samplePeakDbfs": -4.3,
+   "decodedSamples": {
+    "ogg": 127023,
+    "m4a": 128000
+   },
+   "bytes": {
+    "ogg": 28113,
+    "m4a": 43009
+   },
+   "date": "2026-10-08",
+   "tool": "tools/audio/make_sfx.py (numpy/scipy procedural synthesis)",
+   "settings": {
+    "design": "Tram 33 bell: two classic ding-ding strikes on a bright gong bell.",
+    "seed": 7095424,
+    "targetPeakDbfs": -4
+   },
+   "license": "Original procedural synthesis written for this project (tools/audio); no samples or third-party recordings. Owned by the project; commercial use permitted (Q05).",
+   "notes": ""
+  },
+  {
+   "id": "mirror-shimmer",
+   "kind": "sfx",
+   "bus": "effects",
+   "files": {
+    "ogg": "assets/audio/sfx/mirror-shimmer.ogg",
+    "m4a": "assets/audio/sfx/mirror-shimmer.m4a"
+   },
+   "sampleRate": 48000,
+   "channels": 2,
+   "duration": 3.1298,
+   "samples": 150229,
+   "loop": false,
+   "lufs": -14.7,
+   "truePeakDbtp": -5.8,
+   "samplePeakDbfs": -5.8,
+   "decodedSamples": {
+    "ogg": 150229,
+    "m4a": 150528
+   },
+   "bytes": {
+    "ogg": 48767,
+    "m4a": 51355
+   },
+   "date": "2026-10-08",
+   "tool": "tools/audio/make_sfx.py (numpy/scipy procedural synthesis)",
+   "settings": {
+    "design": "Mirror memorial world shimmer: slow glassy sweep of soft tones.",
+    "seed": 11633011,
+    "targetPeakDbfs": -5
+   },
+   "license": "Original procedural synthesis written for this project (tools/audio); no samples or third-party recordings. Owned by the project; commercial use permitted (Q05).",
+   "notes": ""
+  },
+  {
+   "id": "nameless-arrive",
+   "kind": "sfx",
+   "bus": "effects",
+   "files": {
+    "ogg": "assets/audio/sfx/nameless-arrive.ogg",
+    "m4a": "assets/audio/sfx/nameless-arrive.m4a"
+   },
+   "sampleRate": 48000,
+   "channels": 2,
+   "duration": 4.6857,
+   "samples": 224912,
+   "loop": false,
+   "lufs": -25.3,
+   "truePeakDbtp": -8.5,
+   "samplePeakDbfs": -8.5,
+   "decodedSamples": {
+    "ogg": 224912,
+    "m4a": 225280
+   },
+   "bytes": {
+    "ogg": 59573,
+    "m4a": 76389
+   },
+   "date": "2026-10-08",
+   "tool": "tools/audio/make_sfx.py (numpy/scipy procedural synthesis)",
+   "settings": {
+    "design": "Nameless Guest: a swell of air that hollows into near-silence; no tone, no threat.",
+    "seed": 12274450,
+    "targetPeakDbfs": -8
+   },
+   "license": "Original procedural synthesis written for this project (tools/audio); no samples or third-party recordings. Owned by the project; commercial use permitted (Q05).",
+   "notes": ""
+  },
+  {
+   "id": "ui-click",
+   "kind": "sfx",
+   "bus": "ui",
+   "files": {
+    "ogg": "assets/audio/sfx/ui-click.ogg",
+    "m4a": "assets/audio/sfx/ui-click.m4a"
+   },
+   "sampleRate": 48000,
+   "channels": 2,
+   "duration": 0.08,
+   "samples": 3840,
+   "loop": false,
+   "lufs": -70.0,
+   "truePeakDbtp": -10.1,
+   "samplePeakDbfs": -10.2,
+   "decodedSamples": {
+    "ogg": 4800,
+    "m4a": 4096
+   },
+   "bytes": {
+    "ogg": 5012,
+    "m4a": 2102
+   },
+   "date": "2026-10-08",
+   "tool": "tools/audio/make_sfx.py (numpy/scipy procedural synthesis)",
+   "settings": {
+    "design": "Interface click: tiny wooden tap.",
+    "seed": 6216415,
+    "targetPeakDbfs": -9
+   },
+   "license": "Original procedural synthesis written for this project (tools/audio); no samples or third-party recordings. Owned by the project; commercial use permitted (Q05).",
+   "notes": ""
+  },
+  {
+   "id": "ui-hover",
+   "kind": "sfx",
+   "bus": "ui",
+   "files": {
+    "ogg": "assets/audio/sfx/ui-hover.ogg",
+    "m4a": "assets/audio/sfx/ui-hover.m4a"
+   },
+   "sampleRate": 48000,
+   "channels": 2,
+   "duration": 0.12,
+   "samples": 5760,
+   "loop": false,
+   "lufs": -70.0,
+   "truePeakDbtp": -15.5,
+   "samplePeakDbfs": -15.6,
+   "decodedSamples": {
+    "ogg": 5632,
+    "m4a": 6144
+   },
+   "bytes": {
+    "ogg": 5261,
+    "m4a": 2872
+   },
+   "date": "2026-10-08",
+   "tool": "tools/audio/make_sfx.py (numpy/scipy procedural synthesis)",
+   "settings": {
+    "design": "Interface hover: barely-there soft glass pip.",
+    "seed": 6453985,
+    "targetPeakDbfs": -15
+   },
+   "license": "Original procedural synthesis written for this project (tools/audio); no samples or third-party recordings. Owned by the project; commercial use permitted (Q05).",
+   "notes": ""
+  },
+  {
+   "id": "ui-confirm",
+   "kind": "sfx",
+   "bus": "ui",
+   "files": {
+    "ogg": "assets/audio/sfx/ui-confirm.ogg",
+    "m4a": "assets/audio/sfx/ui-confirm.m4a"
+   },
+   "sampleRate": 48000,
+   "channels": 2,
+   "duration": 0.9581,
+   "samples": 45989,
+   "loop": false,
+   "lufs": -22.3,
+   "truePeakDbtp": -9.5,
+   "samplePeakDbfs": -9.5,
+   "decodedSamples": {
+    "ogg": 45861,
+    "m4a": 46080
+   },
+   "bytes": {
+    "ogg": 14885,
+    "m4a": 15839
+   },
+   "date": "2026-10-08",
+   "tool": "tools/audio/make_sfx.py (numpy/scipy procedural synthesis)",
+   "settings": {
+    "design": "Interface confirm: two soft gusli plucks rising G5 to D6.",
+    "seed": 8053623,
+    "targetPeakDbfs": -8
+   },
+   "license": "Original procedural synthesis written for this project (tools/audio); no samples or third-party recordings. Owned by the project; commercial use permitted (Q05).",
+   "notes": ""
+  },
+  {
+   "id": "ui-error",
+   "kind": "sfx",
+   "bus": "ui",
+   "files": {
+    "ogg": "assets/audio/sfx/ui-error.ogg",
+    "m4a": "assets/audio/sfx/ui-error.m4a"
+   },
+   "sampleRate": 48000,
+   "channels": 2,
+   "duration": 0.28,
+   "samples": 13440,
+   "loop": false,
+   "lufs": -70.0,
+   "truePeakDbtp": -9.9,
+   "samplePeakDbfs": -9.9,
+   "decodedSamples": {
+    "ogg": 13312,
+    "m4a": 14336
+   },
+   "bytes": {
+    "ogg": 6226,
+    "m4a": 4279
+   },
+   "date": "2026-10-08",
+   "tool": "tools/audio/make_sfx.py (numpy/scipy procedural synthesis)",
+   "settings": {
+    "design": "Interface not-allowed: gentle muted wooden double tap with a falling third.",
+    "seed": 6501499,
+    "targetPeakDbfs": -9
+   },
+   "license": "Original procedural synthesis written for this project (tools/audio); no samples or third-party recordings. Owned by the project; commercial use permitted (Q05).",
+   "notes": ""
+  },
+  {
+   "id": "undo",
+   "kind": "sfx",
+   "bus": "ui",
+   "files": {
+    "ogg": "assets/audio/sfx/undo.ogg",
+    "m4a": "assets/audio/sfx/undo.m4a"
+   },
+   "sampleRate": 48000,
+   "channels": 2,
+   "duration": 1.0312,
+   "samples": 49496,
+   "loop": false,
+   "lufs": -26.7,
+   "truePeakDbtp": -8.7,
+   "samplePeakDbfs": -8.8,
+   "decodedSamples": {
+    "ogg": 49496,
+    "m4a": 50176
+   },
+   "bytes": {
+    "ogg": 15358,
+    "m4a": 17638
+   },
+   "date": "2026-10-08",
+   "tool": "tools/audio/make_sfx.py (numpy/scipy procedural synthesis)",
+   "settings": {
+    "design": "Undo: short reverse-style air swoop down ending in a soft tap.",
+    "seed": 3468522,
+    "targetPeakDbfs": -8
+   },
+   "license": "Original procedural synthesis written for this project (tools/audio); no samples or third-party recordings. Owned by the project; commercial use permitted (Q05).",
+   "notes": ""
+  },
+  {
+   "id": "clock-wind",
+   "kind": "sfx",
+   "bus": "effects",
+   "files": {
+    "ogg": "assets/audio/sfx/clock-wind.ogg",
+    "m4a": "assets/audio/sfx/clock-wind.m4a"
+   },
+   "sampleRate": 48000,
+   "channels": 2,
+   "duration": 2.9803,
+   "samples": 143054,
+   "loop": false,
+   "lufs": -24.3,
+   "truePeakDbtp": -5.3,
+   "samplePeakDbfs": -5.4,
+   "decodedSamples": {
+    "ogg": 143054,
+    "m4a": 143360
+   },
+   "bytes": {
+    "ogg": 38090,
+    "m4a": 47924
+   },
+   "date": "2026-10-08",
+   "tool": "tools/audio/make_sfx.py (numpy/scipy procedural synthesis)",
+   "settings": {
+    "design": "Clock winding: ratchet clicks pulling the weight chain, then a settling spring.",
+    "seed": 7942757,
+    "targetPeakDbfs": -4
+   },
+   "license": "Original procedural synthesis written for this project (tools/audio); no samples or third-party recordings. Owned by the project; commercial use permitted (Q05).",
+   "notes": ""
+  },
+  {
+   "id": "amb-clock-ticking",
+   "kind": "ambience",
+   "bus": "ambience",
+   "files": {
+    "ogg": "assets/audio/ambience/amb-clock-ticking.ogg",
+    "m4a": "assets/audio/ambience/amb-clock-ticking.m4a"
+   },
+   "sampleRate": 48000,
+   "channels": 2,
+   "duration": 32.0,
+   "samples": 1536000,
+   "loop": true,
+   "lufs": -24.2,
+   "truePeakDbtp": -3.3,
+   "samplePeakDbfs": -3.4,
+   "decodedSamples": {
+    "ogg": 1536000,
+    "m4a": 1536000
+   },
+   "bytes": {
+    "ogg": 303865,
+    "m4a": 398822
+   },
+   "date": "2026-10-08",
+   "loopStart": 0,
+   "loopEnd": 1536000,
+   "seam": {
+    "sample_jump": 0.000152,
+    "diff_p99_9": 0.086579,
+    "rms_step_db_at_seam": 5.68,
+    "rms_step_db_p99": 16.18,
+    "pass": true
+   },
+   "seamMaster": {
+    "sample_jump": 0.000249,
+    "diff_p99_9": 0.090783,
+    "rms_step_db_at_seam": 5.69,
+    "rms_step_db_p99": 16.2,
+    "pass": true
+   },
+   "tool": "tools/audio/make_ambience.py (numpy/scipy procedural synthesis)",
+   "settings": {
+    "design": "Wall-clock (khodiki) pendulum: alternating tick/tock exactly every 1.000 s (48000 samples); 32 beats per loop, tails wrapped circularly so the loop is sample-accurate.",
+    "seed": 174164327
+   },
+   "license": "Original procedural synthesis written for this project (tools/audio); no samples or third-party recordings. Owned by the project; commercial use permitted (Q05).",
+   "notes": ""
+  },
+  {
+   "id": "amb-tavern-room",
+   "kind": "ambience",
+   "bus": "ambience",
+   "files": {
+    "ogg": "assets/audio/ambience/amb-tavern-room.ogg",
+    "m4a": "assets/audio/ambience/amb-tavern-room.m4a"
+   },
+   "sampleRate": 48000,
+   "channels": 2,
+   "duration": 48.0,
+   "samples": 2304000,
+   "loop": true,
+   "lufs": -24.1,
+   "truePeakDbtp": -9.5,
+   "samplePeakDbfs": -9.5,
+   "decodedSamples": {
+    "ogg": 2304000,
+    "m4a": 2304000
+   },
+   "bytes": {
+    "ogg": 536176,
+    "m4a": 587160
+   },
+   "date": "2026-10-08",
+   "loopStart": 0,
+   "loopEnd": 2304000,
+   "seam": {
+    "sample_jump": 0.001142,
+    "diff_p99_9": 0.007334,
+    "rms_step_db_at_seam": 2.65,
+    "rms_step_db_p99": 14.11,
+    "pass": true
+   },
+   "seamMaster": {
+    "sample_jump": 0.000357,
+    "diff_p99_9": 0.007366,
+    "rms_step_db_at_seam": 2.38,
+    "rms_step_db_p99": 14.22,
+    "pass": true
+   },
+   "tool": "tools/audio/make_ambience.py (numpy/scipy procedural synthesis)",
+   "settings": {
+    "design": "Quiet wooden tavern room tone: low warm air, distant settling creaks, rare soft cup clinks.",
+    "seed": 156569855
+   },
+   "license": "Original procedural synthesis written for this project (tools/audio); no samples or third-party recordings. Owned by the project; commercial use permitted (Q05).",
+   "notes": ""
+  },
+  {
+   "id": "amb-stove-fire",
+   "kind": "ambience",
+   "bus": "ambience",
+   "files": {
+    "ogg": "assets/audio/ambience/amb-stove-fire.ogg",
+    "m4a": "assets/audio/ambience/amb-stove-fire.m4a"
+   },
+   "sampleRate": 48000,
+   "channels": 2,
+   "duration": 40.0,
+   "samples": 1920000,
+   "loop": true,
+   "lufs": -24.0,
+   "truePeakDbtp": -7.7,
+   "samplePeakDbfs": -7.7,
+   "decodedSamples": {
+    "ogg": 1920000,
+    "m4a": 1920000
+   },
+   "bytes": {
+    "ogg": 497036,
+    "m4a": 495192
+   },
+   "date": "2026-10-08",
+   "loopStart": 0,
+   "loopEnd": 1920000,
+   "seam": {
+    "sample_jump": 0.00242,
+    "diff_p99_9": 0.049311,
+    "rms_step_db_at_seam": 6.06,
+    "rms_step_db_p99": 14.56,
+    "pass": true
+   },
+   "seamMaster": {
+    "sample_jump": 0.002151,
+    "diff_p99_9": 0.053418,
+    "rms_step_db_at_seam": 6.2,
+    "rms_step_db_p99": 14.48,
+    "pass": true
+   },
+   "tool": "tools/audio/make_ambience.py (numpy/scipy procedural synthesis)",
+   "settings": {
+    "design": "Russian stove fire: low breathing roar, steady soft crackle, occasional pops; nothing sharp.",
+    "seed": 144211833
+   },
+   "license": "Original procedural synthesis written for this project (tools/audio); no samples or third-party recordings. Owned by the project; commercial use permitted (Q05).",
+   "notes": ""
+  },
+  {
+   "id": "amb-world-forest",
+   "kind": "ambience",
+   "bus": "ambience",
+   "files": {
+    "ogg": "assets/audio/ambience/amb-world-forest.ogg",
+    "m4a": "assets/audio/ambience/amb-world-forest.m4a"
+   },
+   "sampleRate": 48000,
+   "channels": 2,
+   "duration": 45.0,
+   "samples": 2160000,
+   "loop": true,
+   "lufs": -24.3,
+   "truePeakDbtp": -11.0,
+   "samplePeakDbfs": -11.1,
+   "decodedSamples": {
+    "ogg": 2160000,
+    "m4a": 2160640
+   },
+   "bytes": {
+    "ogg": 578380,
+    "m4a": 550384
+   },
+   "date": "2026-10-08",
+   "loopStart": 0,
+   "loopEnd": 2160000,
+   "seam": {
+    "sample_jump": 0.011431,
+    "diff_p99_9": 0.026687,
+    "rms_step_db_at_seam": 1.9,
+    "rms_step_db_p99": 5.07,
+    "pass": true
+   },
+   "seamMaster": {
+    "sample_jump": 0.009291,
+    "diff_p99_9": 0.028054,
+    "rms_step_db_at_seam": 1.81,
+    "rms_step_db_p99": 5.06,
+    "pass": true
+   },
+   "tool": "tools/audio/make_ambience.py (numpy/scipy procedural synthesis)",
+   "settings": {
+    "design": "Forest door bed: breathing wind in leaves, a few soft distant bird calls.",
+    "seed": 168090045
+   },
+   "license": "Original procedural synthesis written for this project (tools/audio); no samples or third-party recordings. Owned by the project; commercial use permitted (Q05).",
+   "notes": ""
+  },
+  {
+   "id": "amb-world-river",
+   "kind": "ambience",
+   "bus": "ambience",
+   "files": {
+    "ogg": "assets/audio/ambience/amb-world-river.ogg",
+    "m4a": "assets/audio/ambience/amb-world-river.m4a"
+   },
+   "sampleRate": 48000,
+   "channels": 2,
+   "duration": 45.0,
+   "samples": 2160000,
+   "loop": true,
+   "lufs": -24.2,
+   "truePeakDbtp": -10.9,
+   "samplePeakDbfs": -10.9,
+   "decodedSamples": {
+    "ogg": 2160000,
+    "m4a": 2160640
+   },
+   "bytes": {
+    "ogg": 572813,
+    "m4a": 550333
+   },
+   "date": "2026-10-08",
+   "loopStart": 0,
+   "loopEnd": 2160000,
+   "seam": {
+    "sample_jump": 0.000785,
+    "diff_p99_9": 0.019512,
+    "rms_step_db_at_seam": 5.83,
+    "rms_step_db_p99": 6.2,
+    "pass": true
+   },
+   "seamMaster": {
+    "sample_jump": 0.001593,
+    "diff_p99_9": 0.02068,
+    "rms_step_db_at_seam": 5.69,
+    "rms_step_db_p99": 6.26,
+    "pass": true
+   },
+   "tool": "tools/audio/make_ambience.py (numpy/scipy procedural synthesis)",
+   "settings": {
+    "design": "River door bed: gentle flowing water, glassy bubbles, soft lapping.",
+    "seed": 156884042
+   },
+   "license": "Original procedural synthesis written for this project (tools/audio); no samples or third-party recordings. Owned by the project; commercial use permitted (Q05).",
+   "notes": ""
+  },
+  {
+   "id": "amb-world-city",
+   "kind": "ambience",
+   "bus": "ambience",
+   "files": {
+    "ogg": "assets/audio/ambience/amb-world-city.ogg",
+    "m4a": "assets/audio/ambience/amb-world-city.m4a"
+   },
+   "sampleRate": 48000,
+   "channels": 2,
+   "duration": 45.0,
+   "samples": 2160000,
+   "loop": true,
+   "lufs": -24.1,
+   "truePeakDbtp": -8.2,
+   "samplePeakDbfs": -8.2,
+   "decodedSamples": {
+    "ogg": 2160000,
+    "m4a": 2160640
+   },
+   "bytes": {
+    "ogg": 496847,
+    "m4a": 550325
+   },
+   "date": "2026-10-08",
+   "loopStart": 0,
+   "loopEnd": 2160000,
+   "seam": {
+    "sample_jump": 0.00162,
+    "diff_p99_9": 0.003468,
+    "rms_step_db_at_seam": 8.57,
+    "rms_step_db_p99": 15.07,
+    "pass": true
+   },
+   "seamMaster": {
+    "sample_jump": 0.000721,
+    "diff_p99_9": 0.003529,
+    "rms_step_db_at_seam": 7.65,
+    "rms_step_db_p99": 14.87,
+    "pass": true
+   },
+   "tool": "tools/audio/make_ambience.py (numpy/scipy procedural synthesis)",
+   "settings": {
+    "design": "City door bed: soft distant traffic hush, faint warm lamp hum, far-off tram bell rarely.",
+    "seed": 145259123
+   },
+   "license": "Original procedural synthesis written for this project (tools/audio); no samples or third-party recordings. Owned by the project; commercial use permitted (Q05).",
+   "notes": ""
+  },
+  {
+   "id": "amb-world-memorial",
+   "kind": "ambience",
+   "bus": "ambience",
+   "files": {
+    "ogg": "assets/audio/ambience/amb-world-memorial.ogg",
+    "m4a": "assets/audio/ambience/amb-world-memorial.m4a"
+   },
+   "sampleRate": 48000,
+   "channels": 2,
+   "duration": 45.0,
+   "samples": 2160000,
+   "loop": true,
+   "lufs": -24.1,
+   "truePeakDbtp": -7.3,
+   "samplePeakDbfs": -7.3,
+   "decodedSamples": {
+    "ogg": 2160000,
+    "m4a": 2160640
+   },
+   "bytes": {
+    "ogg": 520988,
+    "m4a": 550360
+   },
+   "date": "2026-10-08",
+   "loopStart": 0,
+   "loopEnd": 2160000,
+   "seam": {
+    "sample_jump": 0.007576,
+    "diff_p99_9": 0.007365,
+    "rms_step_db_at_seam": 3.93,
+    "rms_step_db_p99": 11.16,
+    "pass": true
+   },
+   "seamMaster": {
+    "sample_jump": 0.003125,
+    "diff_p99_9": 0.007583,
+    "rms_step_db_at_seam": 3.9,
+    "rms_step_db_p99": 11.09,
+    "pass": true
+   },
+   "tool": "tools/audio/make_ambience.py (numpy/scipy procedural synthesis)",
+   "settings": {
+    "design": "Memorial (pogost) door bed: hushed wind, candle flutter, a very distant soft bell; calm, not eerie.",
+    "seed": 188512200
+   },
+   "license": "Original procedural synthesis written for this project (tools/audio); no samples or third-party recordings. Owned by the project; commercial use permitted (Q05).",
+   "notes": ""
+  },
+  {
+   "id": "whisper.tutorial.ramen",
+   "kind": "voice",
+   "bus": "voice",
+   "files": {
+    "ogg": "assets/audio/voice/whisper.tutorial.ogg",
+    "m4a": "assets/audio/voice/whisper.tutorial.m4a"
+   },
+   "sampleRate": 48000,
+   "channels": 1,
+   "duration": 13.0034,
+   "samples": 624162,
+   "loop": false,
+   "lufs": -20.0,
+   "truePeakDbtp": -2.0,
+   "samplePeakDbfs": -2.0,
+   "decodedSamples": {
+    "ogg": 624162,
+    "m4a": 624640
+   },
+   "bytes": {
+    "ogg": 103019,
+    "m4a": 110609
+   },
+   "date": "2026-10-08",
+   "tool": "Azure AI Speech neural TTS via speech-production skill (REST), finalized by tools/audio/make_voice.py",
+   "text": "Две Грусти да Радость — вот тебе и рамен. Гляди: тучка и плачет, и смеётся.",
+   "settings": {
+    "voice": "it-IT-Rosa:MAI-Voice-2",
+    "style": "whispering",
+    "language": "ru-RU (via <lang>)",
+    "ssml": "<speak version=\"1.0\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xmlns:mstts=\"https://www.w3.org/2001/mstts\" xml:lang=\"ru-RU\"><voice name=\"it-IT-Rosa:MAI-Voice-2\"><mstts:express-as style=\"whispering\"><lang xml:lang=\"ru-RU\">Две Грусти да Радость <break time=\"200ms\"/> вот тебе и рамен. Гляди: тучка и плачет, и смеётся.</lang></mstts:express-as></voice></speak>",
+    "spokenText": "Две Грусти да Радость — вот тебе и рамен. Гляди: тучка и плачет, и смеётся.",
+    "post": "internal pauses capped at 0.45s, lead 0.06s, tail 0.3s; loudness -20 LUFS",
+    "rawDurationSeconds": 19.67,
+    "skillDecision": "PASS",
+    "skillScores": {
+     "accuracy": 93.0,
+     "fluency": 48.0,
+     "completeness": 93.0
+    },
+    "finalCheck": {
+     "transcript": "2 грусти до радость вот тебе и рамен гляди.Тучка и плачет и смеётся.",
+     "accuracy": 100.0,
+     "fluency": 88.0,
+     "completeness": 100.0
+    }
+   },
+   "license": "Synthesized with Azure AI Speech neural TTS under the project's Azure subscription; Microsoft terms permit commercial use of synthesized output. Slice-only per Q40: release voices need PM approval (live voice or PM-approved synthesis).",
+   "notes": "Slice-only synthetic voice (Q40): release needs PM approval."
+  },
+  {
+   "id": "whisper.tutorial.listen",
+   "kind": "voice",
+   "bus": "voice",
+   "files": {
+    "ogg": "assets/audio/voice/whisper.tutorial.ogg",
+    "m4a": "assets/audio/voice/whisper.tutorial.m4a"
+   },
+   "sampleRate": 48000,
+   "channels": 1,
+   "duration": 7.1562,
+   "samples": 343500,
+   "loop": false,
+   "lufs": -20.1,
+   "truePeakDbtp": -4.7,
+   "samplePeakDbfs": -4.7,
+   "decodedSamples": {
+    "ogg": 343500,
+    "m4a": 344064
+   },
+   "bytes": {
+    "ogg": 60589,
+    "m4a": 60109
+   },
+   "date": "2026-10-08",
+   "tool": "Azure AI Speech neural TTS via speech-production skill (REST), finalized by tools/audio/make_voice.py",
+   "text": "Слушай гостя, внученька. О чём говорить — выбирай сама, а тоном держи чистоту.",
+   "settings": {
+    "voice": "it-IT-Rosa:MAI-Voice-2",
+    "style": "whispering",
+    "language": "ru-RU (via <lang>)",
+    "ssml": "<speak version=\"1.0\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xmlns:mstts=\"https://www.w3.org/2001/mstts\" xml:lang=\"ru-RU\"><voice name=\"it-IT-Rosa:MAI-Voice-2\"><mstts:express-as style=\"whispering\"><lang xml:lang=\"ru-RU\">Слушай гостя, внученька. О чём говорить <break time=\"200ms\"/> выбирай сама, а тоном держи чистоту.</lang></mstts:express-as></voice></speak>",
+    "spokenText": "Слушай гостя, внученька. О чём говорить — выбирай сама, а тоном держи чистоту.",
+    "post": "internal pauses capped at 0.45s, lead 0.06s, tail 0.3s; loudness -20 LUFS",
+    "rawDurationSeconds": 7.16,
+    "skillDecision": "PASS",
+    "skillScores": {
+     "accuracy": 99.0,
+     "fluency": 98.0,
+     "completeness": 100.0
+    },
+    "finalCheck": {
+     "transcript": "Слушай гостя, внученька о чём говорить выбирай сама, а то нам держи чистоту.",
+     "accuracy": 99.0,
+     "fluency": 98.0,
+     "completeness": 100.0
+    }
+   },
+   "license": "Synthesized with Azure AI Speech neural TTS under the project's Azure subscription; Microsoft terms permit commercial use of synthesized output. Slice-only per Q40: release voices need PM approval (live voice or PM-approved synthesis).",
+   "notes": "Slice-only synthetic voice (Q40): release needs PM approval."
+  },
+  {
+   "id": "whisper.tutorial.cook",
+   "kind": "voice",
+   "bus": "voice",
+   "files": {
+    "ogg": "assets/audio/voice/whisper.tutorial.ogg",
+    "m4a": "assets/audio/voice/whisper.tutorial.m4a"
+   },
+   "sampleRate": 48000,
+   "channels": 1,
+   "duration": 7.5358,
+   "samples": 361720,
+   "loop": false,
+   "lufs": -20.2,
+   "truePeakDbtp": -3.0,
+   "samplePeakDbfs": -3.0,
+   "decodedSamples": {
+    "ogg": 361720,
+    "m4a": 362496
+   },
+   "bytes": {
+    "ogg": 63873,
+    "m4a": 63103
+   },
+   "date": "2026-10-08",
+   "tool": "Azure AI Speech neural TTS via speech-production skill (REST), finalized by tools/audio/make_voice.py",
+   "text": "Положи склянку в печь — дальше она сварит сама. А ты пока делом займись.",
+   "settings": {
+    "voice": "it-IT-Rosa:MAI-Voice-2",
+    "style": "whispering",
+    "language": "ru-RU (via <lang>)",
+    "ssml": "<speak version=\"1.0\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xmlns:mstts=\"https://www.w3.org/2001/mstts\" xml:lang=\"ru-RU\"><voice name=\"it-IT-Rosa:MAI-Voice-2\"><mstts:express-as style=\"whispering\"><lang xml:lang=\"ru-RU\">Положи склянку в печь <break time=\"200ms\"/> дальше она сварит сама. А ты пока делом займись.</lang></mstts:express-as></voice></speak>",
+    "spokenText": "Положи склянку в печь — дальше она сварит сама. А ты пока делом займись.",
+    "post": "internal pauses capped at 0.45s, lead 0.06s, tail 0.3s; loudness -20 LUFS",
+    "rawDurationSeconds": 7.54,
+    "skillDecision": "PASS",
+    "skillScores": {
+     "accuracy": 98.0,
+     "fluency": 98.0,
+     "completeness": 100.0
+    },
+    "finalCheck": {
+     "transcript": "Положи склянку в печь, дальше она сварит сама, а ты пока делом займись.",
+     "accuracy": 98.0,
+     "fluency": 98.0,
+     "completeness": 100.0
+    }
+   },
+   "license": "Synthesized with Azure AI Speech neural TTS under the project's Azure subscription; Microsoft terms permit commercial use of synthesized output. Slice-only per Q40: release voices need PM approval (live voice or PM-approved synthesis).",
+   "notes": "Slice-only synthetic voice (Q40): release needs PM approval."
+  },
+  {
+   "id": "whisper.tutorial.serve",
+   "kind": "voice",
+   "bus": "voice",
+   "files": {
+    "ogg": "assets/audio/voice/whisper.tutorial.ogg",
+    "m4a": "assets/audio/voice/whisper.tutorial.m4a"
+   },
+   "sampleRate": 48000,
+   "channels": 1,
+   "duration": 6.3515,
+   "samples": 304874,
+   "loop": false,
+   "lufs": -20.1,
+   "truePeakDbtp": -2.4,
+   "samplePeakDbfs": -2.4,
+   "decodedSamples": {
+    "ogg": 304874,
+    "m4a": 305152
+   },
+   "bytes": {
+    "ogg": 54136,
+    "m4a": 53456
+   },
+   "date": "2026-10-08",
+   "tool": "Azure AI Speech neural TTS via speech-production skill (REST), finalized by tools/audio/make_voice.py",
+   "text": "Готово — неси, пока с пылу с жару. Из печи подать — ни минутки не стоит.",
+   "settings": {
+    "voice": "it-IT-Rosa:MAI-Voice-2",
+    "style": "whispering",
+    "language": "ru-RU (via <lang>)",
+    "ssml": "<speak version=\"1.0\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xmlns:mstts=\"https://www.w3.org/2001/mstts\" xml:lang=\"ru-RU\"><voice name=\"it-IT-Rosa:MAI-Voice-2\"><mstts:express-as style=\"whispering\"><lang xml:lang=\"ru-RU\">Готово <break time=\"200ms\"/> неси, пока с пылу с жару. Из печи подать <break time=\"200ms\"/> ни минутки не стоит.</lang></mstts:express-as></voice></speak>",
+    "spokenText": "Готово — неси, пока с пылу с жару. Из печи подать — ни минутки не стоит.",
+    "post": "internal pauses capped at 0.45s, lead 0.06s, tail 0.3s; loudness -20 LUFS",
+    "rawDurationSeconds": 6.35,
+    "skillDecision": "PASS",
+    "skillScores": {
+     "accuracy": 93.0,
+     "fluency": 99.0,
+     "completeness": 100.0
+    },
+    "finalCheck": {
+     "transcript": "Готова неси пока с пылу с жару из печи подать ни минутки не стоит.",
+     "accuracy": 93.0,
+     "fluency": 99.0,
+     "completeness": 100.0
+    }
+   },
+   "license": "Synthesized with Azure AI Speech neural TTS under the project's Azure subscription; Microsoft terms permit commercial use of synthesized output. Slice-only per Q40: release voices need PM approval (live voice or PM-approved synthesis).",
+   "notes": "Slice-only synthetic voice (Q40): release needs PM approval."
+  },
+  {
+   "id": "whisper.tutorial.clean",
+   "kind": "voice",
+   "bus": "voice",
+   "files": {
+    "ogg": "assets/audio/voice/whisper.tutorial.ogg",
+    "m4a": "assets/audio/voice/whisper.tutorial.m4a"
+   },
+   "sampleRate": 48000,
+   "channels": 1,
+   "duration": 6.7865,
+   "samples": 325750,
+   "loop": false,
+   "lufs": -20.1,
+   "truePeakDbtp": -3.8,
+   "samplePeakDbfs": -3.8,
+   "decodedSamples": {
+    "ogg": 325750,
+    "m4a": 326656
+   },
+   "bytes": {
+    "ogg": 56524,
+    "m4a": 56874
+   },
+   "date": "2026-10-08",
+   "tool": "Azure AI Speech neural TTS via speech-production skill (REST), finalized by tools/audio/make_voice.py",
+   "text": "Гость ушёл — прибери место. За грязный стол никого не усадишь.",
+   "settings": {
+    "voice": "it-IT-Rosa:MAI-Voice-2",
+    "style": "whispering",
+    "language": "ru-RU (via <lang>)",
+    "ssml": "<speak version=\"1.0\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xmlns:mstts=\"https://www.w3.org/2001/mstts\" xml:lang=\"ru-RU\"><voice name=\"it-IT-Rosa:MAI-Voice-2\"><mstts:express-as style=\"whispering\"><lang xml:lang=\"ru-RU\">Гость ушёл <break time=\"200ms\"/> прибери место. За грязный стол никого не усадишь.</lang></mstts:express-as></voice></speak>",
+    "spokenText": "Гость ушёл — прибери место. За грязный стол никого не усадишь.",
+    "post": "internal pauses capped at 0.45s, lead 0.06s, tail 0.3s; loudness -20 LUFS",
+    "rawDurationSeconds": 6.79,
+    "skillDecision": "PASS",
+    "skillScores": {
+     "accuracy": 100.0,
+     "fluency": 99.0,
+     "completeness": 100.0
+    },
+    "finalCheck": {
+     "transcript": "Гость ушёл прибери место за грязный стол никого не усадишь.",
+     "accuracy": 100.0,
+     "fluency": 99.0,
+     "completeness": 100.0
+    }
+   },
+   "license": "Synthesized with Azure AI Speech neural TTS under the project's Azure subscription; Microsoft terms permit commercial use of synthesized output. Slice-only per Q40: release voices need PM approval (live voice or PM-approved synthesis).",
+   "notes": "Slice-only synthetic voice (Q40): release needs PM approval."
+  },
+  {
+   "id": "whisper.tutorial.core",
+   "kind": "voice",
+   "bus": "voice",
+   "files": {
+    "ogg": "assets/audio/voice/whisper.tutorial.ogg",
+    "m4a": "assets/audio/voice/whisper.tutorial.m4a"
+   },
+   "sampleRate": 48000,
+   "channels": 1,
+   "duration": 7.3847,
+   "samples": 354466,
+   "loop": false,
+   "lufs": -20.0,
+   "truePeakDbtp": -3.8,
+   "samplePeakDbfs": -3.8,
+   "decodedSamples": {
+    "ogg": 354466,
+    "m4a": 355328
+   },
+   "bytes": {
+    "ogg": 61360,
+    "m4a": 61730
+   },
+   "date": "2026-10-08",
+   "tool": "Azure AI Speech neural TTS via speech-production skill (REST), finalized by tools/audio/make_voice.py",
+   "text": "Последнюю склянку не трогай. Это ядро — без него гость опустеет.",
+   "settings": {
+    "voice": "it-IT-Rosa:MAI-Voice-2",
+    "style": "whispering",
+    "language": "ru-RU (via <lang>)",
+    "ssml": "<speak version=\"1.0\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xmlns:mstts=\"https://www.w3.org/2001/mstts\" xml:lang=\"ru-RU\"><voice name=\"it-IT-Rosa:MAI-Voice-2\"><mstts:express-as style=\"whispering\"><lang xml:lang=\"ru-RU\">Последнюю склянку не трогай. Это ядро <break time=\"200ms\"/> без него гость опустеет.</lang></mstts:express-as></voice></speak>",
+    "spokenText": "Последнюю склянку не трогай. Это ядро — без него гость опустеет.",
+    "post": "internal pauses capped at 0.45s, lead 0.06s, tail 0.3s; loudness -20 LUFS",
+    "rawDurationSeconds": 7.53,
+    "skillDecision": "PASS",
+    "skillScores": {
+     "accuracy": 99.0,
+     "fluency": 98.0,
+     "completeness": 100.0
+    },
+    "finalCheck": {
+     "transcript": "Последнюю скляннку не трогай, это ядро без него гость опустеет.",
+     "accuracy": 100.0,
+     "fluency": 97.0,
+     "completeness": 100.0
+    }
+   },
+   "license": "Synthesized with Azure AI Speech neural TTS under the project's Azure subscription; Microsoft terms permit commercial use of synthesized output. Slice-only per Q40: release voices need PM approval (live voice or PM-approved synthesis).",
+   "notes": "Slice-only synthetic voice (Q40): release needs PM approval."
+  },
+  {
+   "id": "whisper.tutorial.heat",
+   "kind": "voice",
+   "bus": "voice",
+   "files": {
+    "ogg": "assets/audio/voice/whisper.tutorial.ogg",
+    "m4a": "assets/audio/voice/whisper.tutorial.m4a"
+   },
+   "sampleRate": 48000,
+   "channels": 1,
+   "duration": 7.5057,
+   "samples": 360272,
+   "loop": false,
+   "lufs": -20.5,
+   "truePeakDbtp": -1.7,
+   "samplePeakDbfs": -1.7,
+   "decodedSamples": {
+    "ogg": 360272,
+    "m4a": 360448
+   },
+   "bytes": {
+    "ogg": 62166,
+    "m4a": 64767
+   },
+   "date": "2026-10-08",
+   "tool": "Azure AI Speech neural TTS via speech-production skill (REST), finalized by tools/audio/make_voice.py",
+   "text": "Жар кончится — сходи к Купе. Поворчит, да подкинет.",
+   "settings": {
+    "voice": "it-IT-Rosa:MAI-Voice-2",
+    "style": "whispering",
+    "language": "ru-RU (via <lang>)",
+    "ssml": "<speak version=\"1.0\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xmlns:mstts=\"https://www.w3.org/2001/mstts\" xml:lang=\"ru-RU\"><voice name=\"it-IT-Rosa:MAI-Voice-2\"><mstts:express-as style=\"whispering\"><lang xml:lang=\"ru-RU\">Жар кончится <break time=\"200ms\"/> сходи к Ку́пи. Поворчит, да подкинет.</lang></mstts:express-as></voice></speak>",
+    "spokenText": "Жар кончится — сходи к Купи. Поворчит, да подкинет.",
+    "post": "internal pauses capped at 0.45s, lead 0.06s, tail 0.3s; loudness -20 LUFS",
+    "rawDurationSeconds": 8.56,
+    "skillDecision": "PASS",
+    "skillScores": {
+     "accuracy": 99.0,
+     "fluency": 86.0,
+     "completeness": 100.0
+    },
+    "finalCheck": {
+     "transcript": "Жар кончится, сходи к купе поворчит да подкинет.",
+     "accuracy": 99.0,
+     "fluency": 98.0,
+     "completeness": 100.0
+    }
+   },
+   "license": "Synthesized with Azure AI Speech neural TTS under the project's Azure subscription; Microsoft terms permit commercial use of synthesized output. Slice-only per Q40: release voices need PM approval (live voice or PM-approved synthesis).",
+   "notes": "Slice-only synthetic voice (Q40): release needs PM approval. SSML respells 'Купе' as 'Ку́пи' ([ˈkupʲɪ]) because the voice ignores IPA phoneme tags (capability probe sentinel failed); audible result is the dative of Kupa, not 'купе́'."
+  },
+  {
+   "id": "whisper.tutorial.shelf",
+   "kind": "voice",
+   "bus": "voice",
+   "files": {
+    "ogg": "assets/audio/voice/whisper.tutorial.ogg",
+    "m4a": "assets/audio/voice/whisper.tutorial.m4a"
+   },
+   "sampleRate": 48000,
+   "channels": 1,
+   "duration": 8.1935,
+   "samples": 393290,
+   "loop": false,
+   "lufs": -20.0,
+   "truePeakDbtp": -4.0,
+   "samplePeakDbfs": -4.0,
+   "decodedSamples": {
+    "ogg": 393290,
+    "m4a": 394240
+   },
+   "bytes": {
+    "ogg": 66517,
+    "m4a": 68561
+   },
+   "date": "2026-10-08",
+   "tool": "Azure AI Speech neural TTS via speech-production skill (REST), finalized by tools/audio/make_voice.py",
+   "text": "Полка — не чулан. Что у печи стоит — догорит, что вдали — дозреет.",
+   "settings": {
+    "voice": "it-IT-Rosa:MAI-Voice-2",
+    "style": "whispering",
+    "language": "ru-RU (via <lang>)",
+    "ssml": "<speak version=\"1.0\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xmlns:mstts=\"https://www.w3.org/2001/mstts\" xml:lang=\"ru-RU\"><voice name=\"it-IT-Rosa:MAI-Voice-2\"><mstts:express-as style=\"whispering\"><lang xml:lang=\"ru-RU\">Полка <break time=\"200ms\"/> не чулан. Что у печи стоит <break time=\"200ms\"/> догорит, что вдали <break time=\"200ms\"/> дозреет.</lang></mstts:express-as></voice></speak>",
+    "spokenText": "Полка — не чулан. Что у печи стоит — догорит, что вдали — дозреет.",
+    "post": "internal pauses capped at 0.45s, lead 0.06s, tail 0.3s; loudness -20 LUFS",
+    "rawDurationSeconds": 8.29,
+    "skillDecision": "PASS",
+    "skillScores": {
+     "accuracy": 95.0,
+     "fluency": 91.0,
+     "completeness": 91.0
+    },
+    "finalCheck": {
+     "transcript": "Полка не чулан, что у печи стоит да горит, что вдали до зреет.",
+     "accuracy": 96.0,
+     "fluency": 93.0,
+     "completeness": 91.0
+    }
+   },
+   "license": "Synthesized with Azure AI Speech neural TTS under the project's Azure subscription; Microsoft terms permit commercial use of synthesized output. Slice-only per Q40: release voices need PM approval (live voice or PM-approved synthesis).",
+   "notes": "Slice-only synthetic voice (Q40): release needs PM approval."
+  },
+  {
+   "id": "whisper.tutorial.door",
+   "kind": "voice",
+   "bus": "voice",
+   "files": {
+    "ogg": "assets/audio/voice/whisper.tutorial.ogg",
+    "m4a": "assets/audio/voice/whisper.tutorial.m4a"
+   },
+   "sampleRate": 48000,
+   "channels": 1,
+   "duration": 5.136,
+   "samples": 246526,
+   "loop": false,
+   "lufs": -20.1,
+   "truePeakDbtp": -4.6,
+   "samplePeakDbfs": -4.6,
+   "decodedSamples": {
+    "ogg": 246526,
+    "m4a": 246784
+   },
+   "bytes": {
+    "ogg": 44229,
+    "m4a": 43358
+   },
+   "date": "2026-10-08",
+   "tool": "Azure AI Speech neural TTS via speech-production skill (REST), finalized by tools/audio/make_voice.py",
+   "text": "Мест нет — гость у двери подождёт. Только недолго.",
+   "settings": {
+    "voice": "it-IT-Rosa:MAI-Voice-2",
+    "style": "whispering",
+    "language": "ru-RU (via <lang>)",
+    "ssml": "<speak version=\"1.0\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xmlns:mstts=\"https://www.w3.org/2001/mstts\" xml:lang=\"ru-RU\"><voice name=\"it-IT-Rosa:MAI-Voice-2\"><mstts:express-as style=\"whispering\"><lang xml:lang=\"ru-RU\">Мест нет <break time=\"200ms\"/> гость у двери подождёт. Только недолго.</lang></mstts:express-as></voice></speak>",
+    "spokenText": "Мест нет — гость у двери подождёт. Только недолго.",
+    "post": "internal pauses capped at 0.45s, lead 0.06s, tail 0.3s; loudness -20 LUFS",
+    "rawDurationSeconds": 5.28,
+    "skillDecision": "PASS",
+    "skillScores": {
+     "accuracy": 100.0,
+     "fluency": 90.0,
+     "completeness": 100.0
+    },
+    "finalCheck": {
+     "transcript": "Мест нет гостю двери подождёт только недолго.",
+     "accuracy": 100.0,
+     "fluency": 90.0,
+     "completeness": 100.0
+    }
+   },
+   "license": "Synthesized with Azure AI Speech neural TTS under the project's Azure subscription; Microsoft terms permit commercial use of synthesized output. Slice-only per Q40: release voices need PM approval (live voice or PM-approved synthesis).",
+   "notes": "Slice-only synthetic voice (Q40): release needs PM approval."
+  },
+  {
+   "id": "whisper.tutorial.tray",
+   "kind": "voice",
+   "bus": "voice",
+   "files": {
+    "ogg": "assets/audio/voice/whisper.tutorial.ogg",
+    "m4a": "assets/audio/voice/whisper.tutorial.m4a"
+   },
+   "sampleRate": 48000,
+   "channels": 1,
+   "duration": 8.3275,
+   "samples": 399720,
+   "loop": false,
+   "lufs": -20.0,
+   "truePeakDbtp": -2.7,
+   "samplePeakDbfs": -2.7,
+   "decodedSamples": {
+    "ogg": 399720,
+    "m4a": 400384
+   },
+   "bytes": {
+    "ogg": 68693,
+    "m4a": 70161
+   },
+   "date": "2026-10-08",
+   "tool": "Azure AI Speech neural TTS via speech-production skill (REST), finalized by tools/audio/make_voice.py",
+   "text": "Поднос занят. Сперва найди склянке место, потом слушай дальше.",
+   "settings": {
+    "voice": "it-IT-Rosa:MAI-Voice-2",
+    "style": "whispering",
+    "language": "ru-RU (via <lang>)",
+    "ssml": "<speak version=\"1.0\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xmlns:mstts=\"https://www.w3.org/2001/mstts\" xml:lang=\"ru-RU\"><voice name=\"it-IT-Rosa:MAI-Voice-2\"><mstts:express-as style=\"whispering\"><lang xml:lang=\"ru-RU\">Поднос занят. Сперва найди склянке место, потом слушай дальше.</lang></mstts:express-as></voice></speak>",
+    "spokenText": "Поднос занят. Сперва найди склянке место, потом слушай дальше.",
+    "post": "internal pauses capped at 0.45s, lead 0.06s, tail 0.3s; loudness -20 LUFS",
+    "rawDurationSeconds": 8.33,
+    "skillDecision": "PASS",
+    "skillScores": {
+     "accuracy": 99.0,
+     "fluency": 97.0,
+     "completeness": 100.0
+    },
+    "finalCheck": {
+     "transcript": "Поднос занят сперва найди склянки места. Потом слушай дальше.",
+     "accuracy": 99.0,
+     "fluency": 97.0,
+     "completeness": 100.0
+    }
+   },
+   "license": "Synthesized with Azure AI Speech neural TTS under the project's Azure subscription; Microsoft terms permit commercial use of synthesized output. Slice-only per Q40: release voices need PM approval (live voice or PM-approved synthesis).",
+   "notes": "Slice-only synthetic voice (Q40): release needs PM approval."
+  },
+  {
+   "id": "whisper.tutorial.farewell",
+   "kind": "voice",
+   "bus": "voice",
+   "files": {
+    "ogg": "assets/audio/voice/whisper.tutorial.ogg",
+    "m4a": "assets/audio/voice/whisper.tutorial.m4a"
+   },
+   "sampleRate": 48000,
+   "channels": 1,
+   "duration": 7.9249,
+   "samples": 380396,
+   "loop": false,
+   "lufs": -20.1,
+   "truePeakDbtp": -4.5,
+   "samplePeakDbfs": -4.5,
+   "decodedSamples": {
+    "ogg": 380396,
+    "m4a": 380928
+   },
+   "bytes": {
+    "ogg": 65783,
+    "m4a": 66277
+   },
+   "date": "2026-10-08",
+   "tool": "Azure AI Speech neural TTS via speech-production skill (REST), finalized by tools/audio/make_voice.py",
+   "text": "Мне пора в ходики, внученька. Пружину кто-то держать должен. Я рядом. Тикаю.",
+   "settings": {
+    "voice": "it-IT-Rosa:MAI-Voice-2",
+    "style": "whispering",
+    "language": "ru-RU (via <lang>)",
+    "ssml": "<speak version=\"1.0\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xmlns:mstts=\"https://www.w3.org/2001/mstts\" xml:lang=\"ru-RU\"><voice name=\"it-IT-Rosa:MAI-Voice-2\"><mstts:express-as style=\"whispering\"><lang xml:lang=\"ru-RU\">Мне пора в ходики, внученька. Пружину кто-то держать должен. Я рядом. Тикаю.</lang></mstts:express-as></voice></speak>",
+    "spokenText": "Мне пора в ходики, внученька. Пружину кто-то держать должен. Я рядом. Тикаю.",
+    "post": "internal pauses capped at 0.45s, lead 0.06s, tail 0.3s; loudness -20 LUFS",
+    "rawDurationSeconds": 7.92,
+    "skillDecision": "PASS",
+    "skillScores": {
+     "accuracy": 97.0,
+     "fluency": 98.0,
+     "completeness": 100.0
+    },
+    "finalCheck": {
+     "transcript": "Мне пора в ходике внученька пружину ктото держать должен я рядом тикаю.",
+     "accuracy": 97.0,
+     "fluency": 98.0,
+     "completeness": 100.0
+    }
+   },
+   "license": "Synthesized with Azure AI Speech neural TTS under the project's Azure subscription; Microsoft terms permit commercial use of synthesized output. Slice-only per Q40: release voices need PM approval (live voice or PM-approved synthesis).",
+   "notes": "Slice-only synthetic voice (Q40): release needs PM approval."
+  },
+  {
+   "id": "whisper.tutorial.chimes",
+   "kind": "voice",
+   "bus": "voice",
+   "files": {
+    "ogg": "assets/audio/voice/whisper.tutorial.ogg",
+    "m4a": "assets/audio/voice/whisper.tutorial.m4a"
+   },
+   "sampleRate": 48000,
+   "channels": 1,
+   "duration": 8.6222,
+   "samples": 413864,
+   "loop": false,
+   "lufs": -20.1,
+   "truePeakDbtp": -2.9,
+   "samplePeakDbfs": -2.9,
+   "decodedSamples": {
+    "ogg": 413864,
+    "m4a": 414720
+   },
+   "bytes": {
+    "ogg": 70940,
+    "m4a": 72023
+   },
+   "date": "2026-10-08",
+   "tool": "Azure AI Speech neural TTS via speech-production skill (REST), finalized by tools/audio/make_voice.py",
+   "text": "Слышишь звон? Ветер сменился. Часы теперь сами скажут, который час ночи.",
+   "settings": {
+    "voice": "it-IT-Rosa:MAI-Voice-2",
+    "style": "whispering",
+    "language": "ru-RU (via <lang>)",
+    "ssml": "<speak version=\"1.0\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xmlns:mstts=\"https://www.w3.org/2001/mstts\" xml:lang=\"ru-RU\"><voice name=\"it-IT-Rosa:MAI-Voice-2\"><mstts:express-as style=\"whispering\"><lang xml:lang=\"ru-RU\">Слышишь звон? Ветер сменился. Часы теперь сами скажут, который час ночи.</lang></mstts:express-as></voice></speak>",
+    "spokenText": "Слышишь звон? Ветер сменился. Часы теперь сами скажут, который час ночи.",
+    "post": "internal pauses capped at 0.45s, lead 0.06s, tail 0.3s; loudness -20 LUFS",
+    "rawDurationSeconds": 9.02,
+    "skillDecision": "PASS",
+    "skillScores": {
+     "accuracy": 100.0,
+     "fluency": 90.0,
+     "completeness": 100.0
+    },
+    "finalCheck": {
+     "transcript": "Слышишь звон, ветер сменился, часы теперь сами скажут который час ночи.",
+     "accuracy": 100.0,
+     "fluency": 97.0,
+     "completeness": 100.0
+    }
+   },
+   "license": "Synthesized with Azure AI Speech neural TTS under the project's Azure subscription; Microsoft terms permit commercial use of synthesized output. Slice-only per Q40: release voices need PM approval (live voice or PM-approved synthesis).",
+   "notes": "Slice-only synthetic voice (Q40): release needs PM approval."
+  },
+  {
+   "id": "whisper.tutorial.sediment",
+   "kind": "voice",
+   "bus": "voice",
+   "files": {
+    "ogg": "assets/audio/voice/whisper.tutorial.ogg",
+    "m4a": "assets/audio/voice/whisper.tutorial.m4a"
+   },
+   "sampleRate": 48000,
+   "channels": 1,
+   "duration": 6.6652,
+   "samples": 319930,
+   "loop": false,
+   "lufs": -20.2,
+   "truePeakDbtp": -3.8,
+   "samplePeakDbfs": -3.8,
+   "decodedSamples": {
+    "ogg": 319930,
+    "m4a": 320512
+   },
+   "bytes": {
+    "ogg": 56258,
+    "m4a": 56357
+   },
+   "date": "2026-10-08",
+   "tool": "Azure AI Speech neural TTS via speech-production skill (REST), finalized by tools/audio/make_voice.py",
+   "text": "Осадок — не беда. Сожги в печи — будет Жар. А можно и приберечь.",
+   "settings": {
+    "voice": "it-IT-Rosa:MAI-Voice-2",
+    "style": "whispering",
+    "language": "ru-RU (via <lang>)",
+    "ssml": "<speak version=\"1.0\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xmlns:mstts=\"https://www.w3.org/2001/mstts\" xml:lang=\"ru-RU\"><voice name=\"it-IT-Rosa:MAI-Voice-2\"><mstts:express-as style=\"whispering\"><lang xml:lang=\"ru-RU\">Осадок <break time=\"200ms\"/> не беда. Сожги в печи <break time=\"200ms\"/> будет Жар. А можно и приберечь.</lang></mstts:express-as></voice></speak>",
+    "spokenText": "Осадок — не беда. Сожги в печи — будет Жар. А можно и приберечь.",
+    "post": "internal pauses capped at 0.45s, lead 0.06s, tail 0.3s; loudness -20 LUFS",
+    "rawDurationSeconds": 6.67,
+    "skillDecision": "PASS",
+    "skillScores": {
+     "accuracy": 97.0,
+     "fluency": 98.0,
+     "completeness": 100.0
+    },
+    "finalCheck": {
+     "transcript": "Садок не беда сожги в печи будет жар, а можно и приберечь.",
+     "accuracy": 98.0,
+     "fluency": 98.0,
+     "completeness": 100.0
+    }
+   },
+   "license": "Synthesized with Azure AI Speech neural TTS under the project's Azure subscription; Microsoft terms permit commercial use of synthesized output. Slice-only per Q40: release voices need PM approval (live voice or PM-approved synthesis).",
+   "notes": "Slice-only synthetic voice (Q40): release needs PM approval."
+  },
+  {
+   "id": "whisper.tutorial.hope",
+   "kind": "voice",
+   "bus": "voice",
+   "files": {
+    "ogg": "assets/audio/voice/whisper.tutorial.ogg",
+    "m4a": "assets/audio/voice/whisper.tutorial.m4a"
+   },
+   "sampleRate": 48000,
+   "channels": 1,
+   "duration": 7.8882,
+   "samples": 378634,
+   "loop": false,
+   "lufs": -20.1,
+   "truePeakDbtp": -3.6,
+   "samplePeakDbfs": -3.6,
+   "decodedSamples": {
+    "ogg": 378634,
+    "m4a": 378880
+   },
+   "bytes": {
+    "ogg": 65432,
+    "m4a": 66074
+   },
+   "date": "2026-10-08",
+   "tool": "Azure AI Speech neural TTS via speech-production skill (REST), finalized by tools/audio/make_voice.py",
+   "text": "Грусть отстоялась — стала Надеждой. Её не берут, её выдерживают.",
+   "settings": {
+    "voice": "it-IT-Rosa:MAI-Voice-2",
+    "style": "whispering",
+    "language": "ru-RU (via <lang>)",
+    "ssml": "<speak version=\"1.0\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xmlns:mstts=\"https://www.w3.org/2001/mstts\" xml:lang=\"ru-RU\"><voice name=\"it-IT-Rosa:MAI-Voice-2\"><mstts:express-as style=\"whispering\"><lang xml:lang=\"ru-RU\">Грусть отстоялась <break time=\"200ms\"/> стала Надеждой. Её не берут, её выдерживают.</lang></mstts:express-as></voice></speak>",
+    "spokenText": "Грусть отстоялась — стала Надеждой. Её не берут, её выдерживают.",
+    "post": "internal pauses capped at 0.45s, lead 0.06s, tail 0.3s; loudness -20 LUFS",
+    "rawDurationSeconds": 8.99,
+    "skillDecision": "PASS",
+    "skillScores": {
+     "accuracy": 100.0,
+     "fluency": 82.0,
+     "completeness": 100.0
+    },
+    "finalCheck": {
+     "transcript": "Грусть отстоялась, стала надеждой, её не берут, её выдерживают.",
+     "accuracy": 100.0,
+     "fluency": 95.0,
+     "completeness": 100.0
+    }
+   },
+   "license": "Synthesized with Azure AI Speech neural TTS under the project's Azure subscription; Microsoft terms permit commercial use of synthesized output. Slice-only per Q40: release voices need PM approval (live voice or PM-approved synthesis).",
+   "notes": "Slice-only synthetic voice (Q40): release needs PM approval."
+  },
+  {
+   "id": "whisper.tutorial.amber",
+   "kind": "voice",
+   "bus": "voice",
+   "files": {
+    "ogg": "assets/audio/voice/whisper.tutorial.ogg",
+    "m4a": "assets/audio/voice/whisper.tutorial.m4a"
+   },
+   "sampleRate": 48000,
+   "channels": 1,
+   "duration": 7.4676,
+   "samples": 358446,
+   "loop": false,
+   "lufs": -20.0,
+   "truePeakDbtp": -2.9,
+   "samplePeakDbfs": -2.9,
+   "decodedSamples": {
+    "ogg": 358446,
+    "m4a": 359424
+   },
+   "bytes": {
+    "ogg": 62830,
+    "m4a": 63522
+   },
+   "date": "2026-10-08",
+   "tool": "Azure AI Speech neural TTS via speech-production skill (REST), finalized by tools/audio/make_voice.py",
+   "text": "Радость застыла янтарём. Теперь не испортится — да не во всякое блюдо годится.",
+   "settings": {
+    "voice": "it-IT-Rosa:MAI-Voice-2",
+    "style": "whispering",
+    "language": "ru-RU (via <lang>)",
+    "ssml": "<speak version=\"1.0\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xmlns:mstts=\"https://www.w3.org/2001/mstts\" xml:lang=\"ru-RU\"><voice name=\"it-IT-Rosa:MAI-Voice-2\"><mstts:express-as style=\"whispering\"><lang xml:lang=\"ru-RU\">Радость застыла янтарём. Теперь не испортится <break time=\"200ms\"/> да не во всякое блюдо годится.</lang></mstts:express-as></voice></speak>",
+    "spokenText": "Радость застыла янтарём. Теперь не испортится — да не во всякое блюдо годится.",
+    "post": "internal pauses capped at 0.45s, lead 0.06s, tail 0.3s; loudness -20 LUFS",
+    "rawDurationSeconds": 7.47,
+    "skillDecision": "PASS",
+    "skillScores": {
+     "accuracy": 99.0,
+     "fluency": 98.0,
+     "completeness": 100.0
+    },
+    "finalCheck": {
+     "transcript": "Радость застыла янтарём теперь не испортится. Да не во всякое блюдо годится.",
+     "accuracy": 99.0,
+     "fluency": 98.0,
+     "completeness": 100.0
+    }
+   },
+   "license": "Synthesized with Azure AI Speech neural TTS under the project's Azure subscription; Microsoft terms permit commercial use of synthesized output. Slice-only per Q40: release voices need PM approval (live voice or PM-approved synthesis).",
+   "notes": "Slice-only synthetic voice (Q40): release needs PM approval."
+  },
+  {
+   "id": "whisper.tutorial.nameless",
+   "kind": "voice",
+   "bus": "voice",
+   "files": {
+    "ogg": "assets/audio/voice/whisper.tutorial.ogg",
+    "m4a": "assets/audio/voice/whisper.tutorial.m4a"
+   },
+   "sampleRate": 48000,
+   "channels": 1,
+   "duration": 8.4977,
+   "samples": 407888,
+   "loop": false,
+   "lufs": -20.1,
+   "truePeakDbtp": -3.5,
+   "samplePeakDbfs": -3.5,
+   "decodedSamples": {
+    "ogg": 407888,
+    "m4a": 408576
+   },
+   "bytes": {
+    "ogg": 71432,
+    "m4a": 71817
+   },
+   "date": "2026-10-08",
+   "tool": "Azure AI Speech neural TTS via speech-production skill (REST), finalized by tools/audio/make_voice.py",
+   "text": "Тише… Это Гость без имени. Кормить его не обязательно. Только при нём время тает быстрее.",
+   "settings": {
+    "voice": "it-IT-Rosa:MAI-Voice-2",
+    "style": "whispering",
+    "language": "ru-RU (via <lang>)",
+    "ssml": "<speak version=\"1.0\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xmlns:mstts=\"https://www.w3.org/2001/mstts\" xml:lang=\"ru-RU\"><voice name=\"it-IT-Rosa:MAI-Voice-2\"><mstts:express-as style=\"whispering\"><lang xml:lang=\"ru-RU\">Тише<break time=\"350ms\"/> Это Гость без имени. Кормить его не обязательно. Только при нём время тает быстрее.</lang></mstts:express-as></voice></speak>",
+    "spokenText": "Тише… Это Гость без имени. Кормить его не обязательно. Только при нём время тает быстрее.",
+    "post": "internal pauses capped at 0.45s, lead 0.06s, tail 0.3s; loudness -20 LUFS",
+    "rawDurationSeconds": 8.5,
+    "skillDecision": "PASS",
+    "skillScores": {
+     "accuracy": 96.0,
+     "fluency": 94.0,
+     "completeness": 93.0
+    },
+    "finalCheck": {
+     "transcript": "Тише это гость без имени, кормить его не обязательно, только при нём время тает быстрее.",
+     "accuracy": 96.0,
+     "fluency": 94.0,
+     "completeness": 93.0
+    }
+   },
+   "license": "Synthesized with Azure AI Speech neural TTS under the project's Azure subscription; Microsoft terms permit commercial use of synthesized output. Slice-only per Q40: release voices need PM approval (live voice or PM-approved synthesis).",
+   "notes": "Slice-only synthetic voice (Q40): release needs PM approval."
+  },
+  {
+   "id": "whisper.cuckoo.recipe",
+   "kind": "voice",
+   "bus": "voice",
+   "files": {
+    "ogg": "assets/audio/voice/whisper.cuckoo.ogg",
+    "m4a": "assets/audio/voice/whisper.cuckoo.m4a"
+   },
+   "sampleRate": 48000,
+   "channels": 1,
+   "duration": 7.3178,
+   "samples": 351254,
+   "loop": false,
+   "lufs": -20.0,
+   "truePeakDbtp": -3.0,
+   "samplePeakDbfs": -3.0,
+   "decodedSamples": {
+    "ogg": 351254,
+    "m4a": 352256
+   },
+   "bytes": {
+    "ogg": 60314,
+    "m4a": 61844
+   },
+   "date": "2026-10-08",
+   "tool": "Azure AI Speech neural TTS via speech-production skill (REST), finalized by tools/audio/make_voice.py",
+   "text": "Ку-ку… Есть на полке, из чего сварить заказ. Погляди-ка.",
+   "settings": {
+    "voice": "it-IT-Rosa:MAI-Voice-2",
+    "style": "whispering",
+    "language": "ru-RU (via <lang>)",
+    "ssml": "<speak version=\"1.0\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xmlns:mstts=\"https://www.w3.org/2001/mstts\" xml:lang=\"ru-RU\"><voice name=\"it-IT-Rosa:MAI-Voice-2\"><mstts:express-as style=\"whispering\"><lang xml:lang=\"ru-RU\">Ку-ку<break time=\"350ms\"/> Есть на полке, из чего сварить заказ. Погляди-ка.</lang></mstts:express-as></voice></speak>",
+    "spokenText": "Ку-ку… Есть на полке, из чего сварить заказ. Погляди-ка.",
+    "post": "internal pauses capped at 0.45s, lead 0.06s, tail 0.3s; loudness -20 LUFS",
+    "rawDurationSeconds": 9.3,
+    "skillDecision": "PASS",
+    "skillScores": {
+     "accuracy": 100.0,
+     "fluency": 85.0,
+     "completeness": 100.0
+    },
+    "finalCheck": {
+     "transcript": "У ку есть на полке, из чего сварить заказ погля.",
+     "accuracy": 98.0,
+     "fluency": 98.0,
+     "completeness": 100.0
+    }
+   },
+   "license": "Synthesized with Azure AI Speech neural TTS under the project's Azure subscription; Microsoft terms permit commercial use of synthesized output. Slice-only per Q40: release voices need PM approval (live voice or PM-approved synthesis).",
+   "notes": "Slice-only synthetic voice (Q40): release needs PM approval."
+  },
+  {
+   "id": "whisper.cuckoo.serve",
+   "kind": "voice",
+   "bus": "voice",
+   "files": {
+    "ogg": "assets/audio/voice/whisper.cuckoo.ogg",
+    "m4a": "assets/audio/voice/whisper.cuckoo.m4a"
+   },
+   "sampleRate": 48000,
+   "channels": 1,
+   "duration": 5.513,
+   "samples": 264626,
+   "loop": false,
+   "lufs": -20.0,
+   "truePeakDbtp": -1.7,
+   "samplePeakDbfs": -1.7,
+   "decodedSamples": {
+    "ogg": 264626,
+    "m4a": 265216
+   },
+   "bytes": {
+    "ogg": 44738,
+    "m4a": 46448
+   },
+   "date": "2026-10-08",
+   "tool": "Azure AI Speech neural TTS via speech-production skill (REST), finalized by tools/audio/make_voice.py",
+   "text": "Ку-ку… Блюдо готово. Неси, пока горячее.",
+   "settings": {
+    "voice": "it-IT-Rosa:MAI-Voice-2",
+    "style": "whispering",
+    "language": "ru-RU (via <lang>)",
+    "ssml": "<speak version=\"1.0\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xmlns:mstts=\"https://www.w3.org/2001/mstts\" xml:lang=\"ru-RU\"><voice name=\"it-IT-Rosa:MAI-Voice-2\"><mstts:express-as style=\"whispering\"><lang xml:lang=\"ru-RU\">Ку-ку<break time=\"350ms\"/> Блюдо готово. Неси, пока горячее.</lang></mstts:express-as></voice></speak>",
+    "spokenText": "Ку-ку… Блюдо готово. Неси, пока горячее.",
+    "post": "internal pauses capped at 0.45s, lead 0.06s, tail 0.3s; loudness -20 LUFS",
+    "rawDurationSeconds": 8.19,
+    "skillDecision": "PASS",
+    "skillScores": {
+     "accuracy": 88.0,
+     "fluency": 44.0,
+     "completeness": 83.0
+    },
+    "finalCheck": {
+     "transcript": "Блюдо готово меси пока горячее.",
+     "accuracy": 94.0,
+     "fluency": 97.0,
+     "completeness": 100.0
+    }
+   },
+   "license": "Synthesized with Azure AI Speech neural TTS under the project's Azure subscription; Microsoft terms permit commercial use of synthesized output. Slice-only per Q40: release voices need PM approval (live voice or PM-approved synthesis).",
+   "notes": "Slice-only synthetic voice (Q40): release needs PM approval."
+  },
+  {
+   "id": "whisper.cuckoo.listen",
+   "kind": "voice",
+   "bus": "voice",
+   "files": {
+    "ogg": "assets/audio/voice/whisper.cuckoo.ogg",
+    "m4a": "assets/audio/voice/whisper.cuckoo.m4a"
+   },
+   "sampleRate": 48000,
+   "channels": 1,
+   "duration": 5.3115,
+   "samples": 254950,
+   "loop": false,
+   "lufs": -20.0,
+   "truePeakDbtp": -4.8,
+   "samplePeakDbfs": -4.8,
+   "decodedSamples": {
+    "ogg": 254950,
+    "m4a": 254976
+   },
+   "bytes": {
+    "ogg": 44334,
+    "m4a": 44833
+   },
+   "date": "2026-10-08",
+   "tool": "Azure AI Speech neural TTS via speech-production skill (REST), finalized by tools/audio/make_voice.py",
+   "text": "Ку-ку… Поговори с гостем — у него есть то, что тебе нужно.",
+   "settings": {
+    "voice": "it-IT-Rosa:MAI-Voice-2",
+    "style": "whispering",
+    "language": "ru-RU (via <lang>)",
+    "ssml": "<speak version=\"1.0\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xmlns:mstts=\"https://www.w3.org/2001/mstts\" xml:lang=\"ru-RU\"><voice name=\"it-IT-Rosa:MAI-Voice-2\"><mstts:express-as style=\"whispering\"><lang xml:lang=\"ru-RU\">Ку-ку<break time=\"350ms\"/> Поговори с гостем <break time=\"200ms\"/> у него есть то, что тебе нужно.</lang></mstts:express-as></voice></speak>",
+    "spokenText": "Ку-ку… Поговори с гостем — у него есть то, что тебе нужно.",
+    "post": "internal pauses capped at 0.45s, lead 0.06s, tail 0.3s; loudness -20 LUFS",
+    "rawDurationSeconds": 8.21,
+    "skillDecision": "PASS",
+    "skillScores": {
+     "accuracy": 100.0,
+     "fluency": 61.0,
+     "completeness": 100.0
+    },
+    "finalCheck": {
+     "transcript": "Ку ку поговори с гостем, у него есть то, что тебе нужно.",
+     "accuracy": 99.0,
+     "fluency": 97.0,
+     "completeness": 100.0
+    }
+   },
+   "license": "Synthesized with Azure AI Speech neural TTS under the project's Azure subscription; Microsoft terms permit commercial use of synthesized output. Slice-only per Q40: release voices need PM approval (live voice or PM-approved synthesis).",
+   "notes": "Slice-only synthetic voice (Q40): release needs PM approval."
+  },
+  {
+   "id": "whisper.cuckoo.wait",
+   "kind": "voice",
+   "bus": "voice",
+   "files": {
+    "ogg": "assets/audio/voice/whisper.cuckoo.ogg",
+    "m4a": "assets/audio/voice/whisper.cuckoo.m4a"
+   },
+   "sampleRate": 48000,
+   "channels": 1,
+   "duration": 7.0224,
+   "samples": 337076,
+   "loop": false,
+   "lufs": -20.1,
+   "truePeakDbtp": -3.8,
+   "samplePeakDbfs": -3.8,
+   "decodedSamples": {
+    "ogg": 337076,
+    "m4a": 337920
+   },
+   "bytes": {
+    "ogg": 57867,
+    "m4a": 59111
+   },
+   "date": "2026-10-08",
+   "tool": "Azure AI Speech neural TTS via speech-production skill (REST), finalized by tools/audio/make_voice.py",
+   "text": "Ку-ку… Сейчас лучше подождать. Пусть печь доварит.",
+   "settings": {
+    "voice": "it-IT-Rosa:MAI-Voice-2",
+    "style": "whispering",
+    "language": "ru-RU (via <lang>)",
+    "ssml": "<speak version=\"1.0\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xmlns:mstts=\"https://www.w3.org/2001/mstts\" xml:lang=\"ru-RU\"><voice name=\"it-IT-Rosa:MAI-Voice-2\"><mstts:express-as style=\"whispering\"><lang xml:lang=\"ru-RU\">Ку-ку<break time=\"350ms\"/> Сейчас лучше подождать. Пусть печь доварит.</lang></mstts:express-as></voice></speak>",
+    "spokenText": "Ку-ку… Сейчас лучше подождать. Пусть печь доварит.",
+    "post": "internal pauses capped at 0.45s, lead 0.06s, tail 0.3s; loudness -20 LUFS",
+    "rawDurationSeconds": 14.02,
+    "skillDecision": "PASS",
+    "skillScores": {
+     "accuracy": 100.0,
+     "fluency": 48.0,
+     "completeness": 100.0
+    },
+    "finalCheck": {
+     "transcript": "Ку ку сейчас лучше подождать, пусть печь давари.",
+     "accuracy": 100.0,
+     "fluency": 96.0,
+     "completeness": 100.0
+    }
+   },
+   "license": "Synthesized with Azure AI Speech neural TTS under the project's Azure subscription; Microsoft terms permit commercial use of synthesized output. Slice-only per Q40: release voices need PM approval (live voice or PM-approved synthesis).",
+   "notes": "Slice-only synthetic voice (Q40): release needs PM approval."
+  },
+  {
+   "id": "whisper.cuckoo.risk",
+   "kind": "voice",
+   "bus": "voice",
+   "files": {
+    "ogg": "assets/audio/voice/whisper.cuckoo.ogg",
+    "m4a": "assets/audio/voice/whisper.cuckoo.m4a"
+   },
+   "sampleRate": 48000,
+   "channels": 1,
+   "duration": 5.8913,
+   "samples": 282780,
+   "loop": false,
+   "lufs": -20.1,
+   "truePeakDbtp": -1.9,
+   "samplePeakDbfs": -1.9,
+   "decodedSamples": {
+    "ogg": 282780,
+    "m4a": 283648
+   },
+   "bytes": {
+    "ogg": 49083,
+    "m4a": 50474
+   },
+   "date": "2026-10-08",
+   "tool": "Azure AI Speech neural TTS via speech-production skill (REST), finalized by tools/audio/make_voice.py",
+   "text": "Ку-ку… Беда близко, внученька. Глянь, что я подсветила.",
+   "settings": {
+    "voice": "it-IT-Rosa:MAI-Voice-2",
+    "style": "whispering",
+    "language": "ru-RU (via <lang>)",
+    "ssml": "<speak version=\"1.0\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xmlns:mstts=\"https://www.w3.org/2001/mstts\" xml:lang=\"ru-RU\"><voice name=\"it-IT-Rosa:MAI-Voice-2\"><mstts:express-as style=\"whispering\"><lang xml:lang=\"ru-RU\">Ку-ку<break time=\"350ms\"/> Беда близко, внученька. Глянь, что я подсветила.</lang></mstts:express-as></voice></speak>",
+    "spokenText": "Ку-ку… Беда близко, внученька. Глянь, что я подсветила.",
+    "post": "internal pauses capped at 0.45s, lead 0.06s, tail 0.3s; loudness -20 LUFS",
+    "rawDurationSeconds": 8.55,
+    "skillDecision": "PASS",
+    "skillScores": {
+     "accuracy": 95.0,
+     "fluency": 67.0,
+     "completeness": 100.0
+    },
+    "finalCheck": {
+     "transcript": "Ку ку беда близко внученька глянь что я подсвет.",
+     "accuracy": 96.0,
+     "fluency": 99.0,
+     "completeness": 100.0
+    }
+   },
+   "license": "Synthesized with Azure AI Speech neural TTS under the project's Azure subscription; Microsoft terms permit commercial use of synthesized output. Slice-only per Q40: release voices need PM approval (live voice or PM-approved synthesis).",
+   "notes": "Slice-only synthetic voice (Q40): release needs PM approval."
+  },
+  {
+   "id": "whisper.cuckoo.none",
+   "kind": "voice",
+   "bus": "voice",
+   "files": {
+    "ogg": "assets/audio/voice/whisper.cuckoo.ogg",
+    "m4a": "assets/audio/voice/whisper.cuckoo.m4a"
+   },
+   "sampleRate": 48000,
+   "channels": 1,
+   "duration": 5.4755,
+   "samples": 262826,
+   "loop": false,
+   "lufs": -20.1,
+   "truePeakDbtp": -3.6,
+   "samplePeakDbfs": -3.6,
+   "decodedSamples": {
+    "ogg": 262826,
+    "m4a": 263168
+   },
+   "bytes": {
+    "ogg": 46853,
+    "m4a": 46313
+   },
+   "date": "2026-10-08",
+   "tool": "Azure AI Speech neural TTS via speech-production skill (REST), finalized by tools/audio/make_voice.py",
+   "text": "Ку-ку… Ты и сама всё видишь. Делай, как сердце велит.",
+   "settings": {
+    "voice": "it-IT-Rosa:MAI-Voice-2",
+    "style": "whispering",
+    "language": "ru-RU (via <lang>)",
+    "ssml": "<speak version=\"1.0\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xmlns:mstts=\"https://www.w3.org/2001/mstts\" xml:lang=\"ru-RU\"><voice name=\"it-IT-Rosa:MAI-Voice-2\"><mstts:express-as style=\"whispering\"><lang xml:lang=\"ru-RU\">Ку-ку<break time=\"350ms\"/> Ты и сама всё видишь. Делай, как сердце велит.</lang></mstts:express-as></voice></speak>",
+    "spokenText": "Ку-ку… Ты и сама всё видишь. Делай, как сердце велит.",
+    "post": "internal pauses capped at 0.45s, lead 0.06s, tail 0.3s; loudness -20 LUFS",
+    "rawDurationSeconds": 5.48,
+    "skillDecision": "PASS",
+    "skillScores": {
+     "accuracy": 100.0,
+     "fluency": 99.0,
+     "completeness": 100.0
+    },
+    "finalCheck": {
+     "transcript": "Фуку ты сама всё видишь, делай как сердце велит.",
+     "accuracy": 100.0,
+     "fluency": 99.0,
+     "completeness": 100.0
+    }
+   },
+   "license": "Synthesized with Azure AI Speech neural TTS under the project's Azure subscription; Microsoft terms permit commercial use of synthesized output. Slice-only per Q40: release voices need PM approval (live voice or PM-approved synthesis).",
+   "notes": "Slice-only synthetic voice (Q40): release needs PM approval."
+  },
+  {
+   "id": "whisper.thread.lost",
+   "kind": "voice",
+   "bus": "voice",
+   "files": {
+    "ogg": "assets/audio/voice/whisper.thread.ogg",
+    "m4a": "assets/audio/voice/whisper.thread.m4a"
+   },
+   "sampleRate": 48000,
+   "channels": 1,
+   "duration": 6.0529,
+   "samples": 290540,
+   "loop": false,
+   "lufs": -20.1,
+   "truePeakDbtp": -6.3,
+   "samplePeakDbfs": -6.3,
+   "decodedSamples": {
+    "ogg": 290540,
+    "m4a": 290816
+   },
+   "bytes": {
+    "ogg": 50795,
+    "m4a": 50918
+   },
+   "date": "2026-10-08",
+   "tool": "Azure AI Speech neural TTS via speech-production skill (REST), finalized by tools/audio/make_voice.py",
+   "text": "Тише, внученька. Одна ниточка — ещё не весь клубок.",
+   "settings": {
+    "voice": "it-IT-Rosa:MAI-Voice-2",
+    "style": "whispering",
+    "language": "ru-RU (via <lang>)",
+    "ssml": "<speak version=\"1.0\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xmlns:mstts=\"https://www.w3.org/2001/mstts\" xml:lang=\"ru-RU\"><voice name=\"it-IT-Rosa:MAI-Voice-2\"><mstts:express-as style=\"whispering\"><lang xml:lang=\"ru-RU\">Тише, внученька. Одна ниточка <break time=\"200ms\"/> ещё не весь клубок.</lang></mstts:express-as></voice></speak>",
+    "spokenText": "Тише, внученька. Одна ниточка — ещё не весь клубок.",
+    "post": "internal pauses capped at 0.45s, lead 0.06s, tail 0.3s; loudness -20 LUFS",
+    "rawDurationSeconds": 6.05,
+    "skillDecision": "PASS",
+    "skillScores": {
+     "accuracy": 99.0,
+     "fluency": 98.0,
+     "completeness": 100.0
+    },
+    "finalCheck": {
+     "transcript": "Тише внученька одна ниточка ещё не весь клубок.",
+     "accuracy": 99.0,
+     "fluency": 98.0,
+     "completeness": 100.0
+    }
+   },
+   "license": "Synthesized with Azure AI Speech neural TTS under the project's Azure subscription; Microsoft terms permit commercial use of synthesized output. Slice-only per Q40: release voices need PM approval (live voice or PM-approved synthesis).",
+   "notes": "Slice-only synthetic voice (Q40): release needs PM approval."
+  },
+  {
+   "id": "whisper.thread.last",
+   "kind": "voice",
+   "bus": "voice",
+   "files": {
+    "ogg": "assets/audio/voice/whisper.thread.ogg",
+    "m4a": "assets/audio/voice/whisper.thread.m4a"
+   },
+   "sampleRate": 48000,
+   "channels": 1,
+   "duration": 8.526,
+   "samples": 409248,
+   "loop": false,
+   "lufs": -20.0,
+   "truePeakDbtp": -2.9,
+   "samplePeakDbfs": -2.9,
+   "decodedSamples": {
+    "ogg": 409248,
+    "m4a": 409600
+   },
+   "bytes": {
+    "ogg": 71096,
+    "m4a": 71224
+   },
+   "date": "2026-10-08",
+   "tool": "Azure AI Speech neural TTS via speech-production skill (REST), finalized by tools/audio/make_voice.py",
+   "text": "Последняя ниточка осталась. Береги её до двенадцатой ночи — она для пирога.",
+   "settings": {
+    "voice": "it-IT-Rosa:MAI-Voice-2",
+    "style": "whispering",
+    "language": "ru-RU (via <lang>)",
+    "ssml": "<speak version=\"1.0\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xmlns:mstts=\"https://www.w3.org/2001/mstts\" xml:lang=\"ru-RU\"><voice name=\"it-IT-Rosa:MAI-Voice-2\"><mstts:express-as style=\"whispering\"><lang xml:lang=\"ru-RU\">Последняя ниточка осталась. Береги её до двенадцатой ночи <break time=\"200ms\"/> она для пирога.</lang></mstts:express-as></voice></speak>",
+    "spokenText": "Последняя ниточка осталась. Береги её до двенадцатой ночи — она для пирога.",
+    "post": "internal pauses capped at 0.45s, lead 0.06s, tail 0.3s; loudness -20 LUFS",
+    "rawDurationSeconds": 8.53,
+    "skillDecision": "PASS",
+    "skillScores": {
+     "accuracy": 100.0,
+     "fluency": 99.0,
+     "completeness": 100.0
+    },
+    "finalCheck": {
+     "transcript": "Последняя ниточка осталась, береги её до 12 ночи она для пирога.",
+     "accuracy": 100.0,
+     "fluency": 99.0,
+     "completeness": 100.0
+    }
+   },
+   "license": "Synthesized with Azure AI Speech neural TTS under the project's Azure subscription; Microsoft terms permit commercial use of synthesized output. Slice-only per Q40: release voices need PM approval (live voice or PM-approved synthesis).",
+   "notes": "Slice-only synthetic voice (Q40): release needs PM approval."
+  },
+  {
+   "id": "whisper.keys.last",
+   "kind": "voice",
+   "bus": "voice",
+   "files": {
+    "ogg": "assets/audio/voice/whisper.keys.ogg",
+    "m4a": "assets/audio/voice/whisper.keys.m4a"
+   },
+   "sampleRate": 48000,
+   "channels": 1,
+   "duration": 6.5665,
+   "samples": 315190,
+   "loop": false,
+   "lufs": -20.1,
+   "truePeakDbtp": -4.6,
+   "samplePeakDbfs": -4.6,
+   "decodedSamples": {
+    "ogg": 315190,
+    "m4a": 315392
+   },
+   "bytes": {
+    "ogg": 56614,
+    "m4a": 55134
+   },
+   "date": "2026-10-08",
+   "tool": "Azure AI Speech neural TTS via speech-production skill (REST), finalized by tools/audio/make_voice.py",
+   "text": "Последний ключик тратишь, внученька. Им бы в двенадцатую ночь часы завести.",
+   "settings": {
+    "voice": "it-IT-Rosa:MAI-Voice-2",
+    "style": "whispering",
+    "language": "ru-RU (via <lang>)",
+    "ssml": "<speak version=\"1.0\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xmlns:mstts=\"https://www.w3.org/2001/mstts\" xml:lang=\"ru-RU\"><voice name=\"it-IT-Rosa:MAI-Voice-2\"><mstts:express-as style=\"whispering\"><lang xml:lang=\"ru-RU\">Последний ключик тратишь, внученька. Им бы в двенадцатую ночь часы завести.</lang></mstts:express-as></voice></speak>",
+    "spokenText": "Последний ключик тратишь, внученька. Им бы в двенадцатую ночь часы завести.",
+    "post": "internal pauses capped at 0.45s, lead 0.06s, tail 0.3s; loudness -20 LUFS",
+    "rawDurationSeconds": 6.57,
+    "skillDecision": "PASS",
+    "skillScores": {
+     "accuracy": 93.0,
+     "fluency": 97.0,
+     "completeness": 91.0
+    },
+    "finalCheck": {
+     "transcript": "Последний ключик, тратишь внученька им бы в 12 ночь часы завести.",
+     "accuracy": 93.0,
+     "fluency": 97.0,
+     "completeness": 91.0
+    }
+   },
+   "license": "Synthesized with Azure AI Speech neural TTS under the project's Azure subscription; Microsoft terms permit commercial use of synthesized output. Slice-only per Q40: release voices need PM approval (live voice or PM-approved synthesis).",
+   "notes": "Slice-only synthetic voice (Q40): release needs PM approval."
+  },
+  {
+   "id": "whisper.dawn",
+   "kind": "voice",
+   "bus": "voice",
+   "files": {
+    "ogg": "assets/audio/voice/whisper.ogg",
+    "m4a": "assets/audio/voice/whisper.m4a"
+   },
+   "sampleRate": 48000,
+   "channels": 1,
+   "duration": 5.6671,
+   "samples": 272022,
+   "loop": false,
+   "lufs": -20.1,
+   "truePeakDbtp": -3.5,
+   "samplePeakDbfs": -3.5,
+   "decodedSamples": {
+    "ogg": 272022,
+    "m4a": 272384
+   },
+   "bytes": {
+    "ogg": 47830,
+    "m4a": 47775
+   },
+   "date": "2026-10-08",
+   "tool": "Azure AI Speech neural TTS via speech-production skill (REST), finalized by tools/audio/make_voice.py",
+   "text": "Светает. Отдохни, внученька. Ты хорошо держалась.",
+   "settings": {
+    "voice": "it-IT-Rosa:MAI-Voice-2",
+    "style": "whispering",
+    "language": "ru-RU (via <lang>)",
+    "ssml": "<speak version=\"1.0\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xmlns:mstts=\"https://www.w3.org/2001/mstts\" xml:lang=\"ru-RU\"><voice name=\"it-IT-Rosa:MAI-Voice-2\"><mstts:express-as style=\"whispering\"><lang xml:lang=\"ru-RU\">Светает. Отдохни, внученька. Ты хорошо держалась.</lang></mstts:express-as></voice></speak>",
+    "spokenText": "Светает. Отдохни, внученька. Ты хорошо держалась.",
+    "post": "internal pauses capped at 0.45s, lead 0.06s, tail 0.3s; loudness -20 LUFS",
+    "rawDurationSeconds": 7.52,
+    "skillDecision": "PASS",
+    "skillScores": {
+     "accuracy": 100.0,
+     "fluency": 72.0,
+     "completeness": 100.0
+    },
+    "finalCheck": {
+     "transcript": "Светает отдохни внученька ты хорошо держалась.",
+     "accuracy": 99.0,
+     "fluency": 95.0,
+     "completeness": 100.0
+    }
+   },
+   "license": "Synthesized with Azure AI Speech neural TTS under the project's Azure subscription; Microsoft terms permit commercial use of synthesized output. Slice-only per Q40: release voices need PM approval (live voice or PM-approved synthesis).",
+   "notes": "Slice-only synthetic voice (Q40): release needs PM approval."
+  },
+  {
+   "id": "murmur-kupa",
+   "kind": "murmur",
+   "bus": "voice",
+   "files": [
+    {
+     "id": "murmur-kupa-01",
+     "ogg": "assets/audio/murmur/murmur-kupa-01.ogg",
+     "m4a": "assets/audio/murmur/murmur-kupa-01.m4a",
+     "duration": 0.1173,
+     "samplePeakDbfs": -10.1
+    },
+    {
+     "id": "murmur-kupa-02",
+     "ogg": "assets/audio/murmur/murmur-kupa-02.ogg",
+     "m4a": "assets/audio/murmur/murmur-kupa-02.m4a",
+     "duration": 0.0902,
+     "samplePeakDbfs": -10.7
+    },
+    {
+     "id": "murmur-kupa-03",
+     "ogg": "assets/audio/murmur/murmur-kupa-03.ogg",
+     "m4a": "assets/audio/murmur/murmur-kupa-03.m4a",
+     "duration": 0.1333,
+     "samplePeakDbfs": -11.2
+    },
+    {
+     "id": "murmur-kupa-04",
+     "ogg": "assets/audio/murmur/murmur-kupa-04.ogg",
+     "m4a": "assets/audio/murmur/murmur-kupa-04.m4a",
+     "duration": 0.2057,
+     "samplePeakDbfs": -12.7
+    },
+    {
+     "id": "murmur-kupa-05",
+     "ogg": "assets/audio/murmur/murmur-kupa-05.ogg",
+     "m4a": "assets/audio/murmur/murmur-kupa-05.m4a",
+     "duration": 0.1656,
+     "samplePeakDbfs": -11.3
+    },
+    {
+     "id": "murmur-kupa-06",
+     "ogg": "assets/audio/murmur/murmur-kupa-06.ogg",
+     "m4a": "assets/audio/murmur/murmur-kupa-06.m4a",
+     "duration": 0.1386,
+     "samplePeakDbfs": -11.2
+    },
+    {
+     "id": "murmur-kupa-07",
+     "ogg": "assets/audio/murmur/murmur-kupa-07.ogg",
+     "m4a": "assets/audio/murmur/murmur-kupa-07.m4a",
+     "duration": 0.1442,
+     "samplePeakDbfs": -12.4
+    },
+    {
+     "id": "murmur-kupa-08",
+     "ogg": "assets/audio/murmur/murmur-kupa-08.ogg",
+     "m4a": "assets/audio/murmur/murmur-kupa-08.m4a",
+     "duration": 0.094,
+     "samplePeakDbfs": -12.2
+    },
+    {
+     "id": "murmur-kupa-09",
+     "ogg": "assets/audio/murmur/murmur-kupa-09.ogg",
+     "m4a": "assets/audio/murmur/murmur-kupa-09.m4a",
+     "duration": 0.0919,
+     "samplePeakDbfs": -6.6
+    },
+    {
+     "id": "murmur-kupa-10",
+     "ogg": "assets/audio/murmur/murmur-kupa-10.ogg",
+     "m4a": "assets/audio/murmur/murmur-kupa-10.m4a",
+     "duration": 0.1065,
+     "samplePeakDbfs": -11.8
+    },
+    {
+     "id": "murmur-kupa-11",
+     "ogg": "assets/audio/murmur/murmur-kupa-11.ogg",
+     "m4a": "assets/audio/murmur/murmur-kupa-11.m4a",
+     "duration": 0.1021,
+     "samplePeakDbfs": -8.7
+    },
+    {
+     "id": "murmur-kupa-12",
+     "ogg": "assets/audio/murmur/murmur-kupa-12.ogg",
+     "m4a": "assets/audio/murmur/murmur-kupa-12.m4a",
+     "duration": 0.1239,
+     "samplePeakDbfs": -11.1
+    }
+   ],
+   "clipCount": 12,
+   "duration": 1.513,
+   "durationRange": [
+    0.0902,
+    0.2057
+   ],
+   "loop": false,
+   "lufs": null,
+   "samplePeakDbfs": -6.6,
+   "bytes": {
+    "ogg": 50696,
+    "m4a": 26447
+   },
+   "tool": "tools/audio/make_murmur.py (source-filter formant synthesis)",
+   "settings": {
+    "character": "Kupa, the stove spirit: low, grumbly, a little gravelly",
+    "seed": 6705378679,
+    "f0Hz": 125,
+    "pitchScales": [
+     1.002,
+     0.893,
+     1.038,
+     0.82,
+     1.184,
+     0.929,
+     0.856,
+     1.22,
+     1.075,
+     1.111,
+     0.965,
+     1.147
+    ],
+    "vocalTractScale": 0.95,
+    "breathiness": 0.18,
+    "durationMs": [
+     70,
+     210
+    ],
+    "gravel": 0.35,
+    "reverb": 0.1,
+    "nasal": 0.0,
+    "contour": "down"
+   },
+   "license": "Original procedural synthesis written for this project (tools/audio); no samples or third-party recordings. Owned by the project; commercial use permitted (Q05).",
+   "date": "2026-10-08",
+   "notes": "Single nonsense syllables from random vowel formants; no lexical content. Pick a random clip per revealed text chunk."
+  },
+  {
+   "id": "murmur-commis",
+   "kind": "murmur",
+   "bus": "voice",
+   "files": [
+    {
+     "id": "murmur-commis-01",
+     "ogg": "assets/audio/murmur/murmur-commis-01.ogg",
+     "m4a": "assets/audio/murmur/murmur-commis-01.m4a",
+     "duration": 0.1334,
+     "samplePeakDbfs": -11.5
+    },
+    {
+     "id": "murmur-commis-02",
+     "ogg": "assets/audio/murmur/murmur-commis-02.ogg",
+     "m4a": "assets/audio/murmur/murmur-commis-02.m4a",
+     "duration": 0.1323,
+     "samplePeakDbfs": -12.3
+    },
+    {
+     "id": "murmur-commis-03",
+     "ogg": "assets/audio/murmur/murmur-commis-03.ogg",
+     "m4a": "assets/audio/murmur/murmur-commis-03.m4a",
+     "duration": 0.0819,
+     "samplePeakDbfs": -15.2
+    },
+    {
+     "id": "murmur-commis-04",
+     "ogg": "assets/audio/murmur/murmur-commis-04.ogg",
+     "m4a": "assets/audio/murmur/murmur-commis-04.m4a",
+     "duration": 0.1522,
+     "samplePeakDbfs": -11.4
+    },
+    {
+     "id": "murmur-commis-05",
+     "ogg": "assets/audio/murmur/murmur-commis-05.ogg",
+     "m4a": "assets/audio/murmur/murmur-commis-05.m4a",
+     "duration": 0.1439,
+     "samplePeakDbfs": -14.7
+    },
+    {
+     "id": "murmur-commis-06",
+     "ogg": "assets/audio/murmur/murmur-commis-06.ogg",
+     "m4a": "assets/audio/murmur/murmur-commis-06.m4a",
+     "duration": 0.1141,
+     "samplePeakDbfs": -10.3
+    },
+    {
+     "id": "murmur-commis-07",
+     "ogg": "assets/audio/murmur/murmur-commis-07.ogg",
+     "m4a": "assets/audio/murmur/murmur-commis-07.m4a",
+     "duration": 0.117,
+     "samplePeakDbfs": -14.1
+    },
+    {
+     "id": "murmur-commis-08",
+     "ogg": "assets/audio/murmur/murmur-commis-08.ogg",
+     "m4a": "assets/audio/murmur/murmur-commis-08.m4a",
+     "duration": 0.0905,
+     "samplePeakDbfs": -12.7
+    },
+    {
+     "id": "murmur-commis-09",
+     "ogg": "assets/audio/murmur/murmur-commis-09.ogg",
+     "m4a": "assets/audio/murmur/murmur-commis-09.m4a",
+     "duration": 0.1013,
+     "samplePeakDbfs": -13.4
+    },
+    {
+     "id": "murmur-commis-10",
+     "ogg": "assets/audio/murmur/murmur-commis-10.ogg",
+     "m4a": "assets/audio/murmur/murmur-commis-10.m4a",
+     "duration": 0.1122,
+     "samplePeakDbfs": -12.1
+    },
+    {
+     "id": "murmur-commis-11",
+     "ogg": "assets/audio/murmur/murmur-commis-11.ogg",
+     "m4a": "assets/audio/murmur/murmur-commis-11.m4a",
+     "duration": 0.0681,
+     "samplePeakDbfs": -12.1
+    },
+    {
+     "id": "murmur-commis-12",
+     "ogg": "assets/audio/murmur/murmur-commis-12.ogg",
+     "m4a": "assets/audio/murmur/murmur-commis-12.m4a",
+     "duration": 0.1234,
+     "samplePeakDbfs": -13.3
+    }
+   ],
+   "clipCount": 12,
+   "duration": 1.37,
+   "durationRange": [
+    0.0681,
+    0.1522
+   ],
+   "loop": false,
+   "lufs": null,
+   "samplePeakDbfs": -10.3,
+   "bytes": {
+    "ogg": 49602,
+    "m4a": 24658
+   },
+   "tool": "tools/audio/make_murmur.py (source-filter formant synthesis)",
+   "settings": {
+    "character": "Commis: quick, eager, mid-pitched chatter",
+    "seed": 10034839224,
+    "f0Hz": 170,
+    "pitchScales": [
+     0.856,
+     1.147,
+     1.22,
+     0.893,
+     1.002,
+     0.82,
+     1.111,
+     1.184,
+     0.965,
+     1.075,
+     1.038,
+     0.929
+    ],
+    "vocalTractScale": 1.0,
+    "breathiness": 0.12,
+    "durationMs": [
+     60,
+     160
+    ],
+    "gravel": 0.0,
+    "reverb": 0.08,
+    "nasal": 0.0,
+    "contour": "up"
+   },
+   "license": "Original procedural synthesis written for this project (tools/audio); no samples or third-party recordings. Owned by the project; commercial use permitted (Q05).",
+   "date": "2026-10-08",
+   "notes": "Single nonsense syllables from random vowel formants; no lexical content. Pick a random clip per revealed text chunk."
+  },
+  {
+   "id": "murmur-dubodyor",
+   "kind": "murmur",
+   "bus": "voice",
+   "files": [
+    {
+     "id": "murmur-dubodyor-01",
+     "ogg": "assets/audio/murmur/murmur-dubodyor-01.ogg",
+     "m4a": "assets/audio/murmur/murmur-dubodyor-01.m4a",
+     "duration": 0.136,
+     "samplePeakDbfs": -8.8
+    },
+    {
+     "id": "murmur-dubodyor-02",
+     "ogg": "assets/audio/murmur/murmur-dubodyor-02.ogg",
+     "m4a": "assets/audio/murmur/murmur-dubodyor-02.m4a",
+     "duration": 0.1759,
+     "samplePeakDbfs": -10.7
+    },
+    {
+     "id": "murmur-dubodyor-03",
+     "ogg": "assets/audio/murmur/murmur-dubodyor-03.ogg",
+     "m4a": "assets/audio/murmur/murmur-dubodyor-03.m4a",
+     "duration": 0.2082,
+     "samplePeakDbfs": -11.0
+    },
+    {
+     "id": "murmur-dubodyor-04",
+     "ogg": "assets/audio/murmur/murmur-dubodyor-04.ogg",
+     "m4a": "assets/audio/murmur/murmur-dubodyor-04.m4a",
+     "duration": 0.1814,
+     "samplePeakDbfs": -10.5
+    },
+    {
+     "id": "murmur-dubodyor-05",
+     "ogg": "assets/audio/murmur/murmur-dubodyor-05.ogg",
+     "m4a": "assets/audio/murmur/murmur-dubodyor-05.m4a",
+     "duration": 0.2378,
+     "samplePeakDbfs": -10.7
+    },
+    {
+     "id": "murmur-dubodyor-06",
+     "ogg": "assets/audio/murmur/murmur-dubodyor-06.ogg",
+     "m4a": "assets/audio/murmur/murmur-dubodyor-06.m4a",
+     "duration": 0.2327,
+     "samplePeakDbfs": -10.5
+    },
+    {
+     "id": "murmur-dubodyor-07",
+     "ogg": "assets/audio/murmur/murmur-dubodyor-07.ogg",
+     "m4a": "assets/audio/murmur/murmur-dubodyor-07.m4a",
+     "duration": 0.2021,
+     "samplePeakDbfs": -10.2
+    },
+    {
+     "id": "murmur-dubodyor-08",
+     "ogg": "assets/audio/murmur/murmur-dubodyor-08.ogg",
+     "m4a": "assets/audio/murmur/murmur-dubodyor-08.m4a",
+     "duration": 0.126,
+     "samplePeakDbfs": -11.2
+    },
+    {
+     "id": "murmur-dubodyor-09",
+     "ogg": "assets/audio/murmur/murmur-dubodyor-09.ogg",
+     "m4a": "assets/audio/murmur/murmur-dubodyor-09.m4a",
+     "duration": 0.2367,
+     "samplePeakDbfs": -11.4
+    },
+    {
+     "id": "murmur-dubodyor-10",
+     "ogg": "assets/audio/murmur/murmur-dubodyor-10.ogg",
+     "m4a": "assets/audio/murmur/murmur-dubodyor-10.m4a",
+     "duration": 0.2249,
+     "samplePeakDbfs": -12.0
+    },
+    {
+     "id": "murmur-dubodyor-11",
+     "ogg": "assets/audio/murmur/murmur-dubodyor-11.ogg",
+     "m4a": "assets/audio/murmur/murmur-dubodyor-11.m4a",
+     "duration": 0.1338,
+     "samplePeakDbfs": -12.3
+    },
+    {
+     "id": "murmur-dubodyor-12",
+     "ogg": "assets/audio/murmur/murmur-dubodyor-12.ogg",
+     "m4a": "assets/audio/murmur/murmur-dubodyor-12.m4a",
+     "duration": 0.1799,
+     "samplePeakDbfs": -11.8
+    }
+   ],
+   "clipCount": 12,
+   "duration": 2.275,
+   "durationRange": [
+    0.126,
+    0.2378
+   ],
+   "loop": false,
+   "lufs": null,
+   "samplePeakDbfs": -8.8,
+   "bytes": {
+    "ogg": 55619,
+    "m4a": 32959
+   },
+   "tool": "tools/audio/make_murmur.py (source-filter formant synthesis)",
+   "settings": {
+    "character": "Dubodyor: big, deep, slow woodland rumble",
+    "seed": 13503672536,
+    "f0Hz": 82,
+    "pitchScales": [
+     1.002,
+     0.856,
+     1.111,
+     0.929,
+     0.82,
+     0.893,
+     1.147,
+     1.22,
+     0.965,
+     1.184,
+     1.038,
+     1.075
+    ],
+    "vocalTractScale": 0.82,
+    "breathiness": 0.15,
+    "durationMs": [
+     120,
+     250
+    ],
+    "gravel": 0.45,
+    "reverb": 0.15,
+    "nasal": 0.0,
+    "contour": "down"
+   },
+   "license": "Original procedural synthesis written for this project (tools/audio); no samples or third-party recordings. Owned by the project; commercial use permitted (Q05).",
+   "date": "2026-10-08",
+   "notes": "Single nonsense syllables from random vowel formants; no lexical content. Pick a random clip per revealed text chunk."
+  },
+  {
+   "id": "murmur-tikhaya",
+   "kind": "murmur",
+   "bus": "voice",
+   "files": [
+    {
+     "id": "murmur-tikhaya-01",
+     "ogg": "assets/audio/murmur/murmur-tikhaya-01.ogg",
+     "m4a": "assets/audio/murmur/murmur-tikhaya-01.m4a",
+     "duration": 0.1365,
+     "samplePeakDbfs": -15.7
+    },
+    {
+     "id": "murmur-tikhaya-02",
+     "ogg": "assets/audio/murmur/murmur-tikhaya-02.ogg",
+     "m4a": "assets/audio/murmur/murmur-tikhaya-02.m4a",
+     "duration": 0.125,
+     "samplePeakDbfs": -12.9
+    },
+    {
+     "id": "murmur-tikhaya-03",
+     "ogg": "assets/audio/murmur/murmur-tikhaya-03.ogg",
+     "m4a": "assets/audio/murmur/murmur-tikhaya-03.m4a",
+     "duration": 0.1684,
+     "samplePeakDbfs": -14.8
+    },
+    {
+     "id": "murmur-tikhaya-04",
+     "ogg": "assets/audio/murmur/murmur-tikhaya-04.ogg",
+     "m4a": "assets/audio/murmur/murmur-tikhaya-04.m4a",
+     "duration": 0.112,
+     "samplePeakDbfs": -15.8
+    },
+    {
+     "id": "murmur-tikhaya-05",
+     "ogg": "assets/audio/murmur/murmur-tikhaya-05.ogg",
+     "m4a": "assets/audio/murmur/murmur-tikhaya-05.m4a",
+     "duration": 0.23,
+     "samplePeakDbfs": -13.7
+    },
+    {
+     "id": "murmur-tikhaya-06",
+     "ogg": "assets/audio/murmur/murmur-tikhaya-06.ogg",
+     "m4a": "assets/audio/murmur/murmur-tikhaya-06.m4a",
+     "duration": 0.1271,
+     "samplePeakDbfs": -13.1
+    },
+    {
+     "id": "murmur-tikhaya-07",
+     "ogg": "assets/audio/murmur/murmur-tikhaya-07.ogg",
+     "m4a": "assets/audio/murmur/murmur-tikhaya-07.m4a",
+     "duration": 0.1769,
+     "samplePeakDbfs": -12.2
+    },
+    {
+     "id": "murmur-tikhaya-08",
+     "ogg": "assets/audio/murmur/murmur-tikhaya-08.ogg",
+     "m4a": "assets/audio/murmur/murmur-tikhaya-08.m4a",
+     "duration": 0.1254,
+     "samplePeakDbfs": -14.7
+    },
+    {
+     "id": "murmur-tikhaya-09",
+     "ogg": "assets/audio/murmur/murmur-tikhaya-09.ogg",
+     "m4a": "assets/audio/murmur/murmur-tikhaya-09.m4a",
+     "duration": 0.1551,
+     "samplePeakDbfs": -11.9
+    },
+    {
+     "id": "murmur-tikhaya-10",
+     "ogg": "assets/audio/murmur/murmur-tikhaya-10.ogg",
+     "m4a": "assets/audio/murmur/murmur-tikhaya-10.m4a",
+     "duration": 0.0959,
+     "samplePeakDbfs": -13.6
+    },
+    {
+     "id": "murmur-tikhaya-11",
+     "ogg": "assets/audio/murmur/murmur-tikhaya-11.ogg",
+     "m4a": "assets/audio/murmur/murmur-tikhaya-11.m4a",
+     "duration": 0.1923,
+     "samplePeakDbfs": -13.5
+    },
+    {
+     "id": "murmur-tikhaya-12",
+     "ogg": "assets/audio/murmur/murmur-tikhaya-12.ogg",
+     "m4a": "assets/audio/murmur/murmur-tikhaya-12.m4a",
+     "duration": 0.185,
+     "samplePeakDbfs": -12.9
+    }
+   ],
+   "clipCount": 12,
+   "duration": 1.83,
+   "durationRange": [
+    0.0959,
+    0.23
+   ],
+   "loop": false,
+   "lufs": null,
+   "samplePeakDbfs": -11.9,
+   "bytes": {
+    "ogg": 53550,
+    "m4a": 28337
+   },
+   "tool": "tools/audio/make_murmur.py (source-filter formant synthesis)",
+   "settings": {
+    "character": "Tikhaya: quiet, breathy, soft and high",
+    "seed": 11567939661,
+    "f0Hz": 235,
+    "pitchScales": [
+     0.965,
+     1.184,
+     1.111,
+     1.002,
+     0.856,
+     1.147,
+     1.22,
+     0.893,
+     0.929,
+     1.075,
+     1.038,
+     0.82
+    ],
+    "vocalTractScale": 1.16,
+    "breathiness": 0.55,
+    "durationMs": [
+     90,
+     230
+    ],
+    "gravel": 0.0,
+    "reverb": 0.25,
+    "nasal": 0.0,
+    "contour": "arch"
+   },
+   "license": "Original procedural synthesis written for this project (tools/audio); no samples or third-party recordings. Owned by the project; commercial use permitted (Q05).",
+   "date": "2026-10-08",
+   "notes": "Single nonsense syllables from random vowel formants; no lexical content. Pick a random clip per revealed text chunk."
+  },
+  {
+   "id": "murmur-prosha",
+   "kind": "murmur",
+   "bus": "voice",
+   "files": [
+    {
+     "id": "murmur-prosha-01",
+     "ogg": "assets/audio/murmur/murmur-prosha-01.ogg",
+     "m4a": "assets/audio/murmur/murmur-prosha-01.m4a",
+     "duration": 0.0632,
+     "samplePeakDbfs": -9.7
+    },
+    {
+     "id": "murmur-prosha-02",
+     "ogg": "assets/audio/murmur/murmur-prosha-02.ogg",
+     "m4a": "assets/audio/murmur/murmur-prosha-02.m4a",
+     "duration": 0.1093,
+     "samplePeakDbfs": -12.4
+    },
+    {
+     "id": "murmur-prosha-03",
+     "ogg": "assets/audio/murmur/murmur-prosha-03.ogg",
+     "m4a": "assets/audio/murmur/murmur-prosha-03.m4a",
+     "duration": 0.0974,
+     "samplePeakDbfs": -8.4
+    },
+    {
+     "id": "murmur-prosha-04",
+     "ogg": "assets/audio/murmur/murmur-prosha-04.ogg",
+     "m4a": "assets/audio/murmur/murmur-prosha-04.m4a",
+     "duration": 0.1429,
+     "samplePeakDbfs": -9.5
+    },
+    {
+     "id": "murmur-prosha-05",
+     "ogg": "assets/audio/murmur/murmur-prosha-05.ogg",
+     "m4a": "assets/audio/murmur/murmur-prosha-05.m4a",
+     "duration": 0.068,
+     "samplePeakDbfs": -12.0
+    },
+    {
+     "id": "murmur-prosha-06",
+     "ogg": "assets/audio/murmur/murmur-prosha-06.ogg",
+     "m4a": "assets/audio/murmur/murmur-prosha-06.m4a",
+     "duration": 0.0815,
+     "samplePeakDbfs": -7.4
+    },
+    {
+     "id": "murmur-prosha-07",
+     "ogg": "assets/audio/murmur/murmur-prosha-07.ogg",
+     "m4a": "assets/audio/murmur/murmur-prosha-07.m4a",
+     "duration": 0.0933,
+     "samplePeakDbfs": -11.0
+    },
+    {
+     "id": "murmur-prosha-08",
+     "ogg": "assets/audio/murmur/murmur-prosha-08.ogg",
+     "m4a": "assets/audio/murmur/murmur-prosha-08.m4a",
+     "duration": 0.1353,
+     "samplePeakDbfs": -11.8
+    },
+    {
+     "id": "murmur-prosha-09",
+     "ogg": "assets/audio/murmur/murmur-prosha-09.ogg",
+     "m4a": "assets/audio/murmur/murmur-prosha-09.m4a",
+     "duration": 0.1393,
+     "samplePeakDbfs": -12.7
+    },
+    {
+     "id": "murmur-prosha-10",
+     "ogg": "assets/audio/murmur/murmur-prosha-10.ogg",
+     "m4a": "assets/audio/murmur/murmur-prosha-10.m4a",
+     "duration": 0.0942,
+     "samplePeakDbfs": -11.7
+    },
+    {
+     "id": "murmur-prosha-11",
+     "ogg": "assets/audio/murmur/murmur-prosha-11.ogg",
+     "m4a": "assets/audio/murmur/murmur-prosha-11.m4a",
+     "duration": 0.1089,
+     "samplePeakDbfs": -9.6
+    },
+    {
+     "id": "murmur-prosha-12",
+     "ogg": "assets/audio/murmur/murmur-prosha-12.ogg",
+     "m4a": "assets/audio/murmur/murmur-prosha-12.m4a",
+     "duration": 0.1485,
+     "samplePeakDbfs": -10.9
+    }
+   ],
+   "clipCount": 12,
+   "duration": 1.282,
+   "durationRange": [
+    0.0632,
+    0.1485
+   ],
+   "loop": false,
+   "lufs": null,
+   "samplePeakDbfs": -7.4,
+   "bytes": {
+    "ogg": 51064,
+    "m4a": 24353
+   },
+   "tool": "tools/audio/make_murmur.py (source-filter formant synthesis)",
+   "settings": {
+    "character": "Prosha (domovoi): small old fellow, quick fussy chatter",
+    "seed": 10112268539,
+    "f0Hz": 150,
+    "pitchScales": [
+     1.22,
+     1.147,
+     1.111,
+     0.929,
+     0.82,
+     0.856,
+     0.965,
+     1.075,
+     1.038,
+     1.184,
+     0.893,
+     1.002
+    ],
+    "vocalTractScale": 1.05,
+    "breathiness": 0.2,
+    "durationMs": [
+     60,
+     180
+    ],
+    "gravel": 0.15,
+    "reverb": 0.08,
+    "nasal": 0.0,
+    "contour": "chatter"
+   },
+   "license": "Original procedural synthesis written for this project (tools/audio); no samples or third-party recordings. Owned by the project; commercial use permitted (Q05).",
+   "date": "2026-10-08",
+   "notes": "Single nonsense syllables from random vowel formants; no lexical content. Pick a random clip per revealed text chunk."
+  },
+  {
+   "id": "murmur-tram33",
+   "kind": "murmur",
+   "bus": "voice",
+   "files": [
+    {
+     "id": "murmur-tram33-01",
+     "ogg": "assets/audio/murmur/murmur-tram33-01.ogg",
+     "m4a": "assets/audio/murmur/murmur-tram33-01.m4a",
+     "duration": 0.1055,
+     "samplePeakDbfs": -10.6
+    },
+    {
+     "id": "murmur-tram33-02",
+     "ogg": "assets/audio/murmur/murmur-tram33-02.ogg",
+     "m4a": "assets/audio/murmur/murmur-tram33-02.m4a",
+     "duration": 0.117,
+     "samplePeakDbfs": -15.2
+    },
+    {
+     "id": "murmur-tram33-03",
+     "ogg": "assets/audio/murmur/murmur-tram33-03.ogg",
+     "m4a": "assets/audio/murmur/murmur-tram33-03.m4a",
+     "duration": 0.1935,
+     "samplePeakDbfs": -12.3
+    },
+    {
+     "id": "murmur-tram33-04",
+     "ogg": "assets/audio/murmur/murmur-tram33-04.ogg",
+     "m4a": "assets/audio/murmur/murmur-tram33-04.m4a",
+     "duration": 0.1824,
+     "samplePeakDbfs": -13.4
+    },
+    {
+     "id": "murmur-tram33-05",
+     "ogg": "assets/audio/murmur/murmur-tram33-05.ogg",
+     "m4a": "assets/audio/murmur/murmur-tram33-05.m4a",
+     "duration": 0.1716,
+     "samplePeakDbfs": -13.4
+    },
+    {
+     "id": "murmur-tram33-06",
+     "ogg": "assets/audio/murmur/murmur-tram33-06.ogg",
+     "m4a": "assets/audio/murmur/murmur-tram33-06.m4a",
+     "duration": 0.0984,
+     "samplePeakDbfs": -7.8
+    },
+    {
+     "id": "murmur-tram33-07",
+     "ogg": "assets/audio/murmur/murmur-tram33-07.ogg",
+     "m4a": "assets/audio/murmur/murmur-tram33-07.m4a",
+     "duration": 0.154,
+     "samplePeakDbfs": -14.7
+    },
+    {
+     "id": "murmur-tram33-08",
+     "ogg": "assets/audio/murmur/murmur-tram33-08.ogg",
+     "m4a": "assets/audio/murmur/murmur-tram33-08.m4a",
+     "duration": 0.1976,
+     "samplePeakDbfs": -13.4
+    },
+    {
+     "id": "murmur-tram33-09",
+     "ogg": "assets/audio/murmur/murmur-tram33-09.ogg",
+     "m4a": "assets/audio/murmur/murmur-tram33-09.m4a",
+     "duration": 0.1257,
+     "samplePeakDbfs": -13.9
+    },
+    {
+     "id": "murmur-tram33-10",
+     "ogg": "assets/audio/murmur/murmur-tram33-10.ogg",
+     "m4a": "assets/audio/murmur/murmur-tram33-10.m4a",
+     "duration": 0.1009,
+     "samplePeakDbfs": -6.6
+    },
+    {
+     "id": "murmur-tram33-11",
+     "ogg": "assets/audio/murmur/murmur-tram33-11.ogg",
+     "m4a": "assets/audio/murmur/murmur-tram33-11.m4a",
+     "duration": 0.1638,
+     "samplePeakDbfs": -12.4
+    },
+    {
+     "id": "murmur-tram33-12",
+     "ogg": "assets/audio/murmur/murmur-tram33-12.ogg",
+     "m4a": "assets/audio/murmur/murmur-tram33-12.m4a",
+     "duration": 0.0741,
+     "samplePeakDbfs": -13.3
+    }
+   ],
+   "clipCount": 12,
+   "duration": 1.684,
+   "durationRange": [
+    0.0741,
+    0.1976
+   ],
+   "loop": false,
+   "lufs": null,
+   "samplePeakDbfs": -6.6,
+   "bytes": {
+    "ogg": 53116,
+    "m4a": 27535
+   },
+   "tool": "tools/audio/make_murmur.py (source-filter formant synthesis)",
+   "settings": {
+    "character": "Tram 33: nasal, slightly announcer-like monotone",
+    "seed": 8331394294,
+    "f0Hz": 135,
+    "pitchScales": [
+     0.893,
+     1.075,
+     0.856,
+     1.038,
+     1.147,
+     0.965,
+     1.111,
+     0.82,
+     1.002,
+     0.929,
+     1.184,
+     1.22
+    ],
+    "vocalTractScale": 1.0,
+    "breathiness": 0.12,
+    "durationMs": [
+     70,
+     200
+    ],
+    "gravel": 0.05,
+    "reverb": 0.12,
+    "nasal": 0.6,
+    "contour": "flat"
+   },
+   "license": "Original procedural synthesis written for this project (tools/audio); no samples or third-party recordings. Owned by the project; commercial use permitted (Q05).",
+   "date": "2026-10-08",
+   "notes": "Single nonsense syllables from random vowel formants; no lexical content. Pick a random clip per revealed text chunk."
+  },
+  {
+   "id": "murmur-guardian",
+   "kind": "murmur",
+   "bus": "voice",
+   "files": [
+    {
+     "id": "murmur-guardian-01",
+     "ogg": "assets/audio/murmur/murmur-guardian-01.ogg",
+     "m4a": "assets/audio/murmur/murmur-guardian-01.m4a",
+     "duration": 0.1925,
+     "samplePeakDbfs": -11.2
+    },
+    {
+     "id": "murmur-guardian-02",
+     "ogg": "assets/audio/murmur/murmur-guardian-02.ogg",
+     "m4a": "assets/audio/murmur/murmur-guardian-02.m4a",
+     "duration": 0.221,
+     "samplePeakDbfs": -8.9
+    },
+    {
+     "id": "murmur-guardian-03",
+     "ogg": "assets/audio/murmur/murmur-guardian-03.ogg",
+     "m4a": "assets/audio/murmur/murmur-guardian-03.m4a",
+     "duration": 0.2187,
+     "samplePeakDbfs": -13.5
+    },
+    {
+     "id": "murmur-guardian-04",
+     "ogg": "assets/audio/murmur/murmur-guardian-04.ogg",
+     "m4a": "assets/audio/murmur/murmur-guardian-04.m4a",
+     "duration": 0.2446,
+     "samplePeakDbfs": -10.4
+    },
+    {
+     "id": "murmur-guardian-05",
+     "ogg": "assets/audio/murmur/murmur-guardian-05.ogg",
+     "m4a": "assets/audio/murmur/murmur-guardian-05.m4a",
+     "duration": 0.1598,
+     "samplePeakDbfs": -12.2
+    },
+    {
+     "id": "murmur-guardian-06",
+     "ogg": "assets/audio/murmur/murmur-guardian-06.ogg",
+     "m4a": "assets/audio/murmur/murmur-guardian-06.m4a",
+     "duration": 0.2213,
+     "samplePeakDbfs": -12.1
+    },
+    {
+     "id": "murmur-guardian-07",
+     "ogg": "assets/audio/murmur/murmur-guardian-07.ogg",
+     "m4a": "assets/audio/murmur/murmur-guardian-07.m4a",
+     "duration": 0.1311,
+     "samplePeakDbfs": -10.2
+    },
+    {
+     "id": "murmur-guardian-08",
+     "ogg": "assets/audio/murmur/murmur-guardian-08.ogg",
+     "m4a": "assets/audio/murmur/murmur-guardian-08.m4a",
+     "duration": 0.1638,
+     "samplePeakDbfs": -11.3
+    },
+    {
+     "id": "murmur-guardian-09",
+     "ogg": "assets/audio/murmur/murmur-guardian-09.ogg",
+     "m4a": "assets/audio/murmur/murmur-guardian-09.m4a",
+     "duration": 0.2389,
+     "samplePeakDbfs": -12.8
+    },
+    {
+     "id": "murmur-guardian-10",
+     "ogg": "assets/audio/murmur/murmur-guardian-10.ogg",
+     "m4a": "assets/audio/murmur/murmur-guardian-10.m4a",
+     "duration": 0.2439,
+     "samplePeakDbfs": -9.5
+    },
+    {
+     "id": "murmur-guardian-11",
+     "ogg": "assets/audio/murmur/murmur-guardian-11.ogg",
+     "m4a": "assets/audio/murmur/murmur-guardian-11.m4a",
+     "duration": 0.1767,
+     "samplePeakDbfs": -11.2
+    },
+    {
+     "id": "murmur-guardian-12",
+     "ogg": "assets/audio/murmur/murmur-guardian-12.ogg",
+     "m4a": "assets/audio/murmur/murmur-guardian-12.m4a",
+     "duration": 0.1889,
+     "samplePeakDbfs": -10.7
+    }
+   ],
+   "clipCount": 12,
+   "duration": 2.401,
+   "durationRange": [
+    0.1311,
+    0.2446
+   ],
+   "loop": false,
+   "lufs": null,
+   "samplePeakDbfs": -8.9,
+   "bytes": {
+    "ogg": 56397,
+    "m4a": 33150
+   },
+   "tool": "tools/audio/make_murmur.py (source-filter formant synthesis)",
+   "settings": {
+    "character": "Guardian: slow, low, distant and resonant",
+    "seed": 13054582509,
+    "f0Hz": 96,
+    "pitchScales": [
+     1.075,
+     1.184,
+     1.147,
+     1.22,
+     0.82,
+     0.893,
+     0.856,
+     1.038,
+     1.111,
+     1.002,
+     0.929,
+     0.965
+    ],
+    "vocalTractScale": 0.88,
+    "breathiness": 0.25,
+    "durationMs": [
+     130,
+     250
+    ],
+    "gravel": 0.1,
+    "reverb": 0.45,
+    "nasal": 0.0,
+    "contour": "down"
+   },
+   "license": "Original procedural synthesis written for this project (tools/audio); no samples or third-party recordings. Owned by the project; commercial use permitted (Q05).",
+   "date": "2026-10-08",
+   "notes": "Single nonsense syllables from random vowel formants; no lexical content. Pick a random clip per revealed text chunk."
+  },
+  {
+   "id": "murmur-guest-forest",
+   "kind": "murmur",
+   "bus": "voice",
+   "files": [
+    {
+     "id": "murmur-guest-forest-01",
+     "ogg": "assets/audio/murmur/murmur-guest-forest-01.ogg",
+     "m4a": "assets/audio/murmur/murmur-guest-forest-01.m4a",
+     "duration": 0.1716,
+     "samplePeakDbfs": -11.9
+    },
+    {
+     "id": "murmur-guest-forest-02",
+     "ogg": "assets/audio/murmur/murmur-guest-forest-02.ogg",
+     "m4a": "assets/audio/murmur/murmur-guest-forest-02.m4a",
+     "duration": 0.1278,
+     "samplePeakDbfs": -15.9
+    },
+    {
+     "id": "murmur-guest-forest-03",
+     "ogg": "assets/audio/murmur/murmur-guest-forest-03.ogg",
+     "m4a": "assets/audio/murmur/murmur-guest-forest-03.m4a",
+     "duration": 0.1092,
+     "samplePeakDbfs": -10.4
+    },
+    {
+     "id": "murmur-guest-forest-04",
+     "ogg": "assets/audio/murmur/murmur-guest-forest-04.ogg",
+     "m4a": "assets/audio/murmur/murmur-guest-forest-04.m4a",
+     "duration": 0.1825,
+     "samplePeakDbfs": -15.9
+    },
+    {
+     "id": "murmur-guest-forest-05",
+     "ogg": "assets/audio/murmur/murmur-guest-forest-05.ogg",
+     "m4a": "assets/audio/murmur/murmur-guest-forest-05.m4a",
+     "duration": 0.0754,
+     "samplePeakDbfs": -15.3
+    },
+    {
+     "id": "murmur-guest-forest-06",
+     "ogg": "assets/audio/murmur/murmur-guest-forest-06.ogg",
+     "m4a": "assets/audio/murmur/murmur-guest-forest-06.m4a",
+     "duration": 0.1071,
+     "samplePeakDbfs": -11.4
+    },
+    {
+     "id": "murmur-guest-forest-07",
+     "ogg": "assets/audio/murmur/murmur-guest-forest-07.ogg",
+     "m4a": "assets/audio/murmur/murmur-guest-forest-07.m4a",
+     "duration": 0.1205,
+     "samplePeakDbfs": -9.0
+    },
+    {
+     "id": "murmur-guest-forest-08",
+     "ogg": "assets/audio/murmur/murmur-guest-forest-08.ogg",
+     "m4a": "assets/audio/murmur/murmur-guest-forest-08.m4a",
+     "duration": 0.2099,
+     "samplePeakDbfs": -12.9
+    },
+    {
+     "id": "murmur-guest-forest-09",
+     "ogg": "assets/audio/murmur/murmur-guest-forest-09.ogg",
+     "m4a": "assets/audio/murmur/murmur-guest-forest-09.m4a",
+     "duration": 0.1174,
+     "samplePeakDbfs": -13.1
+    },
+    {
+     "id": "murmur-guest-forest-10",
+     "ogg": "assets/audio/murmur/murmur-guest-forest-10.ogg",
+     "m4a": "assets/audio/murmur/murmur-guest-forest-10.m4a",
+     "duration": 0.1799,
+     "samplePeakDbfs": -11.5
+    },
+    {
+     "id": "murmur-guest-forest-11",
+     "ogg": "assets/audio/murmur/murmur-guest-forest-11.ogg",
+     "m4a": "assets/audio/murmur/murmur-guest-forest-11.m4a",
+     "duration": 0.2014,
+     "samplePeakDbfs": -12.8
+    },
+    {
+     "id": "murmur-guest-forest-12",
+     "ogg": "assets/audio/murmur/murmur-guest-forest-12.ogg",
+     "m4a": "assets/audio/murmur/murmur-guest-forest-12.m4a",
+     "duration": 0.0816,
+     "samplePeakDbfs": -12.4
+    }
+   ],
+   "clipCount": 12,
+   "duration": 1.684,
+   "durationRange": [
+    0.0754,
+    0.2099
+   ],
+   "loop": false,
+   "lufs": null,
+   "samplePeakDbfs": -9.0,
+   "bytes": {
+    "ogg": 52432,
+    "m4a": 27298
+   },
+   "tool": "tools/audio/make_murmur.py (source-filter formant synthesis)",
+   "settings": {
+    "character": "Generic forest guest: soft and woody",
+    "seed": 19450243928,
+    "f0Hz": 175,
+    "pitchScales": [
+     0.82,
+     1.111,
+     0.856,
+     1.147,
+     1.075,
+     0.965,
+     0.893,
+     1.22,
+     1.184,
+     1.038,
+     0.929,
+     1.002
+    ],
+    "vocalTractScale": 1.05,
+    "breathiness": 0.3,
+    "durationMs": [
+     70,
+     220
+    ],
+    "gravel": 0.05,
+    "reverb": 0.15,
+    "nasal": 0.0,
+    "contour": "arch"
+   },
+   "license": "Original procedural synthesis written for this project (tools/audio); no samples or third-party recordings. Owned by the project; commercial use permitted (Q05).",
+   "date": "2026-10-08",
+   "notes": "Single nonsense syllables from random vowel formants; no lexical content. Pick a random clip per revealed text chunk."
+  },
+  {
+   "id": "murmur-guest-river",
+   "kind": "murmur",
+   "bus": "voice",
+   "files": [
+    {
+     "id": "murmur-guest-river-01",
+     "ogg": "assets/audio/murmur/murmur-guest-river-01.ogg",
+     "m4a": "assets/audio/murmur/murmur-guest-river-01.m4a",
+     "duration": 0.1889,
+     "samplePeakDbfs": -15.5
+    },
+    {
+     "id": "murmur-guest-river-02",
+     "ogg": "assets/audio/murmur/murmur-guest-river-02.ogg",
+     "m4a": "assets/audio/murmur/murmur-guest-river-02.m4a",
+     "duration": 0.2233,
+     "samplePeakDbfs": -13.5
+    },
+    {
+     "id": "murmur-guest-river-03",
+     "ogg": "assets/audio/murmur/murmur-guest-river-03.ogg",
+     "m4a": "assets/audio/murmur/murmur-guest-river-03.m4a",
+     "duration": 0.1249,
+     "samplePeakDbfs": -11.4
+    },
+    {
+     "id": "murmur-guest-river-04",
+     "ogg": "assets/audio/murmur/murmur-guest-river-04.ogg",
+     "m4a": "assets/audio/murmur/murmur-guest-river-04.m4a",
+     "duration": 0.1551,
+     "samplePeakDbfs": -14.4
+    },
+    {
+     "id": "murmur-guest-river-05",
+     "ogg": "assets/audio/murmur/murmur-guest-river-05.ogg",
+     "m4a": "assets/audio/murmur/murmur-guest-river-05.m4a",
+     "duration": 0.1221,
+     "samplePeakDbfs": -12.9
+    },
+    {
+     "id": "murmur-guest-river-06",
+     "ogg": "assets/audio/murmur/murmur-guest-river-06.ogg",
+     "m4a": "assets/audio/murmur/murmur-guest-river-06.m4a",
+     "duration": 0.162,
+     "samplePeakDbfs": -14.9
+    },
+    {
+     "id": "murmur-guest-river-07",
+     "ogg": "assets/audio/murmur/murmur-guest-river-07.ogg",
+     "m4a": "assets/audio/murmur/murmur-guest-river-07.m4a",
+     "duration": 0.1556,
+     "samplePeakDbfs": -14.1
+    },
+    {
+     "id": "murmur-guest-river-08",
+     "ogg": "assets/audio/murmur/murmur-guest-river-08.ogg",
+     "m4a": "assets/audio/murmur/murmur-guest-river-08.m4a",
+     "duration": 0.1953,
+     "samplePeakDbfs": -13.4
+    },
+    {
+     "id": "murmur-guest-river-09",
+     "ogg": "assets/audio/murmur/murmur-guest-river-09.ogg",
+     "m4a": "assets/audio/murmur/murmur-guest-river-09.m4a",
+     "duration": 0.1091,
+     "samplePeakDbfs": -13.1
+    },
+    {
+     "id": "murmur-guest-river-10",
+     "ogg": "assets/audio/murmur/murmur-guest-river-10.ogg",
+     "m4a": "assets/audio/murmur/murmur-guest-river-10.m4a",
+     "duration": 0.2003,
+     "samplePeakDbfs": -15.3
+    },
+    {
+     "id": "murmur-guest-river-11",
+     "ogg": "assets/audio/murmur/murmur-guest-river-11.ogg",
+     "m4a": "assets/audio/murmur/murmur-guest-river-11.m4a",
+     "duration": 0.1804,
+     "samplePeakDbfs": -13.7
+    },
+    {
+     "id": "murmur-guest-river-12",
+     "ogg": "assets/audio/murmur/murmur-guest-river-12.ogg",
+     "m4a": "assets/audio/murmur/murmur-guest-river-12.m4a",
+     "duration": 0.2071,
+     "samplePeakDbfs": -12.9
+    }
+   ],
+   "clipCount": 12,
+   "duration": 2.024,
+   "durationRange": [
+    0.1091,
+    0.2233
+   ],
+   "loop": false,
+   "lufs": null,
+   "samplePeakDbfs": -11.4,
+   "bytes": {
+    "ogg": 54974,
+    "m4a": 30234
+   },
+   "tool": "tools/audio/make_murmur.py (source-filter formant synthesis)",
+   "settings": {
+    "character": "Generic river guest: airy, flowing",
+    "seed": 17793256587,
+    "f0Hz": 210,
+    "pitchScales": [
+     1.147,
+     1.038,
+     1.111,
+     1.075,
+     0.856,
+     1.184,
+     0.965,
+     1.22,
+     1.002,
+     0.929,
+     0.82,
+     0.893
+    ],
+    "vocalTractScale": 1.1,
+    "breathiness": 0.4,
+    "durationMs": [
+     80,
+     230
+    ],
+    "gravel": 0.0,
+    "reverb": 0.22,
+    "nasal": 0.0,
+    "contour": "arch"
+   },
+   "license": "Original procedural synthesis written for this project (tools/audio); no samples or third-party recordings. Owned by the project; commercial use permitted (Q05).",
+   "date": "2026-10-08",
+   "notes": "Single nonsense syllables from random vowel formants; no lexical content. Pick a random clip per revealed text chunk."
+  },
+  {
+   "id": "murmur-guest-city",
+   "kind": "murmur",
+   "bus": "voice",
+   "files": [
+    {
+     "id": "murmur-guest-city-01",
+     "ogg": "assets/audio/murmur/murmur-guest-city-01.ogg",
+     "m4a": "assets/audio/murmur/murmur-guest-city-01.m4a",
+     "duration": 0.1122,
+     "samplePeakDbfs": -8.5
+    },
+    {
+     "id": "murmur-guest-city-02",
+     "ogg": "assets/audio/murmur/murmur-guest-city-02.ogg",
+     "m4a": "assets/audio/murmur/murmur-guest-city-02.m4a",
+     "duration": 0.1337,
+     "samplePeakDbfs": -14.5
+    },
+    {
+     "id": "murmur-guest-city-03",
+     "ogg": "assets/audio/murmur/murmur-guest-city-03.ogg",
+     "m4a": "assets/audio/murmur/murmur-guest-city-03.m4a",
+     "duration": 0.1263,
+     "samplePeakDbfs": -12.6
+    },
+    {
+     "id": "murmur-guest-city-04",
+     "ogg": "assets/audio/murmur/murmur-guest-city-04.ogg",
+     "m4a": "assets/audio/murmur/murmur-guest-city-04.m4a",
+     "duration": 0.1228,
+     "samplePeakDbfs": -13.5
+    },
+    {
+     "id": "murmur-guest-city-05",
+     "ogg": "assets/audio/murmur/murmur-guest-city-05.ogg",
+     "m4a": "assets/audio/murmur/murmur-guest-city-05.m4a",
+     "duration": 0.1634,
+     "samplePeakDbfs": -12.7
+    },
+    {
+     "id": "murmur-guest-city-06",
+     "ogg": "assets/audio/murmur/murmur-guest-city-06.ogg",
+     "m4a": "assets/audio/murmur/murmur-guest-city-06.m4a",
+     "duration": 0.0818,
+     "samplePeakDbfs": -8.3
+    },
+    {
+     "id": "murmur-guest-city-07",
+     "ogg": "assets/audio/murmur/murmur-guest-city-07.ogg",
+     "m4a": "assets/audio/murmur/murmur-guest-city-07.m4a",
+     "duration": 0.1704,
+     "samplePeakDbfs": -13.1
+    },
+    {
+     "id": "murmur-guest-city-08",
+     "ogg": "assets/audio/murmur/murmur-guest-city-08.ogg",
+     "m4a": "assets/audio/murmur/murmur-guest-city-08.m4a",
+     "duration": 0.0916,
+     "samplePeakDbfs": -6.8
+    },
+    {
+     "id": "murmur-guest-city-09",
+     "ogg": "assets/audio/murmur/murmur-guest-city-09.ogg",
+     "m4a": "assets/audio/murmur/murmur-guest-city-09.m4a",
+     "duration": 0.175,
+     "samplePeakDbfs": -13.1
+    },
+    {
+     "id": "murmur-guest-city-10",
+     "ogg": "assets/audio/murmur/murmur-guest-city-10.ogg",
+     "m4a": "assets/audio/murmur/murmur-guest-city-10.m4a",
+     "duration": 0.1146,
+     "samplePeakDbfs": -13.4
+    },
+    {
+     "id": "murmur-guest-city-11",
+     "ogg": "assets/audio/murmur/murmur-guest-city-11.ogg",
+     "m4a": "assets/audio/murmur/murmur-guest-city-11.m4a",
+     "duration": 0.1541,
+     "samplePeakDbfs": -15.1
+    },
+    {
+     "id": "murmur-guest-city-12",
+     "ogg": "assets/audio/murmur/murmur-guest-city-12.ogg",
+     "m4a": "assets/audio/murmur/murmur-guest-city-12.m4a",
+     "duration": 0.1106,
+     "samplePeakDbfs": -10.2
+    }
+   ],
+   "clipCount": 12,
+   "duration": 1.556,
+   "durationRange": [
+    0.0818,
+    0.175
+   ],
+   "loop": false,
+   "lufs": null,
+   "samplePeakDbfs": -6.8,
+   "bytes": {
+    "ogg": 51790,
+    "m4a": 26571
+   },
+   "tool": "tools/audio/make_murmur.py (source-filter formant synthesis)",
+   "settings": {
+    "character": "Generic city guest: crisp and quick",
+    "seed": 16074325794,
+    "f0Hz": 155,
+    "pitchScales": [
+     0.82,
+     1.22,
+     1.075,
+     1.038,
+     0.893,
+     1.147,
+     1.002,
+     0.965,
+     0.856,
+     0.929,
+     1.184,
+     1.111
+    ],
+    "vocalTractScale": 1.0,
+    "breathiness": 0.1,
+    "durationMs": [
+     60,
+     180
+    ],
+    "gravel": 0.0,
+    "reverb": 0.06,
+    "nasal": 0.2,
+    "contour": "chatter"
+   },
+   "license": "Original procedural synthesis written for this project (tools/audio); no samples or third-party recordings. Owned by the project; commercial use permitted (Q05).",
+   "date": "2026-10-08",
+   "notes": "Single nonsense syllables from random vowel formants; no lexical content. Pick a random clip per revealed text chunk."
+  },
+  {
+   "id": "murmur-guest-memorial",
+   "kind": "murmur",
+   "bus": "voice",
+   "files": [
+    {
+     "id": "murmur-guest-memorial-01",
+     "ogg": "assets/audio/murmur/murmur-guest-memorial-01.ogg",
+     "m4a": "assets/audio/murmur/murmur-guest-memorial-01.m4a",
+     "duration": 0.1175,
+     "samplePeakDbfs": -13.1
+    },
+    {
+     "id": "murmur-guest-memorial-02",
+     "ogg": "assets/audio/murmur/murmur-guest-memorial-02.ogg",
+     "m4a": "assets/audio/murmur/murmur-guest-memorial-02.m4a",
+     "duration": 0.181,
+     "samplePeakDbfs": -9.5
+    },
+    {
+     "id": "murmur-guest-memorial-03",
+     "ogg": "assets/audio/murmur/murmur-guest-memorial-03.ogg",
+     "m4a": "assets/audio/murmur/murmur-guest-memorial-03.m4a",
+     "duration": 0.1599,
+     "samplePeakDbfs": -14.2
+    },
+    {
+     "id": "murmur-guest-memorial-04",
+     "ogg": "assets/audio/murmur/murmur-guest-memorial-04.ogg",
+     "m4a": "assets/audio/murmur/murmur-guest-memorial-04.m4a",
+     "duration": 0.1582,
+     "samplePeakDbfs": -13.2
+    },
+    {
+     "id": "murmur-guest-memorial-05",
+     "ogg": "assets/audio/murmur/murmur-guest-memorial-05.ogg",
+     "m4a": "assets/audio/murmur/murmur-guest-memorial-05.m4a",
+     "duration": 0.1349,
+     "samplePeakDbfs": -12.2
+    },
+    {
+     "id": "murmur-guest-memorial-06",
+     "ogg": "assets/audio/murmur/murmur-guest-memorial-06.ogg",
+     "m4a": "assets/audio/murmur/murmur-guest-memorial-06.m4a",
+     "duration": 0.1913,
+     "samplePeakDbfs": -10.2
+    },
+    {
+     "id": "murmur-guest-memorial-07",
+     "ogg": "assets/audio/murmur/murmur-guest-memorial-07.ogg",
+     "m4a": "assets/audio/murmur/murmur-guest-memorial-07.m4a",
+     "duration": 0.2226,
+     "samplePeakDbfs": -12.5
+    },
+    {
+     "id": "murmur-guest-memorial-08",
+     "ogg": "assets/audio/murmur/murmur-guest-memorial-08.ogg",
+     "m4a": "assets/audio/murmur/murmur-guest-memorial-08.m4a",
+     "duration": 0.2471,
+     "samplePeakDbfs": -12.0
+    },
+    {
+     "id": "murmur-guest-memorial-09",
+     "ogg": "assets/audio/murmur/murmur-guest-memorial-09.ogg",
+     "m4a": "assets/audio/murmur/murmur-guest-memorial-09.m4a",
+     "duration": 0.1477,
+     "samplePeakDbfs": -12.5
+    },
+    {
+     "id": "murmur-guest-memorial-10",
+     "ogg": "assets/audio/murmur/murmur-guest-memorial-10.ogg",
+     "m4a": "assets/audio/murmur/murmur-guest-memorial-10.m4a",
+     "duration": 0.1417,
+     "samplePeakDbfs": -10.8
+    },
+    {
+     "id": "murmur-guest-memorial-11",
+     "ogg": "assets/audio/murmur/murmur-guest-memorial-11.ogg",
+     "m4a": "assets/audio/murmur/murmur-guest-memorial-11.m4a",
+     "duration": 0.1463,
+     "samplePeakDbfs": -9.3
+    },
+    {
+     "id": "murmur-guest-memorial-12",
+     "ogg": "assets/audio/murmur/murmur-guest-memorial-12.ogg",
+     "m4a": "assets/audio/murmur/murmur-guest-memorial-12.m4a",
+     "duration": 0.1737,
+     "samplePeakDbfs": -10.6
+    }
+   ],
+   "clipCount": 12,
+   "duration": 2.022,
+   "durationRange": [
+    0.1175,
+    0.2471
+   ],
+   "loop": false,
+   "lufs": null,
+   "samplePeakDbfs": -9.3,
+   "bytes": {
+    "ogg": 55773,
+    "m4a": 30289
+   },
+   "tool": "tools/audio/make_murmur.py (source-filter formant synthesis)",
+   "settings": {
+    "character": "Generic memorial guest: hushed, gentle, a little distant",
+    "seed": 22469987213,
+    "f0Hz": 140,
+    "pitchScales": [
+     1.111,
+     0.82,
+     1.184,
+     0.893,
+     1.147,
+     0.856,
+     1.038,
+     1.075,
+     1.22,
+     1.002,
+     0.929,
+     0.965
+    ],
+    "vocalTractScale": 1.0,
+    "breathiness": 0.45,
+    "durationMs": [
+     100,
+     250
+    ],
+    "gravel": 0.0,
+    "reverb": 0.4,
+    "nasal": 0.0,
+    "contour": "down"
+   },
+   "license": "Original procedural synthesis written for this project (tools/audio); no samples or third-party recordings. Owned by the project; commercial use permitted (Q05).",
+   "date": "2026-10-08",
+   "notes": "Single nonsense syllables from random vowel formants; no lexical content. Pick a random clip per revealed text chunk."
+  }
+ ]
+}
