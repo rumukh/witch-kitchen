@@ -1,0 +1,292 @@
+{
+  "workers": 15,
+  "quick": false,
+  "q14": {
+    "average": {
+      "nights": 30000,
+      "pass3": 0.8988666666666667,
+      "all4": 0.5662,
+      "meanSat": 3.468,
+      "p50": 10,
+      "p90": 12,
+      "max": 14,
+      "perNight": [
+        {
+          "night": 2,
+          "pass3": 0.9054,
+          "all4": 0.5679
+        },
+        {
+          "night": 3,
+          "pass3": 0.8629,
+          "all4": 0.5023
+        },
+        {
+          "night": 4,
+          "pass3": 0.9283,
+          "all4": 0.6284
+        }
+      ]
+    },
+    "good": {
+      "nights": 6000,
+      "pass3": 0.9196666666666666,
+      "all4": 0.5893333333333334,
+      "meanSat": 3.5023333333333335,
+      "p50": 10,
+      "p90": 12,
+      "max": 14,
+      "perNight": [
+        {
+          "night": 2,
+          "pass3": 0.9245,
+          "all4": 0.586
+        },
+        {
+          "night": 3,
+          "pass3": 0.8895,
+          "all4": 0.5245
+        },
+        {
+          "night": 4,
+          "pass3": 0.945,
+          "all4": 0.6575
+        }
+      ]
+    }
+  },
+  "load": [
+    {
+      "n": 2,
+      "sat": 3.491,
+      "arrived": 4,
+      "p50": 10,
+      "p90": 11,
+      "max": 14
+    },
+    {
+      "n": 3,
+      "sat": 3.367,
+      "arrived": 4,
+      "p50": 10,
+      "p90": 12,
+      "max": 13
+    },
+    {
+      "n": 4,
+      "sat": 3.5905,
+      "arrived": 4,
+      "p50": 10,
+      "p90": 12,
+      "max": 14
+    },
+    {
+      "n": 5,
+      "sat": 3.609,
+      "arrived": 4,
+      "p50": 10,
+      "p90": 12,
+      "max": 14
+    },
+    {
+      "n": 6,
+      "sat": 3.7025,
+      "arrived": 4,
+      "p50": 11,
+      "p90": 12,
+      "max": 14
+    },
+    {
+      "n": 7,
+      "sat": 2.8685,
+      "arrived": 4,
+      "p50": 10,
+      "p90": 12,
+      "max": 14
+    },
+    {
+      "n": 8,
+      "sat": 3.7545,
+      "arrived": 4,
+      "p50": 10,
+      "p90": 12,
+      "max": 14
+    },
+    {
+      "n": 9,
+      "sat": 3.3825,
+      "arrived": 4,
+      "p50": 11,
+      "p90": 13,
+      "max": 14
+    },
+    {
+      "n": 10,
+      "sat": 3.512,
+      "arrived": 4,
+      "p50": 10,
+      "p90": 13,
+      "max": 14
+    },
+    {
+      "n": 11,
+      "sat": 3.6255,
+      "arrived": 4,
+      "p50": 11,
+      "p90": 13,
+      "max": 14
+    }
+  ],
+  "q26": {
+    "none": {
+      "shelf": 1,
+      "mittensOrChair": 0.8865,
+      "jar": 0.9985,
+      "income": 20.043799999999987
+    },
+    "city": {
+      "shelf": 1,
+      "mittensOrChair": 0.8865,
+      "jar": 0.9985,
+      "income": 22.378550000000075
+    },
+    "forest": {
+      "shelf": 1,
+      "mittensOrChair": 0.9305,
+      "jar": 0.999,
+      "income": 19.76484999999996
+    },
+    "river": {
+      "shelf": 1,
+      "mittensOrChair": 0.9165,
+      "jar": 0.9995,
+      "income": 19.988049999999934
+    }
+  },
+  "endings": {
+    "standard/wound": {
+      "n": 10000,
+      "reached": 10000,
+      "other": {},
+      "failSeeds": [],
+      "digest": "6d5656f3d9dc2bd0"
+    },
+    "standard/remember": {
+      "n": 10000,
+      "reached": 10000,
+      "other": {},
+      "failSeeds": [],
+      "digest": "7701f5bb078bc124"
+    },
+    "standard/new_spring": {
+      "n": 10000,
+      "reached": 10000,
+      "other": {},
+      "failSeeds": [],
+      "digest": "157e5608e48bf7e8"
+    },
+    "standard/letter": {
+      "n": 10000,
+      "reached": 10000,
+      "other": {},
+      "failSeeds": [],
+      "digest": "e8e874df172f621e"
+    },
+    "granny/wound": {
+      "n": 10000,
+      "reached": 10000,
+      "other": {},
+      "failSeeds": [],
+      "digest": "6fe46b756178ccb2"
+    },
+    "granny/remember": {
+      "n": 10000,
+      "reached": 10000,
+      "other": {},
+      "failSeeds": [],
+      "digest": "d77907ee706c648e"
+    },
+    "granny/new_spring": {
+      "n": 10000,
+      "reached": 10000,
+      "other": {},
+      "failSeeds": [],
+      "digest": "7144d1c546842d0b"
+    },
+    "granny/letter": {
+      "n": 10000,
+      "reached": 10000,
+      "other": {},
+      "failSeeds": [],
+      "digest": "5cffa7f51ad10fcf"
+    },
+    "wolf/wound": {
+      "n": 2000,
+      "reached": 2000,
+      "other": {},
+      "failSeeds": [],
+      "digest": "baf5aa5acd1e033b"
+    },
+    "wolf/remember": {
+      "n": 2000,
+      "reached": 2000,
+      "other": {},
+      "failSeeds": [],
+      "digest": "218139c6b65a8b2b"
+    },
+    "wolf/new_spring": {
+      "n": 2000,
+      "reached": 1424,
+      "other": {
+        "remember": 491,
+        "letter": 85
+      },
+      "failSeeds": [
+        2,
+        4,
+        5,
+        7,
+        13
+      ],
+      "digest": "89d701cdb23614ba"
+    },
+    "wolf/letter": {
+      "n": 2000,
+      "reached": 2000,
+      "other": {},
+      "failSeeds": [],
+      "digest": "a3c64e1e38b37625"
+    }
+  },
+  "variants": {
+    "new_spring/base": {
+      "n": 2000,
+      "reached": 2000,
+      "bought": 0
+    },
+    "new_spring/double": {
+      "n": 2000,
+      "reached": 2000,
+      "bought": 24
+    },
+    "letter/zero": {
+      "n": 2000,
+      "reached": 2000,
+      "bought": 0
+    },
+    "remember/zero": {
+      "n": 2000,
+      "reached": 2000,
+      "bought": 0
+    }
+  },
+  "determinism": {
+    "seeds": 2000,
+    "same": true,
+    "digest": "27ec169589395eb3"
+  },
+  "throughput": {
+    "totalSeconds": 92.3456394,
+    "msPerCampaignWall": 0.6164082208333336
+  }
+}
