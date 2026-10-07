@@ -1,0 +1,677 @@
+{
+  "schema": "witch-kitchen-art-manifest/1",
+  "style_bible": "docs/art/STYLE_BIBLE.md",
+  "base_path": "assets/art/",
+  "total_bytes": 2396362,
+  "count": 22,
+  "assets": [
+    {
+      "id": "bg-tavern-night",
+      "kind": "background",
+      "file": "bg/bg-tavern-night.webp",
+      "width": 1920,
+      "height": 1080,
+      "transparent": false,
+      "variants": [
+        {
+          "file": "bg/bg-tavern-night-720.webp",
+          "width": 1280,
+          "height": 720,
+          "label": "720p"
+        }
+      ],
+      "bytes": 561244,
+      "source": {
+        "tool": "azure-image-generation skill (generate-image.ps1)",
+        "provider": "Azure OpenAI",
+        "model": "gpt-image-2.5-sunburst (deployment)",
+        "operation": "generation",
+        "quality": "high",
+        "prompt": "Wide 16:9 interior of a cozy old Russian log-built tavern kitchen at night, straight-on view from the guests' side at eye level. LEFT third: a big whitewashed Russian clay stove with an arched mouth full of glowing embers, a copper cauldron, stacked firewood and a poker. CENTRE: a long carved wooden guest counter with four simple empty round wooden stools in front of it, two candles and an oil lamp on the counter. RIGHT third: a calm, plain log wall with three empty wooden wall shelves, uncluttered and visually quiet. TOP RIGHT corner, high on the wall: a carved wooden pendulum wall clock with pine-cone weights on chains, a small closed arched cuckoo door above the dial; the dial is marked only with dots, no numerals. Back wall: two small windows with ornate carved Slavic wooden window frames, deep blue night with stars outside. Bunches of dried herbs hang from the ceiling beams. No people, no creatures. The lower fifth of the image is a calm, dark wooden floor area. Gouache painting on warm textured paper in the tradition of early-20th-century Russian book illustration: confident dark-brown ink contour over flat matte gouache fills, dry-brush edges, visible paper grain, decorative Slavic folk ornament. Warm candlelit palette of honey amber, ember orange, deep indigo and plum shadows. Cozy, gentle storybook mood; spirits are kind neighbours. Absolutely no text, letters, numerals, runes, writing, signature or watermark.",
+        "derived_from": [],
+        "raw_file": "bg-tavern-night-r1-c2.png",
+        "raw_sha256": "b105eb3a190867d1e578556e3ba3a3cf332eaa8539fbb3069f3dff1a276ddb1b",
+        "postprocess": "cover-crop to 16:9, Lanczos resize, WebP q84/q82"
+      },
+      "license": "generated with Azure OpenAI Image API (deployment gpt-image-2.5-sunburst) via the azure-image-generation helper; under the Microsoft Product Terms for Azure OpenAI the customer owns the output and Microsoft claims no rights in it, so commercial use is permitted (subject to the Azure OpenAI Code of Conduct). No stock or web imagery.",
+      "created": "2026-10-08",
+      "review": {
+        "status": "approved",
+        "notes": "Stove left, 4 stools, calm right wall, clock top-right without numerals."
+      }
+    },
+    {
+      "id": "bg-tavern-predawn",
+      "kind": "background",
+      "file": "bg/bg-tavern-predawn.webp",
+      "width": 1920,
+      "height": 1080,
+      "transparent": false,
+      "variants": [
+        {
+          "file": "bg/bg-tavern-predawn-720.webp",
+          "width": 1280,
+          "height": 720,
+          "label": "720p"
+        }
+      ],
+      "bytes": 437490,
+      "source": {
+        "tool": "azure-image-generation skill (generate-image.ps1)",
+        "provider": "Azure OpenAI",
+        "model": "gpt-image-2.5-sunburst (deployment)",
+        "operation": "edit",
+        "quality": "high",
+        "prompt": "Repaint image 1 as the same room shortly before dawn: keep the exact layout, camera, stove, counter, stools, shelves, clock and windows. Lighting becomes cooler and quieter: pale blue-grey dawn light from the windows, the stove embers low and soft, candles almost burnt down, lavender and grey-blue palette with a faint cold amber. Same gouache book-illustration style. No people. No text.",
+        "derived_from": [
+          "bg-tavern-night"
+        ],
+        "raw_file": "bg-tavern-predawn-r1-c2.png",
+        "raw_sha256": "e67fc28ed348f4d8353b373ae348ad0d95b6f5a60649838bea97b160313ed447",
+        "postprocess": "cover-crop to 16:9, Lanczos resize, WebP q84/q82"
+      },
+      "license": "generated with Azure OpenAI Image API (deployment gpt-image-2.5-sunburst) via the azure-image-generation helper; under the Microsoft Product Terms for Azure OpenAI the customer owns the output and Microsoft claims no rights in it, so commercial use is permitted (subject to the Azure OpenAI Code of Conduct). No stock or web imagery.",
+      "created": "2026-10-08",
+      "review": {
+        "status": "approved",
+        "notes": "Layout matches bg-tavern-night; cool dawn light."
+      }
+    },
+    {
+      "id": "jar-joy",
+      "kind": "feeling-jar",
+      "file": "jars/jar-joy.webp",
+      "width": 346,
+      "height": 512,
+      "transparent": true,
+      "variants": [],
+      "bytes": 45290,
+      "source": {
+        "tool": "azure-image-generation skill (generate-image.ps1)",
+        "provider": "Azure OpenAI",
+        "model": "gpt-image-2.5-sunburst (deployment)",
+        "operation": "generation",
+        "quality": "medium",
+        "prompt": "A perfectly ROUND globe-shaped apothecary bottle with a short neck and a sun-shaped carved wooden stopper; inside, a plump golden firefly spirit laughing with closed happy eyes, warm golden glow. Game item illustration of a small magical glass jar that holds a living feeling: a tiny glowing firefly spirit with a small expressive face inside the glass. Gouache painting on warm textured paper in the tradition of early-20th-century Russian book illustration: confident dark-brown ink contour over flat matte gouache fills, dry-brush edges, visible paper grain, decorative Slavic folk ornament. Warm candlelit palette of honey amber, ember orange, deep indigo and plum shadows. Cozy, gentle storybook mood; spirits are kind neighbours. Absolutely no text, letters, numerals, runes, writing, signature or watermark. Single subject, centered, fully visible with a small margin on all sides, isolated on a fully transparent background; no ground, no cast shadow, no frame, no border, no scenery.",
+        "derived_from": [],
+        "raw_file": "jar-joy-r1-c2.png",
+        "raw_sha256": "b7a0bc694268a65358ddf920b0a0f999edab432a85e93375bd9e8ce2a738385c",
+        "postprocess": "alpha clean + trim + Lanczos resize, WebP with alpha (q90, lossless alpha)"
+      },
+      "license": "generated with Azure OpenAI Image API (deployment gpt-image-2.5-sunburst) via the azure-image-generation helper; under the Microsoft Product Terms for Azure OpenAI the customer owns the output and Microsoft claims no rights in it, so commercial use is permitted (subject to the Azure OpenAI Code of Conduct). No stock or web imagery.",
+      "created": "2026-10-08",
+      "review": {
+        "status": "approved",
+        "notes": "Round globe silhouette; style authority for all jars."
+      }
+    },
+    {
+      "id": "jar-sadness",
+      "kind": "feeling-jar",
+      "file": "jars/jar-sadness.webp",
+      "width": 291,
+      "height": 512,
+      "transparent": true,
+      "variants": [],
+      "bytes": 39652,
+      "source": {
+        "tool": "azure-image-generation skill (generate-image.ps1)",
+        "provider": "Azure OpenAI",
+        "model": "gpt-image-2.5-sunburst (deployment)",
+        "operation": "edit",
+        "quality": "medium",
+        "prompt": "A TALL TEARDROP-shaped glass bottle, narrow at the top with a small round cork; inside, a pale-blue firefly spirit with gently drooping sad eyes, soft blue glow. Image 1 is the style authority for the jar rendering: match its gouache texture, ink contour, glass treatment, scale and lighting, but use the new jar shape described. Game item illustration of a small magical glass jar that holds a living feeling: a tiny glowing firefly spirit with a small expressive face inside the glass. Gouache painting on warm textured paper in the tradition of early-20th-century Russian book illustration: confident dark-brown ink contour over flat matte gouache fills, dry-brush edges, visible paper grain, decorative Slavic folk ornament. Warm candlelit palette of honey amber, ember orange, deep indigo and plum shadows. Cozy, gentle storybook mood; spirits are kind neighbours. Absolutely no text, letters, numerals, runes, writing, signature or watermark. Single subject, centered, fully visible with a small margin on all sides, isolated on a fully transparent background; no ground, no cast shadow, no frame, no border, no scenery.",
+        "derived_from": [
+          "jar-joy"
+        ],
+        "raw_file": "jar-sadness-r1-c1.png",
+        "raw_sha256": "f2024db24cf421b7d38fc0e737d23259ae90d063832dde6e5a31b36ed2b965f7",
+        "postprocess": "alpha clean + trim + Lanczos resize, WebP with alpha (q90, lossless alpha)"
+      },
+      "license": "generated with Azure OpenAI Image API (deployment gpt-image-2.5-sunburst) via the azure-image-generation helper; under the Microsoft Product Terms for Azure OpenAI the customer owns the output and Microsoft claims no rights in it, so commercial use is permitted (subject to the Azure OpenAI Code of Conduct). No stock or web imagery.",
+      "created": "2026-10-08",
+      "review": {
+        "status": "approved",
+        "notes": "Teardrop silhouette."
+      }
+    },
+    {
+      "id": "jar-anger",
+      "kind": "feeling-jar",
+      "file": "jars/jar-anger.webp",
+      "width": 435,
+      "height": 512,
+      "transparent": true,
+      "variants": [],
+      "bytes": 69852,
+      "source": {
+        "tool": "azure-image-generation skill (generate-image.ps1)",
+        "provider": "Azure OpenAI",
+        "model": "gpt-image-2.5-sunburst (deployment)",
+        "operation": "edit",
+        "quality": "medium",
+        "prompt": "A SQUAT, wide HEXAGONAL glass jar with flat faceted sides and dark iron bands and a riveted iron lid; inside, a red-orange firefly spirit frowning with puffed cheeks, hot ember glow. Image 1 is the style authority for the jar rendering: match its gouache texture, ink contour, glass treatment, scale and lighting, but use the new jar shape described. Game item illustration of a small magical glass jar that holds a living feeling: a tiny glowing firefly spirit with a small expressive face inside the glass. Gouache painting on warm textured paper in the tradition of early-20th-century Russian book illustration: confident dark-brown ink contour over flat matte gouache fills, dry-brush edges, visible paper grain, decorative Slavic folk ornament. Warm candlelit palette of honey amber, ember orange, deep indigo and plum shadows. Cozy, gentle storybook mood; spirits are kind neighbours. Absolutely no text, letters, numerals, runes, writing, signature or watermark. Single subject, centered, fully visible with a small margin on all sides, isolated on a fully transparent background; no ground, no cast shadow, no frame, no border, no scenery.",
+        "derived_from": [
+          "jar-joy"
+        ],
+        "raw_file": "jar-anger-r1-c1.png",
+        "raw_sha256": "0b325b9b6048b211ac97eb610d2901902657908c6ee7b92f774487c91f944bd7",
+        "postprocess": "alpha clean + trim + Lanczos resize, WebP with alpha (q90, lossless alpha)"
+      },
+      "license": "generated with Azure OpenAI Image API (deployment gpt-image-2.5-sunburst) via the azure-image-generation helper; under the Microsoft Product Terms for Azure OpenAI the customer owns the output and Microsoft claims no rights in it, so commercial use is permitted (subject to the Azure OpenAI Code of Conduct). No stock or web imagery.",
+      "created": "2026-10-08",
+      "review": {
+        "status": "approved",
+        "notes": "Squat hexagonal iron-banded silhouette."
+      }
+    },
+    {
+      "id": "jar-fear",
+      "kind": "feeling-jar",
+      "file": "jars/jar-fear.webp",
+      "width": 210,
+      "height": 512,
+      "transparent": true,
+      "variants": [],
+      "bytes": 28646,
+      "source": {
+        "tool": "azure-image-generation skill (generate-image.ps1)",
+        "provider": "Azure OpenAI",
+        "model": "gpt-image-2.5-sunburst (deployment)",
+        "operation": "edit",
+        "quality": "medium",
+        "prompt": "A NARROW, TALL bottle with hunched sloping shoulders and a long crooked bent neck with a tiny cork; inside, a pale violet firefly spirit trembling with big wide eyes, faint violet glow. Image 1 is the style authority for the jar rendering: match its gouache texture, ink contour, glass treatment, scale and lighting, but use the new jar shape described. Game item illustration of a small magical glass jar that holds a living feeling: a tiny glowing firefly spirit with a small expressive face inside the glass. Gouache painting on warm textured paper in the tradition of early-20th-century Russian book illustration: confident dark-brown ink contour over flat matte gouache fills, dry-brush edges, visible paper grain, decorative Slavic folk ornament. Warm candlelit palette of honey amber, ember orange, deep indigo and plum shadows. Cozy, gentle storybook mood; spirits are kind neighbours. Absolutely no text, letters, numerals, runes, writing, signature or watermark. Single subject, centered, fully visible with a small margin on all sides, isolated on a fully transparent background; no ground, no cast shadow, no frame, no border, no scenery.",
+        "derived_from": [
+          "jar-joy"
+        ],
+        "raw_file": "jar-fear-r1-c1.png",
+        "raw_sha256": "96e9428cae1cd0f28f539c4a6aeff8ff7b264995a393ff9fdcbe8abe173b463d",
+        "postprocess": "alpha clean + trim + Lanczos resize, WebP with alpha (q90, lossless alpha)"
+      },
+      "license": "generated with Azure OpenAI Image API (deployment gpt-image-2.5-sunburst) via the azure-image-generation helper; under the Microsoft Product Terms for Azure OpenAI the customer owns the output and Microsoft claims no rights in it, so commercial use is permitted (subject to the Azure OpenAI Code of Conduct). No stock or web imagery.",
+      "created": "2026-10-08",
+      "review": {
+        "status": "approved",
+        "notes": "Narrow bottle with crooked neck."
+      }
+    },
+    {
+      "id": "jar-nostalgia",
+      "kind": "feeling-jar",
+      "file": "jars/jar-nostalgia.webp",
+      "width": 393,
+      "height": 512,
+      "transparent": true,
+      "variants": [],
+      "bytes": 67142,
+      "source": {
+        "tool": "azure-image-generation skill (generate-image.ps1)",
+        "provider": "Azure OpenAI",
+        "model": "gpt-image-2.5-sunburst (deployment)",
+        "operation": "edit",
+        "quality": "medium",
+        "prompt": "A classic JAM JAR with a checked cloth cover tied with twine and a bow; inside, a sepia-rose firefly spirit with a dreamy half-closed smile, soft warm glow like an old photograph. Image 1 is the style authority for the jar rendering: match its gouache texture, ink contour, glass treatment, scale and lighting, but use the new jar shape described. Game item illustration of a small magical glass jar that holds a living feeling: a tiny glowing firefly spirit with a small expressive face inside the glass. Gouache painting on warm textured paper in the tradition of early-20th-century Russian book illustration: confident dark-brown ink contour over flat matte gouache fills, dry-brush edges, visible paper grain, decorative Slavic folk ornament. Warm candlelit palette of honey amber, ember orange, deep indigo and plum shadows. Cozy, gentle storybook mood; spirits are kind neighbours. Absolutely no text, letters, numerals, runes, writing, signature or watermark. Single subject, centered, fully visible with a small margin on all sides, isolated on a fully transparent background; no ground, no cast shadow, no frame, no border, no scenery.",
+        "derived_from": [
+          "jar-joy"
+        ],
+        "raw_file": "jar-nostalgia-r1-c1.png",
+        "raw_sha256": "87bdc6e56f95fe550589466295b3a0cfcf22dd918d0fc4cdc0598e12926e2a7f",
+        "postprocess": "alpha clean + trim + Lanczos resize, WebP with alpha (q90, lossless alpha)"
+      },
+      "license": "generated with Azure OpenAI Image API (deployment gpt-image-2.5-sunburst) via the azure-image-generation helper; under the Microsoft Product Terms for Azure OpenAI the customer owns the output and Microsoft claims no rights in it, so commercial use is permitted (subject to the Azure OpenAI Code of Conduct). No stock or web imagery.",
+      "created": "2026-10-08",
+      "review": {
+        "status": "approved",
+        "notes": "Jam jar with checked cloth cover."
+      }
+    },
+    {
+      "id": "jar-loneliness",
+      "kind": "feeling-jar",
+      "file": "jars/jar-loneliness.webp",
+      "width": 152,
+      "height": 512,
+      "transparent": true,
+      "variants": [],
+      "bytes": 20246,
+      "source": {
+        "tool": "azure-image-generation skill (generate-image.ps1)",
+        "provider": "Azure OpenAI",
+        "model": "gpt-image-2.5-sunburst (deployment)",
+        "operation": "edit",
+        "quality": "medium",
+        "prompt": "A very THIN TEST TUBE vial standing on a TALL STEMMED wooden foot like a goblet stem; inside, a small grey-blue firefly spirit sitting alone, looking away, faint cool glow. Image 1 is the style authority for the jar rendering: match its gouache texture, ink contour, glass treatment, scale and lighting, but use the new jar shape described. Game item illustration of a small magical glass jar that holds a living feeling: a tiny glowing firefly spirit with a small expressive face inside the glass. Gouache painting on warm textured paper in the tradition of early-20th-century Russian book illustration: confident dark-brown ink contour over flat matte gouache fills, dry-brush edges, visible paper grain, decorative Slavic folk ornament. Warm candlelit palette of honey amber, ember orange, deep indigo and plum shadows. Cozy, gentle storybook mood; spirits are kind neighbours. Absolutely no text, letters, numerals, runes, writing, signature or watermark. Single subject, centered, fully visible with a small margin on all sides, isolated on a fully transparent background; no ground, no cast shadow, no frame, no border, no scenery.",
+        "derived_from": [
+          "jar-joy"
+        ],
+        "raw_file": "jar-loneliness-r1-c1.png",
+        "raw_sha256": "93690a3d51ac4c24956fa5faa1e276b2602c0dd387a6dd664f96a0d5cf18b5a2",
+        "postprocess": "alpha clean + trim + Lanczos resize, WebP with alpha (q90, lossless alpha)"
+      },
+      "license": "generated with Azure OpenAI Image API (deployment gpt-image-2.5-sunburst) via the azure-image-generation helper; under the Microsoft Product Terms for Azure OpenAI the customer owns the output and Microsoft claims no rights in it, so commercial use is permitted (subject to the Azure OpenAI Code of Conduct). No stock or web imagery.",
+      "created": "2026-10-08",
+      "review": {
+        "status": "approved",
+        "notes": "Thin tube on tall stem, one firefly."
+      }
+    },
+    {
+      "id": "jar-trepet",
+      "kind": "feeling-jar",
+      "file": "jars/jar-trepet.webp",
+      "width": 266,
+      "height": 512,
+      "transparent": true,
+      "variants": [],
+      "bytes": 39282,
+      "source": {
+        "tool": "azure-image-generation skill (generate-image.ps1)",
+        "provider": "Azure OpenAI",
+        "model": "gpt-image-2.5-sunburst (deployment)",
+        "operation": "edit",
+        "quality": "medium",
+        "prompt": "A DOUBLE-GOURD bottle made of two stacked round glass bulbs joined by a narrow waist; in the upper bulb a golden firefly, in the lower bulb a violet firefly, reaching to hold hands through the waist, both shivering with excited wonder, shimmering glow. Image 1 is the style authority for the jar rendering: match its gouache texture, ink contour, glass treatment, scale and lighting, but use the new jar shape described. Game item illustration of a small magical glass jar that holds a living feeling: a tiny glowing firefly spirit with a small expressive face inside the glass. Gouache painting on warm textured paper in the tradition of early-20th-century Russian book illustration: confident dark-brown ink contour over flat matte gouache fills, dry-brush edges, visible paper grain, decorative Slavic folk ornament. Warm candlelit palette of honey amber, ember orange, deep indigo and plum shadows. Cozy, gentle storybook mood; spirits are kind neighbours. Absolutely no text, letters, numerals, runes, writing, signature or watermark. Single subject, centered, fully visible with a small margin on all sides, isolated on a fully transparent background; no ground, no cast shadow, no frame, no border, no scenery.",
+        "derived_from": [
+          "jar-joy"
+        ],
+        "raw_file": "jar-trepet-r1-c1.png",
+        "raw_sha256": "7d4205cbac4f72f8e2a5136101f4acf5934d40003cd12bf10ac6adfcc40c0902",
+        "postprocess": "alpha clean + trim + Lanczos resize, WebP with alpha (q90, lossless alpha)"
+      },
+      "license": "generated with Azure OpenAI Image API (deployment gpt-image-2.5-sunburst) via the azure-image-generation helper; under the Microsoft Product Terms for Azure OpenAI the customer owns the output and Microsoft claims no rights in it, so commercial use is permitted (subject to the Azure OpenAI Code of Conduct). No stock or web imagery.",
+      "created": "2026-10-08",
+      "review": {
+        "status": "approved",
+        "notes": "Double-gourd, gold and violet fireflies."
+      }
+    },
+    {
+      "id": "jar-hope",
+      "kind": "feeling-jar",
+      "file": "jars/jar-hope.webp",
+      "width": 260,
+      "height": 512,
+      "transparent": true,
+      "variants": [],
+      "bytes": 33150,
+      "source": {
+        "tool": "azure-image-generation skill (generate-image.ps1)",
+        "provider": "Azure OpenAI",
+        "model": "gpt-image-2.5-sunburst (deployment)",
+        "operation": "edit",
+        "quality": "medium",
+        "prompt": "A TALL TEARDROP-shaped glass bottle topped with a STAR-SHAPED glowing stopper and surrounded by a soft halo; inside, a pale sky-blue firefly spirit with a quiet hopeful smile, glowing with gentle golden light. Image 1 is the style authority for the jar rendering: match its gouache texture, ink contour, glass treatment, scale and lighting, but use the new jar shape described. Game item illustration of a small magical glass jar that holds a living feeling: a tiny glowing firefly spirit with a small expressive face inside the glass. Gouache painting on warm textured paper in the tradition of early-20th-century Russian book illustration: confident dark-brown ink contour over flat matte gouache fills, dry-brush edges, visible paper grain, decorative Slavic folk ornament. Warm candlelit palette of honey amber, ember orange, deep indigo and plum shadows. Cozy, gentle storybook mood; spirits are kind neighbours. Absolutely no text, letters, numerals, runes, writing, signature or watermark. Single subject, centered, fully visible with a small margin on all sides, isolated on a fully transparent background; no ground, no cast shadow, no frame, no border, no scenery.",
+        "derived_from": [
+          "jar-joy"
+        ],
+        "raw_file": "jar-hope-r1-c1.png",
+        "raw_sha256": "a29301d2735c2580d00c2377ad468d68bc82a25456fa17dc71cf2d6a153d7a5e",
+        "postprocess": "alpha clean + trim + Lanczos resize, WebP with alpha (q90, lossless alpha)"
+      },
+      "license": "generated with Azure OpenAI Image API (deployment gpt-image-2.5-sunburst) via the azure-image-generation helper; under the Microsoft Product Terms for Azure OpenAI the customer owns the output and Microsoft claims no rights in it, so commercial use is permitted (subject to the Azure OpenAI Code of Conduct). No stock or web imagery.",
+      "created": "2026-10-08",
+      "review": {
+        "status": "approved",
+        "notes": "Teardrop with star stopper and glow; distinguished from sadness by stopper and warm glow."
+      }
+    },
+    {
+      "id": "jar-amber-joy",
+      "kind": "feeling-jar",
+      "file": "jars/jar-amber-joy.webp",
+      "width": 274,
+      "height": 512,
+      "transparent": true,
+      "variants": [],
+      "bytes": 44378,
+      "source": {
+        "tool": "azure-image-generation skill (generate-image.ps1)",
+        "provider": "Azure OpenAI",
+        "model": "gpt-image-2.5-sunburst (deployment)",
+        "operation": "edit",
+        "quality": "medium",
+        "prompt": "An OVAL CAPSULE of solid translucent honey-coloured amber with polished ends, no cork; frozen inside like a fossil, a small round golden firefly spirit peacefully asleep with closed eyes. Image 1 is the style authority for the jar rendering: match its gouache texture, ink contour, glass treatment, scale and lighting, but use the new jar shape described. Game item illustration of a small magical glass jar that holds a living feeling: a tiny glowing firefly spirit with a small expressive face inside the glass. Gouache painting on warm textured paper in the tradition of early-20th-century Russian book illustration: confident dark-brown ink contour over flat matte gouache fills, dry-brush edges, visible paper grain, decorative Slavic folk ornament. Warm candlelit palette of honey amber, ember orange, deep indigo and plum shadows. Cozy, gentle storybook mood; spirits are kind neighbours. Absolutely no text, letters, numerals, runes, writing, signature or watermark. Single subject, centered, fully visible with a small margin on all sides, isolated on a fully transparent background; no ground, no cast shadow, no frame, no border, no scenery.",
+        "derived_from": [
+          "jar-joy"
+        ],
+        "raw_file": "jar-amber-joy-r1-c1.png",
+        "raw_sha256": "8cce436264506e8ab556d028e7a44d6a89262ef4b0ccb2ea1a6ba9ea6e6549ed",
+        "postprocess": "alpha clean + trim + Lanczos resize, WebP with alpha (q90, lossless alpha)"
+      },
+      "license": "generated with Azure OpenAI Image API (deployment gpt-image-2.5-sunburst) via the azure-image-generation helper; under the Microsoft Product Terms for Azure OpenAI the customer owns the output and Microsoft claims no rights in it, so commercial use is permitted (subject to the Azure OpenAI Code of Conduct). No stock or web imagery.",
+      "created": "2026-10-08",
+      "review": {
+        "status": "approved",
+        "notes": "Oval amber capsule, sleeping firefly."
+      }
+    },
+    {
+      "id": "jar-burning-joy",
+      "kind": "feeling-jar",
+      "file": "jars/jar-burning-joy.webp",
+      "width": 339,
+      "height": 512,
+      "transparent": true,
+      "variants": [],
+      "bytes": 45392,
+      "source": {
+        "tool": "azure-image-generation skill (generate-image.ps1)",
+        "provider": "Azure OpenAI",
+        "model": "gpt-image-2.5-sunburst (deployment)",
+        "operation": "edit",
+        "quality": "medium",
+        "prompt": "A perfectly ROUND globe-shaped bottle with a sun-shaped stopper, but the glass is sooty and smoke-darkened, a thin curl of smoke rising from the stopper and an ember-red smouldering rim at the bottom; inside, a tired dim orange firefly spirit, smouldering. Image 1 is the style authority for the jar rendering: match its gouache texture, ink contour, glass treatment, scale and lighting, but use the new jar shape described. Game item illustration of a small magical glass jar that holds a living feeling: a tiny glowing firefly spirit with a small expressive face inside the glass. Gouache painting on warm textured paper in the tradition of early-20th-century Russian book illustration: confident dark-brown ink contour over flat matte gouache fills, dry-brush edges, visible paper grain, decorative Slavic folk ornament. Warm candlelit palette of honey amber, ember orange, deep indigo and plum shadows. Cozy, gentle storybook mood; spirits are kind neighbours. Absolutely no text, letters, numerals, runes, writing, signature or watermark. Single subject, centered, fully visible with a small margin on all sides, isolated on a fully transparent background; no ground, no cast shadow, no frame, no border, no scenery.",
+        "derived_from": [
+          "jar-joy"
+        ],
+        "raw_file": "jar-burning-joy-r1-c1.png",
+        "raw_sha256": "0fb5f80e20cb2b6269b6244594ff3d2534a69d09febfe3036e0ac81e7c18d5f1",
+        "postprocess": "alpha clean + trim + Lanczos resize, WebP with alpha (q90, lossless alpha)"
+      },
+      "license": "generated with Azure OpenAI Image API (deployment gpt-image-2.5-sunburst) via the azure-image-generation helper; under the Microsoft Product Terms for Azure OpenAI the customer owns the output and Microsoft claims no rights in it, so commercial use is permitted (subject to the Azure OpenAI Code of Conduct). No stock or web imagery.",
+      "created": "2026-10-08",
+      "review": {
+        "status": "approved",
+        "notes": "Sooty globe with smoke wisp."
+      }
+    },
+    {
+      "id": "jar-sediment",
+      "kind": "feeling-jar",
+      "file": "jars/jar-sediment.webp",
+      "width": 512,
+      "height": 383,
+      "transparent": true,
+      "variants": [],
+      "bytes": 74436,
+      "source": {
+        "tool": "azure-image-generation skill (generate-image.ps1)",
+        "provider": "Azure OpenAI",
+        "model": "gpt-image-2.5-sunburst (deployment)",
+        "operation": "edit",
+        "quality": "medium",
+        "prompt": "A LOW, FLAT, WIDE round glass jar like a draughts piece, with a flat tin lid so it can be stacked; inside, murky brown-grey layered dregs and silt with a few dull bubbles, one sleepy bubble with tiny closed eyes. Image 1 is the style authority for the jar rendering: match its gouache texture, ink contour, glass treatment, scale and lighting, but use the new jar shape described. Game item illustration of a small magical glass jar that holds a living feeling: a tiny glowing firefly spirit with a small expressive face inside the glass. Gouache painting on warm textured paper in the tradition of early-20th-century Russian book illustration: confident dark-brown ink contour over flat matte gouache fills, dry-brush edges, visible paper grain, decorative Slavic folk ornament. Warm candlelit palette of honey amber, ember orange, deep indigo and plum shadows. Cozy, gentle storybook mood; spirits are kind neighbours. Absolutely no text, letters, numerals, runes, writing, signature or watermark. Single subject, centered, fully visible with a small margin on all sides, isolated on a fully transparent background; no ground, no cast shadow, no frame, no border, no scenery.",
+        "derived_from": [
+          "jar-joy"
+        ],
+        "raw_file": "jar-sediment-r1-c1.png",
+        "raw_sha256": "39dc0c6705dac07752b60010fe84506dcb697a84f0c90400d8d572348da938b6",
+        "postprocess": "alpha clean + trim + Lanczos resize, WebP with alpha (q90, lossless alpha)"
+      },
+      "license": "generated with Azure OpenAI Image API (deployment gpt-image-2.5-sunburst) via the azure-image-generation helper; under the Microsoft Product Terms for Azure OpenAI the customer owns the output and Microsoft claims no rights in it, so commercial use is permitted (subject to the Azure OpenAI Code of Conduct). No stock or web imagery.",
+      "created": "2026-10-08",
+      "review": {
+        "status": "approved",
+        "notes": "Low flat stackable jar with dregs."
+      }
+    },
+    {
+      "id": "jar-empty",
+      "kind": "feeling-jar",
+      "file": "jars/jar-empty.webp",
+      "width": 405,
+      "height": 512,
+      "transparent": true,
+      "variants": [],
+      "bytes": 65248,
+      "source": {
+        "tool": "azure-image-generation skill (generate-image.ps1)",
+        "provider": "Azure OpenAI",
+        "model": "gpt-image-2.5-sunburst (deployment)",
+        "operation": "edit",
+        "quality": "medium",
+        "prompt": "Image 1 is the style authority for the jar rendering: match its gouache texture, ink contour, folk ornament band, glass treatment and scale. Paint a plain round-shouldered glass jar with a cork stopper and the same painted folk ornament band at its base; the inside holds only clear, still air with soft glass reflections and a faint cool highlight — an unoccupied vessel waiting for a feeling. Game item illustration. Gouache painting on warm textured paper in the tradition of early-20th-century Russian book illustration: confident dark-brown ink contour over flat matte gouache fills, dry-brush edges, visible paper grain, decorative Slavic folk ornament. Warm candlelit palette of honey amber, ember orange, deep indigo and plum shadows. Cozy, gentle storybook mood; spirits are kind neighbours. Absolutely no text, letters, numerals, runes, writing, signature or watermark. Single subject, centered, fully visible with a small margin on all sides, isolated on a fully transparent background; no ground, no cast shadow, no frame, no border, no scenery.",
+        "derived_from": [
+          "jar-joy"
+        ],
+        "raw_file": "jar-empty-r2-c2.png",
+        "raw_sha256": "bc4d93562abc0688dbca39ab75124d0b0b34e76dfb9b1c1c05ac0468f850dc6c",
+        "postprocess": "alpha clean + trim + Lanczos resize, WebP with alpha (q90, lossless alpha)"
+      },
+      "license": "generated with Azure OpenAI Image API (deployment gpt-image-2.5-sunburst) via the azure-image-generation helper; under the Microsoft Product Terms for Azure OpenAI the customer owns the output and Microsoft claims no rights in it, so commercial use is permitted (subject to the Azure OpenAI Code of Conduct). No stock or web imagery.",
+      "created": "2026-10-08",
+      "review": {
+        "status": "approved",
+        "notes": "Empty translucent globe jar; r1 rejected (contained a firefly)."
+      }
+    },
+    {
+      "id": "jar-murky-overlay",
+      "kind": "feeling-jar",
+      "file": "jars/jar-murky-overlay.webp",
+      "width": 412,
+      "height": 512,
+      "transparent": true,
+      "variants": [],
+      "bytes": 49354,
+      "source": {
+        "tool": "azure-image-generation skill (generate-image.ps1)",
+        "provider": "Azure OpenAI",
+        "model": "gpt-image-2.5-sunburst (deployment)",
+        "operation": "generation",
+        "quality": "medium",
+        "prompt": "A soft cloud of murky brownish-grey haze and swirling silt smoke, roughly jar-sized and oval, semi-transparent wisps with soft edges, gouache dry-brush texture. Single subject, centered, fully visible with a small margin on all sides, isolated on a fully transparent background; no ground, no cast shadow, no frame, no border, no scenery. No jar, only the haze.",
+        "derived_from": [],
+        "raw_file": "jar-murky-overlay-r1-c2.png",
+        "raw_sha256": "2691feab77a08b7582298f785b68a030a9aba3fe7bb15394b0fff82cab57b408",
+        "postprocess": "alpha clean + trim + Lanczos resize, WebP with alpha (q90, lossless alpha)"
+      },
+      "license": "generated with Azure OpenAI Image API (deployment gpt-image-2.5-sunburst) via the azure-image-generation helper; under the Microsoft Product Terms for Azure OpenAI the customer owns the output and Microsoft claims no rights in it, so commercial use is permitted (subject to the Azure OpenAI Code of Conduct). No stock or web imagery.",
+      "created": "2026-10-08",
+      "review": {
+        "status": "approved",
+        "notes": "Soft semi-transparent haze for compositing."
+      }
+    },
+    {
+      "id": "mira-neutral",
+      "kind": "character",
+      "file": "characters/mira-neutral.webp",
+      "width": 518,
+      "height": 1024,
+      "transparent": true,
+      "variants": [],
+      "bytes": 97914,
+      "source": {
+        "tool": "azure-image-generation skill (generate-image.ps1)",
+        "provider": "Azure OpenAI",
+        "model": "gpt-image-2.5-sunburst (deployment)",
+        "operation": "edit",
+        "quality": "high",
+        "prompt": "Image 1 is the approved artwork and the absolute authority. Reproduce it exactly: the same subject, pose, face, expression, clothing, colours, line work, gouache texture, proportions and framing. Keep every part of the subject. Output it as a clean cutout: everything that is not the subject (including any painted checkerboard or plain backdrop) becomes fully transparent background.",
+        "derived_from": [
+          "mira-neutral (approved non-transparent pick, re-rendered as cutout)"
+        ],
+        "raw_file": "mira-neutral-r2.png",
+        "raw_sha256": "bac2919c7285ccb7b6f227d7e8bc4b3bd5c17a6a21d6c1eaf1c398ff1a048c1a",
+        "postprocess": "alpha clean + trim + Lanczos resize, WebP with alpha (q90, lossless alpha)"
+      },
+      "license": "generated with Azure OpenAI Image API (deployment gpt-image-2.5-sunburst) via the azure-image-generation helper; under the Microsoft Product Terms for Azure OpenAI the customer owns the output and Microsoft claims no rights in it, so commercial use is permitted (subject to the Azure OpenAI Code of Conduct). No stock or web imagery.",
+      "created": "2026-10-08",
+      "review": {
+        "status": "approved",
+        "notes": "Identity authority for Mira variants. Full-length. Real-alpha cutout re-render of approved mira-neutral-r1-c2.png (original had a painted checkerboard)."
+      }
+    },
+    {
+      "id": "mira-smile",
+      "kind": "character",
+      "file": "characters/mira-smile.webp",
+      "width": 523,
+      "height": 1024,
+      "transparent": true,
+      "variants": [],
+      "bytes": 93646,
+      "source": {
+        "tool": "azure-image-generation skill (generate-image.ps1)",
+        "provider": "Azure OpenAI",
+        "model": "gpt-image-2.5-sunburst (deployment)",
+        "operation": "edit",
+        "quality": "high",
+        "prompt": "Image 1 is the approved artwork and the absolute authority. Reproduce it exactly: the same subject, pose, face, expression, clothing, colours, line work, gouache texture, proportions and framing. Keep every part of the subject. Output it as a clean cutout: everything that is not the subject (including any painted checkerboard or plain backdrop) becomes fully transparent background.",
+        "derived_from": [
+          "mira-smile (approved non-transparent pick, re-rendered as cutout)"
+        ],
+        "raw_file": "mira-smile-r2.png",
+        "raw_sha256": "41932686d2194225e25bcd8aa04a691dbc92c90afbfa7bd6bfb37ee73bbd0e4c",
+        "postprocess": "alpha clean + trim + Lanczos resize, WebP with alpha (q90, lossless alpha)"
+      },
+      "license": "generated with Azure OpenAI Image API (deployment gpt-image-2.5-sunburst) via the azure-image-generation helper; under the Microsoft Product Terms for Azure OpenAI the customer owns the output and Microsoft claims no rights in it, so commercial use is permitted (subject to the Azure OpenAI Code of Conduct). No stock or web imagery.",
+      "created": "2026-10-08",
+      "review": {
+        "status": "approved",
+        "notes": "On-model with mira-neutral. Real-alpha cutout re-render of approved mira-smile-r1-c1.png (original had a painted checkerboard)."
+      }
+    },
+    {
+      "id": "mira-worried",
+      "kind": "character",
+      "file": "characters/mira-worried.webp",
+      "width": 527,
+      "height": 1024,
+      "transparent": true,
+      "variants": [],
+      "bytes": 90822,
+      "source": {
+        "tool": "azure-image-generation skill (generate-image.ps1)",
+        "provider": "Azure OpenAI",
+        "model": "gpt-image-2.5-sunburst (deployment)",
+        "operation": "edit",
+        "quality": "high",
+        "prompt": "Image 1 is the approved artwork and the absolute authority. Reproduce it exactly: the same subject, pose, face, expression, clothing, colours, line work, gouache texture, proportions and framing. Keep every part of the subject. Output it as a clean cutout: everything that is not the subject (including any painted checkerboard or plain backdrop) becomes fully transparent background.",
+        "derived_from": [
+          "mira-worried (approved non-transparent pick, re-rendered as cutout)"
+        ],
+        "raw_file": "mira-worried-r2.png",
+        "raw_sha256": "87448a1d99b903d1739f156c2e1aca959bef6d770944e973b4b9a4341754d80b",
+        "postprocess": "alpha clean + trim + Lanczos resize, WebP with alpha (q90, lossless alpha)"
+      },
+      "license": "generated with Azure OpenAI Image API (deployment gpt-image-2.5-sunburst) via the azure-image-generation helper; under the Microsoft Product Terms for Azure OpenAI the customer owns the output and Microsoft claims no rights in it, so commercial use is permitted (subject to the Azure OpenAI Code of Conduct). No stock or web imagery.",
+      "created": "2026-10-08",
+      "review": {
+        "status": "approved",
+        "notes": "On-model with mira-neutral. Real-alpha cutout re-render of approved mira-worried-r1-c1.png (original had a painted checkerboard)."
+      }
+    },
+    {
+      "id": "mira-determined",
+      "kind": "character",
+      "file": "characters/mira-determined.webp",
+      "width": 530,
+      "height": 1024,
+      "transparent": true,
+      "variants": [],
+      "bytes": 94944,
+      "source": {
+        "tool": "azure-image-generation skill (generate-image.ps1)",
+        "provider": "Azure OpenAI",
+        "model": "gpt-image-2.5-sunburst (deployment)",
+        "operation": "edit",
+        "quality": "high",
+        "prompt": "Image 1 is the approved artwork and the absolute authority. Reproduce it exactly: the same subject, pose, face, expression, clothing, colours, line work, gouache texture, proportions and framing. Keep every part of the subject. Output it as a clean cutout: everything that is not the subject (including any painted checkerboard or plain backdrop) becomes fully transparent background.",
+        "derived_from": [
+          "mira-determined (approved non-transparent pick, re-rendered as cutout)"
+        ],
+        "raw_file": "mira-determined-r2.png",
+        "raw_sha256": "19d1e741dc781efdc65f18edb9f5d784fd5502fb398c54f33df9b7fbc47052a2",
+        "postprocess": "alpha clean + trim + Lanczos resize, WebP with alpha (q90, lossless alpha)"
+      },
+      "license": "generated with Azure OpenAI Image API (deployment gpt-image-2.5-sunburst) via the azure-image-generation helper; under the Microsoft Product Terms for Azure OpenAI the customer owns the output and Microsoft claims no rights in it, so commercial use is permitted (subject to the Azure OpenAI Code of Conduct). No stock or web imagery.",
+      "created": "2026-10-08",
+      "review": {
+        "status": "approved",
+        "notes": "On-model; holds ladle. Real-alpha cutout re-render of approved mira-determined-r1-c1.png (original had a painted checkerboard)."
+      }
+    },
+    {
+      "id": "grandma-agrafena-kind",
+      "kind": "character",
+      "file": "characters/grandma-agrafena-kind.webp",
+      "width": 682,
+      "height": 768,
+      "transparent": true,
+      "variants": [],
+      "bytes": 124600,
+      "source": {
+        "tool": "azure-image-generation skill (generate-image.ps1)",
+        "provider": "Azure OpenAI",
+        "model": "gpt-image-2.5-sunburst (deployment)",
+        "operation": "edit",
+        "quality": "high",
+        "prompt": "Image 1 is the approved artwork and the absolute authority. Reproduce it exactly: the same subject, pose, face, expression, clothing, colours, line work, gouache texture, proportions and framing. Keep every part of the subject. Output it as a clean cutout: everything that is not the subject (including any painted checkerboard or plain backdrop) becomes fully transparent background.",
+        "derived_from": [
+          "grandma-agrafena-kind (approved non-transparent pick, re-rendered as cutout)"
+        ],
+        "raw_file": "grandma-agrafena-kind-r3.png",
+        "raw_sha256": "9837f234605897c028ecaec551f743f61d11053f94800524c0473828d1134e9d",
+        "postprocess": "alpha clean + trim + Lanczos resize, WebP with alpha (q90, lossless alpha)"
+      },
+      "license": "generated with Azure OpenAI Image API (deployment gpt-image-2.5-sunburst) via the azure-image-generation helper; under the Microsoft Product Terms for Azure OpenAI the customer owns the output and Microsoft claims no rights in it, so commercial use is permitted (subject to the Azure OpenAI Code of Conduct). No stock or web imagery.",
+      "created": "2026-10-08",
+      "review": {
+        "status": "approved",
+        "notes": "Clock-door portrait; identity authority for grandma variants. Real-alpha cutout re-render of approved grandma-agrafena-kind-r2-c2.png (original had a painted checkerboard)."
+      }
+    },
+    {
+      "id": "grandma-agrafena-whisper",
+      "kind": "character",
+      "file": "characters/grandma-agrafena-whisper.webp",
+      "width": 682,
+      "height": 768,
+      "transparent": true,
+      "variants": [],
+      "bytes": 127082,
+      "source": {
+        "tool": "azure-image-generation skill (generate-image.ps1)",
+        "provider": "Azure OpenAI",
+        "model": "gpt-image-2.5-sunburst (deployment)",
+        "operation": "edit",
+        "quality": "high",
+        "prompt": "Image 1 is the approved artwork and the absolute authority. Reproduce it exactly: the same subject, pose, face, expression, clothing, colours, line work, gouache texture, proportions and framing. Keep every part of the subject. Output it as a clean cutout: everything that is not the subject (including any painted checkerboard or plain backdrop) becomes fully transparent background.",
+        "derived_from": [
+          "grandma-agrafena-whisper (approved non-transparent pick, re-rendered as cutout)"
+        ],
+        "raw_file": "grandma-agrafena-whisper-r2.png",
+        "raw_sha256": "803153d37d8930481cadc238f4c9c35057ea26a2c1fb450325651627fb78b485",
+        "postprocess": "alpha clean + trim + Lanczos resize, WebP with alpha (q90, lossless alpha)"
+      },
+      "license": "generated with Azure OpenAI Image API (deployment gpt-image-2.5-sunburst) via the azure-image-generation helper; under the Microsoft Product Terms for Azure OpenAI the customer owns the output and Microsoft claims no rights in it, so commercial use is permitted (subject to the Azure OpenAI Code of Conduct). No stock or web imagery.",
+      "created": "2026-10-08",
+      "review": {
+        "status": "approved",
+        "notes": "On-model with kind variant; hand at mouth. Real-alpha cutout re-render of approved grandma-agrafena-whisper-r1-c1.png (original had a painted checkerboard)."
+      }
+    },
+    {
+      "id": "kupa",
+      "kind": "character",
+      "file": "characters/kupa.webp",
+      "width": 708,
+      "height": 1024,
+      "transparent": true,
+      "variants": [],
+      "bytes": 146552,
+      "source": {
+        "tool": "azure-image-generation skill (generate-image.ps1)",
+        "provider": "Azure OpenAI",
+        "model": "gpt-image-2.5-sunburst (deployment)",
+        "operation": "edit",
+        "quality": "high",
+        "prompt": "Image 1 is the approved artwork and the absolute authority. Reproduce it exactly: the same subject, pose, face, expression, clothing, colours, line work, gouache texture, proportions and framing. Keep every part of the subject. Output it as a clean cutout: everything that is not the subject (including any painted checkerboard or plain backdrop) becomes fully transparent background.",
+        "derived_from": [
+          "kupa (approved non-transparent pick, re-rendered as cutout)"
+        ],
+        "raw_file": "kupa-r2.png",
+        "raw_sha256": "357651cce1a12ba381022234ea325ae6fb82d0ec56d90907a26cd561fccfa90a",
+        "postprocess": "alpha clean + trim + Lanczos resize, WebP with alpha (q90, lossless alpha)"
+      },
+      "license": "generated with Azure OpenAI Image API (deployment gpt-image-2.5-sunburst) via the azure-image-generation helper; under the Microsoft Product Terms for Azure OpenAI the customer owns the output and Microsoft claims no rights in it, so commercial use is permitted (subject to the Azure OpenAI Code of Conduct). No stock or web imagery.",
+      "created": "2026-10-08",
+      "review": {
+        "status": "approved",
+        "notes": "Six arms checked: poker, log, coal shovel, kettle, two folded. Real-alpha cutout re-render of approved kupa-r1-c1.png (original had a painted checkerboard)."
+      }
+    }
+  ]
+}
