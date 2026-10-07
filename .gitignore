@@ -6,3 +6,5 @@ test-results/
 playwright-report/
 *.log
 .vite/
+.art-raw/
+__pycache__/

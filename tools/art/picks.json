@@ -1,0 +1,442 @@
+{
+  "bg-tavern-night": {
+    "pick": "bg-tavern-night-r1-c2.png",
+    "status": "approved",
+    "notes": "Stove left, 4 stools, calm right wall, clock top-right without numerals."
+  },
+  "jar-joy": {
+    "pick": "jar-joy-r1-c2.png",
+    "status": "approved",
+    "notes": "Round globe silhouette; style authority for all jars."
+  },
+  "mira-neutral": {
+    "pick": "mira-neutral-r2.png",
+    "status": "approved",
+    "notes": "Identity authority for Mira variants. Full-length. Real-alpha cutout re-render of approved mira-neutral-r1-c2.png (original had a painted checkerboard)."
+  },
+  "kupa": {
+    "pick": "kupa-r2.png",
+    "status": "approved",
+    "notes": "Six arms checked: poker, log, coal shovel, kettle, two folded. Real-alpha cutout re-render of approved kupa-r1-c1.png (original had a painted checkerboard)."
+  },
+  "grandma-agrafena-kind": {
+    "pick": "grandma-agrafena-kind-r3.png",
+    "status": "approved",
+    "notes": "Clock-door portrait; identity authority for grandma variants. Real-alpha cutout re-render of approved grandma-agrafena-kind-r2-c2.png (original had a painted checkerboard)."
+  },
+  "bg-tavern-predawn": {
+    "pick": "bg-tavern-predawn-r1-c2.png",
+    "status": "approved",
+    "notes": "Layout matches bg-tavern-night; cool dawn light."
+  },
+  "mira-smile": {
+    "pick": "mira-smile-r2.png",
+    "status": "approved",
+    "notes": "On-model with mira-neutral. Real-alpha cutout re-render of approved mira-smile-r1-c1.png (original had a painted checkerboard)."
+  },
+  "mira-worried": {
+    "pick": "mira-worried-r2.png",
+    "status": "approved",
+    "notes": "On-model with mira-neutral. Real-alpha cutout re-render of approved mira-worried-r1-c1.png (original had a painted checkerboard)."
+  },
+  "mira-determined": {
+    "pick": "mira-determined-r2.png",
+    "status": "approved",
+    "notes": "On-model; holds ladle. Real-alpha cutout re-render of approved mira-determined-r1-c1.png (original had a painted checkerboard)."
+  },
+  "grandma-agrafena-whisper": {
+    "pick": "grandma-agrafena-whisper-r2.png",
+    "status": "approved",
+    "notes": "On-model with kind variant; hand at mouth. Real-alpha cutout re-render of approved grandma-agrafena-whisper-r1-c1.png (original had a painted checkerboard)."
+  },
+  "jar-sadness": {
+    "pick": "jar-sadness-r1-c1.png",
+    "status": "approved",
+    "notes": "Teardrop silhouette."
+  },
+  "jar-anger": {
+    "pick": "jar-anger-r1-c1.png",
+    "status": "approved",
+    "notes": "Squat hexagonal iron-banded silhouette."
+  },
+  "jar-fear": {
+    "pick": "jar-fear-r1-c1.png",
+    "status": "approved",
+    "notes": "Narrow bottle with crooked neck."
+  },
+  "jar-nostalgia": {
+    "pick": "jar-nostalgia-r1-c1.png",
+    "status": "approved",
+    "notes": "Jam jar with checked cloth cover."
+  },
+  "jar-loneliness": {
+    "pick": "jar-loneliness-r1-c1.png",
+    "status": "approved",
+    "notes": "Thin tube on tall stem, one firefly."
+  },
+  "jar-trepet": {
+    "pick": "jar-trepet-r1-c1.png",
+    "status": "approved",
+    "notes": "Double-gourd, gold and violet fireflies."
+  },
+  "jar-hope": {
+    "pick": "jar-hope-r1-c1.png",
+    "status": "approved",
+    "notes": "Teardrop with star stopper and glow; distinguished from sadness by stopper and warm glow."
+  },
+  "jar-amber-joy": {
+    "pick": "jar-amber-joy-r1-c1.png",
+    "status": "approved",
+    "notes": "Oval amber capsule, sleeping firefly."
+  },
+  "jar-burning-joy": {
+    "pick": "jar-burning-joy-r1-c1.png",
+    "status": "approved",
+    "notes": "Sooty globe with smoke wisp."
+  },
+  "jar-sediment": {
+    "pick": "jar-sediment-r1-c1.png",
+    "status": "approved",
+    "notes": "Low flat stackable jar with dregs."
+  },
+  "jar-murky-overlay": {
+    "pick": "jar-murky-overlay-r1-c2.png",
+    "status": "approved",
+    "notes": "Soft semi-transparent haze for compositing."
+  },
+  "jar-empty": {
+    "pick": "jar-empty-r2-c2.png",
+    "status": "approved",
+    "notes": "Empty translucent globe jar; r1 rejected (contained a firefly)."
+  },
+  "guest-forest-1": {
+    "pick": "guest-forest-1-r1-c2.png",
+    "status": "approved",
+    "notes": "Reviewed: on-brief, clean alpha, no text."
+  },
+  "guest-forest-2": {
+    "pick": "guest-forest-2-r1-c1.png",
+    "status": "approved",
+    "notes": "Reviewed: on-brief, clean alpha, no text."
+  },
+  "guest-forest-3": {
+    "pick": "guest-forest-3-r1-c2.png",
+    "status": "approved",
+    "notes": "Reviewed: on-brief, clean alpha, no text."
+  },
+  "guest-river-1": {
+    "pick": "guest-river-1-r1-c1.png",
+    "status": "approved",
+    "notes": "Reviewed: on-brief, clean alpha, no text."
+  },
+  "guest-river-2": {
+    "pick": "guest-river-2-r1-c1.png",
+    "status": "approved",
+    "notes": "Reviewed: on-brief, clean alpha, no text."
+  },
+  "guest-river-3": {
+    "pick": "guest-river-3-r1-c1.png",
+    "status": "approved",
+    "notes": "Reviewed: on-brief, clean alpha, no text."
+  },
+  "guest-city-1": {
+    "pick": "guest-city-1-r1-c2.png",
+    "status": "approved",
+    "notes": "Reviewed: on-brief, clean alpha, no text."
+  },
+  "guest-city-2": {
+    "pick": "guest-city-2-r1-c2.png",
+    "status": "approved",
+    "notes": "Reviewed: on-brief, clean alpha, no text."
+  },
+  "guest-city-3": {
+    "pick": "guest-city-3-r1-c2.png",
+    "status": "approved",
+    "notes": "Reviewed: on-brief, clean alpha, no text."
+  },
+  "guest-memorial-1": {
+    "pick": "guest-memorial-1-r1-c1.png",
+    "status": "approved",
+    "notes": "Faceless shadow with candle; gentle."
+  },
+  "guest-memorial-2": {
+    "pick": "guest-memorial-2-r1-c1.png",
+    "status": "approved",
+    "notes": "Faceless shadow, willow sprig."
+  },
+  "guest-memorial-3": {
+    "pick": "guest-memorial-3-r1-c1.png",
+    "status": "approved",
+    "notes": "Faceless child spirit (c2 rejected: hinted eyes)."
+  },
+  "dish-nimbus-ramen": {
+    "pick": "dish-nimbus-ramen-r1-c2.png",
+    "status": "approved",
+    "notes": "Reviewed: on-brief, clean alpha, no text."
+  },
+  "icon-heat": {
+    "pick": "icon-heat-r1-c1.png",
+    "status": "approved",
+    "notes": "Reviewed: on-brief, clean alpha, no text."
+  },
+  "ui-frame": {
+    "pick": "ui-frame-r1-c2.png",
+    "status": "approved",
+    "notes": "Use as CSS border-image (slice ~22%)."
+  },
+  "ui-button": {
+    "pick": "ui-button-r1-c1.png",
+    "status": "approved",
+    "notes": "Reviewed: on-brief, clean alpha, no text."
+  },
+  "card-story-back": {
+    "pick": "card-story-back-r1-c1.png",
+    "status": "approved",
+    "notes": "Reviewed: on-brief, clean alpha, no text."
+  },
+  "card-story-frame": {
+    "pick": "card-story-frame-r1-c2.png",
+    "status": "approved",
+    "notes": "Reviewed: on-brief, clean alpha, no text."
+  },
+  "ui-panel-paper": {
+    "pick": "ui-panel-paper-r1-c2.png",
+    "status": "approved",
+    "notes": "Made seamless by half-offset cross-fade."
+  },
+  "bg-mezhsvetye-day": {
+    "pick": "bg-mezhsvetye-day-r1-c1.png",
+    "status": "approved",
+    "notes": "Same layout as tavern night; map on counter, tram-stop sign outside right window."
+  },
+  "dish-amber-ryapushka": {
+    "pick": "dish-amber-ryapushka-r1-c1.png",
+    "status": "approved",
+    "notes": "Reviewed: matches dish style authority, clean alpha, no text."
+  },
+  "dish-courage-tea": {
+    "pick": "dish-courage-tea-r1-c2.png",
+    "status": "approved",
+    "notes": "Reviewed: matches dish style authority, clean alpha, no text."
+  },
+  "dish-empty-shchi": {
+    "pick": "dish-empty-shchi-r1-c1.png",
+    "status": "approved",
+    "notes": "Reviewed: matches dish style authority, clean alpha, no text."
+  },
+  "dish-fog-ukha": {
+    "pick": "dish-fog-ukha-r1-c1.png",
+    "status": "approved",
+    "notes": "Reviewed: matches dish style authority, clean alpha, no text."
+  },
+  "dish-forgotten-names-kissel": {
+    "pick": "dish-forgotten-names-kissel-r1-c2.png",
+    "status": "approved",
+    "notes": "Reviewed: matches dish style authority, clean alpha, no text."
+  },
+  "dish-memory-pie": {
+    "pick": "dish-memory-pie-r1-c2.png",
+    "status": "approved",
+    "notes": "Reviewed: matches dish style authority, clean alpha, no text."
+  },
+  "dish-postcard-sbiten": {
+    "pick": "dish-postcard-sbiten-r1-c2.png",
+    "status": "approved",
+    "notes": "Reviewed: matches dish style authority, clean alpha, no text."
+  },
+  "dish-pryazhenets": {
+    "pick": "dish-pryazhenets-r1-c1.png",
+    "status": "approved",
+    "notes": "Reviewed: matches dish style authority, clean alpha, no text."
+  },
+  "dish-smoke-tea": {
+    "pick": "dish-smoke-tea-r1-c2.png",
+    "status": "approved",
+    "notes": "Reviewed: matches dish style authority, clean alpha, no text."
+  },
+  "dish-tar-gingerbread": {
+    "pick": "dish-tar-gingerbread-r1-c1.png",
+    "status": "approved",
+    "notes": "Reviewed: matches dish style authority, clean alpha, no text."
+  },
+  "dish-thunder-perepechi": {
+    "pick": "dish-thunder-perepechi-r1-c1.png",
+    "status": "approved",
+    "notes": "Reviewed: matches dish style authority, clean alpha, no text."
+  },
+  "dish-tram-ticket-boltushka": {
+    "pick": "dish-tram-ticket-boltushka-r1-c2.png",
+    "status": "approved",
+    "notes": "Reviewed: matches dish style authority, clean alpha, no text."
+  },
+  "icon-broom": {
+    "pick": "icon-broom-r1-c2.png",
+    "status": "approved",
+    "notes": "Reviewed at 48-256 px: readable silhouette, matches icon style authority, no text."
+  },
+  "icon-burner": {
+    "pick": "icon-burner-r1-c2.png",
+    "status": "approved",
+    "notes": "Reviewed at 48-256 px: readable silhouette, matches icon style authority, no text."
+  },
+  "icon-cuckoo": {
+    "pick": "icon-cuckoo-r1-c2.png",
+    "status": "approved",
+    "notes": "Reviewed at 48-256 px: readable silhouette, matches icon style authority, no text."
+  },
+  "icon-empty-gold": {
+    "pick": "icon-empty-gold-r1-c1.png",
+    "status": "approved",
+    "notes": "Reviewed at 48-256 px: readable silhouette, matches icon style authority, no text."
+  },
+  "icon-key": {
+    "pick": "icon-key-r1-c1.png",
+    "status": "approved",
+    "notes": "Reviewed at 48-256 px: readable silhouette, matches icon style authority, no text."
+  },
+  "icon-memory-thread": {
+    "pick": "icon-memory-thread-r1-c2.png",
+    "status": "approved",
+    "notes": "Reviewed at 48-256 px: readable silhouette, matches icon style authority, no text."
+  },
+  "icon-patience": {
+    "pick": "icon-patience-r1-c2.png",
+    "status": "approved",
+    "notes": "Reviewed at 48-256 px: readable silhouette, matches icon style authority, no text."
+  },
+  "icon-silence-jar": {
+    "pick": "icon-silence-jar-r1-c1.png",
+    "status": "approved",
+    "notes": "Reviewed at 48-256 px: readable silhouette, matches icon style authority, no text."
+  },
+  "icon-sparks": {
+    "pick": "icon-sparks-r1-c1.png",
+    "status": "approved",
+    "notes": "Reviewed at 48-256 px: readable silhouette, matches icon style authority, no text."
+  },
+  "icon-story-card": {
+    "pick": "icon-story-card-r1-c1.png",
+    "status": "approved",
+    "notes": "Reviewed at 48-256 px: readable silhouette, matches icon style authority, no text."
+  },
+  "icon-tram-ticket": {
+    "pick": "icon-tram-ticket-r1-c2.png",
+    "status": "approved",
+    "notes": "Reviewed at 48-256 px: readable silhouette, matches icon style authority, no text."
+  },
+  "icon-tray": {
+    "pick": "icon-tray-r1-c2.png",
+    "status": "approved",
+    "notes": "Reviewed at 48-256 px: readable silhouette, matches icon style authority, no text."
+  },
+  "icon-upgrade-chair": {
+    "pick": "icon-upgrade-chair-r1-c2.png",
+    "status": "approved",
+    "notes": "Reviewed at 48-256 px: readable silhouette, matches icon style authority, no text."
+  },
+  "icon-upgrade-double-stove": {
+    "pick": "icon-upgrade-double-stove-r1-c2.png",
+    "status": "approved",
+    "notes": "Reviewed at 48-256 px: readable silhouette, matches icon style authority, no text."
+  },
+  "icon-upgrade-mittens": {
+    "pick": "icon-upgrade-mittens-r1-c2.png",
+    "status": "approved",
+    "notes": "Reviewed at 48-256 px: readable silhouette, matches icon style authority, no text."
+  },
+  "icon-upgrade-shelf": {
+    "pick": "icon-upgrade-shelf-r1-c1.png",
+    "status": "approved",
+    "notes": "Reviewed at 48-256 px: readable silhouette, matches icon style authority, no text."
+  },
+  "icon-water": {
+    "pick": "icon-water-r1-c1.png",
+    "status": "approved",
+    "notes": "Reviewed at 48-256 px: readable silhouette, matches icon style authority, no text."
+  },
+  "door-city": {
+    "pick": "door-city-r1-c2.png",
+    "status": "approved",
+    "notes": "Reviewed at 48-256 px: readable silhouette, matches icon style authority, no text."
+  },
+  "door-forest": {
+    "pick": "door-forest-r1-c1.png",
+    "status": "approved",
+    "notes": "Reviewed at 48-256 px: readable silhouette, matches icon style authority, no text."
+  },
+  "door-memorial": {
+    "pick": "door-memorial-r1-c1.png",
+    "status": "approved",
+    "notes": "Reviewed at 48-256 px: readable silhouette, matches icon style authority, no text."
+  },
+  "door-river": {
+    "pick": "door-river-r1-c1.png",
+    "status": "approved",
+    "notes": "Reviewed at 48-256 px: readable silhouette, matches icon style authority, no text."
+  },
+  "commis-mirror": {
+    "pick": "commis-mirror-r1-c2.png",
+    "status": "approved",
+    "notes": "Grey peddler with mirror box."
+  },
+  "tram33-spirit": {
+    "pick": "tram33-spirit-r1-c2.png",
+    "status": "approved",
+    "notes": "Headlamp head, conductor coat, trolley pole."
+  },
+  "prosha": {
+    "pick": "prosha-r1-c1.png",
+    "status": "approved",
+    "notes": "Domovoy with broom and keys."
+  },
+  "guardian": {
+    "pick": "guardian-r1-c1.png",
+    "status": "approved",
+    "notes": "Four-patch cloak (forest/river/city/candle), signpost antlers, sun in chest."
+  },
+  "tarot-guest": {
+    "pick": "tarot-guest-r1-c1.png",
+    "status": "approved",
+    "notes": "Visitor silhouette in doorway."
+  },
+  "tarot-whisper": {
+    "pick": "tarot-whisper-r1-c1.png",
+    "status": "approved",
+    "notes": "Cuckoo at clock door with golden whisper ribbon."
+  },
+  "tarot-wind": {
+    "pick": "tarot-wind-r1-c2.png",
+    "status": "approved",
+    "notes": "Wind spirit carrying leaves."
+  },
+  "title-logo-ornament": {
+    "pick": "title-logo-ornament-r1-c2.png",
+    "status": "approved",
+    "notes": "Empty cream band for UI title text."
+  },
+  "door-city-closed": {
+    "pick": "door-city-closed-r1-c1.png",
+    "status": "approved",
+    "notes": "Closed variant of door-city."
+  },
+  "door-forest-closed": {
+    "pick": "door-forest-closed-r1-c2.png",
+    "status": "approved",
+    "notes": "Closed variant of door-forest."
+  },
+  "door-memorial-closed": {
+    "pick": "door-memorial-closed-r1-c2.png",
+    "status": "approved",
+    "notes": "Closed variant of door-memorial."
+  },
+  "door-river-closed": {
+    "pick": "door-river-closed-r1-c2.png",
+    "status": "approved",
+    "notes": "Closed variant of door-river."
+  },
+  "bg-door-forest": {
+    "pick": "bg-door-forest-r1-c1.png",
+    "status": "approved",
+    "notes": "Forest seen through carved tavern doors."
+  }
+}
