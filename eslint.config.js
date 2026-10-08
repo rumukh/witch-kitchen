@@ -6,7 +6,7 @@ export default tseslint.config(
   js.configs.recommended,
   ...tseslint.configs.recommended,
   {
-    languageOptions: { globals: { window: 'readonly', document: 'readonly', console: 'readonly', process: 'readonly', setTimeout: 'readonly', clearTimeout: 'readonly', URL: 'readonly', fetch: 'readonly', performance: 'readonly', structuredClone: 'readonly', require: 'readonly', __dirname: 'readonly', Response: 'readonly' } },
+    languageOptions: { globals: { window: 'readonly', document: 'readonly', console: 'readonly', process: 'readonly', setTimeout: 'readonly', clearTimeout: 'readonly', URL: 'readonly', fetch: 'readonly', performance: 'readonly', structuredClone: 'readonly', require: 'readonly', __dirname: 'readonly', Response: 'readonly', navigator: 'readonly', indexedDB: 'readonly', location: 'readonly' } },
     rules: {
       '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_', varsIgnorePattern: '^_' }],
       '@typescript-eslint/no-require-imports': 'off',

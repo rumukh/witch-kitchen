@@ -1,6 +1,6 @@
 // npm run build:win — portable Windows x64 Electron archive wrapping dist/web.
 import { execSync } from 'node:child_process';
-import { cpSync, existsSync, mkdirSync, rmSync, statSync, writeFileSync } from 'node:fs';
+import { cpSync, existsSync, mkdirSync, readFileSync, rmSync, statSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { packager } from '@electron/packager';
 
@@ -12,7 +12,7 @@ cpSync('electron/main.cjs', join(stage, 'main.cjs'));
 cpSync('electron/preload.cjs', join(stage, 'preload.cjs'));
 cpSync('dist/web', join(stage, 'web'), { recursive: true });
 writeFileSync(join(stage, 'package.json'), JSON.stringify({ name: 'krestets', productName: 'Krestets', version: '1.0.0', main: 'main.cjs', private: true }, null, 2));
-const electronVersion = JSON.parse(execSync('npx electron --version', { encoding: 'utf8' }).trim().replace(/^v/, '"') + '"');
+const electronVersion = JSON.parse(readFileSync('node_modules/electron/package.json', 'utf8')).version;
 rmSync('dist/win', { recursive: true, force: true });
 const [out] = await packager({
   dir: stage,
