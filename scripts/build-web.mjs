@@ -21,5 +21,6 @@ const files = (p) => (statSync(p).isDirectory() ? readdirSync(p).reduce((a, f) =
 writeFileSync(join(out, 'build.json'), JSON.stringify({ game: '1.0.0', engine: '0abd61b5a679020bfb66bf4db24888df9e339d4d', built: new Date().toISOString(), files: files(out), bytes: size(out) }, null, 2));
 mkdirSync('release', { recursive: true });
 rmSync('release/krestets-web.zip', { force: true });
-execSync(`tar -a -c -f release/krestets-web.zip -C ${out} .`, { stdio: 'inherit' });
+if (process.platform === 'win32') execSync(`tar -a -c -f release/krestets-web.zip -C ${out} .`, { stdio: 'inherit' });
+else execSync(`cd ${out} && zip -qr ../../release/krestets-web.zip .`, { stdio: 'inherit', shell: '/bin/sh' });
 console.log(`web build: ${out} (${files(out)} files, ${(size(out) / 1048576).toFixed(1)} MiB) → release/krestets-web.zip (${(statSync('release/krestets-web.zip').size / 1048576).toFixed(1)} MiB)`);
