@@ -60,9 +60,11 @@ Window minimum 1280×720, F11 fullscreen, single-instance lock.
 
 ## Known gaps and TODO stubs
 
-- Music cues (night calm/middle/predawn, Межсветье, title, endings) are still rendering in the
-  audio session; every missing cue is silent and the game is fully playable. Whispers are
-  synthetic TTS pending PM approval (Q40).
+- Music: all requested cues delivered (audio batch 2, b993a78). `node scripts/probe-music.mjs`
+  on the web build fetches music-title → music-night-calm → music-night-middle (Wind) →
+  music-night-predawn (predawn chime) → music-mezhsvetye, with no page errors. Whispers are
+  synthetic TTS pending PM approval (Q40). Ending cues play as authored loops via AEGIS
+  atmosphere (no one-shot music API at the pinned engine).
 - Sets (сервизы) are a `TODO` stub per Д20.
 - Not exercised here: clean Windows 10 22H2/11 VMs with networking disabled at the OS level,
   process kill during file writes and injected sharing violations (K24/K25). The design uses

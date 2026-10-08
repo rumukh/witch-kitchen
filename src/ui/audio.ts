@@ -108,7 +108,7 @@ export class AudioDirector {
     if (id === this.musicId) return;
     this.musicId = id;
     if (!this.main || !this.unlocked) return;
-    void this.main.setAtmosphere(id && this.available.has(id) ? { packId: PACK, asset: id, fadeSeconds: 2.5 } : null).catch(() => undefined);
+    void this.main.setAtmosphere(id && this.available.has(id) ? { packId: PACK, asset: id, fadeSeconds: 1.5 } : null).catch(() => undefined);
   }
 
   private setAmbience(id: string | null): void {
