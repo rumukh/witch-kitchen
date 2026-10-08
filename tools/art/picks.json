@@ -438,5 +438,100 @@
     "pick": "bg-door-forest-r1-c1.png",
     "status": "approved",
     "notes": "Forest seen through carved tavern doors."
+  },
+  "icon-story-half": {
+    "pick": "icon-story-half-r1-c2.png",
+    "status": "approved",
+    "notes": "Torn story card (half)."
+  },
+  "icon-mutnoe": {
+    "pick": "icon-mutnoe-r1-c2.png",
+    "status": "approved",
+    "notes": "Bowl with murky haze."
+  },
+  "tarot-back": {
+    "pick": "tarot-back-r1-c1.png",
+    "status": "approved",
+    "notes": "Moon and clock card back, no text."
+  },
+  "bg-door-city": {
+    "pick": "bg-door-city-r1-c1.png",
+    "status": "approved",
+    "notes": "Rain-wet tram street with amber lamps through carved doors."
+  },
+  "bg-title": {
+    "pick": "bg-title-r1-c1.png",
+    "status": "approved",
+    "notes": "Tavern at crossroads of forest, river, city and candlelit memorial grove; signpost blank."
+  },
+  "nameless-guest": {
+    "pick": "nameless-guest-r2-c1.png",
+    "status": "approved",
+    "notes": "Seated hooded figure; starry negative space instead of a face, gentle halo. Not scary."
+  },
+  "dubodyor": {
+    "pick": "dubodyor-r2-c1.png",
+    "status": "approved",
+    "notes": "Bark-and-moss leshy with antler branches, staff, bast shoes."
+  },
+  "tikhaya": {
+    "pick": "tikhaya-r2-c2.png",
+    "status": "approved",
+    "notes": "River bereginya with water-lilies and jug, watery hem."
+  },
+  "bg-door-river": {
+    "pick": "bg-door-river-r2-c2.png",
+    "status": "approved",
+    "notes": "Moonlit turquoise lake with pier through carved doors."
+  },
+  "bg-door-memorial": {
+    "pick": "bg-door-memorial-r2-c2.png",
+    "status": "approved",
+    "notes": "Misty birch hill with candles; no graves."
+  },
+  "ending-letter": {
+    "pick": "ending-letter-r1-c1.png",
+    "status": "approved",
+    "notes": "Sealed letter, stopped cuckoo clock, candle; domovoy and cat dozing. No text."
+  },
+  "hud-clock-face": {
+    "pick": "hud-clock-face-r1-c1.png",
+    "status": "approved",
+    "notes": "Cuckoo clock body with blank dot dial, no hands; centre pivot."
+  },
+  "hud-clock-hands": {
+    "pick": "hud-clock-hands-r1-c1.png",
+    "status": "approved",
+    "notes": "Single ornate hand; rotate around the lower boss."
+  },
+  "hud-pendulum": {
+    "pick": "hud-pendulum-r1-c2.png",
+    "status": "approved",
+    "notes": "Brass sun pendulum; pivot at top ring."
+  },
+  "hud-stove-lit": {
+    "pick": "hud-stove-lit-r1-c1.png",
+    "status": "approved",
+    "notes": "Whitewashed Russian stove with painted ornament, fire and pot."
+  },
+  "ending-wound": {
+    "pick": "ending-wound-r4-c1.png",
+    "status": "approved",
+    "notes": "v2 with refs: grandmother smiling inside the glowing clock door as its heart; Mira the keeper with candle. Gentle."
+  },
+  "ending-remember": {
+    "pick": "ending-remember-r4-c1.png",
+    "status": "approved",
+    "notes": "v2 with refs: grandmother steps out of the clock, Mira runs to her; the nameless guest glows with a remembered face."
+  },
+  "ending-new-spring": {
+    "pick": "ending-new-spring-r4-c2.png",
+    "status": "approved",
+    "notes": "v2 with refs: dawn feast, guardian blessing, Mira raising a cup, silver memorial shadows at the table."
+  },
+  "hud-stove-idle": {
+    "pick": "hud-stove-idle-r1-c2.png",
+    "status": "approved",
+    "notes": "Same stove as hud-stove-lit, embers only and pot steaming; for idle state."
   }
 }
