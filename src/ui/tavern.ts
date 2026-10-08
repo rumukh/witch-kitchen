@@ -78,7 +78,7 @@ function hud(ctx: Ctx): HTMLElement {
   for (const ch of chimes(s, ctx.C)) {
     const at = ch.t + s.nt.shift;
     const fired = s.nt.fired.includes(ch.id);
-    track.append(h('span', { class: `chime-mark ${fired ? 'fired' : ''}`, style: `left:${(100 * at) / dawn}%`, title: t(`hud.chime.${ch.id}`) }, t(`hud.chime.${ch.id}`)));
+    track.append(h('span', { class: `chime-mark ${fired ? 'fired' : ''}`, style: `left:${(100 * at) / dawn}%`, title: t(`hud.chime.${ch.id}`) }, t(`hud.chimeShort.${ch.id}`)));
   }
   const stat = (icon: string, label: string, value: string | number, id: string) =>
     h('div', { class: `stat stat-${id}`, title: label, 'data-testid': `stat-${id}` }, ctx.art.icon(icon), h('span', { class: 'stat-label' }, label), h('b', {}, String(value)));
@@ -97,8 +97,18 @@ function hud(ctx: Ctx): HTMLElement {
         return true;
       })
     : null;
+  const face = ctx.art.img('hud-clock-face', 'clock-face');
+  const clockArt = face
+    ? h('div', { class: 'clock-art', 'aria-hidden': 'true' }, face,
+        ctx.art.img('hud-clock-hands', 'clock-hand') ? (() => {
+          const hand = ctx.art.img('hud-clock-hands', 'clock-hand')!;
+          hand.style.transform = `rotate(${(360 * s.nt.tick) / Math.max(1, dawn)}deg)`;
+          return hand;
+        })() : null,
+        s.night > 1 ? ctx.art.img('hud-pendulum', 'clock-pendulum') : null)
+    : null;
   return h('header', { class: 'hud' },
-    h('div', { class: 'hud-night' }, h('strong', {}, t('hud.night', { n: s.night })), h('span', {}, t('hud.act', { n: act }))),
+    h('div', { class: 'hud-night' }, h('strong', {}, t('hud.night', { n: s.night })), h('span', {}, t('hud.act', { n: act })), clockArt),
     h('div', { class: 'hud-clock', 'data-target': 'hud-clock', 'data-testid': 'clock' },
       h('div', { class: 'clock-text' }, t('hud.tick', { tick: s.nt.tick, dawn }), ' · ', t('hud.left', { n: dawn - s.nt.tick })),
       track, windBtn,
@@ -135,7 +145,7 @@ function stove(ctx: Ctx): HTMLElement {
   s.burners.forEach((d, b) => burners.append(burnerCard(ctx, d, b)));
   return h('section', { class: 'panel stove', 'data-target': 'stove', 'aria-label': t('area.stove') },
     h('h2', {}, t('area.stove')),
-    ctx.art.img(s.nt.cooked ? 'stove-lit' : 'stove-idle', 'stove-art') ?? h('div', { class: `stove-art placeholder-stove ${s.burners.some((x) => x && !x.ok) ? 'lit' : ''}` }),
+    ctx.art.img(s.nt.cooked ? 'hud-stove-lit' : 'hud-stove-idle', 'stove-art') ?? h('div', { class: `stove-art placeholder-stove ${s.burners.some((x) => x && !x.ok) ? 'lit' : ''}` }),
     heat,
     burners,
     actButton(ctx, t('act.kupa'), { t: 'kupa' }, { 'data-testid': 'kupa', class: 'kupa-btn' }),
@@ -269,12 +279,16 @@ export function renderShelfOnly(ctx: Ctx): HTMLElement {
   return shelf(ctx);
 }
 
+let shelfCleanups: (() => void)[] = [];
+
 function shelf(ctx: Ctx): HTMLElement {
+  for (const c of shelfCleanups) c();
+  shelfCleanups = [];
   const s = ctx.state;
   const t = ctx.t;
   const ui = ctx.ui;
   const grid = h('div', { class: `shelf-grid cols-${s.cols}`, role: 'group', 'aria-label': t('area.shelf') });
-  const cleanups: (() => void)[] = [];
+  const cleanups = shelfCleanups;
   let updateSel = (): void => undefined;
   const placement = createPlacement({
     validate: (item, slot) => (item === slot ? { ok: false, messageKey: 'bad-cell' } : { ok: true }),

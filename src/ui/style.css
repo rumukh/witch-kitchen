@@ -89,7 +89,7 @@ dialog.coach { max-width: 34rem; }
 .clock-track { position: relative; display: flex; gap: 2px; height: 1.6rem; margin: 0.1rem 0 1.1rem; }
 .pip { flex: 1; background: #d9c69d; border-radius: 3px; }
 .pip.past { background: var(--wood); }
-.chime-mark { position: absolute; top: 1.6rem; transform: translateX(-100%); font-size: 0.68rem; white-space: nowrap; color: var(--ink-soft); }
+.chime-mark { position: absolute; top: 1.6rem; transform: translateX(-50%); font-size: 0.68rem; white-space: nowrap; color: var(--ink-soft); }
 .chime-mark::before { content: '▲'; margin-right: 0.15rem; }
 .chime-mark.fired { color: var(--accent); font-weight: 700; }
 .hud-stats { display: flex; flex-wrap: wrap; gap: 0.25rem 0.7rem; }
@@ -248,3 +248,26 @@ dialog.coach { max-width: 34rem; }
 }
 [data-art='on'] button.primary { background-image: var(--btn-img, none), linear-gradient(#f7d58f, #e8b85a); background-size: 100% 100%; background-blend-mode: soft-light; }
 .tavern .panel { background-color: color-mix(in srgb, var(--paper) 84%, transparent); }
+.hud-night { position: relative; padding-right: 3.6rem; }
+.clock-art { position: absolute; right: -0.2rem; top: -0.3rem; width: 3.4rem; height: 4.2rem; }
+.clock-face { width: 100%; height: 100%; object-fit: contain; }
+.clock-hand { position: absolute; left: 50%; top: 18%; width: 0.9rem; height: 1.6rem; margin-left: -0.45rem; object-fit: contain; transform-origin: 50% 88%; transition: transform 0.6s ease; }
+.clock-pendulum { position: absolute; left: 50%; top: 70%; width: 0.9rem; margin-left: -0.45rem; transform-origin: 50% 0; animation: swing 2s ease-in-out infinite alternate; }
+@keyframes swing { from { transform: rotate(-8deg); } to { transform: rotate(8deg); } }
+.tavern.nameless-present .clock-pendulum { animation-play-state: paused; }
+.stove-art { max-height: 9rem; }
+/* UI-09: never clip at 1280x720 with 100–150% text: columns shrink, panels scroll. */
+.tavern-main { grid-template-columns: minmax(0, 1fr) minmax(0, 2.1fr) minmax(0, 1.35fr); }
+.seats { grid-template-columns: repeat(auto-fit, minmax(min(11rem, 100%), 1fr)); }
+.stove-art { max-height: 110px; }
+.placeholder-stove { height: 72px; }
+.guest-art { width: 72px; height: 72px; }
+.jar-img, .jar-svg { width: 46px; height: 46px; }
+.cell { min-height: 84px; min-width: 0; }
+.cell-label { overflow-wrap: anywhere; }
+.hud { grid-template-columns: auto minmax(0, 1.4fr) minmax(0, 2fr) auto auto; }
+.hud-stats { min-width: 0; }
+.grandma-hud { min-width: 0; }
+.day-main { grid-template-columns: minmax(10rem, 14rem) minmax(0, 1fr); }
+.shop-item { grid-template-columns: auto minmax(0, 1fr) auto auto; }
+.recipe { grid-template-columns: auto minmax(8rem, 14rem) minmax(0, 1fr) auto; }

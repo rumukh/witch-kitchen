@@ -390,7 +390,13 @@ export class App {
 
   async act(a: Action): Promise<boolean> {
     if (!this.session || this.paused) return false;
-    const r = await this.session.dispatch(a);
+    let r = await this.session.dispatch(a);
+    // A strict checkpoint may still be writing: wait for the barrier instead of failing the input.
+    for (let i = 0; i < 100 && !r.ok && !r.progress.accepted && /busy|pending|stale|revision/i.test(r.error.code); i++) {
+      await new Promise((res) => setTimeout(res, 25));
+      if (!this.session) return false;
+      r = await this.session.dispatch(a);
+    }
     if (!r.ok) {
       const key = r.error.code.startsWith('rule.') ? r.error.code : `rule.${r.error.code}`;
       if (r.progress.accepted) return true;
@@ -427,7 +433,8 @@ export class App {
     } finally {
       this.scenePlaying = false;
     }
-    this.rerender();
+    // Never spin: if scenes remain (e.g. a failed save blocked acknowledgement), try again later.
+    setTimeout(() => this.rerender(), 50);
   }
 
   private onKey(e: KeyboardEvent): void {

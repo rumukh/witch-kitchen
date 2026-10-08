@@ -17,8 +17,8 @@ await page.locator('[data-testid="choice-0"]').click();
 const log = [];
 for (let i = 0; i < Number(process.argv[3] ?? 600); i++) {
   try {
-    const r = await step(page);
-    log.push(r);
+    const r = await step(page); if (r === 'retry') throw new Error('retry');
+    log.push(r); console.log(i, r, Math.round(performance.now()/1000), await page.locator('.clock-text').textContent().catch(()=>'-'));
     if (r === 'day' && !(await page.locator('dialog[open]').count())) {
       await page.locator('[data-testid="next-night"]').click();
       log.push('NEXT');
@@ -33,4 +33,6 @@ for (let i = 0; i < Number(process.argv[3] ?? 600); i++) {
 }
 console.log('steps', log.length, log.filter((x) => x === 'NEXT').length, 'nights advanced');
 await browser.close();
+
+
 

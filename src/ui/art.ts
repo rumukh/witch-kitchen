@@ -67,7 +67,7 @@ export class ArtLibrary {
   img(id: string, cls: string, alt = ''): HTMLImageElement | null {
     const url = this.url(id);
     if (!url) return null;
-    return h('img', { src: url, class: cls, alt, draggable: 'false', decoding: 'async', loading: 'lazy' });
+    return h('img', { src: url, class: cls, alt, draggable: 'false', decoding: 'async' });
   }
 
   jar(kind: Kind, pure: boolean): HTMLElement | null {
