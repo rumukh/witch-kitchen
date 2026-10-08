@@ -1,0 +1,26 @@
+{
+  "citySparks": { "100": 12, "75": 10, "50": 8, "25": 6 },
+  "satedPayFactor": 0.5,
+  "fullStoryMinQuality": 75,
+  "prices": {
+    "shelf":         { "sparks": 45 },
+    "chair":         { "sparks": 60 },
+    "mittens":       { "sparks": 50 },
+    "double_burner": { "sparks": 90 },
+    "silence_jar":   { "sparks": 80, "stories": 1 }
+  },
+  "mirrorTrade": { "stories": 3, "keys": 1, "once": true },
+  "murky": { "sparks": 5, "night": 8 },
+  "doors": {
+    "storiesToOpen": 4,
+    "forest":   { "heatPerClean": 1, "maxPerNight": 2 },
+    "river":    { "waterAtNightStart": 1 },
+    "city":     { "sparksBonusPercent": 25 },
+    "memorial": { "storyPerSatisfied": 1 }
+  },
+  "storiesPerWorld": 6,
+  "fragmentsPerStory": 3,
+  "halvesPerStory": 2,
+  "mittensBonus": 1,
+  "kupaReward": { "night": 9, "recipe": "courage_tea", "grants": "mittens", "ifOwnedStartHeat": 1 }
+}

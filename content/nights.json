@@ -1,0 +1,17 @@
+{
+  "campaignNights": 12,
+  "acts": [ { "act": 1, "from": 1, "to": 4 }, { "act": 2, "from": 5, "to": 9 }, { "act": 3, "from": 10, "to": 12 } ],
+  "modes": {
+    "standard": { "ticks": 15, "patienceMult": 1.0, "winding": true,  "guarantees": true },
+    "granny":   { "ticks": 18, "patienceMult": 1.3, "winding": true,  "guarantees": true },
+    "wolf":     { "ticks": 12, "patienceMult": 0.7, "winding": false, "guarantees": false }
+  },
+  "waves": [2, 5, 8],
+  "events": { "wind": 5, "midnight": 8, "predawnBeforeDawn": 3 },
+  "tutorial": { "night": 1, "ticks": 10, "secondGuestTick": 3, "noChimes": true, "recipes": ["smoke_tea"] },
+  "patience": { "quarters": 4, "doorMult": 0.5, "predawnMult": 2, "namelessMult": 1.5 },
+  "start": { "heat": 1, "heatMax": 5, "threads": 3, "seats": 3, "shelfCols": 3, "burners": 1, "waterMax": 3,
+             "shelf": [ { "kind": "sadness", "pure": true, "cell": 4 } ] },
+  "fullPaletteFromNight": 5,
+  "droughtNight": 7
+}

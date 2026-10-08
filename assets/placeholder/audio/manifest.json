@@ -1,0 +1,1 @@
+{ "schema": "krestets-audio-manifest/1", "note": "Placeholder layer: empty means silent fallback. Delivered cues in assets/audio/manifest.json override this list.", "cues": [] }

@@ -1,0 +1,26 @@
+{
+  "slots": ["s0", "s2", "s5", "s8"],
+  "slotTicks": { "s0": 0, "s2": 2, "s5": 5, "s8": 8 },
+  "windSlot": "s5",
+  "lineMin": 2,
+  "windowNights": 3,
+  "storyGuests": [
+    { "night": 1, "slot": "s0", "guest": "tutorialA" },
+    { "night": 1, "slot": "s2", "guest": "tutorialB", "tick": 3 },
+    { "night": 4, "slot": "s2", "guest": "tikhaya" },
+    { "night": 5, "slot": "s2", "guest": "tikhaya", "ifRepeat": "v3" },
+    { "night": 7, "slot": "s0", "guest": "dubodyor" },
+    { "night": 7, "slot": "s2", "guest": "tikhaya" },
+    { "night": 8, "slot": "s0", "guest": "tikhaya" },
+    { "night": 8, "slot": "s2", "guest": "commis" },
+    { "night": 10, "slot": "s0", "guest": "tikhaya" },
+    { "night": 11, "slot": "s0", "guest": "tikhaya" }
+  ],
+  "forcedWorlds": [ { "night": 6, "world": "memorial", "count": 2 } ],
+  "guarantees": [
+    { "nights": [9, 10], "world": "city" },
+    { "nights": [9, 10], "paletteHas": "fear" },
+    { "nights": [10, 11], "world": "memorial" },
+    { "nights": [10, 11, 12], "paletteHas": "nostalgia" }
+  ]
+}

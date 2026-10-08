@@ -1,0 +1,38 @@
+{
+  "name": "krestets",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Крестец. Ведьмина кухня на границе миров — v1 on AEGIS",
+  "type": "module",
+  "main": "electron/main.cjs",
+  "scripts": {
+    "dev": "vite",
+    "build:web": "node scripts/build-web.mjs",
+    "build:win": "node scripts/build-win.mjs",
+    "typecheck": "tsc -p .",
+    "lint": "eslint .",
+    "test": "vitest run tests",
+    "sim": "tsx sim/run.ts",
+    "sim:quick": "tsx sim/run.ts --quick",
+    "e2e": "playwright test"
+  },
+  "devDependencies": {
+    "@electron/packager": "^20.3.0",
+    "@eslint/js": "^10.0.1",
+    "@playwright/test": "^1.64.0",
+    "@types/node": "^26.6.4",
+    "electron": "^44.7.0",
+    "eslint": "^10.12.0",
+    "tsx": "^4.23.15",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.71.1",
+    "vite": "^8.3.3",
+    "vitest": "^4.1.11"
+  },
+  "dependencies": {
+    "@aegis/browser": "file:vendor/aegis-sdk/aegis-browser-0.0.0-local.rcc9593b37cf7.d34550d4cb20c6afa.tgz",
+    "@aegis/core": "file:vendor/aegis-sdk/aegis-core-0.0.0-local.rcc9593b37cf7.d34550d4cb20c6afa.tgz",
+    "@aegis/narrative": "file:vendor/aegis-sdk/aegis-narrative-0.0.0-local.rcc9593b37cf7.d34550d4cb20c6afa.tgz",
+    "@aegis/runtime": "file:vendor/aegis-sdk/aegis-runtime-0.0.0-local.rcc9593b37cf7.d34550d4cb20c6afa.tgz"
+  }
+}

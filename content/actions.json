@@ -1,0 +1,19 @@
+{
+  "listen":        { "ticks": 1 },
+  "listenBottom":  { "ticks": 1 },
+  "cook":          { "ticks": 1 },
+  "experiment":    { "ticks": 2, "heat": 1, "minJars": 1, "maxJars": 3 },
+  "serveFresh":    { "ticks": 0 },
+  "serve":         { "ticks": 1 },
+  "clean":         { "ticks": 1 },
+  "kupa":          { "ticks": 1, "heat": 2 },
+  "condense":      { "ticks": 1, "fromNight": 5, "costJars": 2, "gainSediment": 1 },
+  "burn":          { "ticks": 0 },
+  "discardDish":   { "ticks": 0, "gainSediment": 1 },
+  "refuse":        { "ticks": 0 },
+  "wait":          { "ticks": 1 },
+  "endNight":      { "ticks": 0 },
+  "windClock":     { "ticks": 0, "costKeys": 1, "gainTicks": 2, "perNight": 2 },
+  "cuckoo":        { "ticks": 0, "perNight": 3, "fromNight": 2 },
+  "undoDepth": 30
+}
