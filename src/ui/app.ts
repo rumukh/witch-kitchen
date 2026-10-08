@@ -88,6 +88,7 @@ export class App {
     });
     document.documentElement.style.setProperty('--text-scale', String(s.textScale / 100));
     document.documentElement.dataset.colorBlind = String(s.colorBlind);
+    document.documentElement.dataset.textLarge = String(s.textScale >= 125);
     document.documentElement.dataset.reducedMotion = String(s.reducedMotion);
     this.audio?.applyVolumes();
   }

@@ -271,3 +271,44 @@ dialog.coach { max-width: 34rem; }
 .day-main { grid-template-columns: minmax(10rem, 14rem) minmax(0, 1fr); }
 .shop-item { grid-template-columns: auto minmax(0, 1fr) auto auto; }
 .recipe { grid-template-columns: auto minmax(8rem, 14rem) minmax(0, 1fr) auto; }
+
+/* Large text (≥125%): compact art so every essential action stays visible at 1280x720. */
+[data-text-large='true'] .stove-art { max-height: 56px; }
+[data-text-large='true'] .stove h2, [data-text-large='true'] .hall h2, [data-text-large='true'] .shelf h2 { margin-bottom: 0.1rem; }
+[data-text-large='true'] .heat-pip { width: 1rem; height: 1rem; }
+[data-text-large='true'] .burner { padding: 0.15rem 0.35rem; }
+[data-text-large='true'] .guest-art { width: 56px; height: 56px; }
+[data-text-large='true'] .clock-art { display: none; }
+[data-text-large='true'] .hud-night { padding-right: 0; }
+[data-text-large='true'] .action-bar { padding: 0.2rem 0.4rem; gap: 0.3rem; }
+[data-text-large='true'] .action-bar button { padding: 0.15rem 0.5rem; }
+.stove { overflow-y: auto; }
+
+/* Atmosphere: warmer translucent paper so the painted room reads through. */
+.tavern .panel, [data-art='on'] .tavern .panel {
+  background-color: color-mix(in srgb, #fbf3e0 70%, transparent);
+  backdrop-filter: blur(3px) saturate(1.1);
+}
+.tavern .hud, .tavern .action-bar, [data-art='on'] .tavern .hud, [data-art='on'] .tavern .action-bar {
+  background-color: color-mix(in srgb, #fbf3e0 80%, transparent);
+  backdrop-filter: blur(3px);
+}
+.seat.empty { background: color-mix(in srgb, #fffaf0 55%, transparent); }
+.guest { background: color-mix(in srgb, #fffaf0 88%, transparent); }
+.guest-art { width: 96px; height: 96px; }
+.stove-art { filter: drop-shadow(0 0 6px #ffb24f88); animation: fireglow 2.8s ease-in-out infinite alternate; }
+@keyframes fireglow { from { filter: drop-shadow(0 0 4px #ff9a3c66); } to { filter: drop-shadow(0 0 14px #ffb24fcc); } }
+.cell.filled .jar-wrap, .cell.filled .jar-svg { animation: shimmer 3.6s ease-in-out infinite alternate; }
+@keyframes shimmer { from { filter: brightness(1); } to { filter: brightness(1.12) drop-shadow(0 0 4px #fff3c477); } }
+@media (prefers-reduced-motion: reduce) { .stove-art, .cell.filled .jar-wrap, .cell.filled .jar-svg, .clock-pendulum { animation: none !important; } }
+[data-text-large='true'] .stat-label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+[data-text-large='true'] .chime-mark { font-size: 0; }
+[data-text-large='true'] .chime-mark::before { font-size: 0.7rem; }
+[data-text-large='true'] .clock-track { height: 1.1rem; margin-bottom: 0.6rem; }
+[data-text-large='true'] .clock-text { font-size: 0.9rem; }
+[data-text-large='true'] .hud { padding: 0.15rem 0.4rem; gap: 0.3rem; }
+[data-text-large='true'] .grandma-portrait { width: 2.4rem; height: 2.4rem; }
+.hud-clock button { white-space: nowrap; }
+[data-art='on'] .tavern .panel { background-image: none; background-color: color-mix(in srgb, #fbf3e0 68%, transparent); }
+[data-art='on'] .tavern .seat.empty { background: color-mix(in srgb, #fffaf0 35%, transparent); }
+[data-text-large='true'] .clock-track { margin-bottom: 0.95rem; }

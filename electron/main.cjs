@@ -13,7 +13,8 @@ app.setPath('userData', path.join(dataRoot, 'electron'));
 const saveRoot = process.env.KRESTETS_SAVE_DIR || path.join(dataRoot, 'saves');
 const webRoot = path.join(__dirname, 'web');
 
-protocol.registerSchemesAsPrivileged([{ scheme: 'app', privileges: { standard: true, secure: true, supportFetchAPI: true, stream: true, corsEnabled: true } }]);
+// The packaged files are served from an intercepted https origin (AEGIS audio requires same-origin HTTP(S) asset URLs).
+const ORIGIN = 'https://krestets.local/';
 
 if (!app.requestSingleInstanceLock()) {
   // A second instance would write the same slot: refuse and focus the first one.
@@ -165,16 +166,17 @@ function createWindow() {
   // No outbound navigation or new windows.
   win.webContents.setWindowOpenHandler(() => ({ action: 'deny' }));
   win.webContents.on('will-navigate', (e, url) => {
-    if (!url.startsWith('app://')) e.preventDefault();
+    if (!url.startsWith(ORIGIN)) e.preventDefault();
   });
-  win.loadURL('app://krestets/index.html');
+  win.loadURL(ORIGIN + 'index.html');
   return win;
 }
 
 app.whenReady().then(() => {
   const MIME = { '.html': 'text/html; charset=utf-8', '.js': 'text/javascript', '.css': 'text/css', '.json': 'application/json', '.webp': 'image/webp', '.png': 'image/png', '.svg': 'image/svg+xml', '.ogg': 'audio/ogg', '.m4a': 'audio/mp4', '.wav': 'audio/wav', '.woff2': 'font/woff2', '.txt': 'text/plain; charset=utf-8' };
-  protocol.handle('app', async (req) => {
+  protocol.handle('https', async (req) => {
     const url = new URL(req.url);
+    if (url.host !== 'krestets.local') return new Response('offline', { status: 503 });
     const rel = decodeURIComponent(url.pathname).replace(/^\/+/, '') || 'index.html';
     const file = path.normalize(path.join(webRoot, rel));
     if (!file.startsWith(webRoot)) return new Response('forbidden', { status: 403 });
@@ -188,7 +190,7 @@ app.whenReady().then(() => {
   // Deny all network access: the game runs fully offline.
   const { session } = require('electron');
   session.defaultSession.webRequest.onBeforeRequest((details, cb) => {
-    cb({ cancel: !(details.url.startsWith('app://') || details.url.startsWith('devtools://') || details.url.startsWith('data:') || details.url.startsWith('blob:')) });
+    cb({ cancel: !(details.url.startsWith(ORIGIN) || details.url.startsWith('devtools://') || details.url.startsWith('data:') || details.url.startsWith('blob:')) });
   });
   createWindow();
 });

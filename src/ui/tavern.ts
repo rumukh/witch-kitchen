@@ -147,8 +147,8 @@ function stove(ctx: Ctx): HTMLElement {
     h('h2', {}, t('area.stove')),
     ctx.art.img(s.nt.cooked ? 'hud-stove-lit' : 'hud-stove-idle', 'stove-art') ?? h('div', { class: `stove-art placeholder-stove ${s.burners.some((x) => x && !x.ok) ? 'lit' : ''}` }),
     heat,
-    burners,
     actButton(ctx, t('act.kupa'), { t: 'kupa' }, { 'data-testid': 'kupa', class: 'kupa-btn' }),
+    burners,
     s.night === ctx.C.economy.kupaReward.night && !s.flags.kupaReward ? h('p', { class: 'small' }, t('guest.kupaQuest')) : null,
   );
 }

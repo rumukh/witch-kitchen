@@ -59,6 +59,42 @@ test('title, settings and 150% text screens', async ({ page }) => {
   expect(clipped).toEqual([]);
 });
 
+test('UI-09: at 100/125/150% every essential action is fully visible (nights 1 and 10)', async ({ page }) => {
+  await importFixture(page, 'e2e/fixtures/night10.json', 2);
+  for (const scale of ['100', '125', '150']) {
+    await page.locator('[data-testid="settings"]').click();
+    await page.locator('[data-testid="set-text"]').selectOption(scale);
+    await page.keyboard.press('Escape');
+    await page.locator('[data-testid="continue-2"]').click();
+    await drain(page);
+    await page.waitForFunction(() => [...document.images].every((i) => i.complete));
+    const problems = await page.evaluate(() => {
+      const out: string[] = [];
+      const vis = (el: Element) => {
+        const r = el.getBoundingClientRect();
+        if (r.width === 0 || r.left < 0 || r.top < 0 || r.right > window.innerWidth + 0.5 || r.bottom > window.innerHeight + 0.5) return false;
+        let p = el.parentElement;
+        while (p) {
+          const st = getComputedStyle(p);
+          if (/(auto|scroll|hidden)/.test(st.overflowY + st.overflowX)) {
+            const pr = p.getBoundingClientRect();
+            if (r.top < pr.top - 0.5 || r.bottom > pr.bottom + 0.5 || r.left < pr.left - 0.5 || r.right > pr.right + 0.5) return false;
+          }
+          p = p.parentElement;
+        }
+        return true;
+      };
+      for (const b of document.querySelectorAll('.action-bar button, [data-testid="kupa"], [data-testid="cuckoo"], [data-testid="pause"], [data-testid="wind"]'))
+        if (!vis(b)) out.push((b as HTMLElement).dataset.testid ?? b.textContent ?? '?');
+      return out;
+    });
+    await page.screenshot({ path: `docs/screens/tavern-night10-text${scale}.png` });
+    expect(problems, `text ${scale}%`).toEqual([]);
+    await page.keyboard.press('Escape');
+    await page.locator('dialog[open] [data-testid="to-title"]').click();
+  }
+});
+
 test('night 10 fixture: listen dialog, cook list, Межсветье tabs', async ({ page }) => {
   await importFixture(page, 'e2e/fixtures/night10.json', 2);
   await page.locator('[data-testid="continue-2"]').click();

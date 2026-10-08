@@ -135,6 +135,7 @@ export class AudioDirector {
   /** Select the current authored state from committed state only (restores never replay chimes). */
   syncState(s: GameState): void {
     if (s.phase === 'ended') {
+      this.caption.classList.remove('on');
       this.setMusic(`ending-${(s.ending ?? 'letter').replace('_', '-')}`);
       this.setAmbience(null);
       this.setNameless(false);

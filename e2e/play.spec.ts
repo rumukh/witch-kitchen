@@ -20,6 +20,9 @@ test('new game: finish nights 1 and 2 through the UI, resume after reload', asyn
   await page.reload();
   await page.locator('[data-testid="continue-1"]').click();
   await expect(page.locator('.clock-text')).toHaveText(tickBefore ?? '');
+  await page.waitForFunction(() => [...document.images].every((i) => i.complete && i.naturalWidth > 0));
+  await expect(page.locator('img.tavern-bg')).toHaveCount(1);
+  await expect(page.locator('img.grandma-portrait')).toHaveCount(1);
   await page.screenshot({ path: 'docs/screens/e2e-night2-resumed.png' });
   await playUntilDay(page, 2);
   await expect(page.locator('[data-testid="night-report"]')).toContainText('После ночи 2');

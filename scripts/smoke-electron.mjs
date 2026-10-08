@@ -69,7 +69,7 @@ await app.close();
 const files = existsSync(join(saveDir, 'io.github.rumukh.krestets')) ? readdirSync(join(saveDir, 'io.github.rumukh.krestets')) : [];
 const slot = files.includes('slot-1.json') ? JSON.parse(readFileSync(join(saveDir, 'io.github.rumukh.krestets', 'slot-1.json'), 'utf8')) : null;
 out.push(`save files: ${files.join(', ')}; slot-1 revision ${slot?.current?.revision}; previous kept: ${!!slot?.previous}`);
-out.push(`non-app requests blocked: ${blocked.filter((u) => !u.startsWith('app://')).length}`);
+out.push(`non-app requests blocked: ${blocked.filter((u) => !u.startsWith('https://krestets.local/')).length}`);
 const ok = before === after && heat === heat2 && slot?.current && !out.some((l) => l.startsWith('pageerror'));
 console.log(out.join('\n'));
 console.log(ok ? 'ELECTRON SMOKE: PASS' : 'ELECTRON SMOKE: FAIL');
