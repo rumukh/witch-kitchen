@@ -23,9 +23,11 @@
     "@aegis/runtime": "file:vendor/aegis-sdk/aegis-runtime-0.0.0-local.r0abd61b5a679.dc349e8c5ff2bae20.tgz"
   },
   "devDependencies": {
+    "@electron/packager": "^20.3.0",
     "@eslint/js": "^10.0.1",
     "@playwright/test": "^1.64.0",
     "@types/node": "^26.6.4",
+    "electron": "^44.7.0",
     "eslint": "^10.12.0",
     "tsx": "^4.23.15",
     "typescript": "^6.0.3",

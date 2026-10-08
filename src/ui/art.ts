@@ -39,6 +39,17 @@ export class ArtLibrary {
       const m = (await r.json()) as { assets?: ArtEntry[]; entries?: ArtEntry[] } | ArtEntry[];
       const list = Array.isArray(m) ? m : (m.assets ?? m.entries ?? []);
       for (const e of list) if (e && typeof e.id === 'string' && typeof e.file === 'string') this.entries.set(e.id, e);
+      const root = document.documentElement.style;
+      const css = (id: string, v: string) => {
+        const u = this.url(id);
+        if (u) root.setProperty(v, `url("${u}")`);
+      };
+      css('ui-panel-paper', '--paper-tex');
+      css('ui-frame', '--frame-img');
+      css('ui-button-normal', '--btn-img');
+      css('ui-button-hover', '--btn-hover-img');
+      css('ui-button-pressed', '--btn-pressed-img');
+      document.documentElement.dataset.art = 'on';
     } catch {
       /* placeholders */
     }

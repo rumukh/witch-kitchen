@@ -234,3 +234,17 @@ dialog.coach { max-width: 34rem; }
 @media (max-width: 1279px) {
   #app { zoom: 0.9; }
 }
+
+/* Delivered UI kit (only when assets/art provides it). */
+[data-art='on'] .panel, [data-art='on'] .hud, [data-art='on'] .action-bar, [data-art='on'] .day-head, [data-art='on'] dialog.modal, [data-art='on'] .title-card, [data-art='on'] .ending-card {
+  background-color: color-mix(in srgb, var(--paper) 88%, transparent);
+  background-image: var(--paper-tex, none);
+  background-size: 384px;
+  background-blend-mode: multiply;
+}
+[data-art='on'] .title-card, [data-art='on'] dialog.modal, [data-art='on'] .ending-card {
+  border: 18px solid transparent;
+  border-image: var(--frame-img) 22% / 18px round;
+}
+[data-art='on'] button.primary { background-image: var(--btn-img, none), linear-gradient(#f7d58f, #e8b85a); background-size: 100% 100%; background-blend-mode: soft-light; }
+.tavern .panel { background-color: color-mix(in srgb, var(--paper) 84%, transparent); }

@@ -12,7 +12,7 @@ interface Cue {
   id: string;
   kind?: string;
   bus?: string;
-  files?: { ogg?: string; m4a?: string } | string[];
+  files?: { ogg?: string; m4a?: string } | (string | { id?: string; ogg?: string; m4a?: string })[];
 }
 
 const PACK = 'krestets-audio';
@@ -52,8 +52,9 @@ export class AudioDirector {
     }
     for (const c of cues.values()) {
       if (Array.isArray(c.files)) {
-        const ids = c.files.map((f, i) => `${c.id}.${i}`);
-        c.files.forEach((f, i) => this.assets.push({ id: ids[i]!, src: f }));
+        const srcs = c.files.map((f) => (typeof f === 'string' ? f : (f.ogg ?? f.m4a ?? ''))).filter(Boolean);
+        const ids = srcs.map((_f, i) => `${c.id}.${i}`);
+        srcs.forEach((f, i) => this.assets.push({ id: ids[i]!, src: f }));
         ids.forEach((id) => this.available.add(id));
         this.murmurs.set(c.id.replace(/^murmur-/, ''), ids);
       } else if (c.files) {
@@ -246,8 +247,12 @@ export class AudioDirector {
 }
 
 function rebase(files: Cue['files'], base: string): Cue['files'] {
-  const fix = (f: string) => (f.startsWith('./') || f.startsWith('/') || f.includes('://') ? f : `${base}${f}`).replace(/^\.\//, '');
+  const fix = (f: string | undefined) => {
+    if (!f) return undefined;
+    if (f.startsWith('assets/')) return f;
+    return (f.startsWith('./') || f.includes('://') ? f : `${base}${f}`).replace(/^\.\//, '');
+  };
   if (!files) return files;
-  if (Array.isArray(files)) return files.map(fix);
-  return { ogg: files.ogg ? fix(files.ogg) : undefined, m4a: files.m4a ? fix(files.m4a) : undefined };
+  if (Array.isArray(files)) return files.map((f) => (typeof f === 'string' ? fix(f)! : { ...f, ogg: fix(f.ogg), m4a: fix(f.m4a) }));
+  return { ogg: fix(files.ogg), m4a: fix(files.m4a) };
 }
