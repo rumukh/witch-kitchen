@@ -28,11 +28,11 @@
  ],
  "totals": {
   "bytes": {
-   "ogg": 6833997,
-   "m4a": 7134395
+   "ogg": 19745834,
+   "m4a": 20212624
   },
-  "megabytes": 13.97,
-  "cues": 83
+  "megabytes": 39.96,
+  "cues": 93
  },
  "cues": [
   {
@@ -1703,6 +1703,526 @@
    },
    "license": "Original procedural synthesis written for this project (tools/audio); no samples or third-party recordings. Owned by the project; commercial use permitted (Q05).",
    "notes": ""
+  },
+  {
+   "id": "music-night-calm",
+   "kind": "music",
+   "bus": "music",
+   "files": {
+    "ogg": "assets/audio/music/music-night-calm.ogg",
+    "m4a": "assets/audio/music/music-night-calm.m4a"
+   },
+   "sampleRate": 48000,
+   "channels": 2,
+   "duration": 101.7429,
+   "samples": 4883658,
+   "loop": true,
+   "lufs": -18.0,
+   "truePeakDbtp": -5.2,
+   "samplePeakDbfs": -5.3,
+   "decodedSamples": {
+    "ogg": 4883658,
+    "m4a": 4884480
+   },
+   "bytes": {
+    "ogg": 1508854,
+    "m4a": 1654331
+   },
+   "date": "2026-10-08",
+   "loopStart": 0,
+   "loopEnd": 4883658,
+   "seam": {
+    "sample_jump": 0.002199,
+    "diff_p99_9": 0.05607,
+    "rms_step_db_at_seam": 3.74,
+    "rms_step_db_p99": 6.37,
+    "pass": true
+   },
+   "seamMaster": {
+    "sample_jump": 0.002425,
+    "diff_p99_9": 0.057027,
+    "rms_step_db_at_seam": 3.89,
+    "rms_step_db_p99": 6.36,
+    "pass": true
+   },
+   "tool": "ACE-Step 1.5 XL-SFT (acestep-v15-xl-sft, INT8 weight-only, CPU+DiT offload, flash attention, 50 ODE steps, guidance 7.0, shift 3.0, batch 1) via tools/audio/ace_local.py; planner acestep-5Hz-lm-1.7B (PyTorch backend) for text2music; no LM for cover. Loop/trim by tools/audio/make_music.py",
+   "settings": {
+    "task": "cover",
+    "prompt": "Cozy Slavic folk instrumental for a warm tavern at night, gentle and tender, never scary. The same simple eight-bar melody on wooden flute and zhaleika, answered by plucked gusli psaltery and soft domra tremolo, warm bayan accordion chords breathing underneath, delicate music box sparkles. No drums, no percussion. Steady even energy throughout, no build-up and no ending, a continuous loop. Intimate, warm, close-miked acoustic recording, soft dynamics.",
+    "bpm": 76,
+    "key": "G major",
+    "timeSignature": "4/4",
+    "renderSeconds": 113.7,
+    "seed": 66,
+    "coverStrength": 0.7,
+    "coverSource": "36-bar guide: the calm text2music render (seed 2354546952) cut to a seamless 16-bar loop, played twice with 2-bar pre/post-roll, time-stretched (ffmpeg atempo, pitch preserved) to the tier tempo",
+    "tuningCorrectionCents": 10.8,
+    "estimatedBpm": 75.49,
+    "loopSourceStartSample": 292480,
+    "loopBars": 32,
+    "loopSourceLengthSamples": 4883658,
+    "seamCrossfadeSeconds": 0.35,
+    "seamSpectralSimilarity": 0.8854
+   },
+   "license": "Generated locally with ACE-Step 1.5 (Apache-2.0 code/weights; generated output is not claimed by the model authors) from original prompts written for this project; no reference audio. Commercial use permitted (Q05). Final release audio subject to PM approval.",
+   "notes": "Calm tier (~76 BPM). Night theme tier; same motif, key (G major request) and 32-bar form across calm/middle/predawn, tuning aligned to within 2 cents so tiers can be crossfaded at chimes."
+  },
+  {
+   "id": "music-night-middle",
+   "kind": "music",
+   "bus": "music",
+   "files": {
+    "ogg": "assets/audio/music/music-night-middle.ogg",
+    "m4a": "assets/audio/music/music-night-middle.m4a"
+   },
+   "sampleRate": 48000,
+   "channels": 2,
+   "duration": 80.0,
+   "samples": 3839999,
+   "loop": true,
+   "lufs": -18.0,
+   "truePeakDbtp": -4.2,
+   "samplePeakDbfs": -4.2,
+   "decodedSamples": {
+    "ogg": 3839999,
+    "m4a": 3840000
+   },
+   "bytes": {
+    "ogg": 1255128,
+    "m4a": 1306083
+   },
+   "date": "2026-10-08",
+   "loopStart": 0,
+   "loopEnd": 3839999,
+   "seam": {
+    "sample_jump": 0.002075,
+    "diff_p99_9": 0.04031,
+    "rms_step_db_at_seam": 3.96,
+    "rms_step_db_p99": 8.63,
+    "pass": true
+   },
+   "seamMaster": {
+    "sample_jump": 0.00569,
+    "diff_p99_9": 0.036082,
+    "rms_step_db_at_seam": 3.96,
+    "rms_step_db_p99": 8.63,
+    "pass": true
+   },
+   "tool": "ACE-Step 1.5 XL-SFT (acestep-v15-xl-sft, INT8 weight-only, CPU+DiT offload, flash attention, 50 ODE steps, guidance 7.0, shift 3.0, batch 1) via tools/audio/ace_local.py; planner acestep-5Hz-lm-1.7B (PyTorch backend) for text2music; no LM for cover. Loop/trim by tools/audio/make_music.py",
+   "settings": {
+    "task": "cover",
+    "prompt": "Cozy Slavic folk instrumental for a busy, happy tavern in the middle of the night. The same eight-bar melody on wooden flute and zhaleika, livelier plucked domra and balalaika, gusli psaltery runs, warm rhythmic bayan accordion chords, music box glints, and a light frame drum with soft shaker keeping a walking pulse. Warm, friendly, gently bustling, never scary. Steady energy throughout, no build-up and no ending, a continuous loop. Warm acoustic recording.",
+    "bpm": 96,
+    "key": "G major",
+    "timeSignature": "4/4",
+    "renderSeconds": 90.0,
+    "seed": 2427635866,
+    "coverStrength": 0.7,
+    "coverSource": "36-bar guide: the calm text2music render (seed 2354546952) cut to a seamless 16-bar loop, played twice with 2-bar pre/post-roll, time-stretched (ffmpeg atempo, pitch preserved) to the tier tempo",
+    "estimatedBpm": 95.99,
+    "loopSourceStartSample": 180992,
+    "loopBars": 32,
+    "loopSourceLengthSamples": 3839999,
+    "seamCrossfadeSeconds": 0.35,
+    "seamSpectralSimilarity": 0.9919
+   },
+   "license": "Generated locally with ACE-Step 1.5 (Apache-2.0 code/weights; generated output is not claimed by the model authors) from original prompts written for this project; no reference audio. Commercial use permitted (Q05). Final release audio subject to PM approval.",
+   "notes": "Middle tier (~96 BPM), light frame drum. Night theme tier; same motif, key (G major request) and 32-bar form across calm/middle/predawn, tuning aligned to within 2 cents so tiers can be crossfaded at chimes."
+  },
+  {
+   "id": "music-night-predawn",
+   "kind": "music",
+   "bus": "music",
+   "files": {
+    "ogg": "assets/audio/music/music-night-predawn.ogg",
+    "m4a": "assets/audio/music/music-night-predawn.m4a"
+   },
+   "sampleRate": 48000,
+   "channels": 2,
+   "duration": 67.4307,
+   "samples": 3236674,
+   "loop": true,
+   "lufs": -18.0,
+   "truePeakDbtp": -4.9,
+   "samplePeakDbfs": -4.9,
+   "decodedSamples": {
+    "ogg": 3236674,
+    "m4a": 3236864
+   },
+   "bytes": {
+    "ogg": 1083996,
+    "m4a": 1097060
+   },
+   "date": "2026-10-08",
+   "loopStart": 0,
+   "loopEnd": 3236674,
+   "seam": {
+    "sample_jump": 0.011705,
+    "diff_p99_9": 0.080034,
+    "rms_step_db_at_seam": 0.62,
+    "rms_step_db_p99": 4.45,
+    "pass": true
+   },
+   "seamMaster": {
+    "sample_jump": 0.008018,
+    "diff_p99_9": 0.080418,
+    "rms_step_db_at_seam": 0.25,
+    "rms_step_db_p99": 4.43,
+    "pass": true
+   },
+   "tool": "ACE-Step 1.5 XL-SFT (acestep-v15-xl-sft, INT8 weight-only, CPU+DiT offload, flash attention, 50 ODE steps, guidance 7.0, shift 3.0, batch 1) via tools/audio/ace_local.py; planner acestep-5Hz-lm-1.7B (PyTorch backend) for text2music; no LM for cover. Loop/trim by tools/audio/make_music.py",
+   "settings": {
+    "task": "cover",
+    "prompt": "Brisk cozy Slavic folk instrumental for the last hour before dawn in a magical tavern. The same eight-bar melody, brighter on zhaleika and wooden flute, quick balalaika and domra strumming, gusli runs, rhythmic bayan accordion pumping, a frame drum and tambourine driving a lively pulse. Hurried, warm and hopeful anticipation, never scary or harsh. Steady energy throughout, no build-up and no ending, a continuous loop. Warm acoustic recording.",
+    "bpm": 116,
+    "key": "G major",
+    "timeSignature": "4/4",
+    "renderSeconds": 74.5,
+    "seed": 2622751964,
+    "coverStrength": 0.7,
+    "coverSource": "36-bar guide: the calm text2music render (seed 2354546952) cut to a seamless 16-bar loop, played twice with 2-bar pre/post-roll, time-stretched (ffmpeg atempo, pitch preserved) to the tier tempo",
+    "tuningCorrectionCents": -30.0,
+    "estimatedBpm": 113.92,
+    "loopSourceStartSample": 129344,
+    "loopBars": 32,
+    "loopSourceLengthSamples": 3236674,
+    "seamCrossfadeSeconds": 0.35,
+    "seamSpectralSimilarity": 0.9083
+   },
+   "license": "Generated locally with ACE-Step 1.5 (Apache-2.0 code/weights; generated output is not claimed by the model authors) from original prompts written for this project; no reference audio. Commercial use permitted (Q05). Final release audio subject to PM approval.",
+   "notes": "Predawn tier (~116 BPM), frame drum and tambourine. Night theme tier; same motif, key (G major request) and 32-bar form across calm/middle/predawn, tuning aligned to within 2 cents so tiers can be crossfaded at chimes."
+  },
+  {
+   "id": "ending-wound",
+   "kind": "music",
+   "bus": "music",
+   "files": {
+    "ogg": "assets/audio/music/ending-wound.ogg",
+    "m4a": "assets/audio/music/ending-wound.m4a"
+   },
+   "sampleRate": 48000,
+   "channels": 2,
+   "duration": 75.0,
+   "samples": 3600000,
+   "loop": false,
+   "lufs": -18.0,
+   "truePeakDbtp": -5.9,
+   "samplePeakDbfs": -5.9,
+   "decodedSamples": {
+    "ogg": 3600000,
+    "m4a": 3600384
+   },
+   "bytes": {
+    "ogg": 1037674,
+    "m4a": 1219131
+   },
+   "date": "2026-10-08",
+   "tool": "ACE-Step 1.5 XL-SFT (acestep-v15-xl-sft, INT8 weight-only, CPU+DiT offload, flash attention, 50 ODE steps, guidance 7.0, shift 3.0, batch 1) via tools/audio/ace_local.py; planner acestep-5Hz-lm-1.7B (PyTorch backend) for text2music; no LM for cover. Loop/trim by tools/audio/make_music.py",
+   "settings": {
+    "task": "text2music",
+    "prompt": "Gentle ending cue for a story that closes with an old wound, not healed but tended. Slow Slavic folk chorale on soft bayan accordion, low plucked gusli, a lonely wooden flute melody. Melancholic, tender, quiet and dignified, never scary or harsh. Starts sparse, swells softly in the middle, then thins out and resolves to a quiet hopeful major chord with a long natural decay. Warm acoustic recording.",
+    "bpm": 70,
+    "key": "E minor",
+    "timeSignature": "4/4",
+    "renderSeconds": 75.0,
+    "seed": 644463954
+   },
+   "license": "Generated locally with ACE-Step 1.5 (Apache-2.0 code/weights; generated output is not claimed by the model authors) from original prompts written for this project; no reference audio. Commercial use permitted (Q05). Final release audio subject to PM approval.",
+   "notes": "Non-looping ending cue."
+  },
+  {
+   "id": "ending-remember",
+   "kind": "music",
+   "bus": "music",
+   "files": {
+    "ogg": "assets/audio/music/ending-remember.ogg",
+    "m4a": "assets/audio/music/ending-remember.m4a"
+   },
+   "sampleRate": 48000,
+   "channels": 2,
+   "duration": 75.0,
+   "samples": 3600000,
+   "loop": false,
+   "lufs": -18.0,
+   "truePeakDbtp": -4.0,
+   "samplePeakDbfs": -4.0,
+   "decodedSamples": {
+    "ogg": 3600000,
+    "m4a": 3600384
+   },
+   "bytes": {
+    "ogg": 1319485,
+    "m4a": 1223619
+   },
+   "date": "2026-10-08",
+   "tool": "ACE-Step 1.5 XL-SFT (acestep-v15-xl-sft, INT8 weight-only, CPU+DiT offload, flash attention, 50 ODE steps, guidance 7.0, shift 3.0, batch 1) via tools/audio/ace_local.py; planner acestep-5Hz-lm-1.7B (PyTorch backend) for text2music; no LM for cover. Loop/trim by tools/audio/make_music.py",
+   "settings": {
+    "task": "text2music",
+    "prompt": "Nostalgic ending cue about remembering who you are. Slavic folk instrumental: wooden flute and zhaleika sing a warm memorable melody over gusli psaltery arpeggios, domra tremolo and soft bayan; a music box echoes the tune. Warm, glowing, gently emotional, never scary. Builds tenderly to a full heartfelt passage, then settles and ends on a clear soft major chord with natural decay.",
+    "bpm": 76,
+    "key": "G major",
+    "timeSignature": "4/4",
+    "renderSeconds": 75.0,
+    "seed": 4104325526
+   },
+   "license": "Generated locally with ACE-Step 1.5 (Apache-2.0 code/weights; generated output is not claimed by the model authors) from original prompts written for this project; no reference audio. Commercial use permitted (Q05). Final release audio subject to PM approval.",
+   "notes": "Non-looping ending cue."
+  },
+  {
+   "id": "ending-new-spring",
+   "kind": "music",
+   "bus": "music",
+   "files": {
+    "ogg": "assets/audio/music/ending-new-spring.ogg",
+    "m4a": "assets/audio/music/ending-new-spring.m4a"
+   },
+   "sampleRate": 48000,
+   "channels": 2,
+   "duration": 90.0,
+   "samples": 4320000,
+   "loop": false,
+   "lufs": -18.1,
+   "truePeakDbtp": -6.8,
+   "samplePeakDbfs": -6.8,
+   "decodedSamples": {
+    "ogg": 4320000,
+    "m4a": 4320256
+   },
+   "bytes": {
+    "ogg": 1561217,
+    "m4a": 1481519
+   },
+   "date": "2026-10-08",
+   "tool": "ACE-Step 1.5 XL-SFT (acestep-v15-xl-sft, INT8 weight-only, CPU+DiT offload, flash attention, 50 ODE steps, guidance 7.0, shift 3.0, batch 1) via tools/audio/ace_local.py; planner acestep-5Hz-lm-1.7B (PyTorch backend) for text2music; no LM for cover. Loop/trim by tools/audio/make_music.py",
+   "settings": {
+    "task": "text2music",
+    "prompt": "Festive Slavic folk dance for a dawn feast celebrating a new spring. Bright balalaika and domra strumming, gusli runs, zhaleika and wooden flute playing a joyful dance tune, lively bayan accordion, frame drum and tambourine, hand claps. Happy, warm, sunny, communal celebration. Energetic dance that grows brighter and ends well before the end of the track with a cheerful decisive final chord, then a short natural ring-out into silence.",
+    "bpm": 126,
+    "key": "G major",
+    "timeSignature": "4/4",
+    "renderSeconds": 90.0,
+    "seed": 404
+   },
+   "license": "Generated locally with ACE-Step 1.5 (Apache-2.0 code/weights; generated output is not claimed by the model authors) from original prompts written for this project; no reference audio. Commercial use permitted (Q05). Final release audio subject to PM approval.",
+   "notes": "Non-looping ending cue (festive dawn feast), natural final chord and ring-out."
+  },
+  {
+   "id": "ending-letter",
+   "kind": "music",
+   "bus": "music",
+   "files": {
+    "ogg": "assets/audio/music/ending-letter.ogg",
+    "m4a": "assets/audio/music/ending-letter.m4a"
+   },
+   "sampleRate": 48000,
+   "channels": 2,
+   "duration": 70.0,
+   "samples": 3360000,
+   "loop": false,
+   "lufs": -18.0,
+   "truePeakDbtp": -7.5,
+   "samplePeakDbfs": -7.6,
+   "decodedSamples": {
+    "ogg": 3360000,
+    "m4a": 3360768
+   },
+   "bytes": {
+    "ogg": 1060203,
+    "m4a": 1138643
+   },
+   "date": "2026-10-08",
+   "tool": "ACE-Step 1.5 XL-SFT (acestep-v15-xl-sft, INT8 weight-only, CPU+DiT offload, flash attention, 50 ODE steps, guidance 7.0, shift 3.0, batch 1) via tools/audio/ace_local.py; planner acestep-5Hz-lm-1.7B (PyTorch backend) for text2music; no LM for cover. Loop/trim by tools/audio/make_music.py",
+   "settings": {
+    "task": "text2music",
+    "prompt": "Gentle bittersweet ending cue, a letter read by candlelight at dawn. Slavic folk palette: soft music box, slow gusli psaltery, a tender zhaleika melody, warm bayan accordion breathing underneath. Quiet, loving, a little sad but comforting, never scary. Unhurried phrasing that rises once with warmth, then fades into a soft final chord with a natural decay.",
+    "bpm": 64,
+    "key": "E minor",
+    "timeSignature": "4/4",
+    "renderSeconds": 70.0,
+    "seed": 4162035344
+   },
+   "license": "Generated locally with ACE-Step 1.5 (Apache-2.0 code/weights; generated output is not claimed by the model authors) from original prompts written for this project; no reference audio. Commercial use permitted (Q05). Final release audio subject to PM approval.",
+   "notes": "Non-looping ending cue (gentle, bittersweet)."
+  },
+  {
+   "id": "music-mezhsvetye",
+   "kind": "music",
+   "bus": "music",
+   "files": {
+    "ogg": "assets/audio/music/music-mezhsvetye.ogg",
+    "m4a": "assets/audio/music/music-mezhsvetye.m4a"
+   },
+   "sampleRate": 48000,
+   "channels": 2,
+   "duration": 70.6066,
+   "samples": 3389116,
+   "loop": true,
+   "lufs": -18.0,
+   "truePeakDbtp": -8.3,
+   "samplePeakDbfs": -8.3,
+   "decodedSamples": {
+    "ogg": 3389116,
+    "m4a": 3389440
+   },
+   "bytes": {
+    "ogg": 1174185,
+    "m4a": 1151742
+   },
+   "date": "2026-10-08",
+   "loopStart": 0,
+   "loopEnd": 3389116,
+   "seam": {
+    "sample_jump": 0.00966,
+    "diff_p99_9": 0.035748,
+    "rms_step_db_at_seam": 4.09,
+    "rms_step_db_p99": 9.31,
+    "pass": true
+   },
+   "seamMaster": {
+    "sample_jump": 0.002523,
+    "diff_p99_9": 0.033106,
+    "rms_step_db_at_seam": 4.24,
+    "rms_step_db_p99": 9.37,
+    "pass": true
+   },
+   "tool": "ACE-Step 1.5 XL-SFT (acestep-v15-xl-sft, INT8 weight-only, CPU+DiT offload, flash attention, 50 ODE steps, guidance 7.0, shift 3.0, batch 1) via tools/audio/ace_local.py; planner acestep-5Hz-lm-1.7B (PyTorch backend) for text2music; no LM for cover. Loop/trim by tools/audio/make_music.py",
+   "settings": {
+    "task": "text2music",
+    "prompt": "Sleepy daytime Slavic folk instrumental, a lazy quiet afternoon in a wooden house between worlds. Slow drowsy gusli psaltery arpeggios, a soft breathy wooden flute melody, tiny music box sparkles, warm low bayan accordion drones. Hazy, dreamy, peaceful and cozy, never scary. No drums. Steady even energy from start to finish, no build-up and no ending, like a continuous loop. Intimate close-miked acoustic recording.",
+    "bpm": 68,
+    "key": "G major",
+    "timeSignature": "4/4",
+    "renderSeconds": 120.0,
+    "seed": 101,
+    "estimatedBpm": 67.97,
+    "loopSourceStartSample": 524032,
+    "loopBars": 20,
+    "loopSourceLengthSamples": 3389116,
+    "seamCrossfadeSeconds": 0.35,
+    "seamSpectralSimilarity": 0.9522
+   },
+   "license": "Generated locally with ACE-Step 1.5 (Apache-2.0 code/weights; generated output is not claimed by the model authors) from original prompts written for this project; no reference audio. Commercial use permitted (Q05). Final release audio subject to PM approval.",
+   "notes": "Sleepy daytime Mezhsvetye theme, seamless 20-bar loop."
+  },
+  {
+   "id": "music-title",
+   "kind": "music",
+   "bus": "music",
+   "files": {
+    "ogg": "assets/audio/music/music-title.ogg",
+    "m4a": "assets/audio/music/music-title.m4a"
+   },
+   "sampleRate": 48000,
+   "channels": 2,
+   "duration": 98.7127,
+   "samples": 4738211,
+   "loop": true,
+   "lufs": -18.0,
+   "truePeakDbtp": -4.2,
+   "samplePeakDbfs": -4.3,
+   "decodedSamples": {
+    "ogg": 4738211,
+    "m4a": 4739072
+   },
+   "bytes": {
+    "ogg": 1661634,
+    "m4a": 1623173
+   },
+   "date": "2026-10-08",
+   "loopStart": 0,
+   "loopEnd": 4738211,
+   "seam": {
+    "sample_jump": 0.007188,
+    "diff_p99_9": 0.075001,
+    "rms_step_db_at_seam": 2.89,
+    "rms_step_db_p99": 8.62,
+    "pass": true
+   },
+   "seamMaster": {
+    "sample_jump": 0.001668,
+    "diff_p99_9": 0.076999,
+    "rms_step_db_at_seam": 1.72,
+    "rms_step_db_p99": 8.6,
+    "pass": true
+   },
+   "tool": "ACE-Step 1.5 XL-SFT (acestep-v15-xl-sft, INT8 weight-only, CPU+DiT offload, flash attention, 50 ODE steps, guidance 7.0, shift 3.0, batch 1) via tools/audio/ace_local.py; planner acestep-5Hz-lm-1.7B (PyTorch backend) for text2music; no LM for cover. Loop/trim by tools/audio/make_music.py",
+   "settings": {
+    "task": "text2music",
+    "prompt": "Warm inviting title theme for a cozy fairy-tale cooking game set in a witch tavern. Slavic folk instrumental: plucked gusli psaltery and domra carry a singable melody, zhaleika and wooden flute answer, soft bayan accordion harmony, light frame drum heartbeat, music box glints. Magical, cozy, gently wistful, never scary. Steady loopable energy with no fade and no final ending. Warm acoustic recording.",
+    "bpm": 88,
+    "key": "G major",
+    "timeSignature": "4/4",
+    "renderSeconds": 120.0,
+    "seed": 202,
+    "estimatedBpm": 87.52,
+    "loopSourceStartSample": 330496,
+    "loopBars": 36,
+    "loopSourceLengthSamples": 4738211,
+    "seamCrossfadeSeconds": 0.35,
+    "seamSpectralSimilarity": 0.916
+   },
+   "license": "Generated locally with ACE-Step 1.5 (Apache-2.0 code/weights; generated output is not claimed by the model authors) from original prompts written for this project; no reference audio. Commercial use permitted (Q05). Final release audio subject to PM approval.",
+   "notes": "Title theme, seamless 36-bar loop."
+  },
+  {
+   "id": "music-night1",
+   "kind": "music",
+   "bus": "music",
+   "files": {
+    "ogg": "assets/audio/music/music-night1.ogg",
+    "m4a": "assets/audio/music/music-night1.m4a"
+   },
+   "sampleRate": 48000,
+   "channels": 2,
+   "duration": 72.7431,
+   "samples": 3491671,
+   "loop": true,
+   "lufs": -17.9,
+   "truePeakDbtp": -8.5,
+   "samplePeakDbfs": -8.5,
+   "decodedSamples": {
+    "ogg": 3491671,
+    "m4a": 3491840
+   },
+   "bytes": {
+    "ogg": 1249461,
+    "m4a": 1182928
+   },
+   "date": "2026-10-08",
+   "loopStart": 0,
+   "loopEnd": 3491671,
+   "seam": {
+    "sample_jump": 0.012647,
+    "diff_p99_9": 0.028447,
+    "rms_step_db_at_seam": 4.48,
+    "rms_step_db_p99": 5.01,
+    "pass": true
+   },
+   "seamMaster": {
+    "sample_jump": 0.001132,
+    "diff_p99_9": 0.028575,
+    "rms_step_db_at_seam": 4.5,
+    "rms_step_db_p99": 4.96,
+    "pass": true
+   },
+   "tool": "ACE-Step 1.5 XL-SFT (acestep-v15-xl-sft, INT8 weight-only, CPU+DiT offload, flash attention, 50 ODE steps, guidance 7.0, shift 3.0, batch 1) via tools/audio/ace_local.py; planner acestep-5Hz-lm-1.7B (PyTorch backend) for text2music; no LM for cover. Loop/trim by tools/audio/make_music.py",
+   "settings": {
+    "task": "text2music",
+    "prompt": "Tender lullaby for a grandmother's last night in her tavern kitchen. Solo music box and soft gusli psaltery, a quiet wooden flute line, very soft bayan accordion pads. Intimate, loving, bittersweet but warm and safe. No percussion, no clock ticking, no metronome clicks. Steady gentle energy throughout with no build-up and no ending, like a continuous loop. Close-miked, candlelit, soft dynamics.",
+    "bpm": 66,
+    "key": "G major",
+    "timeSignature": "4/4",
+    "renderSeconds": 120.0,
+    "seed": 101,
+    "estimatedBpm": 65.99,
+    "loopSourceStartSample": 963328,
+    "loopBars": 20,
+    "loopSourceLengthSamples": 3491671,
+    "seamCrossfadeSeconds": 0.35,
+    "seamSpectralSimilarity": 0.8248
+   },
+   "license": "Generated locally with ACE-Step 1.5 (Apache-2.0 code/weights; generated output is not claimed by the model authors) from original prompts written for this project; no reference audio. Commercial use permitted (Q05). Final release audio subject to PM approval.",
+   "notes": "Night 1 (grandmother's last night outside the clock): tender, no percussion, no ticking. Seamless 20-bar loop."
   },
   {
    "id": "whisper.tutorial.ramen",
