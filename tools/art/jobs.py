@@ -284,6 +284,28 @@ for jid, d in {
 }.items():
     job(jid, "ending", "Wide 16:9 full-scene book illustration. " + d + " " + STYLE, "1920x1088", out=END)
 
+# v2 endings: on-model characters via references (r1 had a child-like Mira and no grandmother-in-clock).
+ENDING_REF = ("Image 1 is Mira: a young woman (about 19), long dark-blond braid over the shoulder, dark floral shawl, white embroidered blouse, "
+              "red sarafan, ochre apron with a pocket. Image 2 is grandmother Agrafena: round kind face, red-orange patterned headscarf, dark blouse, "
+              "framed by a carved clock door. Keep both characters exactly on-model (face, age, costume), but repaint them inside a new full scene. ")
+job("ending-wound", "ending", "Wide 16:9 full-scene book illustration. " + ENDING_REF +
+    "Ending, the keeper: night inside the warm tavern. The large carved pendulum wall clock glows softly from within like a gentle golden heart; "
+    "inside its open little door the kind, smiling face of grandmother Agrafena is visible, peaceful and serene, wrapped in warm golden light, as if she is the heart of the clock. "
+    "Mira stands before the clock holding a candle, calm and grown-up, the new keeper of the tavern, looking up at her grandmother with quiet love. "
+    "Warm hearth glow on one side, sleeping cat. Bittersweet, tender, peaceful, never sad or painful. " + STYLE,
+    "1920x1088", refs=["mira-neutral", "grandma-agrafena-kind"], out=END)
+job("ending-remember", "ending", "Wide 16:9 full-scene book illustration. " + ENDING_REF +
+    "Ending, remembrance: in the tavern, grandmother Agrafena, full figure, small and round, steps out of the open door of a big carved pendulum clock into warm light, smiling, arms open; "
+    "Mira runs to embrace her. Beside the counter a tall figure made of soft golden light, once an empty outline, now gently glowing with a calm, warm, newly remembered presence, "
+    "hand over heart. Joyful and tender. " + STYLE,
+    "1920x1088", refs=["mira-neutral", "grandma-agrafena-kind"], out=END)
+job("ending-new-spring", "ending", "Wide 16:9 full-scene book illustration. "
+    "Image 1 is Mira (young woman, dark-blond braid, red sarafan, ochre apron); Image 2 is the guardian of the crossroads (antlers hung with little signpost boards, "
+    "four-panel cloak of forest, river, city and candle-night). Keep both on-model. "
+    "Ending, new spring: a dawn feast outside the tavern at the crossroads: long tables with dishes, forest, river and city spirits and gentle silver memorial shadows seated together; "
+    "the guardian stands blessing the feast and Mira raises a cup among the guests; pink-gold sunrise, blossoming birches. Warm, festive, hopeful. " + STYLE,
+    "1920x1088", refs=["mira-neutral", "guardian"], out=END)
+
 job("jar-empty", "feeling-jar",
     "Image 1 is the style authority for the jar rendering: match its gouache texture, ink contour, folk ornament band, glass treatment and scale. "
     "Paint a plain round-shouldered glass jar with a cork stopper and the same painted folk ornament band at its base; the inside holds only clear, "
@@ -323,3 +345,17 @@ for k in ["dubodyor", "tikhaya", "prosha", "commis-mirror", "nameless-guest", "t
     JOBS[k]["out"] = dict(PORTRAIT, id="char-" + {"commis-mirror": "commis", "nameless-guest": "nameless", "tram33-spirit": "tram33"}.get(k, k))
 JOBS["char-kupa-portrait"] = dict(JOBS["kupa"], id="char-kupa-portrait", alias_of="kupa",
                                   out={"type": "sprite", "h": 768, "square": 768, "bottom": True, "crop_top": 0.55})
+
+# ---------------------------------------------------------------- optional HUD layers
+HUD = {"type": "sprite", "box": 512, "margin": 0.02}
+job("hud-clock-face", "ui", "Front orthographic view of a carved wooden folk pendulum wall clock case WITHOUT its pendulum and without hands: a carved gabled top with a small closed arched cuckoo door, "
+    "below it a round cream dial marked only with twelve small painted dots (no numerals, no hands), carved folk ornament around the dial, the bottom of the case ends in a flat edge with a hole where a pendulum would hang. "
+    + STYLE + " " + CUTOUT, "1024x1536", "high", True, out=HUD)
+job("hud-clock-hands", "ui", "Front orthographic view of a single pair of ornate wrought-brass clock hands (one short hour hand and one long minute hand) both pointing straight up, overlapping, with a round central boss; nothing else. "
+    + STYLE + " " + CUTOUT, "1024x1536", "medium", True, out={"type": "sprite", "box": 256, "margin": 0.01})
+job("hud-pendulum", "ui", "Front orthographic view of a single clock pendulum hanging straight down: a long thin brass rod with a round polished brass bob decorated with a small engraved sun, nothing else. "
+    + STYLE + " " + CUTOUT, "1024x1536", "medium", True, out={"type": "sprite", "box": 512, "margin": 0.01})
+job("hud-stove-lit", "ui", "Front view of the arched mouth of a whitewashed Russian clay stove, close-up: the arched opening full of bright glowing orange embers and lively flames, a copper pot in it, painted red folk ornament around the arch, only the stove front. "
+    + STYLE + " " + CUTOUT, "1024x1024", "high", True, out=HUD)
+job("hud-stove-idle", "ui", "Image 1 is the stove front, the authority for shape, framing and style: keep everything identical, but the fire is resting — only a few dim, softly glowing grey-red embers, no flames, a thin wisp of smoke. "
+    + CUTOUT, "1024x1024", "high", True, refs=["hud-stove-lit"], out=HUD)

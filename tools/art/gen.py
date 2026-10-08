@@ -48,8 +48,13 @@ def run(jid, count, quality, extra, cutout=False):
     if job.get("transparent"):
         cmd += ["-Background", "transparent"]
     refs = [str(picked_raw(r)) if not os.path.isabs(r) else r for r in job.get("refs", [])]
-    if refs:
+    if len(refs) == 1:
         cmd += ["-ReferenceImage"] + refs
+    elif refs:
+        # -File cannot bind several values to a [string[]] parameter; use -Command with a PowerShell array.
+        q = lambda s: "'" + str(s).replace("'", "''") + "'"
+        args = " ".join(a if a.startswith("-") else q(a) for a in cmd[6:])
+        cmd = cmd[:4] + ["-Command", f"& {q(HELPER)} {args} -ReferenceImage @({','.join(q(r) for r in refs)})"]
     for attempt in range(8):
         p = subprocess.run(cmd, capture_output=True, text=True, encoding="utf-8", errors="replace")
         if p.returncode == 0 or "rate limit" not in (p.stdout + p.stderr):

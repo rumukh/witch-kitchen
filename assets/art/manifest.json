@@ -2,8 +2,8 @@
   "schema": "witch-kitchen-art-manifest/1",
   "style_bible": "docs/art/STYLE_BIBLE.md",
   "base_path": "assets/art/",
-  "total_bytes": 7809424,
-  "count": 92,
+  "total_bytes": 14847998,
+  "count": 111,
   "assets": [
     {
       "id": "bg-tavern-night",
@@ -2373,6 +2373,34 @@
       }
     },
     {
+      "id": "char-nameless",
+      "kind": "character",
+      "file": "characters/char-nameless.webp",
+      "width": 768,
+      "height": 768,
+      "transparent": true,
+      "variants": [],
+      "bytes": 92430,
+      "source": {
+        "tool": "azure-image-generation skill (generate-image.ps1)",
+        "provider": "Azure OpenAI",
+        "model": "gpt-image-2.5-sunburst (deployment)",
+        "operation": "generation",
+        "quality": "high",
+        "prompt": "Original character design, consistent clean silhouette, natural anatomy with exactly the stated number of arms, hands and fingers. The Nameless Guest, 'silence enthroned': an empty, softly glowing outline of a seated cloaked figure, the inside is a calm deep-blue negative space with faint gentle star dust, no face and no features at all, sitting peacefully upright, a quiet pale-gold halo of light at the edges. Serene, mysterious, not scary. Gouache painting on warm textured paper in the tradition of early-20th-century Russian book illustration: confident dark-brown ink contour over flat matte gouache fills, dry-brush edges, visible paper grain, decorative Slavic folk ornament. Warm candlelit palette of honey amber, ember orange, deep indigo and plum shadows. Cozy, gentle storybook mood; spirits are kind neighbours. Absolutely no text, letters, numerals, runes, writing, signature or watermark. Single subject, centered, fully visible with a small margin on all sides, isolated on a fully transparent background; no ground, no cast shadow, no frame, no border, no scenery.",
+        "derived_from": [],
+        "raw_file": "nameless-guest-r2-c1.png",
+        "raw_sha256": "04a49ed973b02b482bb560f7d9d0740d04124c224c9f5807061bab7a547720be",
+        "postprocess": "alpha clean + trim + Lanczos resize, WebP with alpha (q90, lossless alpha)"
+      },
+      "license": "generated with Azure OpenAI Image API (deployment gpt-image-2.5-sunburst) via the azure-image-generation helper; under the Microsoft Product Terms for Azure OpenAI the customer owns the output and Microsoft claims no rights in it, so commercial use is permitted (subject to the Azure OpenAI Code of Conduct). No stock or web imagery.",
+      "created": "2026-10-08",
+      "review": {
+        "status": "approved",
+        "notes": "Seated hooded figure; starry negative space instead of a face, gentle halo. Not scary."
+      }
+    },
+    {
       "id": "char-tram33",
       "kind": "character",
       "file": "characters/char-tram33.webp",
@@ -2398,6 +2426,62 @@
       "review": {
         "status": "approved",
         "notes": "Headlamp head, conductor coat, trolley pole."
+      }
+    },
+    {
+      "id": "char-dubodyor",
+      "kind": "character",
+      "file": "characters/char-dubodyor.webp",
+      "width": 768,
+      "height": 768,
+      "transparent": true,
+      "variants": [],
+      "bytes": 135346,
+      "source": {
+        "tool": "azure-image-generation skill (generate-image.ps1)",
+        "provider": "Azure OpenAI",
+        "model": "gpt-image-2.5-sunburst (deployment)",
+        "operation": "generation",
+        "quality": "high",
+        "prompt": "Original character design, consistent clean silhouette, natural anatomy with exactly the stated number of arms, hands and fingers. Dubodyor, the leshy, heart of the forest: a huge old gnarled stump-bodied forest grandfather with a long beard of green moss and lichen, branching antlers of oak twigs with a few leaves, small bright amber eyes, bark skin, bast shoes, leaning on a crooked staff; gruff but kind. Full body. Gouache painting on warm textured paper in the tradition of early-20th-century Russian book illustration: confident dark-brown ink contour over flat matte gouache fills, dry-brush edges, visible paper grain, decorative Slavic folk ornament. Warm candlelit palette of honey amber, ember orange, deep indigo and plum shadows. Cozy, gentle storybook mood; spirits are kind neighbours. Absolutely no text, letters, numerals, runes, writing, signature or watermark. Single subject, centered, fully visible with a small margin on all sides, isolated on a fully transparent background; no ground, no cast shadow, no frame, no border, no scenery.",
+        "derived_from": [],
+        "raw_file": "dubodyor-r2-c1.png",
+        "raw_sha256": "398b8d354d70c1e754a97fc3748310e519d1635ceda3ae2c28b659c8c1dce2c5",
+        "postprocess": "alpha clean + trim + Lanczos resize, WebP with alpha (q90, lossless alpha)"
+      },
+      "license": "generated with Azure OpenAI Image API (deployment gpt-image-2.5-sunburst) via the azure-image-generation helper; under the Microsoft Product Terms for Azure OpenAI the customer owns the output and Microsoft claims no rights in it, so commercial use is permitted (subject to the Azure OpenAI Code of Conduct). No stock or web imagery.",
+      "created": "2026-10-08",
+      "review": {
+        "status": "approved",
+        "notes": "Bark-and-moss leshy with antler branches, staff, bast shoes."
+      }
+    },
+    {
+      "id": "char-tikhaya",
+      "kind": "character",
+      "file": "characters/char-tikhaya.webp",
+      "width": 768,
+      "height": 768,
+      "transparent": true,
+      "variants": [],
+      "bytes": 107158,
+      "source": {
+        "tool": "azure-image-generation skill (generate-image.ps1)",
+        "provider": "Azure OpenAI",
+        "model": "gpt-image-2.5-sunburst (deployment)",
+        "operation": "generation",
+        "quality": "high",
+        "prompt": "Original character design, consistent clean silhouette, natural anatomy with exactly the stated number of arms, hands and fingers. Tikhaya, the bereginya of the river: a pale, quiet river maiden, long hair flowing like a slow current of water, a dress of layered translucent glass-green and turquoise like river water, water lilies in her hair, a soft sad gentle smile, hands holding a small clay jug. Three-quarter-length view. Gouache painting on warm textured paper in the tradition of early-20th-century Russian book illustration: confident dark-brown ink contour over flat matte gouache fills, dry-brush edges, visible paper grain, decorative Slavic folk ornament. Warm candlelit palette of honey amber, ember orange, deep indigo and plum shadows. Cozy, gentle storybook mood; spirits are kind neighbours. Absolutely no text, letters, numerals, runes, writing, signature or watermark. Single subject, centered, fully visible with a small margin on all sides, isolated on a fully transparent background; no ground, no cast shadow, no frame, no border, no scenery.",
+        "derived_from": [],
+        "raw_file": "tikhaya-r2-c2.png",
+        "raw_sha256": "55f8b8fb168fd57564f896da712f02d9ca81fc146c1605060fcb5562aad17d50",
+        "postprocess": "alpha clean + trim + Lanczos resize, WebP with alpha (q90, lossless alpha)"
+      },
+      "license": "generated with Azure OpenAI Image API (deployment gpt-image-2.5-sunburst) via the azure-image-generation helper; under the Microsoft Product Terms for Azure OpenAI the customer owns the output and Microsoft claims no rights in it, so commercial use is permitted (subject to the Azure OpenAI Code of Conduct). No stock or web imagery.",
+      "created": "2026-10-08",
+      "review": {
+        "status": "approved",
+        "notes": "River bereginya with water-lilies and jug, watery hem."
       }
     },
     {
@@ -2489,6 +2573,355 @@
       "review": {
         "status": "approved",
         "notes": "Forest seen through carved tavern doors."
+      }
+    },
+    {
+      "id": "bg-door-river",
+      "kind": "background",
+      "file": "bg/bg-door-river.webp",
+      "width": 1920,
+      "height": 1080,
+      "transparent": false,
+      "variants": [
+        {
+          "file": "bg/bg-door-river-720.webp",
+          "width": 1280,
+          "height": 720,
+          "label": "720p"
+        }
+      ],
+      "bytes": 741280,
+      "source": {
+        "tool": "azure-image-generation skill (generate-image.ps1)",
+        "provider": "Azure OpenAI",
+        "model": "gpt-image-2.5-sunburst (deployment)",
+        "operation": "generation",
+        "quality": "high",
+        "prompt": "Wide 16:9 view through the open double doors of a cozy carved wooden tavern, the doorway framed by ornate Slavic carved nalichnik ornament at the edges of the image, looking out into another world at night: a wide calm river of glass-clear turquoise water with reeds, lily pads, a small wooden pier and a pale moon reflected; glass and turquoise palette. No people. Gouache painting on warm textured paper in the tradition of early-20th-century Russian book illustration: confident dark-brown ink contour over flat matte gouache fills, dry-brush edges, visible paper grain, decorative Slavic folk ornament. Warm candlelit palette of honey amber, ember orange, deep indigo and plum shadows. Cozy, gentle storybook mood; spirits are kind neighbours. Absolutely no text, letters, numerals, runes, writing, signature or watermark.",
+        "derived_from": [],
+        "raw_file": "bg-door-river-r2-c2.png",
+        "raw_sha256": "93c913a4d7f62878d7184c9ba1273592ee2ec36c54a8be44e60b156188d5a317",
+        "postprocess": "cover-crop to 16:9, Lanczos resize, WebP q84/q82"
+      },
+      "license": "generated with Azure OpenAI Image API (deployment gpt-image-2.5-sunburst) via the azure-image-generation helper; under the Microsoft Product Terms for Azure OpenAI the customer owns the output and Microsoft claims no rights in it, so commercial use is permitted (subject to the Azure OpenAI Code of Conduct). No stock or web imagery.",
+      "created": "2026-10-08",
+      "review": {
+        "status": "approved",
+        "notes": "Moonlit turquoise lake with pier through carved doors."
+      }
+    },
+    {
+      "id": "bg-door-city",
+      "kind": "background",
+      "file": "bg/bg-door-city.webp",
+      "width": 1920,
+      "height": 1080,
+      "transparent": false,
+      "variants": [
+        {
+          "file": "bg/bg-door-city-720.webp",
+          "width": 1280,
+          "height": 720,
+          "label": "720p"
+        }
+      ],
+      "bytes": 763268,
+      "source": {
+        "tool": "azure-image-generation skill (generate-image.ps1)",
+        "provider": "Azure OpenAI",
+        "model": "gpt-image-2.5-sunburst (deployment)",
+        "operation": "generation",
+        "quality": "high",
+        "prompt": "Wide 16:9 view through the open double doors of a cozy carved wooden tavern, the doorway framed by ornate Slavic carved nalichnik ornament at the edges of the image, looking out into another world at night: a small old town street with wet warm-grey cobbles and asphalt, brick houses with glowing amber windows, strings of warm light bulbs and a tram rail curving away; no signs, no lettering. No people. Gouache painting on warm textured paper in the tradition of early-20th-century Russian book illustration: confident dark-brown ink contour over flat matte gouache fills, dry-brush edges, visible paper grain, decorative Slavic folk ornament. Warm candlelit palette of honey amber, ember orange, deep indigo and plum shadows. Cozy, gentle storybook mood; spirits are kind neighbours. Absolutely no text, letters, numerals, runes, writing, signature or watermark.",
+        "derived_from": [],
+        "raw_file": "bg-door-city-r1-c1.png",
+        "raw_sha256": "dedb70bcb7c2c0f94621b0cc4a3299b98f5f89aca27673882f624c4c4495d5d2",
+        "postprocess": "cover-crop to 16:9, Lanczos resize, WebP q84/q82"
+      },
+      "license": "generated with Azure OpenAI Image API (deployment gpt-image-2.5-sunburst) via the azure-image-generation helper; under the Microsoft Product Terms for Azure OpenAI the customer owns the output and Microsoft claims no rights in it, so commercial use is permitted (subject to the Azure OpenAI Code of Conduct). No stock or web imagery.",
+      "created": "2026-10-08",
+      "review": {
+        "status": "approved",
+        "notes": "Rain-wet tram street with amber lamps through carved doors."
+      }
+    },
+    {
+      "id": "bg-door-memorial",
+      "kind": "background",
+      "file": "bg/bg-door-memorial.webp",
+      "width": 1920,
+      "height": 1080,
+      "transparent": false,
+      "variants": [
+        {
+          "file": "bg/bg-door-memorial-720.webp",
+          "width": 1280,
+          "height": 720,
+          "label": "720p"
+        }
+      ],
+      "bytes": 742562,
+      "source": {
+        "tool": "azure-image-generation skill (generate-image.ps1)",
+        "provider": "Azure OpenAI",
+        "model": "gpt-image-2.5-sunburst (deployment)",
+        "operation": "generation",
+        "quality": "high",
+        "prompt": "Wide 16:9 view through the open double doors of a cozy carved wooden tavern, the doorway framed by ornate Slavic carved nalichnik ornament at the edges of the image, looking out into another world at night: a quiet birch grove on a gentle hill with many small candles glowing in the grass, silver birch trunks, soft blue night and a thin mist; peaceful, tender remembrance, no graves, no crosses. No people. Gouache painting on warm textured paper in the tradition of early-20th-century Russian book illustration: confident dark-brown ink contour over flat matte gouache fills, dry-brush edges, visible paper grain, decorative Slavic folk ornament. Warm candlelit palette of honey amber, ember orange, deep indigo and plum shadows. Cozy, gentle storybook mood; spirits are kind neighbours. Absolutely no text, letters, numerals, runes, writing, signature or watermark.",
+        "derived_from": [],
+        "raw_file": "bg-door-memorial-r2-c2.png",
+        "raw_sha256": "8ba323190ddf64c328928faa3b5b5a59faf5c2b1602d09f0c117817512f15b32",
+        "postprocess": "cover-crop to 16:9, Lanczos resize, WebP q84/q82"
+      },
+      "license": "generated with Azure OpenAI Image API (deployment gpt-image-2.5-sunburst) via the azure-image-generation helper; under the Microsoft Product Terms for Azure OpenAI the customer owns the output and Microsoft claims no rights in it, so commercial use is permitted (subject to the Azure OpenAI Code of Conduct). No stock or web imagery.",
+      "created": "2026-10-08",
+      "review": {
+        "status": "approved",
+        "notes": "Misty birch hill with candles; no graves."
+      }
+    },
+    {
+      "id": "bg-title",
+      "kind": "background",
+      "file": "bg/bg-title.webp",
+      "width": 1920,
+      "height": 1080,
+      "transparent": false,
+      "variants": [
+        {
+          "file": "bg/bg-title-720.webp",
+          "width": 1280,
+          "height": 720,
+          "label": "720p"
+        }
+      ],
+      "bytes": 1010152,
+      "source": {
+        "tool": "azure-image-generation skill (generate-image.ps1)",
+        "provider": "Azure OpenAI",
+        "model": "gpt-image-2.5-sunburst (deployment)",
+        "operation": "generation",
+        "quality": "high",
+        "prompt": "Wide 16:9 night landscape: a small cozy two-storey log tavern with a carved roof and glowing warm windows stands exactly where four roads meet; the four roads lead away into four different worlds — a mossy forest on the left, a turquoise river on the right, a distant warm amber old town behind, and a silver-blue birch grove with candles in the foreground corner. A pendulum clock motif in the carved gable, a crossroads signpost with blank boards, a big starry indigo sky. The upper third of the sky is calm and empty for the title. Gouache painting on warm textured paper in the tradition of early-20th-century Russian book illustration: confident dark-brown ink contour over flat matte gouache fills, dry-brush edges, visible paper grain, decorative Slavic folk ornament. Warm candlelit palette of honey amber, ember orange, deep indigo and plum shadows. Cozy, gentle storybook mood; spirits are kind neighbours. Absolutely no text, letters, numerals, runes, writing, signature or watermark.",
+        "derived_from": [],
+        "raw_file": "bg-title-r1-c1.png",
+        "raw_sha256": "248918fed835ee2159f032c05fac5193e587f938e625bef1a5384f5614936327",
+        "postprocess": "cover-crop to 16:9, Lanczos resize, WebP q84/q82"
+      },
+      "license": "generated with Azure OpenAI Image API (deployment gpt-image-2.5-sunburst) via the azure-image-generation helper; under the Microsoft Product Terms for Azure OpenAI the customer owns the output and Microsoft claims no rights in it, so commercial use is permitted (subject to the Azure OpenAI Code of Conduct). No stock or web imagery.",
+      "created": "2026-10-08",
+      "review": {
+        "status": "approved",
+        "notes": "Tavern at crossroads of forest, river, city and candlelit memorial grove; signpost blank."
+      }
+    },
+    {
+      "id": "ending-wound",
+      "kind": "ending",
+      "file": "endings/ending-wound.webp",
+      "width": 1920,
+      "height": 1080,
+      "transparent": false,
+      "variants": [
+        {
+          "file": "endings/ending-wound-720.webp",
+          "width": 1280,
+          "height": 720,
+          "label": "720p"
+        }
+      ],
+      "bytes": 651762,
+      "source": {
+        "tool": "azure-image-generation skill (generate-image.ps1)",
+        "provider": "Azure OpenAI",
+        "model": "gpt-image-2.5-sunburst (deployment)",
+        "operation": "edit",
+        "quality": "high",
+        "prompt": "Wide 16:9 full-scene book illustration. Image 1 is Mira: a young woman (about 19), long dark-blond braid over the shoulder, dark floral shawl, white embroidered blouse, red sarafan, ochre apron with a pocket. Image 2 is grandmother Agrafena: round kind face, red-orange patterned headscarf, dark blouse, framed by a carved clock door. Keep both characters exactly on-model (face, age, costume), but repaint them inside a new full scene. Ending, the keeper: night inside the warm tavern. The large carved pendulum wall clock glows softly from within like a gentle golden heart; inside its open little door the kind, smiling face of grandmother Agrafena is visible, peaceful and serene, wrapped in warm golden light, as if she is the heart of the clock. Mira stands before the clock holding a candle, calm and grown-up, the new keeper of the tavern, looking up at her grandmother with quiet love. Warm hearth glow on one side, sleeping cat. Bittersweet, tender, peaceful, never sad or painful. Gouache painting on warm textured paper in the tradition of early-20th-century Russian book illustration: confident dark-brown ink contour over flat matte gouache fills, dry-brush edges, visible paper grain, decorative Slavic folk ornament. Warm candlelit palette of honey amber, ember orange, deep indigo and plum shadows. Cozy, gentle storybook mood; spirits are kind neighbours. Absolutely no text, letters, numerals, runes, writing, signature or watermark.",
+        "derived_from": [
+          "mira-neutral",
+          "grandma-agrafena-kind"
+        ],
+        "raw_file": "ending-wound-r4-c1.png",
+        "raw_sha256": "d4863d988f1ba22f7ec047aeed51b146684ef96d5761687d41d3219b841d48d4",
+        "postprocess": "cover-crop to 16:9, Lanczos resize, WebP q84/q82"
+      },
+      "license": "generated with Azure OpenAI Image API (deployment gpt-image-2.5-sunburst) via the azure-image-generation helper; under the Microsoft Product Terms for Azure OpenAI the customer owns the output and Microsoft claims no rights in it, so commercial use is permitted (subject to the Azure OpenAI Code of Conduct). No stock or web imagery.",
+      "created": "2026-10-08",
+      "review": {
+        "status": "approved",
+        "notes": "v2 with refs: grandmother smiling inside the glowing clock door as its heart; Mira the keeper with candle. Gentle."
+      }
+    },
+    {
+      "id": "ending-remember",
+      "kind": "ending",
+      "file": "endings/ending-remember.webp",
+      "width": 1920,
+      "height": 1080,
+      "transparent": false,
+      "variants": [
+        {
+          "file": "endings/ending-remember-720.webp",
+          "width": 1280,
+          "height": 720,
+          "label": "720p"
+        }
+      ],
+      "bytes": 691858,
+      "source": {
+        "tool": "azure-image-generation skill (generate-image.ps1)",
+        "provider": "Azure OpenAI",
+        "model": "gpt-image-2.5-sunburst (deployment)",
+        "operation": "edit",
+        "quality": "high",
+        "prompt": "Wide 16:9 full-scene book illustration. Image 1 is Mira: a young woman (about 19), long dark-blond braid over the shoulder, dark floral shawl, white embroidered blouse, red sarafan, ochre apron with a pocket. Image 2 is grandmother Agrafena: round kind face, red-orange patterned headscarf, dark blouse, framed by a carved clock door. Keep both characters exactly on-model (face, age, costume), but repaint them inside a new full scene. Ending, remembrance: in the tavern, grandmother Agrafena, full figure, small and round, steps out of the open door of a big carved pendulum clock into warm light, smiling, arms open; Mira runs to embrace her. Beside the counter a tall figure made of soft golden light, once an empty outline, now gently glowing with a calm, warm, newly remembered presence, hand over heart. Joyful and tender. Gouache painting on warm textured paper in the tradition of early-20th-century Russian book illustration: confident dark-brown ink contour over flat matte gouache fills, dry-brush edges, visible paper grain, decorative Slavic folk ornament. Warm candlelit palette of honey amber, ember orange, deep indigo and plum shadows. Cozy, gentle storybook mood; spirits are kind neighbours. Absolutely no text, letters, numerals, runes, writing, signature or watermark.",
+        "derived_from": [
+          "mira-neutral",
+          "grandma-agrafena-kind"
+        ],
+        "raw_file": "ending-remember-r4-c1.png",
+        "raw_sha256": "b15ef674fb275ff774a5e7bd1aef9b21169350277398f42dc5508e19a8ab83fd",
+        "postprocess": "cover-crop to 16:9, Lanczos resize, WebP q84/q82"
+      },
+      "license": "generated with Azure OpenAI Image API (deployment gpt-image-2.5-sunburst) via the azure-image-generation helper; under the Microsoft Product Terms for Azure OpenAI the customer owns the output and Microsoft claims no rights in it, so commercial use is permitted (subject to the Azure OpenAI Code of Conduct). No stock or web imagery.",
+      "created": "2026-10-08",
+      "review": {
+        "status": "approved",
+        "notes": "v2 with refs: grandmother steps out of the clock, Mira runs to her; the nameless guest glows with a remembered face."
+      }
+    },
+    {
+      "id": "ending-new-spring",
+      "kind": "ending",
+      "file": "endings/ending-new-spring.webp",
+      "width": 1920,
+      "height": 1080,
+      "transparent": false,
+      "variants": [
+        {
+          "file": "endings/ending-new-spring-720.webp",
+          "width": 1280,
+          "height": 720,
+          "label": "720p"
+        }
+      ],
+      "bytes": 977372,
+      "source": {
+        "tool": "azure-image-generation skill (generate-image.ps1)",
+        "provider": "Azure OpenAI",
+        "model": "gpt-image-2.5-sunburst (deployment)",
+        "operation": "edit",
+        "quality": "high",
+        "prompt": "Wide 16:9 full-scene book illustration. Image 1 is Mira (young woman, dark-blond braid, red sarafan, ochre apron); Image 2 is the guardian of the crossroads (antlers hung with little signpost boards, four-panel cloak of forest, river, city and candle-night). Keep both on-model. Ending, new spring: a dawn feast outside the tavern at the crossroads: long tables with dishes, forest, river and city spirits and gentle silver memorial shadows seated together; the guardian stands blessing the feast and Mira raises a cup among the guests; pink-gold sunrise, blossoming birches. Warm, festive, hopeful. Gouache painting on warm textured paper in the tradition of early-20th-century Russian book illustration: confident dark-brown ink contour over flat matte gouache fills, dry-brush edges, visible paper grain, decorative Slavic folk ornament. Warm candlelit palette of honey amber, ember orange, deep indigo and plum shadows. Cozy, gentle storybook mood; spirits are kind neighbours. Absolutely no text, letters, numerals, runes, writing, signature or watermark.",
+        "derived_from": [
+          "mira-neutral",
+          "guardian"
+        ],
+        "raw_file": "ending-new-spring-r4-c2.png",
+        "raw_sha256": "71a024904222f925725d4a674c7c9acfa6d3c96fcf78b23a9a1122a4cd427964",
+        "postprocess": "cover-crop to 16:9, Lanczos resize, WebP q84/q82"
+      },
+      "license": "generated with Azure OpenAI Image API (deployment gpt-image-2.5-sunburst) via the azure-image-generation helper; under the Microsoft Product Terms for Azure OpenAI the customer owns the output and Microsoft claims no rights in it, so commercial use is permitted (subject to the Azure OpenAI Code of Conduct). No stock or web imagery.",
+      "created": "2026-10-08",
+      "review": {
+        "status": "approved",
+        "notes": "v2 with refs: dawn feast, guardian blessing, Mira raising a cup, silver memorial shadows at the table."
+      }
+    },
+    {
+      "id": "ending-letter",
+      "kind": "ending",
+      "file": "endings/ending-letter.webp",
+      "width": 1920,
+      "height": 1080,
+      "transparent": false,
+      "variants": [
+        {
+          "file": "endings/ending-letter-720.webp",
+          "width": 1280,
+          "height": 720,
+          "label": "720p"
+        }
+      ],
+      "bytes": 765822,
+      "source": {
+        "tool": "azure-image-generation skill (generate-image.ps1)",
+        "provider": "Azure OpenAI",
+        "model": "gpt-image-2.5-sunburst (deployment)",
+        "operation": "generation",
+        "quality": "high",
+        "prompt": "Wide 16:9 full-scene book illustration. Ending: a quiet still life: on a wooden table by the window, a folded letter with a wax seal (no visible writing), a stopped pendulum wall clock above with its little door open and a small carved cuckoo leaning out, a single candle, soft morning light. Bittersweet, gentle, hopeful. Gouache painting on warm textured paper in the tradition of early-20th-century Russian book illustration: confident dark-brown ink contour over flat matte gouache fills, dry-brush edges, visible paper grain, decorative Slavic folk ornament. Warm candlelit palette of honey amber, ember orange, deep indigo and plum shadows. Cozy, gentle storybook mood; spirits are kind neighbours. Absolutely no text, letters, numerals, runes, writing, signature or watermark.",
+        "derived_from": [],
+        "raw_file": "ending-letter-r1-c1.png",
+        "raw_sha256": "d40b4e38c9c0c8d329f9114de343d5b8f5a5f748159671fbd46680128859387b",
+        "postprocess": "cover-crop to 16:9, Lanczos resize, WebP q84/q82"
+      },
+      "license": "generated with Azure OpenAI Image API (deployment gpt-image-2.5-sunburst) via the azure-image-generation helper; under the Microsoft Product Terms for Azure OpenAI the customer owns the output and Microsoft claims no rights in it, so commercial use is permitted (subject to the Azure OpenAI Code of Conduct). No stock or web imagery.",
+      "created": "2026-10-08",
+      "review": {
+        "status": "approved",
+        "notes": "Sealed letter, stopped cuckoo clock, candle; domovoy and cat dozing. No text."
+      }
+    },
+    {
+      "id": "icon-story-half",
+      "kind": "icon",
+      "file": "ui/icons/icon-story-half.webp",
+      "width": 178,
+      "height": 256,
+      "transparent": true,
+      "variants": [],
+      "bytes": 12698,
+      "source": {
+        "tool": "azure-image-generation skill (generate-image.ps1)",
+        "provider": "Azure OpenAI",
+        "model": "gpt-image-2.5-sunburst (deployment)",
+        "operation": "edit",
+        "quality": "medium",
+        "prompt": "Image 1 is the style authority for icons: match its contour weight, flat gouache fill, palette and scale, but draw the new object described. Small game UI icon, bold readable silhouette, simple shapes, thick dark-brown ink contour and flat gouache fill, slight paper texture, warm folk-art palette, front view, readable at 48 pixels. A small upright card with a rounded ornament border and a tiny painted house, torn diagonally in half so only the left half remains, the torn edge ragged. Gouache painting on warm textured paper in the tradition of early-20th-century Russian book illustration: confident dark-brown ink contour over flat matte gouache fills, dry-brush edges, visible paper grain, decorative Slavic folk ornament. Warm candlelit palette of honey amber, ember orange, deep indigo and plum shadows. Cozy, gentle storybook mood; spirits are kind neighbours. Absolutely no text, letters, numerals, runes, writing, signature or watermark. Single subject, centered, fully visible with a small margin on all sides, isolated on a fully transparent background; no ground, no cast shadow, no frame, no border, no scenery.",
+        "derived_from": [
+          "icon-heat"
+        ],
+        "raw_file": "icon-story-half-r1-c2.png",
+        "raw_sha256": "f0b15b38d549326ca6ca4abbaa41aeb13f752ff3e075018ae2df827c3cd4b298",
+        "postprocess": "alpha clean + trim + Lanczos resize, WebP with alpha (q90, lossless alpha)"
+      },
+      "license": "generated with Azure OpenAI Image API (deployment gpt-image-2.5-sunburst) via the azure-image-generation helper; under the Microsoft Product Terms for Azure OpenAI the customer owns the output and Microsoft claims no rights in it, so commercial use is permitted (subject to the Azure OpenAI Code of Conduct). No stock or web imagery.",
+      "created": "2026-10-08",
+      "review": {
+        "status": "approved",
+        "notes": "Torn story card (half)."
+      }
+    },
+    {
+      "id": "icon-mutnoe",
+      "kind": "icon",
+      "file": "ui/icons/icon-mutnoe.webp",
+      "width": 208,
+      "height": 256,
+      "transparent": true,
+      "variants": [],
+      "bytes": 11044,
+      "source": {
+        "tool": "azure-image-generation skill (generate-image.ps1)",
+        "provider": "Azure OpenAI",
+        "model": "gpt-image-2.5-sunburst (deployment)",
+        "operation": "edit",
+        "quality": "medium",
+        "prompt": "Image 1 is the style authority for icons: match its contour weight, flat gouache fill, palette and scale, but draw the new object described. Small game UI icon, bold readable silhouette, simple shapes, thick dark-brown ink contour and flat gouache fill, slight paper texture, warm folk-art palette, front view, readable at 48 pixels. A small swirl of murky brown-grey silt smoke curling inside a round wooden bowl, dull and cloudy. Gouache painting on warm textured paper in the tradition of early-20th-century Russian book illustration: confident dark-brown ink contour over flat matte gouache fills, dry-brush edges, visible paper grain, decorative Slavic folk ornament. Warm candlelit palette of honey amber, ember orange, deep indigo and plum shadows. Cozy, gentle storybook mood; spirits are kind neighbours. Absolutely no text, letters, numerals, runes, writing, signature or watermark. Single subject, centered, fully visible with a small margin on all sides, isolated on a fully transparent background; no ground, no cast shadow, no frame, no border, no scenery.",
+        "derived_from": [
+          "icon-heat"
+        ],
+        "raw_file": "icon-mutnoe-r1-c2.png",
+        "raw_sha256": "c8f947372f2433490429fcfa38848cc1f3c1537717b4252f06efb20396d8291c",
+        "postprocess": "alpha clean + trim + Lanczos resize, WebP with alpha (q90, lossless alpha)"
+      },
+      "license": "generated with Azure OpenAI Image API (deployment gpt-image-2.5-sunburst) via the azure-image-generation helper; under the Microsoft Product Terms for Azure OpenAI the customer owns the output and Microsoft claims no rights in it, so commercial use is permitted (subject to the Azure OpenAI Code of Conduct). No stock or web imagery.",
+      "created": "2026-10-08",
+      "review": {
+        "status": "approved",
+        "notes": "Bowl with murky haze."
       }
     },
     {
@@ -2612,6 +3045,34 @@
       }
     },
     {
+      "id": "tarot-back",
+      "kind": "card",
+      "file": "ui/cards/tarot-back.webp",
+      "width": 499,
+      "height": 768,
+      "transparent": true,
+      "variants": [],
+      "bytes": 153946,
+      "source": {
+        "tool": "azure-image-generation skill (generate-image.ps1)",
+        "provider": "Azure OpenAI",
+        "model": "gpt-image-2.5-sunburst (deployment)",
+        "operation": "generation",
+        "quality": "high",
+        "prompt": "A tall vertical game card with rounded corners, 2:3 proportions, front view, filling the whole height. The back of grandmother's fortune cards: deep plum-violet with a symmetric silver-and-gold folk ornament, a crescent moon cradling a small pendulum clock in the middle, a carved border. Gouache painting on warm textured paper in the tradition of early-20th-century Russian book illustration: confident dark-brown ink contour over flat matte gouache fills, dry-brush edges, visible paper grain, decorative Slavic folk ornament. Warm candlelit palette of honey amber, ember orange, deep indigo and plum shadows. Cozy, gentle storybook mood; spirits are kind neighbours. Absolutely no text, letters, numerals, runes, writing, signature or watermark. Isolated on a fully transparent background.",
+        "derived_from": [],
+        "raw_file": "tarot-back-r1-c1.png",
+        "raw_sha256": "d2e2dee3ee8b7845c42bdda0d219993b5a4bb59150b286325d1d252f185bb911",
+        "postprocess": "alpha clean + trim + Lanczos resize, WebP with alpha (q90, lossless alpha)"
+      },
+      "license": "generated with Azure OpenAI Image API (deployment gpt-image-2.5-sunburst) via the azure-image-generation helper; under the Microsoft Product Terms for Azure OpenAI the customer owns the output and Microsoft claims no rights in it, so commercial use is permitted (subject to the Azure OpenAI Code of Conduct). No stock or web imagery.",
+      "created": "2026-10-08",
+      "review": {
+        "status": "approved",
+        "notes": "Moon and clock card back, no text."
+      }
+    },
+    {
       "id": "char-kupa-portrait",
       "kind": "character",
       "file": "characters/char-kupa-portrait.webp",
@@ -2639,6 +3100,148 @@
       "review": {
         "status": "approved",
         "notes": "Six arms checked: poker, log, coal shovel, kettle, two folded. Real-alpha cutout re-render of approved kupa-r1-c1.png (original had a painted checkerboard)."
+      }
+    },
+    {
+      "id": "hud-clock-face",
+      "kind": "ui",
+      "file": "ui/hud-clock-face.webp",
+      "width": 340,
+      "height": 512,
+      "transparent": true,
+      "variants": [],
+      "bytes": 36210,
+      "source": {
+        "tool": "azure-image-generation skill (generate-image.ps1)",
+        "provider": "Azure OpenAI",
+        "model": "gpt-image-2.5-sunburst (deployment)",
+        "operation": "generation",
+        "quality": "high",
+        "prompt": "Front orthographic view of a carved wooden folk pendulum wall clock case WITHOUT its pendulum and without hands: a carved gabled top with a small closed arched cuckoo door, below it a round cream dial marked only with twelve small painted dots (no numerals, no hands), carved folk ornament around the dial, the bottom of the case ends in a flat edge with a hole where a pendulum would hang. Gouache painting on warm textured paper in the tradition of early-20th-century Russian book illustration: confident dark-brown ink contour over flat matte gouache fills, dry-brush edges, visible paper grain, decorative Slavic folk ornament. Warm candlelit palette of honey amber, ember orange, deep indigo and plum shadows. Cozy, gentle storybook mood; spirits are kind neighbours. Absolutely no text, letters, numerals, runes, writing, signature or watermark. Single subject, centered, fully visible with a small margin on all sides, isolated on a fully transparent background; no ground, no cast shadow, no frame, no border, no scenery.",
+        "derived_from": [],
+        "raw_file": "hud-clock-face-r1-c1.png",
+        "raw_sha256": "530ccedfc5d1e2dc32f7bdb13a809d65b0231359297261149a727f21f3d0c5c1",
+        "postprocess": "alpha clean + trim + Lanczos resize, WebP with alpha (q90, lossless alpha)"
+      },
+      "license": "generated with Azure OpenAI Image API (deployment gpt-image-2.5-sunburst) via the azure-image-generation helper; under the Microsoft Product Terms for Azure OpenAI the customer owns the output and Microsoft claims no rights in it, so commercial use is permitted (subject to the Azure OpenAI Code of Conduct). No stock or web imagery.",
+      "created": "2026-10-08",
+      "review": {
+        "status": "approved",
+        "notes": "Cuckoo clock body with blank dot dial, no hands; centre pivot."
+      }
+    },
+    {
+      "id": "hud-clock-hands",
+      "kind": "ui",
+      "file": "ui/hud-clock-hands.webp",
+      "width": 42,
+      "height": 256,
+      "transparent": true,
+      "variants": [],
+      "bytes": 5740,
+      "source": {
+        "tool": "azure-image-generation skill (generate-image.ps1)",
+        "provider": "Azure OpenAI",
+        "model": "gpt-image-2.5-sunburst (deployment)",
+        "operation": "generation",
+        "quality": "medium",
+        "prompt": "Front orthographic view of a single pair of ornate wrought-brass clock hands (one short hour hand and one long minute hand) both pointing straight up, overlapping, with a round central boss; nothing else. Gouache painting on warm textured paper in the tradition of early-20th-century Russian book illustration: confident dark-brown ink contour over flat matte gouache fills, dry-brush edges, visible paper grain, decorative Slavic folk ornament. Warm candlelit palette of honey amber, ember orange, deep indigo and plum shadows. Cozy, gentle storybook mood; spirits are kind neighbours. Absolutely no text, letters, numerals, runes, writing, signature or watermark. Single subject, centered, fully visible with a small margin on all sides, isolated on a fully transparent background; no ground, no cast shadow, no frame, no border, no scenery.",
+        "derived_from": [],
+        "raw_file": "hud-clock-hands-r1-c1.png",
+        "raw_sha256": "ee08ff5d9c0e3837126c662145e2677563de3c241f5ccea7c0b43f74fa5d6a50",
+        "postprocess": "alpha clean + trim + Lanczos resize, WebP with alpha (q90, lossless alpha)"
+      },
+      "license": "generated with Azure OpenAI Image API (deployment gpt-image-2.5-sunburst) via the azure-image-generation helper; under the Microsoft Product Terms for Azure OpenAI the customer owns the output and Microsoft claims no rights in it, so commercial use is permitted (subject to the Azure OpenAI Code of Conduct). No stock or web imagery.",
+      "created": "2026-10-08",
+      "review": {
+        "status": "approved",
+        "notes": "Single ornate hand; rotate around the lower boss."
+      }
+    },
+    {
+      "id": "hud-pendulum",
+      "kind": "ui",
+      "file": "ui/hud-pendulum.webp",
+      "width": 161,
+      "height": 512,
+      "transparent": true,
+      "variants": [],
+      "bytes": 15958,
+      "source": {
+        "tool": "azure-image-generation skill (generate-image.ps1)",
+        "provider": "Azure OpenAI",
+        "model": "gpt-image-2.5-sunburst (deployment)",
+        "operation": "generation",
+        "quality": "medium",
+        "prompt": "Front orthographic view of a single clock pendulum hanging straight down: a long thin brass rod with a round polished brass bob decorated with a small engraved sun, nothing else. Gouache painting on warm textured paper in the tradition of early-20th-century Russian book illustration: confident dark-brown ink contour over flat matte gouache fills, dry-brush edges, visible paper grain, decorative Slavic folk ornament. Warm candlelit palette of honey amber, ember orange, deep indigo and plum shadows. Cozy, gentle storybook mood; spirits are kind neighbours. Absolutely no text, letters, numerals, runes, writing, signature or watermark. Single subject, centered, fully visible with a small margin on all sides, isolated on a fully transparent background; no ground, no cast shadow, no frame, no border, no scenery.",
+        "derived_from": [],
+        "raw_file": "hud-pendulum-r1-c2.png",
+        "raw_sha256": "349a047dec43d312a7a3be5a0238d14c8d16c0eae2730f0b9a173de9e5683cbd",
+        "postprocess": "alpha clean + trim + Lanczos resize, WebP with alpha (q90, lossless alpha)"
+      },
+      "license": "generated with Azure OpenAI Image API (deployment gpt-image-2.5-sunburst) via the azure-image-generation helper; under the Microsoft Product Terms for Azure OpenAI the customer owns the output and Microsoft claims no rights in it, so commercial use is permitted (subject to the Azure OpenAI Code of Conduct). No stock or web imagery.",
+      "created": "2026-10-08",
+      "review": {
+        "status": "approved",
+        "notes": "Brass sun pendulum; pivot at top ring."
+      }
+    },
+    {
+      "id": "hud-stove-lit",
+      "kind": "ui",
+      "file": "ui/hud-stove-lit.webp",
+      "width": 470,
+      "height": 512,
+      "transparent": true,
+      "variants": [],
+      "bytes": 67770,
+      "source": {
+        "tool": "azure-image-generation skill (generate-image.ps1)",
+        "provider": "Azure OpenAI",
+        "model": "gpt-image-2.5-sunburst (deployment)",
+        "operation": "generation",
+        "quality": "high",
+        "prompt": "Front view of the arched mouth of a whitewashed Russian clay stove, close-up: the arched opening full of bright glowing orange embers and lively flames, a copper pot in it, painted red folk ornament around the arch, only the stove front. Gouache painting on warm textured paper in the tradition of early-20th-century Russian book illustration: confident dark-brown ink contour over flat matte gouache fills, dry-brush edges, visible paper grain, decorative Slavic folk ornament. Warm candlelit palette of honey amber, ember orange, deep indigo and plum shadows. Cozy, gentle storybook mood; spirits are kind neighbours. Absolutely no text, letters, numerals, runes, writing, signature or watermark. Single subject, centered, fully visible with a small margin on all sides, isolated on a fully transparent background; no ground, no cast shadow, no frame, no border, no scenery.",
+        "derived_from": [],
+        "raw_file": "hud-stove-lit-r1-c1.png",
+        "raw_sha256": "a7e8b2f82d277ea3191d7c8f5d4283a69bb6bf0725974cfe9e3ba0f32bb5cee0",
+        "postprocess": "alpha clean + trim + Lanczos resize, WebP with alpha (q90, lossless alpha)"
+      },
+      "license": "generated with Azure OpenAI Image API (deployment gpt-image-2.5-sunburst) via the azure-image-generation helper; under the Microsoft Product Terms for Azure OpenAI the customer owns the output and Microsoft claims no rights in it, so commercial use is permitted (subject to the Azure OpenAI Code of Conduct). No stock or web imagery.",
+      "created": "2026-10-08",
+      "review": {
+        "status": "approved",
+        "notes": "Whitewashed Russian stove with painted ornament, fire and pot."
+      }
+    },
+    {
+      "id": "hud-stove-idle",
+      "kind": "ui",
+      "file": "ui/hud-stove-idle.webp",
+      "width": 469,
+      "height": 512,
+      "transparent": true,
+      "variants": [],
+      "bytes": 56198,
+      "source": {
+        "tool": "azure-image-generation skill (generate-image.ps1)",
+        "provider": "Azure OpenAI",
+        "model": "gpt-image-2.5-sunburst (deployment)",
+        "operation": "edit",
+        "quality": "high",
+        "prompt": "Image 1 is the stove front, the authority for shape, framing and style: keep everything identical, but the fire is resting — only a few dim, softly glowing grey-red embers, no flames, a thin wisp of smoke. Single subject, centered, fully visible with a small margin on all sides, isolated on a fully transparent background; no ground, no cast shadow, no frame, no border, no scenery.",
+        "derived_from": [
+          "hud-stove-lit"
+        ],
+        "raw_file": "hud-stove-idle-r1-c2.png",
+        "raw_sha256": "e469bf435e30b01591ceb4ffda5bc43154b8ac41b1b2f4f067e7b8a5dc651ee0",
+        "postprocess": "alpha clean + trim + Lanczos resize, WebP with alpha (q90, lossless alpha)"
+      },
+      "license": "generated with Azure OpenAI Image API (deployment gpt-image-2.5-sunburst) via the azure-image-generation helper; under the Microsoft Product Terms for Azure OpenAI the customer owns the output and Microsoft claims no rights in it, so commercial use is permitted (subject to the Azure OpenAI Code of Conduct). No stock or web imagery.",
+      "created": "2026-10-08",
+      "review": {
+        "status": "approved",
+        "notes": "Same stove as hud-stove-lit, embers only and pot steaming; for idle state."
       }
     },
     {
