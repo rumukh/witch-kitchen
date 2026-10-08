@@ -140,7 +140,7 @@ export function vowsAtDawn(s: GameState, C: Content): boolean {
     const v = s.vows[id];
     if (!v || v.to !== s.night) continue;
     if (v.s === 'active') {
-      let ok = false;
+      let ok: boolean;
       switch (def.cond) {
         case 'pureDishes':
           ok = s.nt.pureServed >= (def.count ?? 2);

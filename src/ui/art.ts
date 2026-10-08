@@ -42,7 +42,7 @@ export class ArtLibrary {
       const root = document.documentElement.style;
       const css = (id: string, v: string) => {
         const u = this.url(id);
-        if (u) root.setProperty(v, `url("${u}")`);
+        if (u) root.setProperty(v, `url("${new URL(u, location.href).href}")`);
       };
       css('ui-panel-paper', '--paper-tex');
       css('ui-frame', '--frame-img');

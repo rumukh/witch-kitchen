@@ -135,7 +135,7 @@ function tarot(ctx: Ctx): HTMLElement {
     return box;
   }
   const r = s.tarot;
-  let text = '';
+  let text: string;
   if (r.card === 'guest') text = t('day.tarot.result.guest', { list: (r.guests ?? []).map((g) => `${g.sp ? t(`special.${g.sp}`) : t(`world.${g.w}.guest`)} (${g.ord === 'any' ? t('feeling.any') : feelingName(ctx, g.ord)})`).join(', ') });
   else if (r.card === 'wind') text = r.wind ? t('day.tarot.result.wind', { world: t(`world.${r.wind}`) }) : t('day.tarot.result.windNone');
   else if (r.hint) {

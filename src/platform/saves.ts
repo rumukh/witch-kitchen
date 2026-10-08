@@ -175,7 +175,7 @@ export function parseImport(text: string): SaveEnvelope<RuntimeSnapshot, SlotRes
     if (raw.gameId !== GAME_ID) throw new Error('not a Krestets save');
     if (typeof raw.profileId === 'string' && (SLOT_IDS as readonly string[]).includes(raw.profileId)) source = raw.profileId;
   } catch (e) {
-    throw new Error((e as Error).message);
+    throw new Error((e as Error).message, { cause: e });
   }
   return importSave(text, slotPolicy(source, () => true));
 }

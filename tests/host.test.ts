@@ -12,9 +12,8 @@ const pack = contentPack(C, contentRevision(C));
 /** Play nights 1–3 with the average bot on the pure model, recording the trace. */
 function botTrace(seed: string, nights = 3): Action[] {
   const P = averagePolicy({ seed: 1 });
-  let s = requireValue({ ok: true as const, value: null }) as unknown as GameState;
   const host0 = createKrestetsHost(pack, seed, 'standard');
-  s = structuredClone(host0.getView().state);
+  let s: GameState = structuredClone(host0.getView().state);
   void host0.dispose();
   const trace: Action[] = [];
   while (s.night <= nights && s.phase !== 'ended') {

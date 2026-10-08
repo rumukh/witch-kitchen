@@ -74,6 +74,14 @@ test('night 10 fixture: listen dialog, cook list, Межсветье tabs', asyn
   await page.locator('[data-testid="cook"]').click();
   await page.screenshot({ path: 'docs/screens/cook-dialog.png' });
   await page.locator('dialog[open] [data-testid="choice-cancel"]').click();
+  // DIAG-01: export the night report from Settings → «Для тестировщиков».
+  await page.keyboard.press('Escape');
+  await page.locator('dialog[open]').getByText('Настройки').click();
+  const download = page.waitForEvent('download');
+  await page.locator('[data-testid="export-report"]').click();
+  await (await download).saveAs('docs/reports/sample-night-report.json');
+  await page.keyboard.press('Escape');
+  await page.keyboard.press('Escape');
   for (let i = 0; i < 300 && !(await page.locator('[data-testid="day"]').count()); i++) {
     const r = await step(page);
     if (r === 'stuck') break;

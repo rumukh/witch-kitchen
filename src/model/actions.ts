@@ -4,7 +4,6 @@ import type { Action, Dish, GameState, Jar, ModelOptions, Resolution } from './t
 import {
   accepts,
   addSediment,
-  cellCount,
   freeCell,
   freshStage,
   gainHeat,
@@ -286,7 +285,6 @@ export function resolve(s: GameState, a: Action, C: Content): Resolution {
       const price = C.economy.prices[a.item];
       if (!price) return no('bad-item');
       if (!(s.phase === 'day' || mirrorOpen(s, C))) return no('shop-closed');
-      if (s.night === C.nights.tutorial.night && s.phase === 'day' && false) return no('shop-closed');
       if (owned(s, a.item)) return no('owned');
       if (a.pay === 'stories') {
         if (!price.stories || s.stories < price.stories) return no('no-story');

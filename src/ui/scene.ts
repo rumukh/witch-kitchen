@@ -79,7 +79,8 @@ function presentLines(ctx: Ctx, id: string, lines: { s: string; t: string; e?: s
       if (revealing !== null) clearInterval(revealing);
       revealing = null;
       ctx.audio.stopMurmur();
-      text.textContent = lines[i]!.t;
+      const line = lines[Math.min(i, lines.length - 1)];
+      if (line) text.textContent = line.t;
     };
     const advance = () => {
       if (revealing !== null) return stopReveal();
