@@ -1,6 +1,17 @@
 # v1 acceptance evidence
 
-Date: 2026-10-08. Branch `rumukh-krestets-v1-game-build`. Engine AEGIS `0abd61b5`.
+Date: 2026-10-08. Branch `rumukh-krestets-v1-game-build`. Engine AEGIS `cc9593b3` (re-pinned from `0abd61b5`).
+
+## Re-pin to cc9593b (engine PRs #18 and #19)
+
+- Typecheck, lint, 22 tests (incl. AEGIS host ↔ pure-model parity), 5 Playwright tests: pass.
+- Full 10k sweeps re-run: all 12 ending-route digests and the K28 determinism digest are
+  **identical** to the 0abd61b run. Expected: sweeps execute the engine-independent rules model;
+  engine behaviour is covered by the host parity test.
+- Saves from the first pin restore and continue on the new engine (`npx tsx scripts/check-old-saves.ts e2e/fixtures/*.json`).
+- Desktop now serves `app://krestets/` with `schemes: ['app:']`. A save written by the
+  previous `https://krestets.local` build resumes in the new build (`KRESTETS_EXE`/`KRESTETS_EXE2`
+  in `scripts/smoke-electron.mjs`); 0 requests outside the app origin.
 All commands below were run on this branch; outputs are in this folder and `docs/screens/`.
 
 ## Balance and reachability (headless, `npx tsx sim/run.ts`, 15 workers)
@@ -71,5 +82,3 @@ Window minimum 1280×720, F11 fullscreen, single-instance lock.
   temp + fsync + rename, a `.prev` copy, CAS and bounded EPERM/EBUSY retries.
 - Screen readers, touch and mobile are not promised (Q02, Q43). Playtest timing (Q48) and
   editorial review of texts remain for the slice playtest.
-- Engine note sent to the coordinator: AEGIS audio requires HTTP(S) asset origins; the
-  desktop build serves an intercepted `https://krestets.local/` origin.

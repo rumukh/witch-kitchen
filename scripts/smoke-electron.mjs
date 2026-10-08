@@ -5,14 +5,15 @@ import { mkdtempSync, readdirSync, existsSync, readFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 
-const exe = join('dist', 'win', 'Krestets-win32-x64', 'Krestets.exe');
-const saveDir = mkdtempSync(join(tmpdir(), 'krestets-smoke-'));
+const exe = process.env.KRESTETS_EXE || join('dist', 'win', 'Krestets-win32-x64', 'Krestets.exe');
+const exe2 = process.env.KRESTETS_EXE2 || exe;
+const saveDir = process.env.KRESTETS_SAVE_DIR || mkdtempSync(join(tmpdir(), 'krestets-smoke-'));
 const env = { ...process.env, KRESTETS_SAVE_DIR: saveDir };
 const out = [];
 const blocked = [];
 
-async function launch() {
-  const app = await electron.launch({ executablePath: exe, env, timeout: 60000 });
+async function launch(path = exe) {
+  const app = await electron.launch({ executablePath: path, env, timeout: 60000 });
   const page = await app.firstWindow();
   page.on('pageerror', (e) => out.push('pageerror ' + e.message));
   page.on('requestfailed', (r) => blocked.push(r.url()));
@@ -58,7 +59,7 @@ await page.screenshot({ path: 'docs/screens/electron-night1.png' });
 out.push(`before quit: ${before}, heat ${heat}, save status: ${await page.locator('[data-testid="save-status"]').textContent()}`);
 await app.close();
 
-({ app, page } = await launch());
+({ app, page } = await launch(exe2));
 await page.click('[data-testid="continue-1"]');
 await page.waitForSelector('[data-testid="tavern"]');
 const after = await page.locator('.clock-text').textContent();
@@ -69,7 +70,7 @@ await app.close();
 const files = existsSync(join(saveDir, 'io.github.rumukh.krestets')) ? readdirSync(join(saveDir, 'io.github.rumukh.krestets')) : [];
 const slot = files.includes('slot-1.json') ? JSON.parse(readFileSync(join(saveDir, 'io.github.rumukh.krestets', 'slot-1.json'), 'utf8')) : null;
 out.push(`save files: ${files.join(', ')}; slot-1 revision ${slot?.current?.revision}; previous kept: ${!!slot?.previous}`);
-out.push(`non-app requests blocked: ${blocked.filter((u) => !u.startsWith('https://krestets.local/')).length}`);
+out.push(`non-app requests blocked: ${blocked.filter((u) => !u.startsWith('app://krestets/')).length}`);
 const ok = before === after && heat === heat2 && slot?.current && !out.some((l) => l.startsWith('pageerror'));
 console.log(out.join('\n'));
 console.log(ok ? 'ELECTRON SMOKE: PASS' : 'ELECTRON SMOKE: FAIL');

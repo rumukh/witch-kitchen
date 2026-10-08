@@ -1,8 +1,8 @@
 {
   "format": "aegis-sdk-build/1",
-  "revision": "0abd61b5a679020bfb66bf4db24888df9e339d4d",
+  "revision": "cc9593b37cf72b72047ac0fc076fb80283652d50",
   "workingTree": "clean",
-  "sourceDigest": "c349e8c5ff2bae203c3e8025bebc1a432589325c1b82060a9280737daa7e914a",
+  "sourceDigest": "34550d4cb20c6afa501f77f21f375ef446aadbd07209215e866e8d08c814b97f",
   "sourceFiles": [
     {
       "path": "LICENSE",
@@ -10,23 +10,71 @@
     },
     {
       "path": "package-lock.json",
-      "sha256": "5d87413aea2f473093fdcb625143ed65ebba0d1fdf86d347380f580b8213ba81"
+      "sha256": "62ad50fd994121f6b09862609d7757097a32072e60885397587bc0d41e17c732"
     },
     {
       "path": "package.json",
       "sha256": "b51b8d0e4b1eaa757fbce3e43aacbfdf5c12d68a2f474cc0a589fe6b48d7aa79"
     },
     {
+      "path": "packages/browser/bin/aegis-animation.mjs",
+      "sha256": "165a11ad21df11544c39e13168752e00475fc9a4535257e7e9d26c25a31f91db"
+    },
+    {
       "path": "packages/browser/package.json",
-      "sha256": "36e3d9e4b7c1dbd8e618928b4d5d38d0f0aa09a5ed93c03ebff57bbd2852aa03"
+      "sha256": "5654cafc29f4c03878388749dc09ddd891c631b6fd8d4f521212f8892ed9dbbf"
+    },
+    {
+      "path": "packages/browser/src/animation/animation.test.ts",
+      "sha256": "356e8fbd2bf5483f1fdd69768083ab478e01b0174ea2a884310088cac87cdc09"
+    },
+    {
+      "path": "packages/browser/src/animation/cutscene.ts",
+      "sha256": "674bd4b24f3a79d753b4252d240033256184d3cea0fcee4c49b4243bf54c896b"
+    },
+    {
+      "path": "packages/browser/src/animation/easing.ts",
+      "sha256": "1f1c41589897599b8c61cd49b0a910117472b70b2e45000c25c163837b2f162e"
+    },
+    {
+      "path": "packages/browser/src/animation/index.ts",
+      "sha256": "a0871d10a974a60f83b97089fddbc7eb43f1d346e2bb4051767aa4382b4c2cd3"
+    },
+    {
+      "path": "packages/browser/src/animation/mouth.ts",
+      "sha256": "d7eb99bc7a7946f2faa739be679059de21dbd83a95bf5678285fc2837d5099fd"
+    },
+    {
+      "path": "packages/browser/src/animation/puppet.ts",
+      "sha256": "5b2fffb534a0ec3eead418e1772de7a8a440e8c633b7de8edc645d08d96228f1"
+    },
+    {
+      "path": "packages/browser/src/animation/random.ts",
+      "sha256": "ced12388f7b2e889cffd3ef9670c70b1310420c29aab828240b9f9677cb0826b"
+    },
+    {
+      "path": "packages/browser/src/animation/sample.ts",
+      "sha256": "d15e8a9154f5054935f5f3b74fe52704ef0cd14c1b594cb63e11b2aa1dc19a3b"
+    },
+    {
+      "path": "packages/browser/src/animation/types.ts",
+      "sha256": "74fad3546eee673fa9cced2198ae0b132a0169ee365c398381d6c0dcaf3456af"
+    },
+    {
+      "path": "packages/browser/src/animation/validate.ts",
+      "sha256": "8b1239c433740931e39000e854578fc257c45e1336d6a192461736ccb29a8b4c"
     },
     {
       "path": "packages/browser/src/audio/index.ts",
       "sha256": "961bf6b77b5abd1943cd0db2c26033494a08870bb0ae651f8925288f0b504a77"
     },
     {
+      "path": "packages/browser/src/audio/narration.test.ts",
+      "sha256": "a04ed1a5842c7da910c94a3b82a792445314e209d1ffe0e6895dc08ddaad0bd6"
+    },
+    {
       "path": "packages/browser/src/audio/narration.ts",
-      "sha256": "dc593887046d441286476561660b08adfa6eac41c8f6d6436d554fe9123c1813"
+      "sha256": "fef90624d1060d8963b3715cfc0229195f922975f0bb9775c8487b89d159a0f9"
     },
     {
       "path": "packages/browser/src/audio/nodes.ts",
@@ -42,11 +90,15 @@
     },
     {
       "path": "packages/browser/src/io.ts",
-      "sha256": "577cab33a21ce6fdc8e2a41d0d4107299bc5b696c11dedb5950b50832e2f3e21"
+      "sha256": "75a942957439e26e65c7941d7cea6ebd2bde801e9230d96ccaf3ce8c49b1ca95"
     },
     {
       "path": "packages/browser/src/offline/index.ts",
       "sha256": "b3f02cee8c7799e03942b143c5f11bb9671611b6cb1e351b192a5d9bd8ed85e5"
+    },
+    {
+      "path": "packages/browser/src/offline/media-packs.test.ts",
+      "sha256": "4c6b2ac4d6f33ed5adb0dad2df9d1c4a74adb88c77c7a6b6e7910189bf319448"
     },
     {
       "path": "packages/browser/src/offline/network.ts",
@@ -58,7 +110,7 @@
     },
     {
       "path": "packages/browser/src/offline/packs.ts",
-      "sha256": "ccaea63557d0c57e15b675e28ef66315cd02e41b3ee0dfcd8be3c0f22f49d3e5"
+      "sha256": "1531f3e2c7f9fcf15d3d8a8a66ba3e251de9597eae89b86f37243aac8975202a"
     },
     {
       "path": "packages/browser/src/offline/worker.ts",
@@ -78,11 +130,19 @@
     },
     {
       "path": "packages/browser/src/save/index.ts",
-      "sha256": "08d1f7854821aa5c8ea220be1627df5a3ed11ad5ad56e0e85ed2a6f7a812ad83"
+      "sha256": "f836adfe09f729e2c12491ea53d32bf4e6329ee9c625d0aaa96a09049217af86"
     },
     {
       "path": "packages/browser/src/save/indexeddb.ts",
       "sha256": "edfa921c6de189cc1049192092008468242b0e09ab3bb53444e791afe0fd5134"
+    },
+    {
+      "path": "packages/browser/src/save/profiles.test.ts",
+      "sha256": "a59cd7da971296025a3610d0efa64b4c71a66b70ee68e532b24ad3402a5aedec"
+    },
+    {
+      "path": "packages/browser/src/save/profiles.ts",
+      "sha256": "bf6810df4fce34b954aadf313d9e3fb7ca12f1b3b5a06f4ce396bf786ecec00b"
     },
     {
       "path": "packages/browser/src/save/save.test.ts",
@@ -97,6 +157,26 @@
       "sha256": "17251b3cfa4da8cc7c8c59bdd89a8c5de3f63e36147ee4d736da8118ee023ce0"
     },
     {
+      "path": "packages/browser/src/stage/canvas.ts",
+      "sha256": "da8bee8646e36c2d0ea8b5093f2b085162d6366095555cbb201181e75fe51cb4"
+    },
+    {
+      "path": "packages/browser/src/stage/index.ts",
+      "sha256": "8e7b61ab45a10abec736e67be4f74a3af2d20516bccacf31d39a75080f3397ab"
+    },
+    {
+      "path": "packages/browser/src/stage/renderer.ts",
+      "sha256": "3f3501318a43324a13214c4fa4aedc6bb6203d0d49de77f1aa46c4e9c1b8b03a"
+    },
+    {
+      "path": "packages/browser/src/stage/stage.ts",
+      "sha256": "89bb393fbaff29579ff58f1f3323049efad842185ba538b787df979c0c34bac2"
+    },
+    {
+      "path": "packages/browser/src/stage/webgl.ts",
+      "sha256": "313158a5de587c46245cf40110aa65e5853d5496667136c6594ef02fb57aeeb7"
+    },
+    {
       "path": "packages/browser/src/ui/controls.ts",
       "sha256": "eda444d4f20973e52c63da6ea46747b71a08f31bfd0e672b52aefaebb34e6293"
     },
@@ -106,7 +186,7 @@
     },
     {
       "path": "packages/browser/src/ui/index.ts",
-      "sha256": "c82c2ba127b8ade5b25c3c565300d8348596128f1d4761216e0740fa83ef8c7e"
+      "sha256": "2c91161e32ce1d2212b6b9b1bbd8cceb93b3387945339b481b537bb8f834db1e"
     },
     {
       "path": "packages/browser/src/ui/placement.ts",
@@ -114,11 +194,19 @@
     },
     {
       "path": "packages/browser/src/ui/preferences.ts",
-      "sha256": "7c67017f66328b66680379191e40d96c259e072277d608f480cf4c6940ebbcd3"
+      "sha256": "f809efd44efa5611e84af62c4f6b0e3e552cefb3d349a3ae75bda2de015c3388"
     },
     {
       "path": "packages/browser/src/ui/projection.ts",
       "sha256": "a4a0c4b8c8822c31e6bc27f9b02bc542a1873be232aac3426212dd53182a6cf3"
+    },
+    {
+      "path": "packages/browser/src/ui/tablet.test.ts",
+      "sha256": "de7f973a06ec3bbac6875cc7a749f386df3294193165c61ac68f1c5fc3f25410"
+    },
+    {
+      "path": "packages/browser/src/ui/tablet.ts",
+      "sha256": "e10654497b2945a7d8f5098948db471b08e7978842812c3ac174aeeff7aab7ea"
     },
     {
       "path": "packages/browser/src/ui/ui.test.ts",
@@ -378,11 +466,11 @@
     },
     {
       "path": "packages/runtime/src/data.ts",
-      "sha256": "bd0ee8d57bb3d35cf8a2a4680444da096cdee16117738334d13bbbc8eef2b3bb"
+      "sha256": "40b0680edd006a1e2adb060b77380052c92fd10b8d929de65a799e85bbb91a5a"
     },
     {
       "path": "packages/runtime/src/host.ts",
-      "sha256": "5031c1aa24973a7077f05754b5c728e689a1e3bcf8334d7a5bba776311968a18"
+      "sha256": "4f31537926e7c7b003eadf286c13ec0a8d0b2a678978908a3b63f00e38a3b63b"
     },
     {
       "path": "packages/runtime/src/index.ts",
@@ -394,7 +482,7 @@
     },
     {
       "path": "packages/runtime/src/snapshot.ts",
-      "sha256": "db803bff3d512498e629fb89e786c928f9018318cf5db434ae84b2ae77e73fff"
+      "sha256": "d5e45ff9d0f849a720ea5a385bf28fcbaa407ba0be62190735b710b085b262f1"
     },
     {
       "path": "packages/runtime/src/trace.ts",
@@ -402,7 +490,7 @@
     },
     {
       "path": "packages/runtime/src/types.ts",
-      "sha256": "956375428e1ac4f9d417df3351dcd7ce65b4cdce70b9cbf687face0d2cbd5368"
+      "sha256": "18a23bc4f0c4c38bfc1bbdd5a2af970d058f40f9819c86e68834ecdf1716cf90"
     },
     {
       "path": "packages/runtime/test/content.test.ts",
@@ -410,7 +498,7 @@
     },
     {
       "path": "packages/runtime/test/data.test.ts",
-      "sha256": "b46b417d8029227a11a9f17cc2db8ecff6bd026d7c0c613868f492460a930984"
+      "sha256": "d5aaf0f9b3f5d46ef7bf61ad2a915398bc91919d93f7193f2f20022e67987fe4"
     },
     {
       "path": "packages/runtime/test/edges.test.ts",
@@ -422,7 +510,7 @@
     },
     {
       "path": "packages/runtime/test/host.test.ts",
-      "sha256": "a0fc11bd22caff74694f4cda7dfd8c09db81feb2b40cc2e95fcc4162f35c5bd0"
+      "sha256": "72d326294068f8cdae1328df0d716758a4d14e5c1812058126b74f83f90b80fe"
     },
     {
       "path": "packages/runtime/tsconfig.json",
@@ -434,7 +522,7 @@
     },
     {
       "path": "scripts/pack-sdk.mjs",
-      "sha256": "d920d82f27d00d62979bab9b400b4e7d62c9320a72e7b49bbcdf74fc5db5b582"
+      "sha256": "4023e77cbac20f69739eefc89f8397114a934be60705717d6a4f9ff33e08b992"
     },
     {
       "path": "scripts/sdk-tools.mjs",
@@ -450,35 +538,35 @@
     "npm": "11.8.0",
     "typescript": "5.9.3"
   },
-  "version": "0.0.0-local.r0abd61b5a679.dc349e8c5ff2bae20",
+  "version": "0.0.0-local.rcc9593b37cf7.d34550d4cb20c6afa",
   "packages": [
     {
       "name": "@aegis/core",
-      "version": "0.0.0-local.r0abd61b5a679.dc349e8c5ff2bae20",
-      "file": "aegis-core-0.0.0-local.r0abd61b5a679.dc349e8c5ff2bae20.tgz",
-      "sha256": "c0e5311915befd51c40fe3a244b39ae12648f3eab5864436deeaf13ef49430a1",
-      "integrity": "sha512-7gW7RMFCJa03Ad8h1EagFEk7fnvdDYhn7Vby1cykhiSXjAqJUW0paXIubFXbus8NvQZh49EFnqqxlaPaEVhVTQ=="
+      "version": "0.0.0-local.rcc9593b37cf7.d34550d4cb20c6afa",
+      "file": "aegis-core-0.0.0-local.rcc9593b37cf7.d34550d4cb20c6afa.tgz",
+      "sha256": "7b584f5e5f3e5f550d198c84758d9cc497dc8b98116bc2ddc396f7cfd5e3083a",
+      "integrity": "sha512-S40GoG0cUOTDIa3AVrivel7IlJqaz+/PeiXU+eMdKMjyzJ2FR2X7Ip/zu7Mi9yjOAYnGdC7zHnWmY2enZWm1yA=="
     },
     {
       "name": "@aegis/runtime",
-      "version": "0.0.0-local.r0abd61b5a679.dc349e8c5ff2bae20",
-      "file": "aegis-runtime-0.0.0-local.r0abd61b5a679.dc349e8c5ff2bae20.tgz",
-      "sha256": "98032097506781d9e239854b7e81694ec3da5e70cb3407d25885eedd5aa1159c",
-      "integrity": "sha512-q/yo6l19c/XWk10F6X6vLnGDCnEEynEsylWJv9fhIef5ys+dgEPyfwBGGBhYr7K9zJ2uTKNm35gB9OfVlOtBpg=="
+      "version": "0.0.0-local.rcc9593b37cf7.d34550d4cb20c6afa",
+      "file": "aegis-runtime-0.0.0-local.rcc9593b37cf7.d34550d4cb20c6afa.tgz",
+      "sha256": "e853714bdfe9c957b802505ff3ecf73a79199b888a12b551692a8f0e6557a61f",
+      "integrity": "sha512-RpLvnMKAbiBqp5ZIj+LeQ8n5a8y1j5k8zFFUmKBP1Uz3mvMsiRih49t4PV5gSlvifdE7uEx52uZoR1KkG4Mv5w=="
     },
     {
       "name": "@aegis/narrative",
-      "version": "0.0.0-local.r0abd61b5a679.dc349e8c5ff2bae20",
-      "file": "aegis-narrative-0.0.0-local.r0abd61b5a679.dc349e8c5ff2bae20.tgz",
-      "sha256": "e9fb223c68fda44436449b13b1712913d988e5d4b9cc577dc8e39c044706cb2d",
-      "integrity": "sha512-5DdvIXX9r1erS9NGYKeWnnUKTRqlBZ49IL0yvZHsYf8daT3huUHcnAKLpGyZ7V3CSTn9ToPxeFFOWMZuciMhNA=="
+      "version": "0.0.0-local.rcc9593b37cf7.d34550d4cb20c6afa",
+      "file": "aegis-narrative-0.0.0-local.rcc9593b37cf7.d34550d4cb20c6afa.tgz",
+      "sha256": "8e598a40fc6cfb5defad778d4de0e88877e1001382b3e4979a95cffcd9b22036",
+      "integrity": "sha512-RhZV4jolqZLMS6XjMqb2CpV1xugV9sVCPUZ7pMniByhk4IRzLLhfkokPwsXNYyAeBuARp5GxtvMKuecJjgOqIg=="
     },
     {
       "name": "@aegis/browser",
-      "version": "0.0.0-local.r0abd61b5a679.dc349e8c5ff2bae20",
-      "file": "aegis-browser-0.0.0-local.r0abd61b5a679.dc349e8c5ff2bae20.tgz",
-      "sha256": "82fffdc3b14502b07ee6fd5761ff603c94aa9aeb02fcbb95d638a28656aebca0",
-      "integrity": "sha512-q57vBOeQGUrbB3HlNJYkL2XZA0y1rh8ckVuDYz5SJKKtAWVW6oodRDMImGuwXgCCNvPgUVoHJFk44DpFrikPpQ=="
+      "version": "0.0.0-local.rcc9593b37cf7.d34550d4cb20c6afa",
+      "file": "aegis-browser-0.0.0-local.rcc9593b37cf7.d34550d4cb20c6afa.tgz",
+      "sha256": "40b3f34e5095c035ba416faea274088de061d7e439ede90a70b225f92dfb2f02",
+      "integrity": "sha512-ex01wmv4Dk3F8OKgnqIw4cmm/OAjRmTlu/RWnhcL3ingWP967mdEC1Tji9ZubG1etKSUYIe5Jxw2CjRAI2uWXA=="
     }
   ]
 }

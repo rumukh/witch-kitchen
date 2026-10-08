@@ -286,7 +286,7 @@
     "digest": "27ec169589395eb3"
   },
   "throughput": {
-    "totalSeconds": 92.3456394,
-    "msPerCampaignWall": 0.6164082208333336
+    "totalSeconds": 76.2067267,
+    "msPerCampaignWall": 0.4933451716666665
   }
 }

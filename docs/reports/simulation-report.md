@@ -81,4 +81,4 @@ New Spring route, 2000 seeds: 15 workers × chunk 97 vs 1 worker × one chunk �
 
 ## Throughput
 
-Total wall time 92.3 s; ending sweeps 0.62 ms wall per 12-night campaign with 15 workers (≈ 1622 campaigns/s).
+Total wall time 76.2 s; ending sweeps 0.49 ms wall per 12-night campaign with 15 workers (≈ 2027 campaigns/s).

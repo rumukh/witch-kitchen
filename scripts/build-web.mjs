@@ -18,7 +18,7 @@ const html = readFileSync(join(out, 'index.html'), 'utf8');
 if (/serviceWorker|\/\/[a-z]+\.(com|net|org)/i.test(html)) throw new Error('index.html must stay offline-neutral and SW-free');
 const size = (p) => (statSync(p).isDirectory() ? readdirSync(p).reduce((a, f) => a + size(join(p, f)), 0) : statSync(p).size);
 const files = (p) => (statSync(p).isDirectory() ? readdirSync(p).reduce((a, f) => a + files(join(p, f)), 0) : 1);
-writeFileSync(join(out, 'build.json'), JSON.stringify({ game: '1.0.0', engine: '0abd61b5a679020bfb66bf4db24888df9e339d4d', built: new Date().toISOString(), files: files(out), bytes: size(out) }, null, 2));
+writeFileSync(join(out, 'build.json'), JSON.stringify({ game: '1.0.0', engine: 'cc9593b37cf72b72047ac0fc076fb80283652d50', built: new Date().toISOString(), files: files(out), bytes: size(out) }, null, 2));
 mkdirSync('release', { recursive: true });
 rmSync('release/krestets-web.zip', { force: true });
 if (process.platform === 'win32') execSync(`tar -a -c -f release/krestets-web.zip -C ${out} .`, { stdio: 'inherit' });

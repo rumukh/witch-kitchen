@@ -3,7 +3,7 @@
 ## AEGIS engine (bundled in the web and Windows builds)
 
 Packages `@aegis/core`, `@aegis/runtime`, `@aegis/narrative`, `@aegis/browser`, packed from
-https://github.com/rumukh/aegis-engine at commit `0abd61b5a679020bfb66bf4db24888df9e339d4d`
+https://github.com/rumukh/aegis-engine at commit `cc9593b37cf72b72047ac0fc076fb80283652d50`
 (see `vendor/aegis-sdk/PROVENANCE.md`).
 
 ```

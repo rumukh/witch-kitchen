@@ -16,12 +16,6 @@
     "sim:quick": "tsx sim/run.ts --quick",
     "e2e": "playwright test"
   },
-  "dependencies": {
-    "@aegis/browser": "file:vendor/aegis-sdk/aegis-browser-0.0.0-local.r0abd61b5a679.dc349e8c5ff2bae20.tgz",
-    "@aegis/core": "file:vendor/aegis-sdk/aegis-core-0.0.0-local.r0abd61b5a679.dc349e8c5ff2bae20.tgz",
-    "@aegis/narrative": "file:vendor/aegis-sdk/aegis-narrative-0.0.0-local.r0abd61b5a679.dc349e8c5ff2bae20.tgz",
-    "@aegis/runtime": "file:vendor/aegis-sdk/aegis-runtime-0.0.0-local.r0abd61b5a679.dc349e8c5ff2bae20.tgz"
-  },
   "devDependencies": {
     "@electron/packager": "^20.3.0",
     "@eslint/js": "^10.0.1",
@@ -34,5 +28,11 @@
     "typescript-eslint": "^8.71.1",
     "vite": "^8.3.3",
     "vitest": "^4.1.11"
+  },
+  "dependencies": {
+    "@aegis/browser": "file:vendor/aegis-sdk/aegis-browser-0.0.0-local.rcc9593b37cf7.d34550d4cb20c6afa.tgz",
+    "@aegis/core": "file:vendor/aegis-sdk/aegis-core-0.0.0-local.rcc9593b37cf7.d34550d4cb20c6afa.tgz",
+    "@aegis/narrative": "file:vendor/aegis-sdk/aegis-narrative-0.0.0-local.rcc9593b37cf7.d34550d4cb20c6afa.tgz",
+    "@aegis/runtime": "file:vendor/aegis-sdk/aegis-runtime-0.0.0-local.rcc9593b37cf7.d34550d4cb20c6afa.tgz"
   }
 }

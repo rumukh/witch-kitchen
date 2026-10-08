@@ -45,4 +45,4 @@ balance edit.
 | `docs/reports`, `docs/screens` | evidence |
 
 Storage namespace: `io.github.rumukh.krestets` (WEBHOST-01). Engine pin: AEGIS
-`0abd61b5a679020bfb66bf4db24888df9e339d4d` (`vendor/aegis-sdk/PROVENANCE.md`).
+`cc9593b37cf72b72047ac0fc076fb80283652d50` (`vendor/aegis-sdk/PROVENANCE.md`).

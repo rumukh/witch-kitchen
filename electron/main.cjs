@@ -13,8 +13,9 @@ app.setPath('userData', path.join(dataRoot, 'electron'));
 const saveRoot = process.env.KRESTETS_SAVE_DIR || path.join(dataRoot, 'saves');
 const webRoot = path.join(__dirname, 'web');
 
-// The packaged files are served from an intercepted https origin (AEGIS audio requires same-origin HTTP(S) asset URLs).
-const ORIGIN = 'https://krestets.local/';
+// Packaged files are served from a privileged, secure, standard app:// origin; AEGIS audio accepts it via schemes: ['app:'].
+const ORIGIN = 'app://krestets/';
+protocol.registerSchemesAsPrivileged([{ scheme: 'app', privileges: { standard: true, secure: true, supportFetchAPI: true, stream: true, corsEnabled: true } }]);
 
 if (!app.requestSingleInstanceLock()) {
   // A second instance would write the same slot: refuse and focus the first one.
@@ -174,9 +175,9 @@ function createWindow() {
 
 app.whenReady().then(() => {
   const MIME = { '.html': 'text/html; charset=utf-8', '.js': 'text/javascript', '.css': 'text/css', '.json': 'application/json', '.webp': 'image/webp', '.png': 'image/png', '.svg': 'image/svg+xml', '.ogg': 'audio/ogg', '.m4a': 'audio/mp4', '.wav': 'audio/wav', '.woff2': 'font/woff2', '.txt': 'text/plain; charset=utf-8' };
-  protocol.handle('https', async (req) => {
+  protocol.handle('app', async (req) => {
     const url = new URL(req.url);
-    if (url.host !== 'krestets.local') return new Response('offline', { status: 503 });
+    if (url.host !== 'krestets') return new Response('not found', { status: 404 });
     const rel = decodeURIComponent(url.pathname).replace(/^\/+/, '') || 'index.html';
     const file = path.normalize(path.join(webRoot, rel));
     if (!file.startsWith(webRoot)) return new Response('forbidden', { status: 403 });

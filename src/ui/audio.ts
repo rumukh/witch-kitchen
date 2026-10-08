@@ -71,7 +71,13 @@ export class AudioDirector {
     if (this.main || typeof AudioContext === 'undefined') return;
     const lines = Object.entries(this.app.i18n.cat.whispers).map(([id, caption]) => ({ id, asset: id, caption }));
     const pack = { id: PACK, revision: 'v1', assets: this.assets, lines: lines.filter((l) => this.available.has(l.asset)) };
-    const mk = () => createNarration({ baseUrl: new URL('./', location.href).href, onState: () => undefined });
+    const mk = () =>
+      createNarration({
+        baseUrl: new URL('./', location.href).href,
+        // Desktop serves from app://krestets/ (secure custom scheme); the web build is plain HTTPS.
+        ...(location.protocol === 'app:' ? { schemes: ['app:'] } : {}),
+        onState: () => undefined,
+      });
     this.main = mk();
     this.room = mk();
     this.uiBus = mk();
