@@ -99,10 +99,16 @@ test('night 10 fixture: listen dialog, cook list, Межсветье tabs', asyn
   await importFixture(page, 'e2e/fixtures/night10.json', 2);
   await page.locator('[data-testid="continue-2"]').click();
   await drain(page);
+  // Guest cards use the painted portraits, not the procedural SVG placeholder.
+  await expect(page.locator('.guest img.guest-art').first()).toBeVisible();
+  await expect(page.locator('.guest .guest-svg')).toHaveCount(0);
   await page.screenshot({ path: 'docs/screens/tavern-night10.png' });
   const listen = page.locator('.pal-jar:not(.core):not([aria-disabled="true"])').first();
   if (await listen.count()) {
     await listen.click();
+    await expect(page.locator('dialog[open] .scene-pic img.scene-portrait')).toBeVisible();
+    await expect(page.locator('dialog[open] .guest-svg')).toHaveCount(0);
+    await page.waitForFunction(() => [...document.images].every((i) => i.complete));
     await page.screenshot({ path: 'docs/screens/listen-dialog.png' });
     await page.locator('dialog[open] [data-testid="reply-warm"]').click();
     await drain(page);

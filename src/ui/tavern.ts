@@ -202,6 +202,11 @@ async function serveFlow(ctx: Ctx, b: number): Promise<void> {
   if (pick) await ctx.act(pick);
 }
 
+/** Delivered guest art (story guests by special ID, ordinary guests by world variant); SVG placeholder otherwise. */
+export function guestPortrait(ctx: Ctx, g: Guest, cls: string, size: number): Element {
+  return ctx.art.img(g.sp ? `char-${g.sp}` : `guest-${g.w}-${(g.id % 3) + 1}`, cls) ?? guestSvg(g.w, g.sp, size);
+}
+
 function guestCard(ctx: Ctx, g: Guest, seat: number | 'door'): HTMLElement {
   const t = ctx.t;
   const s = ctx.state;
@@ -212,7 +217,7 @@ function guestCard(ctx: Ctx, g: Guest, seat: number | 'door'): HTMLElement {
     h('span', { class: 'candle-fill', style: `width:${pct}%` }),
     h('span', { class: 'candle-text' }, g.out ? t('guest.candleOut') : t('guest.patience', { n: ticksLeft })));
   const card = h('article', { class: `guest world-${g.w} ${g.out ? 'leaving' : ''} ${atDoor ? 'at-door' : ''}`, 'data-testid': atDoor ? 'guest-door' : `guest-${seat}`, 'aria-label': guestName(ctx, g) },
-    h('div', { class: 'guest-portrait' }, ctx.art.img(g.sp ? `char-${g.sp}` : `guest-${g.w}-${(g.id % 3) + 1}`, 'guest-art') ?? guestSvg(g.w, g.sp, 84)),
+    h('div', { class: 'guest-portrait' }, guestPortrait(ctx, g, 'guest-art', 84)),
     h('h3', {}, atDoor ? `${guestName(ctx, g)} · ${t('guest.atDoor')}` : `${(seat as number) + 1}. ${guestName(ctx, g)}`),
     atDoor ? null : h('p', { class: 'order' }, g.ord === 'any' ? t('guest.orderAny') : [feelingIcon(g.ord as Kind, 22), ' ', t('guest.order', { feeling: feelingName(ctx, g.ord) })]),
     candle,

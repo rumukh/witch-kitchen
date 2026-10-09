@@ -5,7 +5,7 @@ import type { Ctx } from './app.js';
 import type { Scene } from './i18n.js';
 import { h, button, feelingIcon, guestSvg } from './dom.js';
 import { showModal } from './modal.js';
-import { feelingName, guestName } from './tavern.js';
+import { feelingName, guestName, guestPortrait } from './tavern.js';
 
 function sceneFor(ctx: Ctx, id: string): { scene: Scene | null; params: Record<string, string> } {
   const [base, param] = id.split(':') as [string, string | undefined];
@@ -189,7 +189,7 @@ export function listenDialog(ctx: Ctx, g: Guest, kind: Kind): Promise<boolean | 
     if (!warmFirst) opts.reverse();
     const list = h('div', { class: 'choice-list' });
     const m = showModal(ctx.t('listen.title'), [
-      h('div', { class: 'scene-layout' }, h('div', { class: 'scene-pic' }, guestSvg(g.w, g.sp, 96)),
+      h('div', { class: 'scene-layout' }, h('div', { class: 'scene-pic' }, guestPortrait(ctx, g, 'scene-portrait', 96)),
         h('div', { class: 'scene-col' },
           h('p', { class: 'scene-who' }, guestName(ctx, g)),
           h('p', {}, feelingIcon(kind, 22), ' ', h('em', {}, ctx.i18n.filter(fill(question, { feeling: feelingName(ctx, kind).toLowerCase() })))),

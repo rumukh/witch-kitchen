@@ -2,8 +2,8 @@
   "schema": "witch-kitchen-art-manifest/1",
   "style_bible": "docs/art/STYLE_BIBLE.md",
   "base_path": "assets/art/",
-  "total_bytes": 14847998,
-  "count": 111,
+  "total_bytes": 15078478,
+  "count": 113,
   "assets": [
     {
       "id": "bg-tavern-night",
@@ -3332,6 +3332,66 @@
       "review": {
         "status": "approved",
         "notes": "Reviewed: on-brief, clean alpha, no text."
+      }
+    },
+    {
+      "id": "char-tutorialA",
+      "kind": "character",
+      "file": "characters/char-tutorialA.webp",
+      "width": 640,
+      "height": 768,
+      "transparent": true,
+      "variants": [],
+      "bytes": 111638,
+      "source": {
+        "tool": "wangp-reference-image skill (generate-reference-image.ps1, local WanGP, -RawPrompt, Subjects mode, 1328x1328)",
+        "provider": "local (WanGP on this machine, no cloud)",
+        "model": "Qwen Image Edit Plus 2511 20B (Quanto BF16/INT8), 50 steps, CFG 4, seed 1202",
+        "operation": "reference edit (style reference)",
+        "quality": "50 steps",
+        "prompt": "Paint a completely NEW character in the style of the reference (do not copy the reference's face, beard or mushroom hat): Lesovichok, a small young forest sprite child, round rosy cheeks, about ten years old, big shiny tearful brown eyes, a slightly pink sniffly nose of normal human size, little ears shaped like oak leaves, a small brown mushroom-cap hat trimmed with moss, wearing a moss-green felted vest over a linen shirt with red embroidered cuffs, a tiny acorn on a cord; one hand holds a small white handkerchief near his face, the other forearm rests forward. Moss green, fern and bark-brown palette. Sad but sweet. Match the reference image's art style exactly: gouache on warm textured paper like early-20th-century Russian book illustration (Bilibin school), crisp confident dark-brown ink outline around every shape, flat matte gouache colour fills with gentle dry-brush shading, rich Slavic folk embroidery ornament on clothing, warm honey-amber candlelit palette. Composition exactly like the reference: a half-body bust from the waist up, three-quarter view facing slightly left, both forearms resting forward in the lower part of the picture, the figure cut off at the waist with a clean soft edge, centered and filling about 85 percent of the frame. Isolated character only on a plain flat uniform light grey background: no table, no counter, no furniture, no candle, no props other than those described, no scenery, no floor, no shadow, no frame. Natural anatomy, exactly two arms and two hands with five fingers each. Absolutely no text, letters, signature or watermark.",
+        "derived_from": [
+          "guest-forest-2"
+        ],
+        "raw_file": "tutorialA-c4.png",
+        "raw_sha256": "ff9f2c95c310d1ba0acb099d3dae916c009173cf78b25eb565f2f659e671e841",
+        "postprocess": "local rembg u2net matte + background-colour key in edge band + enclosed background pocket removal + colour decontamination, trim, Lanczos resize to 768 px height, WebP with alpha (q90, lossless alpha)"
+      },
+      "license": "generated locally with Qwen-Image-Edit-2511 (Apache-2.0 weights) in WanGP; style reference is an existing project asset (guest-forest-2). No cloud services, stock or web imagery.",
+      "created": "2026-10-09",
+      "review": {
+        "status": "approved",
+        "notes": "Tutorial guest Lesovichok with mushroom cap, sniffling; chosen by user (A4)."
+      }
+    },
+    {
+      "id": "char-tutorialB",
+      "kind": "character",
+      "file": "characters/char-tutorialB.webp",
+      "width": 577,
+      "height": 768,
+      "transparent": true,
+      "variants": [],
+      "bytes": 118842,
+      "source": {
+        "tool": "wangp-reference-image skill (generate-reference-image.ps1, local WanGP, -RawPrompt, Subjects mode, 1328x1328)",
+        "provider": "local (WanGP on this machine, no cloud)",
+        "model": "Qwen Image Edit Plus 2511 20B (Quanto BF16/INT8), 50 steps, CFG 4, seed 2301",
+        "operation": "reference edit (style reference)",
+        "quality": "50 steps",
+        "prompt": "Paint a completely NEW character in the style of the reference (do not copy the reference's face, hair or shawl): a little river girl spirit about eight years old, freckled cheerful face with a small curious smile, short damp tousled hair the colour of green river weed with a small white water lily tucked in, a simple linen shirt with turquoise embroidered cuffs under a sleeveless river-green sarafan with folk embroidery, a string of smooth coloured river pebbles around her neck, both forearms resting forward with a few shiny wet pebbles cupped in her hands. Glass-green and turquoise palette. Playful and innocent. Match the reference image's art style exactly: gouache on warm textured paper like early-20th-century Russian book illustration (Bilibin school), crisp confident dark-brown ink outline around every shape, flat matte gouache colour fills with gentle dry-brush shading, rich Slavic folk embroidery ornament on clothing, warm honey-amber candlelit palette. Composition exactly like the reference: a half-body bust from the waist up, three-quarter view facing slightly left, both forearms resting forward in the lower part of the picture, the figure cut off at the waist with a clean soft edge, centered and filling about 85 percent of the frame. Isolated character only on a plain flat uniform light grey background: no table, no counter, no furniture, no candle, no props other than those described, no scenery, no floor, no shadow, no frame. Natural anatomy, exactly two arms and two hands with five fingers each. Absolutely no text, letters, signature or watermark.",
+        "derived_from": [
+          "guest-river-2"
+        ],
+        "raw_file": "tutorialB-c3.png",
+        "raw_sha256": "d4a7a05586d560c39f801280c1debb44313cf33bbc759ce8c4a22ae969d415e1",
+        "postprocess": "local rembg u2net matte + background-colour key in edge band + enclosed background pocket removal + colour decontamination, trim, Lanczos resize to 768 px height, WebP with alpha (q90, lossless alpha)"
+      },
+      "license": "generated locally with Qwen-Image-Edit-2511 (Apache-2.0 weights) in WanGP; style reference is an existing project asset (guest-river-2). No cloud services, stock or web imagery.",
+      "created": "2026-10-09",
+      "review": {
+        "status": "approved",
+        "notes": "Tutorial guest river girl with water lily and pebbles; chosen by user (B3)."
       }
     }
   ]
